@@ -1,0 +1,689 @@
+{
+  "Nav": {
+    "home": "Home",
+    "services": "Services",
+    "whyPanama": "Why Panama?",
+    "contact": "Contact",
+    "freeConsultation": "Book a free consultation !"
+  },
+  "Footer": {
+    "tagline": "Your trusted relocation partner in Panama.",
+    "services": "Our Services",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "services2": "Services",
+    "whyPanama": "Why Panama?",
+    "contact": "Contact",
+    "freeConsultation": "Book Free Consultation",
+    "ctaHeading": "Ready to make your move?"
+  },
+  "HomePage": {
+    "meta": {
+      "title": "Panama Contact Services | Relocation & Visa Experts in Panama",
+      "description": "Your trusted partner for relocating to Panama. Visas, bank accounts, real estate, tax declarations and more. Expert advice in English, French, Spanish and Portuguese."
+    },
+    "hero": {
+      "eyebrow": "Your relocation experts in Panama",
+      "headline": "Your move to Panama,",
+      "headlineAccent": "made simple.",
+      "subheadline": "With experts by your side.",
+      "body": "Moving to Panama? We've got you covered. From opening a bank account to securing residency, our expert team and nationwide network of trusted partners are here to make your transition smooth, stress-free, and cost-effective.",
+      "cta": "Contact us",
+      "ctaSecondary": "Our services",
+      "ctaTertiary": "Why Panama?"
+    },
+    "features": {
+      "sectionLabel": "Panamá Contact Services",
+      "headline": "Your trusted relocation partner in Panama.",
+      "description": "Moving to Panama? We’ve got you covered. From opening a bank account to securing residency, our expert team and nationwide network of trusted partners are here to make your transition smooth, stress-free, and cost-effective. Let us handle the details — so you can focus on starting your new life in paradise.",
+      "tailored": {
+        "title": "A tailor-made solution",
+        "body": "Because every customer is unique, every customer has their own solution."
+      },
+      "local": {
+        "title": "A local team",
+        "body": "Come and meet us at our offices in Panama City. Our team of professionals is on the ground all day long."
+      },
+      "international": {
+        "title": "International skills",
+        "body": "With a presence in North America and Europe, we speak your language and understand your background."
+      },
+      "transparent": {
+        "title": "A transparent service",
+        "body": "All our work is detailed and guaranteed. No hidden costs. All deadlines are guaranteed."
+      }
+    },
+    "whyUs": {
+      "sectionLabel": "Why choose us",
+      "heading": "Why we are the best?",
+      "subheading": "At Panamá Contact Services, we don’t just offer relocation assistance — we offer peace of mind. Our team combines local expertise with international standards to provide a seamless, efficient, and fully personalized experience.",
+      "items": {
+        "experienced": {
+          "title": "An experienced team",
+          "body": "Panamá Contact Services is made up of professionals who are familiar with the country and fully integrated. Our customers are our best references."
+        },
+        "longTerm": {
+          "title": "A long-term relationship based on trust",
+          "body": "We offer regular and comprehensive long-term support. We are always there for you, free of charge, for any consultation, even years after you have used our services."
+        },
+        "global": {
+          "title": "A global solution",
+          "body": "Because every action has a consequence, we take the time to analyse our clients' migration, tax and financial situation in its entirety before recommending a product or service."
+        },
+        "multilingual": {
+          "title": "A multilingual international team",
+          "body": "With a presence in North America (Montreal) and Europe (Barcelona, Lisbon) we can answer your questions in Spanish, English, French and Portuguese."
+        },
+        "deadlines": {
+          "title": "Meeting deadlines",
+          "body": "We don't make false promises. But we do keep the deadlines we promise, and we undertake to compensate you for any damage caused by delays for which we are responsible."
+        }
+      }
+    },
+    "services": {
+      "sectionLabel": "What we do",
+      "heading": "Our services",
+      "cta": "All services",
+      "readMore": "Learn more"
+    },
+    "cta": {
+      "eyebrow": "Free consultation",
+      "heading": "Don't know what suits your situation?",
+      "subheading": "Get your consultation free of charge!",
+      "cta": "Book Your Free Consultation"
+    }
+  },
+  "ServicesPage": {
+    "meta": {
+      "title": "Panama Residency & Expat Services — Visas, Business, Real Estate | Panama Contact",
+      "description": "Expert guidance for relocating to Panama. Friendly Nations visa, digital nomad visa, company formation, bank accounts, real estate & more. Free consultation."
+    },
+    "sectionLabel": "Services",
+    "heading": "Our Services",
+    "subheading": "We support you at every step of your project in Panama.",
+    "filterAll": "All",
+    "filterVisa": "Visas",
+    "filterSetup": "Setup",
+    "filterLifestyle": "Lifestyle",
+    "readMore": "Read more",
+    "faq": {
+      "heading": "Common Questions About Panama",
+      "subheading": "Everything you need to know before making your move to Panama."
+    }
+  },
+  "services": {
+    "friendly-nations": {
+      "title": "Friendly Nations Visa in Panama",
+      "description": "The friendly nations visa allows citizens of certain countries to obtain residency in Panama.",
+      "faq": [
+        {
+          "question": "How can a foreigner obtain residency in Panama?",
+          "answer": "To obtain residency in Panama as a foreigner, you must apply under a migration programme suited to your nationality and profile. The most commonly used options include the Friendly Nations Visa (which requires a professional or economic tie to Panama), the Qualified Investor Residency (minimum investment of $300,000 USD), and the Retiree Visa (for those with retirement income from $1,000/month). The process requires apostilled documents and strict compliance with the chosen programme's requirements."
+        },
+        {
+          "question": "What are the requirements for residency in Panama?",
+          "answer": "The core requirements include a valid passport, apostilled criminal record certificate, and fulfilment of a valid migration programme. Specific conditions vary by programme — some are restricted to citizens of certain countries. Residency cannot be obtained if the applicant has a criminal record or appears on international control lists."
+        },
+        {
+          "question": "How much does residency in Panama cost in 2026?",
+          "answer": "The total cost depends on the visa type chosen. Legal and administrative fees generally range from $5,000 to $10,000 USD per person. The Qualified Investor route requires a minimum investment of $300,000 USD. The Retiree Visa requires monthly income from $1,000 USD. The Friendly Nations Visa involves variable costs depending on the economic or professional tie used to qualify."
+        },
+        {
+          "question": "How long does it take to get residency in Panama?",
+          "answer": "Processing times vary by programme. Most residency applications take between 3 and 6 months from the date a complete file is submitted. The Qualified Investor Residency has a legal processing window of 30 days. The Friendly Nations Visa typically takes several months due to administrative verifications. Timelines may also be affected by your nationality, visa type, and the quality of your file preparation."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Current Legal Framework",
+          "body": "<p>The National Migration Service will receive your application under the program \"Permanent Residence Permit for Citizens of Nations with Friendly, Commercial, and Professional Relations with Panama\". This program, commonly known as the \"friendly nations visa\", was created by Executive Decree 343, dated May 16, 2012, and later modified by Executive Decree 197 of May 7, 2021. Note that since 2022, applicants first obtain a probationary permit for two years before they can apply for permanent residence.</p>"
+        },
+        {
+          "heading": "Reasons for Applying",
+          "body": "<p>Three options are available to obtain Panamanian residence through the friendly nations visa:</p><ul><li><strong>Employment:</strong> A work contract from a legally established company on Panamanian territory is required. Obtaining a work permit is legally mandatory if this path is chosen.</li><li><strong>Real estate:</strong> Purchase of a property with a minimum value of $200,000.</li><li><strong>Bank investment:</strong> Maintaining an amount equal to or greater than $200,000 in a Panamanian banking entity for three years.</li></ul>"
+        },
+        {
+          "heading": "Main Documentation",
+          "body": "<ul><li>Legal representation by a lawyer.</li><li>Five passport-type photos and a notarized passport copy.</li><li>Criminal record from the country of residence.</li><li>Medical certificate.</li><li>Checks endorsed to Panamanian institutions.</li><li>Proof of the reason for the application (employment contract, assets, etc.).</li><li>For dependents: proof of family relationship and financial stability.</li></ul>"
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "body": "<p>Interested parties must possess citizenship from one of the nations considered friendly in commercial and diplomatic spheres with Panama. This extends to close relatives — parents, descendants, and spouses. If your country is not on the list, other alternatives are available — contact Panama Contact Services to study the best option for your personal situation.</p>"
+        },
+        {
+          "heading": "Related Benefits",
+          "body": "<p>The friendly nations visa allows beneficiaries to obtain permanent establishment in Panama, offering cultural and social integration while opening economic opportunities. Once permanently established in Panama, the possibility of acquiring Panamanian nationality is open to you.</p>"
+        }
+      ]
+    },
+    "digital-nomad": {
+      "title": "Digital Nomad Visa",
+      "description": "Work remotely from Panama while enjoying a unique lifestyle.",
+      "faq": [
+        {
+          "question": "Can I work remotely from Panama as a foreigner?",
+          "answer": "Yes. The Digital Nomad Visa allows you to live and work remotely from Panama for up to 9 months, renewable once for the same period. You must hold a contract with a foreign company or foreign clients and earn at least $36,000 USD per year. You cannot be hired by a Panamanian company under this visa."
+        },
+        {
+          "question": "What documents are required for the Digital Nomad Visa?",
+          "answer": "Required documents include a valid passport with at least 6 months remaining, an apostilled criminal record certificate, international health insurance covering Panama, a sworn declaration that you will not accept local employment, proof of the foreign company's existence, and a work contract or proof of income from abroad of at least $36,000 USD per year."
+        },
+        {
+          "question": "How long can I stay in Panama with a tourist visa before needing this visa?",
+          "answer": "European citizens can stay up to 3 months consecutively on a tourist visa in Panama. Canadian citizens are allowed 6 months. The Digital Nomad Visa is a good way to extend your stay and test life in the country without committing to a full residency application."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>The digital nomad visa of Panama will allow you to combine work and adventure without having to leave the country at the end of your tourist visa. Affordable, the digital nomad visa can also be a good way to test life in the country without making a residency application. Europeans can only stay three months in a row with a tourist visa in Panama; this period is 6 months for Canadian citizens.</p><p>Launched in 2021 following the COVID-19 crisis, this program aims not only to promote tourism but also to stimulate the local economy and introduce the country to young foreigners working in innovative sectors.</p>"
+        },
+        {
+          "heading": "Duration and Conditions",
+          "body": "<p>The digital nomad visa was created on May 7, 2021. It is valid for 9 months and can be extended once for the same period. Holders may work in Panama provided they maintain a contract with a foreign company and meet a minimum annual income of $36,000 USD.</p><p>Note that this only applies if you have contracts with companies or clients abroad. You will not be able to be hired by a Panamanian company with this visa.</p>"
+        },
+        {
+          "heading": "Documents Required",
+          "body": "<ul><li>Valid passport with at least 6 months of remaining validity.</li><li>Apostilled and translated criminal record certificate.</li><li>International health insurance covering Panama.</li><li>Sworn declaration of not accepting job offers in Panama.</li><li>Proof of existence of the foreign company.</li><li>Current work contract or proof of income from abroad (at least $36,000/year).</li><li>Independent applicants must provide contracts with foreign clients.</li></ul>"
+        },
+        {
+          "heading": "Essential Tips",
+          "body": "<p>Completeness and accuracy of documents are crucial. Discrepancies or errors can lead to delays or rejections. Keep duplicates of all documents submitted throughout the procedure. Maintain regular contact with Panama Contact Services throughout the process.</p>"
+        }
+      ]
+    },
+    "qualified-investor": {
+      "title": "Qualified Investor Visa",
+      "description": "Invest in Panama and obtain residency quickly.",
+      "faq": [
+        {
+          "question": "How quickly can I get residency through the Qualified Investor Visa?",
+          "answer": "The Qualified Investor Visa has a legal processing window of just 30 days from the date a complete file is submitted — making it the fastest residency route in Panama. The process can be initiated remotely, though you must travel to Panama to finalise it."
+        },
+        {
+          "question": "What are the investment options for the Qualified Investor Visa?",
+          "answer": "There are three options: (1) a financial placement of at least $500,000 USD in a Panama-registered securities house; (2) a fixed-term bank deposit of $750,000 USD in a Panamanian bank; or (3) a real estate purchase of at least $300,000 USD (or $500,000 USD after October 2024). The property must be held for a minimum of five years. All invested funds must originate from abroad."
+        },
+        {
+          "question": "Do I need to live in Panama to keep the Qualified Investor residency?",
+          "answer": "You are required to visit Panama at least once every 24 months to maintain your resident status. To apply for tax residency, you must spend at least 183 days per year in Panama and demonstrate ties to the country."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Established in October 2020, this visa can be obtained through several means: acquiring properties in the country, buying securities in a Panama-registered securities house, or investing in a fixed-term deposit in a local bank. The process can be initiated remotely, although you must travel to Panama to finalize it. The visa process only takes 30 days after making the necessary investment and gathering the required documentation.</p>"
+        },
+        {
+          "heading": "Option 1 — Financial Placement: $500,000",
+          "body": "<p><strong>Investment required:</strong> At least $500,000 through a financial placement in Panama.</p><p><strong>Documentation:</strong> In addition to general documents (criminal record, Ministry of Commerce certification, etc.), you must present a certified letter from the securities house detailing the investment made.</p>"
+        },
+        {
+          "heading": "Option 2 — Fixed-Term Deposit: $750,000",
+          "body": "<p><strong>Investment required:</strong> $750,000 in fixed-term deposits in a Panamanian bank.</p><p><strong>Documentation:</strong> Certified letters from the banking institution, verifying that funds were transferred from abroad.</p>"
+        },
+        {
+          "heading": "Option 3 — Real Estate: $300,000 / $500,000",
+          "body": "<p><strong>Investment required:</strong> At least $300,000 until October 2024, and $500,000 after that date. Can also apply via a promise of sale contract.</p><p><strong>Holding period:</strong> The property must be retained for a minimum of five years.</p><p><strong>Documentation:</strong> Property titles and/or purchase contracts.</p>"
+        },
+        {
+          "heading": "Procedure and Key Conditions",
+          "body": "<p><strong>Lawyer required:</strong> The entire procedure must be carried out by a lawyer in Panama.</p><p><strong>Timeframe:</strong> Usually 30 days from filing.</p><p><strong>Maintenance:</strong> You must visit Panama at least once every 24 months to maintain resident status.</p><p><strong>Origin of funds:</strong> All invested funds must come from abroad.</p><p><strong>Tax residence:</strong> To apply for tax residence, the applicant must spend at least 183 days in Panamanian territory and demonstrate ties in the country.</p>"
+        }
+      ]
+    },
+    "retiring": {
+      "title": "Retiree Visa",
+      "description": "Enjoy your retirement in Panama with exclusive benefits.",
+      "faq": [
+        {
+          "question": "How much income do I need to qualify for the Panama Retiree Visa?",
+          "answer": "You need to prove a guaranteed lifetime pension of at least $1,000 USD per month. If your pension is between $750 and $1,000, it can be supplemented by a real estate investment of at least $100,000 USD. There is no upper age limit, but the minimum age to apply is 25 years. An additional $250/month is required per dependent."
+        },
+        {
+          "question": "What discounts does the Panama Retiree Visa provide?",
+          "answer": "The pensionado card grants significant discounts across Panama: 15% on medical bills and loans, 20% on medical consultations and prescription medications, 25% on restaurants and utility bills, 30% on public transport, and 50% on leisure activities such as cinemas and concerts. Retirees also benefit from a tax exemption on the importation of personal belongings and a vehicle upon arrival."
+        },
+        {
+          "question": "Does the Retiree Visa allow me to work in Panama?",
+          "answer": "The Retiree Visa does not grant a work permit, meaning you cannot be employed by a Panamanian company. However, owning and operating your own company in Panama is not prohibited under this visa."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Eligibility for the Retiree Visa",
+          "body": "<p>The Retirement Visa does not discriminate based on age — it focuses on guaranteed income. You need to prove a lifetime pension of at least $1,000/month. The minimum required age is 25 years. This visa does not grant the right to a work permit, but owning a company is not prohibited.</p><p><strong>Minimum income:</strong> $1,000/month. If the pension is between $750–$1,000, it can be supplemented by real estate investment of at least $100,000.</p><p><strong>Dependents:</strong> An additional $250/month is required per dependent. Dependent children must be single and under 18, or under 25 if in university.</p>"
+        },
+        {
+          "heading": "Required Documents",
+          "body": "<ul><li>Pension certificate from a government or private entity, authenticated.</li><li>Public property registration certificate if you own property in Panama.</li><li>Criminal background certificate from your country of origin, authenticated by the Panamanian Consulate.</li><li>Authenticated marriage and/or birth certificates for spouses and children.</li></ul>"
+        },
+        {
+          "heading": "Application Procedure",
+          "body": "<ul><li>Registration with the National Migration Service.</li><li>Submission of all required documents, translated into Spanish if necessary.</li><li>Payment of migration fees and repatriation deposit.</li></ul><p><strong>Review and approval:</strong> The review can take several months. Once approved, a temporary residence card will be issued.</p>"
+        },
+        {
+          "heading": "Benefits of the Retiree Visa",
+          "body": "<p><strong>15% discounts:</strong> Fast-food restaurants, medical bills (without insurance), visual or dental checks, loans.</p><p><strong>20% discounts:</strong> Medical visits, technical or expert services, prescription medications.</p><p><strong>25% discounts:</strong> Dining establishments, public utility bills, airline tickets.</p><p><strong>30% discounts:</strong> Hostels (Friday–Sunday), transport (trains, buses, ships).</p><p><strong>50% discounts:</strong> Leisure activities (cinemas, concerts, sports events), hotels on weekdays (Monday–Thursday).</p><p><strong>Tax exemption</strong> on importation of personal belongings and vehicles upon arrival in Panama.</p>"
+        },
+        {
+          "heading": "Essential Tips",
+          "body": "<p>Completeness and accuracy of documents are crucial. Discrepancies or errors can lead to delays or rejections. Keep duplicates of all documents submitted. It is advised to maintain regular contact with Panama Contact Services throughout the process.</p>"
+        }
+      ]
+    },
+    "bank-account": {
+      "title": "Bank Account Opening",
+      "description": "Open personal or corporate bank accounts in Panama with expert guidance.",
+      "faq": [
+        {
+          "question": "How can a foreigner open a bank account in Panama?",
+          "answer": "Opening a bank account in Panama as a foreigner is possible, but banks apply strict compliance controls. You will need a valid passport, bank references, and documents proving the origin of your funds. Most banks require physical presence or a demonstrable link to Panama, though remote account opening is possible in certain cases when the file is correctly structured and presented through intermediaries with established local banking relationships."
+        },
+        {
+          "question": "What documents are required to open a bank account in Panama?",
+          "answer": "The standard requirements include a valid passport, bank references, proof of income, and documentation demonstrating the origin of funds. For corporate accounts, you will also need company incorporation documents and details of beneficial owners. Applications will be declined if the applicant appears on sanctions lists or cannot justify the source of funds."
+        },
+        {
+          "question": "How long does it take to open a bank account in Panama?",
+          "answer": "The typical processing time is 2 to 4 weeks from the submission of a complete file. This may be longer if the bank requests additional information or if your profile requires enhanced due diligence. For remote account opening, the timeline depends on file validation and the bank's internal processes."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Opening a first bank account in Panama is crucial, whether it's for an individual or a legal entity. Panama Contact Service makes this intricate process easier by guiding you through every step until your account is opened and your products are available. We offer comprehensive support, encompassing understanding the process, liaising with banks, and managing administrative tasks.</p>"
+        },
+        {
+          "heading": "Opening a Corporate Bank Account",
+          "body": "<p>In Panama, there are mainly two types of corporate bank accounts: accounts for Panamanian Legal Entities (companies registered in Panama) and accounts for Foreign Legal Entities (companies registered abroad). Following the Panama Papers scandal, the banking regulatory framework has strengthened, particularly for offshore companies. Panama Contact Services is your preferred ally in navigating these regulations.</p>"
+        },
+        {
+          "heading": "Opening a Personal Bank Account",
+          "body": "<p>A foreigner can open a personal bank account in Panama, whether they are a resident or not. With about forty banks open to individuals, Panama offers a wide range — from simple retail banks with very few fees to private banks offering personalized international-standard assistance. For individuals undergoing an immigration process, opening a bank account is a mandatory step for settling in the country.</p>"
+        }
+      ]
+    },
+    "business": {
+      "title": "Business Setup",
+      "description": "Launch your company in Panama with full support.",
+      "faq": [
+        {
+          "question": "How can a foreigner create a company in Panama?",
+          "answer": "Creating a company in Panama as a foreigner is a fast process and does not require residency. The most common structures are the Sociedad Anónima (S.A.), the Sociedad de Responsabilidad Limitada (S.R.L.), and the Private Interest Foundation. The S.A. is the most widely used for commercial activity and international investment. The process is handled by a lawyer and a registered structure can be in place within a few days, even remotely in certain cases."
+        },
+        {
+          "question": "What are the requirements to set up a company in Panama?",
+          "answer": "Requirements include a valid passport, information about the intended business activity, and compliance forms. It is mandatory to designate a resident agent and declare the beneficial owners. Residency is not required. Ongoing obligations include an annual flat tax (tasa única) of $300 USD and maintaining the resident agent relationship."
+        },
+        {
+          "question": "How much does it cost to set up a company in Panama?",
+          "answer": "Incorporation costs for an S.A., S.R.L., or Private Interest Foundation typically range from $1,500 to $2,000 USD. Annual maintenance costs — including the tasa única, resident agent fees, and administrative services — generally run between $600 and $1,000 USD per year. Exact costs vary depending on the structure and the applicant's profile."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Deciding to start your business in Panama? There are fundamental requirements to set up a business according to local legislation. These steps ensure optimal protection of your investment and minimize potential risks. Since 2005, Panama has streamlined business setup procedures through various fiscal and commercial reforms.</p>"
+        },
+        {
+          "heading": "Setting Up a Corporation (S.A.)",
+          "body": "<p>About 90% of businesses in Panama operate as corporations. These structures protect the identity of shareholders and limit risks to capital and assets. Setting up takes between 5 and 7 working days in Panama.</p>"
+        },
+        {
+          "heading": "Choose a Business Location",
+          "body": "<p>The location can be your personal residence or premises specifically acquired as the company's headquarters. You can either own or rent this space.</p>"
+        },
+        {
+          "heading": "Obtain the \"Aviso de Operaciones\"",
+          "body": "<p>This is the only authorization required by the government to start your activity. Once obtained, you can notify the commercial, fiscal, and municipal authorities of your intention to operate — in one single step, saving you from making separate applications to various entities.</p>"
+        },
+        {
+          "heading": "Opening a Bank Account",
+          "body": "<p>Although not mandatory, it is highly recommended to open a bank account after setting up the company. This task can be particularly challenging without knowledge and reliable contacts in the country.</p>"
+        },
+        {
+          "heading": "Registering Staff",
+          "body": "<p>It is imperative to register your staff with the Ministry of Labor and Social Security. Without a written contract, the government will take employees' statements as given. Surround yourself with a reputable accountant who actually carries out these registrations to avoid unpleasant surprises.</p>"
+        },
+        {
+          "heading": "Registration with AMPYME",
+          "body": "<p>Businesses with an initial investment of less than $150,000 must register with AMPYME (Autoridad de la Micro, Pequeña y Mediana Empresa). This allows for tax benefits, including an exemption on the first two income statements.</p>"
+        }
+      ]
+    },
+    "real-estate": {
+      "title": "Real Estate",
+      "description": "Find and finance your ideal property in Panama.",
+      "faq": [
+        {
+          "question": "Can a foreigner buy property in Panama?",
+          "answer": "Yes. Foreigners can purchase property in Panama with the same rights as Panamanian citizens. The law allows foreigners to acquire real estate in their own name or through a company or foundation. Residency is not required to buy property, though it may simplify certain banking and administrative procedures."
+        },
+        {
+          "question": "What are the requirements to buy property in Panama?",
+          "answer": "You need a valid passport and to sign a purchase agreement. In practice, due diligence is essential — you must verify that the property is free of encumbrances and correctly registered in the Public Registry. If the purchase is made through a company or foundation, additional legal structuring is required."
+        },
+        {
+          "question": "How much does it cost to buy property in Panama?",
+          "answer": "In addition to the purchase price, the main costs are a 2% property transfer tax (on the higher of the sale price or registered value) and a 3% capital gains withholding on the sale value. Legal fees, notary costs, and Public Registry inscription fees add approximately 3% to 5% of the property value in total transaction costs. The exact amount depends on the structure and any negotiated distribution of taxes between buyer and seller."
+        },
+        {
+          "question": "Can buying property in Panama lead to residency?",
+          "answer": "Yes. The Qualified Investor Residency grants permanent residency through a minimum real estate investment of $300,000 USD, with a legal processing time of 30 days. The Friendly Nations Visa also allows residency through a minimum property purchase of $200,000 USD, leading to permanent residency after a provisional period. Buying property is one of the most common ways foreigners combine investment with a migration pathway in Panama."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Panama Contact Services aids you in your search for the perfect apartment or house in Panama. Our approach is marked by a thorough understanding of the country's nuances and subtleties, combined with a strong network of contacts. We collaborate with licensed real estate agents in Panama to find properties that align with your requirements.</p><p>Panama's real estate is as diverse as its landscapes — from the bustling metropolis of Panama City to the mountainous terrains of Chiriqui, and the alluring shores of Bocas del Toro province. Each region offers unique characteristics and distinct opportunities.</p>"
+        },
+        {
+          "heading": "Financing Your Property in Panama",
+          "body": "<p>Our team scouts the best rates and conditions for you, negotiating a mortgage with banks regardless of your situation. Contrary to the belief that banks don't finance foreigners, Panama Contact Services can prove otherwise. If you are a resident, don't limit yourself to your bank — there are numerous banking agencies in Panama. Comparison is free, and you're only charged if the loan is secured!</p>"
+        },
+        {
+          "heading": "Selling Your Property",
+          "body": "<p>If you're looking to sell a property in Panama and want to reach a foreign clientele, Panama Contact Services, with its registered broker partner in North America, opens the doors to the North American market for you. This service is free of charge.</p>"
+        }
+      ]
+    },
+    "income-tax": {
+      "title": "Income Tax Declaration",
+      "description": "We assist you with your tax obligations in Panama.",
+      "faq": [
+        {
+          "question": "Who must file an income tax declaration in Panama?",
+          "answer": "Any individual or legal entity generating income in Panama must file an annual Income Tax Return (ISR). Individuals have until March 15th each year; legal entities until March 31st. Extensions of one month are possible but must be requested on time. Since 2022, gross annual incomes exceeding $11,000 USD require validation by a certified public accountant."
+        },
+        {
+          "question": "What types of income tax declarations exist in Panama?",
+          "answer": "There are five types: a Normal Declaration (for employees, independent professionals, and traders), a No Operations Declaration (for taxpayers with no activity during the year), a Final Declaration (for businesses ceasing operations), an Original Declaration (filed for the first time), and an Amending Declaration (to correct previous submissions, subject to conditions and potential penalties)."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>The Income Tax Return (ISR) is a document where individuals and legal entities report their income and expenses during a fiscal year in Panama. This declaration is mandatory annually for anyone or any entity generating income in the country.</p>"
+        },
+        {
+          "heading": "Deadlines for Income Tax Declaration",
+          "body": "<p>Individuals have until <strong>March 15th</strong> each year to submit their declaration. Legal entities must do so before <strong>March 31st</strong>. Extensions of one month are possible but must be requested timely to avoid penalties.</p>"
+        },
+        {
+          "heading": "Types of ISR Declarations",
+          "body": "<p><strong>Normal Declaration:</strong> For employed individuals, independent professionals, and traders.</p><p><strong>No Operations Declaration:</strong> For taxpayers who had no activities or transactions during the fiscal year.</p><p><strong>Final Declaration:</strong> For businesses that dissolve or cease operations.</p><p><strong>Original Declaration:</strong> Submitted for the first time to declare income, expenses, and deductions.</p><p><strong>Amending Declaration:</strong> To correct errors or omissions in previously submitted declarations. Subject to conditions and can lead to penalties if not made in time.</p><p>According to Article 81 of Executive Decree 98 of September 27, 2010, all taxpayers must submit a declaration. With the enactment of Law 280 of December 30, 2021, validation from a certified public accountant is required for gross annual incomes exceeding B/. 11,000.00.</p>"
+        },
+        {
+          "heading": "First-Year Tax Declaration",
+          "body": "<p>It's important to differentiate between the tax declaration and the tax payment. The declaration is a document to be filled out and submitted online — based on the declared income and expenses, a payable tax amount may or may not be generated.</p><p>Consult a competent accountant familiar with the various types of declarations. The type of declaration to submit will differ based on the status or activity of the company or individual.</p>"
+        }
+      ]
+    },
+    "goods-import": {
+      "title": "Goods Import",
+      "description": "Import goods into Panama with expert guidance.",
+      "faq": [
+        {
+          "question": "What documents are required to import goods into Panama?",
+          "answer": "Required documents include a commercial invoice and packing list, a bill of lading or air waybill, an import declaration signed by an authorised customs broker, and the appropriate permit for any restricted goods. Food intended for human consumption and cosmetics require an additional Certificate of Sale (CFS) from Panama's health authority. The import must arrive through a designated port or airport."
+        },
+        {
+          "question": "Are there customs costs when importing into Panama?",
+          "answer": "Yes. A customs tax is applied based on the type of product and must be paid during customs clearance. Additional consular and consumption taxes may also apply, though exceptions exist depending on the product category and applicable trade agreements."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Thanks to its international airport and the Panama Canal, frequented by ships from around the world, Panama is highly connected to the rest of the world, ensuring a constant flow of imports. The importation of products is facilitated by administrative procedures that are simple in theory, but in practice can be more complicated than expected. Panama Contact Services, in collaboration with its partners such as customs brokers, supports both companies and individuals throughout the process.</p>"
+        },
+        {
+          "heading": "Required Documentation",
+          "body": "<ul><li>Commercial invoice and packing list (quantity, product type, place of shipment).</li><li>Bill of lading manifest for tax purposes, with the name of the consignee.</li><li>The appropriate permit if it is a restricted import.</li><li>Import declaration signed by an authorized customs broker.</li><li>Commercial invoice in English and Spanish (original + four copies).</li><li>Air waybill for air shipments.</li><li>Bill of Lading for maritime cargo.</li><li>Transport letter for land freight.</li></ul>"
+        },
+        {
+          "heading": "Food Import Restrictions",
+          "body": "<p>The health authority of Panama requires additional verification for a Certificate of Sale (CFS) for food intended for human consumption and other products such as cosmetics. The import must be made through one of the designated ports or airports. Consult us before sending your shipment to confirm you are able to receive it.</p>"
+        },
+        {
+          "heading": "Customs Costs",
+          "body": "<p>A customs tax is applied according to the imported product and must be paid during customs clearance. Other consular and consumption taxes are also applied, although exceptions may exist.</p>"
+        }
+      ]
+    },
+    "driver-s-license": {
+      "title": "Driver's License",
+      "description": "Get your Panamanian driver's license as a foreigner.",
+      "faq": [
+        {
+          "question": "Can I use my foreign driver's license in Panama?",
+          "answer": "Yes, but only if you are entering as a tourist. A valid foreign licence can be used for 90 days from your date of entry. However, as soon as you initiate a migration process in Panama, you are no longer considered a tourist and may not drive on a foreign licence — even if the 90 days have not elapsed. A $50 fine applies, and in the event of an accident, your insurance may not cover you."
+        },
+        {
+          "question": "How do I get a Panamanian driver's license as a foreigner?",
+          "answer": "You have two options once you have migration status: homologation (exchanging your foreign licence) or starting from scratch with a Panamanian driving school certified by Sertracen. Documents not in Spanish must be officially translated. In many cases, retaking the test is faster and less costly than homologation."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>In the isthmus country, regulations to consider are established by \"Sertracen\", the agency responsible for regulating and supervising land traffic and transport. On the ground, the agents of the land transport authority (ATT) are often responsible for traffic regulation. If you enter Panama for the first time as a tourist with a valid driver's license from your home country, you can use it for 90 days from the date of entry.</p>"
+        },
+        {
+          "heading": "⚠️ Important Warning",
+          "body": "<p>Initiating your migration process immediately prohibits you from using your foreign license in Panama. No longer a tourist, you no longer have the right to drive a vehicle on Panamanian soil, even if the 90-day period has not elapsed. You must wait to have a Panamanian driver's license to drive again. Besides a fine of $50, the police can immobilize your vehicle, and in the event of an accident, you may not be covered by your insurance.</p>"
+        },
+        {
+          "heading": "Options After Obtaining Migration Status",
+          "body": "<p><strong>Homologation (exchange):</strong> If you have a driver's license from your home country and want to exchange it. Documents not written in Spanish must be translated by an authorized interpreter in Panama. Often, it is faster and less costly to retake the driving test in Panama directly.</p><p><strong>Starting from scratch:</strong> If you do not have a license or do not wish to homologate, you must attend a driving school certified by Sertracen. Panama Contact Services guides you through partner schools.</p>"
+        },
+        {
+          "heading": "License Validity",
+          "body": "<p>Foreign licenses are valid for three months and allow driving under categories A, B, C, and D. Public transport driving is not authorized with these categories.</p><p>In Panama, the Panamanian license is issued for a period of four years. For foreigners with temporary or provisional status, the validity coincides with their residence card. Only permanent residents benefit from the full four-year validity.</p>"
+        }
+      ]
+    },
+    "insurance": {
+      "title": "Insurance",
+      "description": "Find the best insurance solutions in Panama.",
+      "faq": [
+        {
+          "question": "Is it better to take out insurance in Panama or in my home country?",
+          "answer": "For foreigners living in Panama, it is generally more effective and cost-efficient to insure locally. Health insurance in Panama is significantly cheaper than equivalent coverage in North America or Europe, while still providing access to high-quality private facilities. Panama Contact Services works with brokers to obtain free quotes, so you can compare directly."
+        },
+        {
+          "question": "How is the insurance market regulated in Panama?",
+          "answer": "Insurance in Panama is regulated by the Superintendencia de Seguros (Superintendency of Insurance), which ensures transparency, financial solidity, and fair pricing. The system is simpler than those in Europe or North America — focused on essential coverages — making choices more straightforward. Both international players (such as Mapfre and Allianz) and strong local insurers operate in the market."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>As an international financial center, Panama City is no exception when it comes to insurance. For a foreigner, it is often much more effective to insure in Panama with their assets rather than seeking an insurance product in their home country. However, the world of insurance can sometimes seem labyrinthine for the novice, especially when faced with a country where the difference in infrastructure reality between provinces can be significant.</p>"
+        },
+        {
+          "heading": "Specificities of the Panamanian Approach",
+          "body": "<p>In Panama, insurances are regulated by the \"Superintendencia de Seguros\"(Superintendency of Insurance). It ensures transparency, solidity, and proper functioning of market players, and rigorously frames the risk assessment and pricing process to protect the insured.</p><p>Compared to Europe and North America where insurance systems are more fragmented, the Panamanian system is simpler — focused on essential coverages, making choices less complex. In addition to multinationals like Mapfre or Allianz, a few strong local players stand out for individuals and businesses.</p>"
+        },
+        {
+          "heading": "Compare Insurances — It's Free!",
+          "body": "<p>Panama Contact Service allows you to approach a broker to obtain insurance quotes at no cost. You will be surprised by the prices and level of coverage offered for health insurance in Panama versus your home country. Do not hesitate to use our brokerage service with follow-up in the language of your choice.</p>"
+        }
+      ]
+    }
+  },
+  "WhyPanamaPage": {
+    "meta": {
+      "title": "Why Move to Panama? Taxes, Healthcare, Cost of Living & More | Panama Contact",
+      "description": "Discover why thousands of expats choose Panama: US dollar economy, territorial taxation, world-class healthcare, 80+ international banks, and warm expat community."
+    },
+    "heading": "A Paradise of Diversity, Good Living & Prosperity",
+    "subheading": "Located at the junction of Central and South America, Panama is a hidden gem offering travelers an unforgettable experience and investors a favorable business climate.",
+    "introHeading": "Welcome to Panama",
+    "introBody1": "Panama fascinates with its variety of landscapes — from the pristine beaches of the Pacific to the crystal-clear waters of the Caribbean Sea, through lush tropical forests. The isthmus country is a true natural Eden, gathering a condensed panorama of landscapes from all over Latin America, of which it is the nerve center.",
+    "introBody2": "Wander through the majestic Central Cordillera mountain range or explore the amazing biodiversity of the Portobello or Coiba national parks, a UNESCO World Heritage site. From the summit of Baru Volcano, on clear mornings, you can glimpse both oceans in the blink of an eye.",
+    "introBody3": "Besides its breathtaking landscapes, Panama is also renowned for the warm hospitality of its inhabitants. Land of welcome for many peoples throughout its history, Panamanians warmly welcome foreigners with open arms. In Panama City or in small picturesque villages, you will always be greeted with a friendly smile.",
+    "ctaLabel": "Ready to make the move?",
+    "ctaHeading": "Discover All That This Latin American Jewel Has to Offer",
+    "ctaButton": "Book a Free Consultation",
+    "readMore": "Learn more",
+    "backToOverview": "Back to Why Panama",
+    "cards": {
+      "life-quality": {
+        "title": "Quality of Life",
+        "subtitle": "Good Living",
+        "shortDescription": "Panama offers a high quality of life to both its national and foreign residents, with a relatively low cost of living, modern infrastructure, and a welcoming multicultural society.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>Panama offers a high quality of life to both its national and foreign residents. One of its main attractions is a relatively low cost of living compared to major cities in North America and Europe, allowing residents to enjoy a higher purchasing power than in their home countries.</p><p>However, it's important to note that Panama is not a cheap country compared to some neighboring countries, with a standard of living similar to Southern European countries. As a comparison, the average net monthly salary after taxes in Panama in 2023 is around $1,050 — a figure comparable to Portugal. The use of the US dollar as the official currency contributes significantly to this, ensuring stability and preventing hyperinflation, thus guaranteeing a reliable economy.</p>"
+          },
+          {
+            "heading": "Quality Infrastructure",
+            "body": "<p>Infrastructure in Panama has been the subject of significant investment over the last decade, enabling the country to offer reliable services in major cities. Electricity and running water are available in all urban areas, as is access to high-speed internet, cable television, and good mobile phone coverage.</p><p>In terms of transport, Panama City is superbly served by its airport (PTY) — an international hub and regional headquarters for several airlines. For getting around the city, the metro and Uber services work perfectly, though caution is advised during peak hours and heavy rain periods. At the national level, the entire Pacific side is served by the famous Pan-American Highway. The Caribbean side, wilder in nature, benefits in some areas from a secondary road network, though it is often poorly maintained (provinces of Colón and Bocas del Toro).</p><p>The country also offers various modern leisure options to suit all tastes: golf clubs, shopping centers, international-standard restaurants, beach resorts, parks, and cultural events. In terms of healthcare, Panama City and urbanized areas offer modern, internationally-standard medical facilities. Panama City is on par with other American and European capitals in terms of medical services. The presence of bilingual doctors trained at prestigious institutions in the United States and Europe is remarkable.</p>"
+          },
+          {
+            "heading": "Safety and Education in Panama",
+            "body": "<p>Panama is considered a safe country with low crime rates, consistently improving in this regard over recent years. While there are remote areas affected by drug trafficking, violence is generally rare outside these tense zones. The Global Peace Index gives Panama a high peace rating, similar to the UK and Italy, and the US State Department considers the entire country safe to visit.</p><p>In the field of education, Panama offers international schools with American, British, French, and German curriculums for expatriates. These schools provide high-quality education from preschool to advanced levels, primarily located in cities with significant expatriate populations.</p>"
+          },
+          {
+            "heading": "Panama: Welcoming to Tourists and Expats",
+            "body": "<p>With its recent history, Panama is welcoming to foreigners, and this multicultural dimension makes integration into the country easier. Spanish is the official language spoken almost everywhere, coexisting with native languages, English (or the Panamanian Anglophone Creole variant), and other languages from immigration — European languages, Mandarin, and others. This variety facilitates communication and coexistence.</p><p>Thanks to its geographical location, Panama is a regional tourist center with air, logistical, and maritime infrastructure. The famous Panama Canal is a major tourist attraction, and the country offers activities such as scuba diving, whale watching, birdwatching, hiking, and extreme sports in a diverse and beautiful natural environment.</p>"
+          }
+        ]
+      },
+      "healthcare": {
+        "title": "Healthcare System",
+        "subtitle": "Health & Wellbeing",
+        "shortDescription": "In line with Panamanian legislation, every citizen has the inalienable right to medical care. The country operates a dual public-private system with modern facilities and internationally trained physicians.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>In line with Panamanian legislation, every citizen has the inalienable right to medical care, and the public healthcare system theoretically works for all. This service, offered in various health centers, usually comes at a low cost, although it's free for children under five years old.</p><p>Health centers are established in all urban municipalities, and despite the Pan American Health Organization noting a lesser presence in rural areas, access to care remains relatively uniform. However, the quality of care, especially for specialties, varies greatly across the country. This public system operates alongside a well-established private healthcare system.</p>"
+          },
+          {
+            "heading": "Public Healthcare System",
+            "body": "<p>The Panamanian public healthcare system is managed by two entities. Firstly, the Ministry of Health (MINSA), which ensures equity and quality, coordinates assistance in Health Centers, including for foreigners. Secondly, the Social Security Fund (CSS) regulates work-related and pension insurances and provides access to maternity and illness services in its health centers spread across the country.</p><p>While not free, healthcare services remain accessible to the majority of the population, both nationals and foreigners. A contribution system through employment exists, but specialized staff intervene to adjust payment modalities when solvency is lacking, ensuring continuity of care even in financial difficulty. Panama has made significant progress in healthcare over the last twenty years, focusing on improving quality and access. The system is often cited as one of the best in Central America, although disparities exist between urban and rural areas in terms of availability and quality of care.</p>"
+          },
+          {
+            "heading": "Private Healthcare System",
+            "body": "<p>Alongside the public system, Panama has renowned clinics and private practices in major cities, generally considered of higher quality. In addition to the attention and quality of services, private clinics have better infrastructure, and it is easier and faster to receive treatment in this system. In Panama City, Colón, or David, you will often find English-speaking doctors trained at top international universities.</p><p>The services offered by these establishments are accessible by paying directly or are reimbursed, in whole or in part, by private health insurance or supplementary health insurance. Although only 10% of Panamanians have such insurance, many expatriates opt for this route. Most French-speaking emigrants or expatriates choose supplementary health insurance from their home country that is compatible. However, if you plan to settle in the country permanently, it is advisable to inquire about local insurance, which often offers more advantageous rates and better coverage.</p>"
+          }
+        ]
+      },
+      "economic-stability": {
+        "title": "Economic Stability",
+        "subtitle": "Strategic Hub",
+        "shortDescription": "In 1914, Panama completed the inauguration of its prestigious canal. Since then, the country has built a diversified, resilient economy that stands as a model of success in Latin America.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>In 1914, Panama completed a monumental feat with the inauguration of its prestigious canal — a dream started by Ferdinand de Lesseps in 1881. The iconic canal is more than an engineering marvel; it has catalyzed Panama's economic stability, attracting global investors. It revolutionized global transport by shortening distances and reducing costs between the Atlantic and Pacific Oceans.</p>"
+          },
+          {
+            "heading": "Strategic Geographical Position and Economic Diversity",
+            "body": "<p>Located at the crossroads of the world, Panama has capitalized on its unique location. It's known not only for its canal but also for its thriving logistics and port sector. The creation of the International Banking Center in 1970 marked the emergence of a flourishing financial sector that continues to attract banks and investors, contributing to GDP growth.</p><p>Panama hasn't put all its eggs in one basket. Beyond the canal and free zones, the country has diversified its economy, developing sectors like tourism, finance, real estate, agriculture, and services. This diversification has reinforced its resilience to global economic turbulence.</p>"
+          },
+          {
+            "heading": "Impact of Panama's Relationship with the United States",
+            "body": "<p>Panama's economic history is also marked by its close ties with the United States. The military dictatorship of Omar Torrijos Herrera in 1968, nationalist reforms, and the Torrijos-Carter Treaty of 1977 were key in shaping Panama's economic identity. Adopting the US dollar as the official currency has ensured monetary stability and simplified international transactions.</p><p>The end of the US military presence in 1999 and the return of full control of the canal marked a turning point in Panama's history. This step led to enhanced independence and unprecedented economic modernization.</p>"
+          },
+          {
+            "heading": "A Model of Success in Latin America",
+            "body": "<p>Today, Panama stands out as a beacon of economic success in Latin America. Its impressive over 10% GDP growth in 2022 is a testament to its vitality. Despite challenges posed by the Covid-19 crisis, Panama continues to be a prime destination for entrepreneurs and investors worldwide.</p><p>In summary, Panama has established itself as a major player in the global economy. Its stability, diversification, special relationship with the United States, and strategic position make it a unique hub for trade, investment, and innovation. Panama is more than a country with a famous canal; it's an attractive business destination and an economic success story for every entrepreneur to consider.</p>"
+          }
+        ]
+      },
+      "welcoming-country": {
+        "title": "Investment Opportunities",
+        "subtitle": "Dynamic & Welcoming",
+        "shortDescription": "Over the last fifteen years, Panama has positioned itself as a prime destination for foreign direct investment in Latin America, boasting resilient growth and diverse opportunities across key sectors.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>Over the last fifteen years, Panama has positioned itself as a prime destination for foreign direct investment in Latin America. Compared to its neighbors, the country stood out by withstanding the global financial crisis, boasting a GDP growth of 1.24% in 2009, followed by 11.31% in 2011.</p><p>The Panama Papers affair, followed by the COVID-19 pandemic's impact, put a freeze on the country's flourishing economy, which had been driven by a GDP growth four times the Latin America-Caribbean region's average. After a contraction in 2020, a strong rebound was observed in 2022 and continues into 2023.</p>"
+          },
+          {
+            "heading": "Panama: Strategic & Investable",
+            "body": "<p>Panama serves as a bridge between continents. Its expanded interoceanic canal doubles maritime transit capacity, acting as a global economy engine. The country is a logistic crossroads for global cargo storage and distribution, linked with North and South America, the Caribbean, Europe, and Asia.</p><p>With financial stability based on the US dollar, a crucial free trade zone, Tocumen International Airport, the metro, and other infrastructure, Panama is attractive for investors. Its geographical position and size make it central to five submarine fiber optic cables, making it a prime location for telecommunications companies.</p><p>Investment opportunities are diverse in this young country, aiming to enhance infrastructure, sustainability, and the economy.</p>"
+          },
+          {
+            "heading": "Key Sectors in Demand",
+            "body": "<ul><li><p><strong>Logistics &amp; Port Infrastructure</strong> — Canal expansion and multimodal freight corridors create sustained demand for logistics investment.</p></li><li><p><strong>Real Estate &amp; Tourism</strong> — From Panama City luxury developments to eco-lodges in Bocas del Toro, the property market attracts sustained international capital.</p></li><li><p><strong>Financial Services &amp; Fintech</strong> — Panama's banking center and growing fintech ecosystem offer strong returns for financial sector investors.</p></li><li><p><strong>Renewable Energy</strong> — The government actively incentivizes solar, wind, and hydroelectric projects as part of a long-term sustainability agenda.</p></li><li><p><strong>Telecommunications</strong> — With five submarine fiber optic cables converging on the isthmus, Panama is a natural hub for data centers and telecom infrastructure.</p></li><li><p><strong>Agribusiness</strong> — Panama's diverse climate zones support a wide range of agricultural exports, from coffee and cacao to tropical fruits and seafood.</p></li></ul>"
+          }
+        ]
+      },
+      "financial-hub": {
+        "title": "International Financial Hub",
+        "subtitle": "Global Finance",
+        "shortDescription": "Panama's financial system is undergoing significant changes, aligning with global trends through technological advancements — keeping it in a strong position in the international financial arena.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>Panama's financial system is undergoing significant changes, aligning with global trends. These changes are driven by technological advancements and the unique characteristics of the country's financial system. Regulators and key players agree that modernization is essential to enhance competitiveness and transparency.</p><p>The combination of robust regulation, a well-developed financial structure, and the integration of advanced technologies keeps Panama in a strong position in the international financial arena. Embracing new technologies and recognizing the need to change not just technology but also processes ensures that Panama remains a robust and dynamic financial center in the region.</p>"
+          },
+          {
+            "heading": "Characteristics of the Panamanian Financial System",
+            "body": "<p>The Panamanian economy is characterized by its banking monetary system, using the US dollar as the common currency. It operates without a central bank and is heavily connected to the global economy. The financial system structure includes banks, securities firms, pension funds, insurance companies, and cooperatives, accounting for 7.31% of GDP in 2021, with total assets amounting to $148,218 million.</p><p>Panama's international banking center operates as an intermediary system without a last-resort lender or deposit insurance institution. Main banking activities occur in various segments, including accepting bank deposits, retail banking, commercial and corporate lending, and corporate finance. The sector is regulated by a supervision model with a separate supervisory entity for each financial market, coordinated within the Financial Coordination Council (CCF). The Superintendency of Banks of Panama is responsible for regulating and supervising various financial entities.</p>"
+          },
+          {
+            "heading": "Modernization and Digital Transformation",
+            "body": "<p>Experts highlight the need to invest in digitalization, both in customer interactions and internal processes. While some banks have efficient and user-friendly client interfaces, internal operations and processes still require significant improvement. Procedures like loan granting and financial solvency analysis are still slow and rely on archaic mechanisms compared to North American or other Latin American banks.</p><p>Nonetheless, the Panamanian financial system has maintained remarkable macroeconomic stability, without any systemic banking crisis attributable to intrinsic imbalances in the banking system. The simultaneous operation of international and local banks allows for significant competitiveness and efficiency. Reflecting its international reach, Panama had 66 banks supervised by the Superintendency of Banks for 4 million inhabitants in 2023. By comparison, using the same criteria and including neobanks, France had 73 banks at the same date.</p>"
+          }
+        ]
+      },
+      "tax-pressure": {
+        "title": "Moderate Tax Pressure",
+        "subtitle": "Tax Efficiency",
+        "shortDescription": "Panama's moderate and well-structured tax regime for corporations and individuals makes it particularly attractive to residents, investors, and companies worldwide — built on the principle of territorial taxation.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>Panama not only stands out as a place of natural and cultural wonder but also as a country where preferential taxation, financial security, and economic stability prevail. Its moderate and well-structured tax regime for corporations and individuals makes it particularly attractive to residents, investors, and companies worldwide.</p><p>Panama's tax system is mainly based on the principle of territoriality, where only income generated on national territory is taxed. This peculiarity has allowed Panama to stand out as an attractive destination for foreign investments.</p>"
+          },
+          {
+            "heading": "Direct Taxes Applicable to Corporations",
+            "body": "<ul><li><p><strong>Income Tax:</strong> Equivalent to corporate tax, levied on profits earned by tax-resident companies in Panama. The tax rate is 25%, although it can reach 30% for some public or semi-public entities. There is a minimum effective tax rate for entities with revenues exceeding $1.5 million USD, where the higher of the following two rates applies: either the tax rate on taxable profits or 4.67% of the company's global turnover.</p></li><li><p><strong>The \"tasa única\" tax:</strong> An annual flat tax levied on various entities established in Panama, with an amount of $300 USD, except for private interest foundations, which contribute $350 USD.</p></li><li><p><strong>Resident agent's sworn declaration:</strong> Since 2022, lawyers representing companies must file a sworn declaration of the companies' accounts annually. This measure — a consequence of the Panama Papers affair — aims to combat money laundering in the country. This fee of $350 USD is paid by the lawyer and passed on to their client. Although this obligation is not presented as a tax, it is mandatory and paid to the DGI (Dirección General de Impuestos).</p></li><li><p><strong>Complementary Tax:</strong> An advance payment of the dividend tax payable by shareholders who receive them. It only applies to entities that distribute less than 40% of their net after-tax profits. The applicable rate is 10% of the difference between the undistributed net profits and 40% of the same net profit.</p></li></ul>"
+          },
+          {
+            "heading": "Direct Taxes Applicable to Individuals",
+            "body": "<ul><li><p><strong>Income Tax:</strong> Panama has a relatively simple, progressive income tax system for individuals: 0% for incomes between $0 and $11,000 USD; 15% for incomes between $11,000 and $50,000 USD (only the portion between $11,000 and $50,000 is taxed); and 25% for incomes over $50,000 USD (taxpayers pay 15% on incomes up to $50,000, and only incomes above $50,000 are taxed at 25%).</p></li><li><p><strong>Dividend Tax:</strong> A withholding tax for individuals on shares held in both Panamanian and foreign entities. The rate is 10% for dividends from Panamanian sources and 5% for dividends from foreign sources.</p></li><li><p><strong>Capital Gains Tax:</strong> Imposed at a rate of 15% on the profits made from the sale of shares and real estate.</p></li></ul><p>These tax regulations demonstrate Panama's commitment to creating a stable and safe economic environment. The moderation of tax pressure attracts a wide range of investors and companies, thereby enhancing the country's status as a financial hub.</p><p>Efficiency and transparency in Panama's tax system have been strengthened over time, especially following the Panama Papers affair. Recent reforms reflect the country's intention to align with international standards while retaining its unique appeal in terms of taxation.</p><p>In summary, Panama represents a land of tax opportunities and innovation, where financial stability and security are at the heart of its prosperity. Its clear tax legislation and competitive tax rates make it a preferred destination for entrepreneurs, investors, and individuals seeking growth and asset protection.</p>"
+          }
+        ]
+      }
+    }
+  },
+  "ServiceDetail": {
+    "backToServices": "Back to services",
+    "backToWhyPanama": "Back to Why Panama",
+    "ctaTitle": "Need help with this?",
+    "ctaBody": "Our experts are ready to guide you through every step of the process. Free initial consultation.",
+    "ctaButton": "Book free consultation",
+    "contactTitle": "Contact us directly",
+    "relatedTitle": "Related services",
+    "faqTitle": "Frequently Asked Questions",
+    "allTopics": "All topics"
+  },
+  "ContactPage": {
+    "meta": {
+      "title": "Contact Us | Panama Contact Services",
+      "description": "Get in touch with our relocation experts. Free initial consultation available."
+    },
+    "heading": "Get in touch",
+    "subheading": "Our team typically responds within 24 hours.",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent! We'll be in touch soon.",
+    "error": "Something went wrong. Please try again.",
+    "or": "Or book directly",
+    "bookCall": "Book a free 30-min call",
+    "bookCallBody": "Skip the back-and-forth — book a 30-minute call with one of our relocation experts and get answers to all your questions.",
+    "contactInfo": "Contact information",
+    "phone": "Phone",
+    "address": "Address"
+  }
+}

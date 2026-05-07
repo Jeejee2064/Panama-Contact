@@ -1,0 +1,690 @@
+{
+  "Nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "whyPanama": "¿Por qué Panamá?",
+    "contact": "Contacto",
+    "freeConsultation": "¡Reserva una consulta gratuita!"
+  },
+  "Footer": {
+    "tagline": "Tu socio de confianza para la reubicación en Panamá.",
+    "services": "Nuestros Servicios",
+    "quickLinks": "Enlaces rápidos",
+    "home": "Inicio",
+    "services2": "Servicios",
+    "whyPanama": "¿Por qué Panamá?",
+    "contact": "Contacto",
+    "freeConsultation": "Agendar consulta gratuita",
+    "ctaHeading": "¿Listo para dar el paso?"
+  },
+  "HomePage": {
+    "meta": {
+      "title": "Panama Contact Services | Expertos en Reubicación y Visas en Panamá",
+      "description": "Tu socio de confianza para reubicarte en Panamá. Visas, cuentas bancarias, bienes raíces, declaraciones de impuestos y más. Asesoría experta en inglés, francés, español y portugués."
+    },
+    "hero": {
+      "eyebrow": "Tus expertos en reubicación en Panamá",
+      "headline": "Tu mudanza a Panamá,",
+      "headlineAccent": "hecha simple.",
+      "subheadline": "Con expertos a tu lado.",
+      "body": "¿Te mudas a Panamá? Nosotros te cubrimos. Desde abrir una cuenta bancaria hasta obtener la residencia, nuestro equipo experto y nuestra red nacional de socios de confianza están aquí para hacer tu transición fluida, sin estrés y rentable.",
+      "cta": "Contáctanos",
+      "ctaSecondary": "Nuestros servicios",
+      "ctaTertiary": "¿Por qué Panamá?"
+    },
+    "features": {
+      "sectionLabel": "Lo que nos diferencia",
+      "headline": "Tu socio de confianza para la reubicación en Panamá.",
+      "description": "¿Te mudas a Panamá? Nosotros te cubrimos. Desde abrir una cuenta bancaria hasta obtener la residencia, nuestro equipo experto y nuestra red nacional de socios de confianza están aquí para hacer tu transición fluida, sin estrés y rentable. Déjanos manejar los detalles — para que puedas concentrarte en comenzar tu nueva vida en el paraíso.",
+      "tailored": {
+        "title": "Una solución a medida",
+        "body": "Porque cada cliente es único, cada cliente tiene su propia solución. Nos adaptamos a tu situación."
+      },
+      "local": {
+        "title": "Un equipo local",
+        "body": "Ven a conocernos en nuestras oficinas en Ciudad de Panamá. Nuestro equipo de profesionales está en el terreno todo el día."
+      },
+      "international": {
+        "title": "Un equipo internacional",
+        "body": "Con presencia en Norteamérica y Europa, hablamos tu idioma y entendemos tu contexto."
+      },
+      "transparent": {
+        "title": "Un servicio transparente",
+        "body": "Todo nuestro trabajo está detallado y garantizado. Sin costos ocultos. Todos los plazos están garantizados."
+      }
+    },
+    "whyUs": {
+      "sectionLabel": "Por qué elegirnos",
+      "heading": "¿Por qué somos los mejores?",
+      "subheading": "En Panamá Contact Services, no solo ofrecemos asistencia para la reubicación — ofrecemos tranquilidad.",
+      "items": {
+        "experienced": {
+          "title": "Un equipo experimentado",
+          "body": "Panamá Contact Services está formado por profesionales que conocen el país y están plenamente integrados. Nuestros clientes son nuestra mejor referencia."
+        },
+        "longTerm": {
+          "title": "Una relación a largo plazo basada en la confianza",
+          "body": "Ofrecemos un acompañamiento regular e integral a largo plazo. Siempre estamos ahí para ti, de forma gratuita, para cualquier consulta, incluso años después de haber utilizado nuestros servicios."
+        },
+        "global": {
+          "title": "Una solución global",
+          "body": "Porque toda acción tiene una consecuencia, nos tomamos el tiempo de analizar la situación migratoria, fiscal y financiera de nuestros clientes en su totalidad antes de recomendar un producto o servicio."
+        },
+        "multilingual": {
+          "title": "Un equipo internacional multilingüe",
+          "body": "Con presencia en Norteamérica (Montreal) y Europa (Barcelona, Lisboa) podemos responder a tus preguntas en español, inglés, francés y portugués."
+        },
+        "deadlines": {
+          "title": "Cumplimiento de plazos",
+          "body": "No hacemos promesas falsas. Pero cumplimos los plazos que prometemos, y nos comprometemos a compensarte por cualquier daño causado por retrasos de nuestra responsabilidad."
+        }
+      }
+    },
+    "services": {
+      "sectionLabel": "Lo que hacemos",
+      "heading": "Nuestros servicios",
+      "cta": "Todos los servicios",
+      "readMore": "Saber más"
+    },
+    "cta": {
+      "eyebrow": "Consulta gratuita",
+      "heading": "¿No sabes qué se adapta a tu situación?",
+      "subheading": "¡Obtén tu consulta sin costo!",
+      "cta": "Agenda tu consulta gratuita"
+    }
+  },
+  "ServicesPage": {
+    "meta": {
+      "title": "Servicios para Expatriados en Panamá — Visas, Empresa, Inmobiliaria | Panama Contact",
+      "description": "Asesoramiento experto para instalarse en Panamá. Visa naciones amigas, nómada digital, constitución de empresa, cuenta bancaria, bienes raíces. Consulta gratuita."
+    },
+    "sectionLabel": "Servicios",
+    "heading": "Nuestros Servicios",
+    "subheading": "Te acompañamos en cada paso de tu proyecto en Panamá.",
+    "filterAll": "Todos",
+    "filterVisa": "Visas",
+    "filterSetup": "Instalación",
+    "filterLifestyle": "Estilo de vida",
+    "filterFirstStep": "Primeros pasos",
+    "readMore": "Leer más",
+    "faq": {
+      "heading": "Preguntas Frecuentes sobre Panamá",
+      "subheading": "Todo lo que necesitas saber antes de dar el paso hacia Panamá."
+    }
+  },
+  "services": {
+    "friendly-nations": {
+      "title": "Visa de Naciones Amigas en Panamá",
+      "description": "La visa de naciones amigas permite a ciudadanos de ciertos países obtener residencia en Panamá.",
+      "faq": [
+        {
+          "question": "¿Cómo puede un extranjero obtener residencia en Panamá?",
+          "answer": "Para obtener residencia en Panamá como extranjero, debes solicitar bajo un programa migratorio adecuado a tu nacionalidad y perfil. Las opciones más utilizadas incluyen la Visa de Naciones Amigas (que requiere un vínculo profesional o económico con Panamá), la Residencia de Inversionista Calificado (inversión mínima de $300,000 USD) y la Visa de Pensionado (para quienes tienen ingresos de jubilación desde $1,000/mes). El proceso requiere documentos apostillados y el cumplimiento estricto de los requisitos del programa elegido."
+        },
+        {
+          "question": "¿Cuáles son los requisitos para la residencia en Panamá?",
+          "answer": "Los requisitos básicos incluyen un pasaporte válido, certificado de antecedentes penales apostillado y el cumplimiento de un programa migratorio válido. Las condiciones específicas varían según el programa — algunos están restringidos a ciudadanos de ciertos países. No se puede obtener residencia si el solicitante tiene antecedentes penales o aparece en listas de control internacional."
+        },
+        {
+          "question": "¿Cuánto cuesta la residencia en Panamá en 2026?",
+          "answer": "El costo total depende del tipo de visa elegida. Los honorarios legales y administrativos generalmente oscilan entre $5,000 y $10,000 USD por persona. La vía de Inversionista Calificado requiere una inversión mínima de $300,000 USD. La Visa de Pensionado requiere ingresos mensuales desde $1,000 USD. La Visa de Naciones Amigas implica costos variables según el vínculo económico o profesional utilizado para calificar."
+        },
+        {
+          "question": "¿Cuánto tiempo lleva obtener la residencia en Panamá?",
+          "answer": "Los tiempos de procesamiento varían según el programa. La mayoría de las solicitudes de residencia toman entre 3 y 6 meses desde la fecha de presentación de un expediente completo. La Residencia de Inversionista Calificado tiene un plazo legal de procesamiento de 30 días. La Visa de Naciones Amigas generalmente toma varios meses debido a las verificaciones administrativas. Los plazos también pueden verse afectados por tu nacionalidad, tipo de visa y la calidad de la preparación de tu expediente."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Marco Legal Actual",
+          "body": "<p>El Servicio Nacional de Migración recibirá tu solicitud bajo el programa \"Permiso de Residencia Permanente para Ciudadanos de Naciones con Relaciones de Amistad, Comercio y Profesionales con Panamá\". Este programa, conocido comúnmente como la \"visa de naciones amigas\", fue creado por el Decreto Ejecutivo 343, de fecha 16 de mayo de 2012, y posteriormente modificado por el Decreto Ejecutivo 197 del 7 de mayo de 2021. Cabe señalar que desde 2022, los solicitantes obtienen primero un permiso probatorio por dos años antes de poder solicitar la residencia permanente.</p>"
+        },
+        {
+          "heading": "Razones para Solicitarla",
+          "body": "<p>Existen tres opciones para obtener residencia panameña a través de la visa de naciones amigas:</p><ul><li><strong>Empleo:</strong> Se requiere un contrato de trabajo de una empresa legalmente establecida en territorio panameño. Obtener un permiso de trabajo es legalmente obligatorio si se elige esta vía.</li><li><strong>Bienes raíces:</strong> Compra de una propiedad con un valor mínimo de $200,000.</li><li><strong>Inversión bancaria:</strong> Mantener un monto igual o mayor a $200,000 en una entidad bancaria panameña por tres años.</li></ul>"
+        },
+        {
+          "heading": "Documentación Principal",
+          "body": "<ul><li>Representación legal por un abogado.</li><li>Cinco fotos tipo pasaporte y copia de pasaporte notariada.</li><li>Antecedentes penales del país de residencia.</li><li>Certificado médico.</li><li>Cheques endosados a instituciones panameñas.</li><li>Comprobante de la razón de la solicitud (contrato de trabajo, bienes, etc.).</li><li>Para dependientes: prueba de relación familiar y solvencia económica.</li></ul>"
+        },
+        {
+          "heading": "Criterios de Elegibilidad",
+          "body": "<p>Los interesados deben poseer la ciudadanía de una de las naciones consideradas amigas en los ámbitos comercial y diplomático con Panamá. Esto se extiende a familiares cercanos — padres, descendientes y cónyuges. Si tu país no está en la lista, existen otras alternativas disponibles — contacta a Panama Contact Services para estudiar la mejor opción para tu situación personal.</p>"
+        },
+        {
+          "heading": "Beneficios Relacionados",
+          "body": "<p>La visa de naciones amigas permite a los beneficiarios obtener establecimiento permanente en Panamá, ofreciendo integración cultural y social mientras abre oportunidades económicas. Una vez establecido permanentemente en Panamá, se abre ante ti la posibilidad de adquirir la nacionalidad panameña.</p>"
+        }
+      ]
+    },
+    "digital-nomad": {
+      "title": "Visa de Nómada Digital",
+      "description": "Trabaja remotamente desde Panamá mientras disfrutas de un estilo de vida único.",
+      "faq": [
+        {
+          "question": "¿Puedo trabajar remotamente desde Panamá como extranjero?",
+          "answer": "Sí. La Visa de Nómada Digital te permite vivir y trabajar remotamente desde Panamá por hasta 9 meses, renovable una vez por el mismo período. Debes tener un contrato con una empresa o clientes extranjeros y ganar al menos $36,000 USD por año. No puedes ser contratado por una empresa panameña con esta visa."
+        },
+        {
+          "question": "¿Qué documentos se requieren para la Visa de Nómada Digital?",
+          "answer": "Los documentos requeridos incluyen un pasaporte válido con al menos 6 meses de vigencia, un certificado de antecedentes penales apostillado, seguro de salud internacional que cubra Panamá, una declaración jurada de que no aceptarás empleo local, prueba de la existencia de la empresa extranjera y un contrato de trabajo o comprobante de ingresos del extranjero de al menos $36,000 USD por año."
+        },
+        {
+          "question": "¿Cuánto tiempo puedo quedarme en Panamá con una visa de turista antes de necesitar esta visa?",
+          "answer": "Los ciudadanos europeos pueden permanecer hasta 3 meses consecutivos con visa de turista en Panamá. Los ciudadanos canadienses tienen permitido 6 meses. La Visa de Nómada Digital es una buena manera de extender tu estadía y probar la vida en el país sin comprometerte con una solicitud de residencia completa."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>La visa de nómada digital de Panamá te permitirá combinar trabajo y aventura sin tener que salir del país al finalizar tu visa de turista. Asequible, la visa de nómada digital también puede ser una buena forma de probar la vida en el país sin hacer una solicitud de residencia. Los europeos solo pueden quedarse tres meses seguidos con visa de turista en Panamá; este período es de 6 meses para ciudadanos canadienses.</p><p>Lanzada en 2021 tras la crisis del COVID-19, este programa tiene como objetivo no solo promover el turismo sino también estimular la economía local y presentar el país a jóvenes extranjeros que trabajan en sectores innovadores.</p>"
+        },
+        {
+          "heading": "Duración y Condiciones",
+          "body": "<p>La visa de nómada digital fue creada el 7 de mayo de 2021. Tiene una validez de 9 meses y puede extenderse una vez por el mismo período. Los titulares pueden trabajar en Panamá siempre que mantengan un contrato con una empresa extranjera y cumplan con un ingreso mínimo anual de $36,000 USD.</p><p>Ten en cuenta que esto solo aplica si tienes contratos con empresas o clientes en el extranjero. No podrás ser contratado por una empresa panameña con esta visa.</p>"
+        },
+        {
+          "heading": "Documentos Requeridos",
+          "body": "<ul><li>Pasaporte válido con al menos 6 meses de vigencia restante.</li><li>Certificado de antecedentes penales apostillado y traducido.</li><li>Seguro de salud internacional que cubra Panamá.</li><li>Declaración jurada de no aceptar ofertas de trabajo en Panamá.</li><li>Prueba de existencia de la empresa extranjera.</li><li>Contrato de trabajo actual o comprobante de ingresos del extranjero (al menos $36,000/año).</li><li>Los solicitantes independientes deben proporcionar contratos con clientes extranjeros.</li></ul>"
+        },
+        {
+          "heading": "Consejos Esenciales",
+          "body": "<p>La exhaustividad y exactitud de los documentos son cruciales. Las discrepancias o errores pueden provocar retrasos o rechazos. Conserva duplicados de todos los documentos presentados durante todo el trámite. Mantén contacto regular con Panama Contact Services durante todo el proceso.</p>"
+        }
+      ]
+    },
+    "qualified-investor": {
+      "title": "Visa de Inversionista Calificado",
+      "description": "Invierte en Panamá y obtén residencia rápidamente.",
+      "faq": [
+        {
+          "question": "¿Con qué rapidez puedo obtener residencia a través de la Visa de Inversionista Calificado?",
+          "answer": "La Visa de Inversionista Calificado tiene un plazo legal de procesamiento de solo 30 días desde la fecha de presentación de un expediente completo — convirtiéndola en la vía de residencia más rápida en Panamá. El proceso puede iniciarse de forma remota, aunque debes viajar a Panamá para finalizarlo."
+        },
+        {
+          "question": "¿Cuáles son las opciones de inversión para la Visa de Inversionista Calificado?",
+          "answer": "Existen tres opciones: (1) una colocación financiera de al menos $500,000 USD en una casa de valores registrada en Panamá; (2) un depósito bancario a plazo fijo de $750,000 USD en un banco panameño; o (3) una compra de bienes raíces de al menos $300,000 USD (o $500,000 USD después de octubre de 2024). La propiedad debe mantenerse por un mínimo de cinco años. Todos los fondos invertidos deben provenir del extranjero."
+        },
+        {
+          "question": "¿Necesito vivir en Panamá para mantener la residencia de Inversionista Calificado?",
+          "answer": "Debes visitar Panamá al menos una vez cada 24 meses para mantener tu estatus de residente. Para solicitar residencia fiscal, debes pasar al menos 183 días al año en Panamá y demostrar vínculos con el país."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Establecida en octubre de 2020, esta visa puede obtenerse mediante varios medios: adquiriendo propiedades en el país, comprando valores en una casa de valores registrada en Panamá, o invirtiendo en un depósito a plazo en un banco local. El proceso puede iniciarse de forma remota, aunque debes viajar a Panamá para finalizarlo. El trámite de la visa solo toma 30 días después de realizar la inversión necesaria y reunir la documentación requerida.</p>"
+        },
+        {
+          "heading": "Opción 1 — Colocación Financiera: $500,000",
+          "body": "<p><strong>Inversión requerida:</strong> Al menos $500,000 mediante una colocación financiera en Panamá.</p><p><strong>Documentación:</strong> Además de los documentos generales (antecedentes penales, certificación del Ministerio de Comercio, etc.), debes presentar una carta certificada de la casa de valores detallando la inversión realizada.</p>"
+        },
+        {
+          "heading": "Opción 2 — Depósito a Plazo: $750,000",
+          "body": "<p><strong>Inversión requerida:</strong> $750,000 en depósitos a plazo en un banco panameño.</p><p><strong>Documentación:</strong> Cartas certificadas de la institución bancaria, verificando que los fondos fueron transferidos desde el extranjero.</p>"
+        },
+        {
+          "heading": "Opción 3 — Bienes Raíces: $300,000 / $500,000",
+          "body": "<p><strong>Inversión requerida:</strong> Al menos $300,000 hasta octubre de 2024, y $500,000 después de esa fecha. También puede aplicarse mediante un contrato de promesa de venta.</p><p><strong>Período de retención:</strong> La propiedad debe mantenerse por un mínimo de cinco años.</p><p><strong>Documentación:</strong> Títulos de propiedad y/o contratos de compra.</p>"
+        },
+        {
+          "heading": "Trámite y Condiciones Clave",
+          "body": "<p><strong>Abogado requerido:</strong> Todo el trámite debe ser realizado por un abogado en Panamá.</p><p><strong>Plazo:</strong> Generalmente 30 días desde la presentación.</p><p><strong>Mantenimiento:</strong> Debes visitar Panamá al menos una vez cada 24 meses para mantener el estatus de residente.</p><p><strong>Origen de los fondos:</strong> Todos los fondos invertidos deben provenir del extranjero.</p><p><strong>Residencia fiscal:</strong> Para solicitar residencia fiscal, el solicitante debe pasar al menos 183 días en territorio panameño y demostrar vínculos en el país.</p>"
+        }
+      ]
+    },
+    "retiring": {
+      "title": "Visa de Pensionado",
+      "description": "Disfruta tu jubilación en Panamá con beneficios exclusivos.",
+      "faq": [
+        {
+          "question": "¿Cuántos ingresos necesito para calificar para la Visa de Pensionado de Panamá?",
+          "answer": "Necesitas probar una pensión vitalicia garantizada de al menos $1,000 USD por mes. Si tu pensión está entre $750 y $1,000, puede complementarse con una inversión inmobiliaria de al menos $100,000 USD. No hay límite máximo de edad, pero la edad mínima para solicitar es 25 años. Se requiere un adicional de $250/mes por dependiente."
+        },
+        {
+          "question": "¿Qué descuentos ofrece la Visa de Pensionado de Panamá?",
+          "answer": "La tarjeta de pensionado otorga descuentos significativos en todo Panamá: 15% en facturas médicas y préstamos, 20% en consultas médicas y medicamentos recetados, 25% en restaurantes y servicios públicos, 30% en transporte público y 50% en actividades de ocio como cines y conciertos. Los pensionados también se benefician de exención de impuestos en la importación de pertenencias personales y un vehículo al llegar."
+        },
+        {
+          "question": "¿La Visa de Pensionado me permite trabajar en Panamá?",
+          "answer": "La Visa de Pensionado no otorga permiso de trabajo, lo que significa que no puedes ser empleado por una empresa panameña. Sin embargo, poseer y operar tu propia empresa en Panamá no está prohibido bajo esta visa."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Elegibilidad para la Visa de Pensionado",
+          "body": "<p>La Visa de Pensionado no discrimina por edad — se enfoca en ingresos garantizados. Necesitas probar una pensión vitalicia de al menos $1,000/mes. La edad mínima requerida es de 25 años. Esta visa no otorga derecho a permiso de trabajo, pero poseer una empresa no está prohibido.</p><p><strong>Ingreso mínimo:</strong> $1,000/mes. Si la pensión está entre $750–$1,000, puede complementarse con una inversión inmobiliaria de al menos $100,000.</p><p><strong>Dependientes:</strong> Se requiere un adicional de $250/mes por dependiente. Los hijos dependientes deben ser solteros y menores de 18 años, o menores de 25 si están en la universidad.</p>"
+        },
+        {
+          "heading": "Documentos Requeridos",
+          "body": "<ul><li>Certificado de pensión de una entidad gubernamental o privada, autenticado.</li><li>Certificado de registro público de propiedad si posees inmuebles en Panamá.</li><li>Certificado de antecedentes penales de tu país de origen, autenticado por el Consulado Panameño.</li><li>Certificados de matrimonio y/o nacimiento autenticados para cónyuges e hijos.</li></ul>"
+        },
+        {
+          "heading": "Procedimiento de Solicitud",
+          "body": "<ul><li>Registro ante el Servicio Nacional de Migración.</li><li>Presentación de todos los documentos requeridos, traducidos al español si es necesario.</li><li>Pago de tasas migratorias y depósito de repatriación.</li></ul><p><strong>Revisión y aprobación:</strong> La revisión puede tomar varios meses. Una vez aprobada, se emitirá una tarjeta de residencia temporal.</p>"
+        },
+        {
+          "heading": "Beneficios de la Visa de Pensionado",
+          "body": "<p><strong>Descuentos del 15%:</strong> Restaurantes de comida rápida, facturas médicas (sin seguro), exámenes visuales o dentales, préstamos.</p><p><strong>Descuentos del 20%:</strong> Consultas médicas, servicios técnicos o especializados, medicamentos recetados.</p><p><strong>Descuentos del 25%:</strong> Establecimientos de comida, servicios públicos, boletos de avión.</p><p><strong>Descuentos del 30%:</strong> Albergues (viernes–domingo), transporte (trenes, autobuses, barcos).</p><p><strong>Descuentos del 50%:</strong> Actividades de ocio (cines, conciertos, eventos deportivos), hoteles entre semana (lunes–jueves).</p><p><strong>Exención de impuestos</strong> sobre la importación de pertenencias personales y vehículos al llegar a Panamá.</p>"
+        },
+        {
+          "heading": "Consejos Esenciales",
+          "body": "<p>La exhaustividad y exactitud de los documentos son cruciales. Las discrepancias o errores pueden provocar retrasos o rechazos. Conserva duplicados de todos los documentos presentados. Se recomienda mantener contacto regular con Panama Contact Services durante todo el proceso.</p>"
+        }
+      ]
+    },
+    "bank-account": {
+      "title": "Apertura de Cuenta Bancaria",
+      "description": "Abre cuentas bancarias personales o corporativas en Panamá con orientación experta.",
+      "faq": [
+        {
+          "question": "¿Cómo puede un extranjero abrir una cuenta bancaria en Panamá?",
+          "answer": "Abrir una cuenta bancaria en Panamá como extranjero es posible, pero los bancos aplican estrictos controles de cumplimiento. Necesitarás un pasaporte válido, referencias bancarias y documentos que acrediten el origen de tus fondos. La mayoría de los bancos requieren presencia física o un vínculo demostrable con Panamá, aunque la apertura de cuenta remota es posible en ciertos casos cuando el expediente está correctamente estructurado y presentado a través de intermediarios con relaciones bancarias locales establecidas."
+        },
+        {
+          "question": "¿Qué documentos se requieren para abrir una cuenta bancaria en Panamá?",
+          "answer": "Los requisitos estándar incluyen un pasaporte válido, referencias bancarias, comprobante de ingresos y documentación que demuestre el origen de los fondos. Para cuentas corporativas, también necesitarás documentos de constitución de la empresa y detalles de los beneficiarios reales. Las solicitudes serán rechazadas si el solicitante aparece en listas de sanciones o no puede justificar el origen de los fondos."
+        },
+        {
+          "question": "¿Cuánto tiempo lleva abrir una cuenta bancaria en Panamá?",
+          "answer": "El tiempo de procesamiento típico es de 2 a 4 semanas desde la presentación de un expediente completo. Puede ser más largo si el banco solicita información adicional o si tu perfil requiere debida diligencia mejorada. Para la apertura de cuenta remota, el plazo depende de la validación del expediente y los procesos internos del banco."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Abrir una primera cuenta bancaria en Panamá es crucial, ya sea para un individuo o una entidad legal. Panama Contact Service facilita este proceso complejo guiándote en cada paso hasta que tu cuenta esté abierta y tus productos disponibles. Ofrecemos apoyo integral, que abarca la comprensión del proceso, el contacto con bancos y la gestión de trámites administrativos.</p>"
+        },
+        {
+          "heading": "Apertura de una Cuenta Bancaria Corporativa",
+          "body": "<p>En Panamá, existen principalmente dos tipos de cuentas bancarias corporativas: cuentas para Personas Jurídicas Panameñas (empresas registradas en Panamá) y cuentas para Personas Jurídicas Extranjeras (empresas registradas en el extranjero). Tras el escándalo de los Panama Papers, el marco regulatorio bancario se ha fortalecido, particularmente para empresas offshore. Panama Contact Services es tu aliado preferido para navegar estas regulaciones.</p>"
+        },
+        {
+          "heading": "Apertura de una Cuenta Bancaria Personal",
+          "body": "<p>Un extranjero puede abrir una cuenta bancaria personal en Panamá, ya sea residente o no. Con cerca de cuarenta bancos abiertos a individuos, Panamá ofrece una amplia gama — desde bancos minoristas simples con muy pocas comisiones hasta bancos privados que ofrecen asistencia personalizada de estándar internacional. Para individuos en proceso de inmigración, abrir una cuenta bancaria es un paso obligatorio para establecerse en el país.</p>"
+        }
+      ]
+    },
+    "business": {
+      "title": "Constitución de Empresas",
+      "description": "Lanza tu empresa en Panamá con apoyo completo.",
+      "faq": [
+        {
+          "question": "¿Cómo puede un extranjero crear una empresa en Panamá?",
+          "answer": "Crear una empresa en Panamá como extranjero es un proceso rápido y no requiere residencia. Las estructuras más comunes son la Sociedad Anónima (S.A.), la Sociedad de Responsabilidad Limitada (S.R.L.) y la Fundación de Interés Privado. La S.A. es la más utilizada para actividades comerciales e inversión internacional. El proceso es manejado por un abogado y una estructura registrada puede estar lista en pocos días, incluso de forma remota en ciertos casos."
+        },
+        {
+          "question": "¿Cuáles son los requisitos para constituir una empresa en Panamá?",
+          "answer": "Los requisitos incluyen un pasaporte válido, información sobre la actividad comercial prevista y formularios de cumplimiento. Es obligatorio designar un agente residente y declarar los beneficiarios reales. No se requiere residencia. Las obligaciones continuas incluyen un impuesto anual fijo (tasa única) de $300 USD y mantener la relación con el agente residente."
+        },
+        {
+          "question": "¿Cuánto cuesta constituir una empresa en Panamá?",
+          "answer": "Los costos de constitución de una S.A., S.R.L. o Fundación de Interés Privado generalmente oscilan entre $1,500 y $2,000 USD. Los costos anuales de mantenimiento — incluyendo la tasa única, honorarios del agente residente y servicios administrativos — generalmente se sitúan entre $600 y $1,000 USD por año. Los costos exactos varían según la estructura y el perfil del solicitante."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>¿Decidiste iniciar tu negocio en Panamá? Existen requisitos fundamentales para constituir una empresa según la legislación local. Estos pasos aseguran la protección óptima de tu inversión y minimizan riesgos potenciales. Desde 2005, Panamá ha simplificado los trámites de constitución de empresas mediante diversas reformas fiscales y comerciales.</p>"
+        },
+        {
+          "heading": "Constitución de una Sociedad Anónima (S.A.)",
+          "body": "<p>Aproximadamente el 90% de las empresas en Panamá operan como sociedades anónimas. Estas estructuras protegen la identidad de los accionistas y limitan los riesgos al capital y activos. La constitución toma entre 5 y 7 días hábiles en Panamá.</p>"
+        },
+        {
+          "heading": "Elige una Ubicación Comercial",
+          "body": "<p>La ubicación puede ser tu residencia personal o locales adquiridos específicamente como sede de la empresa. Puedes ser propietario o alquilar este espacio.</p>"
+        },
+        {
+          "heading": "Obtener el \"Aviso de Operaciones\"",
+          "body": "<p>Esta es la única autorización requerida por el gobierno para iniciar tu actividad. Una vez obtenida, puedes notificar a las autoridades comerciales, fiscales y municipales tu intención de operar — en un solo paso, ahorrándote hacer solicitudes separadas a diversas entidades.</p>"
+        },
+        {
+          "heading": "Apertura de una Cuenta Bancaria",
+          "body": "<p>Aunque no es obligatorio, es altamente recomendable abrir una cuenta bancaria después de constituir la empresa. Esta tarea puede ser particularmente desafiante sin conocimiento y contactos confiables en el país.</p>"
+        },
+        {
+          "heading": "Registro de Personal",
+          "body": "<p>Es imperativo registrar tu personal ante el Ministerio de Trabajo y Seguridad Social. Sin un contrato escrito, el gobierno tomará las declaraciones de los empleados como ciertas. Rodéate de un contador de buena reputación que realmente lleve a cabo estos registros para evitar sorpresas desagradables.</p>"
+        },
+        {
+          "heading": "Registro ante AMPYME",
+          "body": "<p>Los negocios con una inversión inicial inferior a $150,000 deben registrarse ante AMPYME (Autoridad de la Micro, Pequeña y Mediana Empresa). Esto permite obtener beneficios fiscales, incluyendo una exención en las dos primeras declaraciones de renta.</p>"
+        }
+      ]
+    },
+    "real-estate": {
+      "title": "Bienes Raíces",
+      "description": "Encuentra y financia tu propiedad ideal en Panamá.",
+      "faq": [
+        {
+          "question": "¿Puede un extranjero comprar una propiedad en Panamá?",
+          "answer": "Sí. Los extranjeros pueden comprar propiedades en Panamá con los mismos derechos que los ciudadanos panameños. La ley permite a los extranjeros adquirir bienes raíces a su nombre o a través de una empresa o fundación. No se requiere residencia para comprar una propiedad, aunque puede simplificar ciertos trámites bancarios y administrativos."
+        },
+        {
+          "question": "¿Cuáles son los requisitos para comprar una propiedad en Panamá?",
+          "answer": "Necesitas un pasaporte válido y firmar un contrato de compraventa. En la práctica, la debida diligencia es esencial — debes verificar que la propiedad esté libre de gravámenes y correctamente registrada en el Registro Público. Si la compra se realiza a través de una empresa o fundación, se requiere estructuración legal adicional."
+        },
+        {
+          "question": "¿Cuánto cuesta comprar una propiedad en Panamá?",
+          "answer": "Además del precio de compra, los principales costos son un impuesto de transferencia de propiedad del 2% (sobre el mayor entre el precio de venta o valor registrado) y una retención del 3% sobre ganancias de capital sobre el valor de venta. Los honorarios legales, costos notariales y tasas de inscripción en el Registro Público agregan aproximadamente entre el 3% y el 5% del valor de la propiedad en costos totales de transacción."
+        },
+        {
+          "question": "¿Puede la compra de una propiedad en Panamá llevar a la residencia?",
+          "answer": "Sí. La Residencia de Inversionista Calificado otorga residencia permanente mediante una inversión mínima en bienes raíces de $300,000 USD, con un tiempo legal de procesamiento de 30 días. La Visa de Naciones Amigas también permite la residencia mediante una compra de propiedad mínima de $200,000 USD, llevando a residencia permanente después de un período provisional. Comprar una propiedad es una de las formas más comunes en que los extranjeros combinan inversión con una vía migratoria en Panamá."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Panama Contact Services te ayuda en la búsqueda del apartamento o casa perfecta en Panamá. Nuestro enfoque se caracteriza por un profundo conocimiento de los matices y sutilezas del país, combinado con una sólida red de contactos. Colaboramos con agentes de bienes raíces licenciados en Panamá para encontrar propiedades que se alineen con tus requerimientos.</p><p>Los bienes raíces de Panamá son tan diversos como sus paisajes — desde la bulliciosa metrópoli de Ciudad de Panamá hasta los terrenos montañosos de Chiriquí, y las costas cautivadoras de la provincia de Bocas del Toro. Cada región ofrece características únicas y oportunidades distintas.</p>"
+        },
+        {
+          "heading": "Financiamiento de tu Propiedad en Panamá",
+          "body": "<p>Nuestro equipo busca las mejores tasas y condiciones para ti, negociando una hipoteca con bancos independientemente de tu situación. Contrario a la creencia de que los bancos no financian a extranjeros, Panama Contact Services puede demostrar lo contrario. Si eres residente, no te limites a tu banco — existen numerosas agencias bancarias en Panamá. ¡La comparación es gratuita y solo te cobramos si se asegura el préstamo!</p>"
+        },
+        {
+          "heading": "Venta de tu Propiedad",
+          "body": "<p>Si buscas vender una propiedad en Panamá y quieres llegar a una clientela extranjera, Panama Contact Services, con su socio corredor registrado en Norteamérica, te abre las puertas al mercado norteamericano. Este servicio es gratuito.</p>"
+        }
+      ]
+    },
+    "income-tax": {
+      "title": "Declaración de Impuesto sobre la Renta",
+      "description": "Te asistimos con tus obligaciones fiscales en Panamá.",
+      "faq": [
+        {
+          "question": "¿Quién debe presentar una declaración de impuesto sobre la renta en Panamá?",
+          "answer": "Cualquier persona o entidad legal que genere ingresos en Panamá debe presentar una Declaración de Impuesto sobre la Renta (ISR) anual. Las personas tienen plazo hasta el 15 de marzo de cada año; las entidades legales hasta el 31 de marzo. Las prórrogas de un mes son posibles pero deben solicitarse a tiempo. Desde 2022, los ingresos brutos anuales superiores a $11,000 USD requieren validación de un contador público autorizado."
+        },
+        {
+          "question": "¿Qué tipos de declaraciones de impuesto sobre la renta existen en Panamá?",
+          "answer": "Existen cinco tipos: una Declaración Normal (para empleados, profesionales independientes y comerciantes), una Declaración de No Operaciones (para contribuyentes sin actividad durante el año), una Declaración Final (para empresas que cesan operaciones), una Declaración Original (presentada por primera vez) y una Declaración Rectificativa (para corregir presentaciones anteriores, sujeta a condiciones y posibles sanciones)."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>La Declaración de Impuesto sobre la Renta (ISR) es un documento donde personas y entidades legales reportan sus ingresos y gastos durante un año fiscal en Panamá. Esta declaración es obligatoria anualmente para cualquier persona o entidad que genere ingresos en el país.</p>"
+        },
+        {
+          "heading": "Plazos para la Declaración de Impuesto sobre la Renta",
+          "body": "<p>Las personas tienen hasta el <strong>15 de marzo</strong> de cada año para presentar su declaración. Las entidades legales deben hacerlo antes del <strong>31 de marzo</strong>. Las prórrogas de un mes son posibles pero deben solicitarse oportunamente para evitar multas.</p>"
+        },
+        {
+          "heading": "Tipos de Declaraciones ISR",
+          "body": "<p><strong>Declaración Normal:</strong> Para empleados, profesionales independientes y comerciantes.</p><p><strong>Declaración de No Operaciones:</strong> Para contribuyentes que no tuvieron actividades o transacciones durante el año fiscal.</p><p><strong>Declaración Final:</strong> Para empresas que se disuelven o cesan operaciones.</p><p><strong>Declaración Original:</strong> Presentada por primera vez para declarar ingresos, gastos y deducciones.</p><p><strong>Declaración Rectificativa:</strong> Para corregir errores u omisiones en declaraciones presentadas previamente. Con la promulgación de la Ley 280 del 30 de diciembre de 2021, se requiere validación de un contador público autorizado para ingresos brutos anuales superiores a B/. 11,000.00.</p>"
+        },
+        {
+          "heading": "Declaración Fiscal del Primer Año",
+          "body": "<p>Es importante diferenciar entre la declaración de impuestos y el pago de impuestos. La declaración es un documento que debe completarse y presentarse en línea — según los ingresos y gastos declarados, puede generarse o no un monto de impuesto a pagar.</p><p>Consulta a un contador competente familiarizado con los diversos tipos de declaraciones. El tipo de declaración a presentar diferirá según el estatus o actividad de la empresa o individuo.</p>"
+        }
+      ]
+    },
+    "goods-import": {
+      "title": "Importación de Bienes",
+      "description": "Importa bienes a Panamá con orientación experta.",
+      "faq": [
+        {
+          "question": "¿Qué documentos se requieren para importar bienes a Panamá?",
+          "answer": "Los documentos requeridos incluyen una factura comercial y lista de empaque, un conocimiento de embarque o guía aérea, una declaración de importación firmada por un agente aduanal autorizado y el permiso apropiado para cualquier mercancía restringida. Los alimentos destinados al consumo humano y cosméticos requieren un Certificado de Libre Venta (CFS) adicional de la autoridad sanitaria de Panamá. La importación debe llegar a través de un puerto o aeropuerto designado."
+        },
+        {
+          "question": "¿Hay costos aduaneros al importar a Panamá?",
+          "answer": "Sí. Se aplica un impuesto aduanero basado en el tipo de producto y debe pagarse durante el despacho aduanero. También pueden aplicarse impuestos consulares y de consumo adicionales, aunque existen excepciones dependiendo de la categoría del producto y los acuerdos comerciales aplicables."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Gracias a su aeropuerto internacional y al Canal de Panamá, frecuentado por barcos de todo el mundo, Panamá está altamente conectado con el resto del mundo, asegurando un flujo constante de importaciones. La importación de productos se facilita por trámites administrativos que son simples en teoría, pero en práctica pueden ser más complicados de lo esperado. Panama Contact Services, en colaboración con sus socios como agentes aduanales, apoya tanto a empresas como a individuos durante todo el proceso.</p>"
+        },
+        {
+          "heading": "Documentación Requerida",
+          "body": "<ul><li>Factura comercial y lista de empaque (cantidad, tipo de producto, lugar de envío).</li><li>Manifiesto de conocimiento de embarque para fines fiscales, con el nombre del consignatario.</li><li>El permiso apropiado si se trata de una importación restringida.</li><li>Declaración de importación firmada por un agente aduanal autorizado.</li><li>Factura comercial en inglés y español (original + cuatro copias).</li><li>Guía aérea para envíos por vía aérea.</li><li>Conocimiento de embarque para carga marítima.</li><li>Carta de transporte para carga terrestre.</li></ul>"
+        },
+        {
+          "heading": "Restricciones en la Importación de Alimentos",
+          "body": "<p>La autoridad sanitaria de Panamá requiere verificación adicional para un Certificado de Libre Venta (CFS) para alimentos destinados al consumo humano y otros productos como cosméticos. La importación debe realizarse por uno de los puertos o aeropuertos designados. Consúltanos antes de enviar tu carga para confirmar que puedes recibirla.</p>"
+        },
+        {
+          "heading": "Costos Aduaneros",
+          "body": "<p>Se aplica un impuesto aduanero según el producto importado y debe pagarse durante el despacho aduanero. Otros impuestos consulares y de consumo también se aplican, aunque pueden existir excepciones.</p>"
+        }
+      ]
+    },
+    "driver-s-license": {
+      "title": "Licencia de Conducir",
+      "description": "Obtén tu licencia de conducir panameña como extranjero.",
+      "faq": [
+        {
+          "question": "¿Puedo usar mi licencia de conducir extranjera en Panamá?",
+          "answer": "Sí, pero solo si estás ingresando como turista. Una licencia extranjera válida puede usarse durante 90 días desde tu fecha de entrada. Sin embargo, tan pronto como inicies un proceso migratorio en Panamá, ya no serás considerado turista y no podrás conducir con licencia extranjera — incluso si los 90 días no han transcurrido. Se aplica una multa de $50 y, en caso de accidente, tu seguro puede no cubrirte."
+        },
+        {
+          "question": "¿Cómo obtengo una licencia de conducir panameña como extranjero?",
+          "answer": "Tienes dos opciones una vez que tienes estatus migratorio: homologación (canje de tu licencia extranjera) o comenzar desde cero con una escuela de conducción panameña certificada por Sertracen. Los documentos que no estén en español deben ser traducidos oficialmente. En muchos casos, volver a tomar el examen es más rápido y menos costoso que la homologación."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>En el país istmeño, las regulaciones a considerar son establecidas por \"Sertracen\", la agencia responsable de regular y supervisar el tránsito y transporte terrestre. En el terreno, los agentes de la autoridad de transporte terrestre (ATT) son a menudo responsables de la regulación del tránsito. Si ingresas a Panamá por primera vez como turista con una licencia de conducir válida de tu país de origen, puedes usarla por 90 días desde la fecha de entrada.</p>"
+        },
+        {
+          "heading": "⚠️ Advertencia Importante",
+          "body": "<p>Iniciar tu proceso migratorio prohíbe inmediatamente el uso de tu licencia extranjera en Panamá. Al no ser más turista, ya no tienes derecho a conducir un vehículo en suelo panameño, incluso si el período de 90 días no ha transcurrido. Debes esperar a tener una licencia de conducir panameña para volver a conducir. Además de una multa de $50, la policía puede inmovilizar tu vehículo, y en caso de accidente, tu seguro puede no cubrirte.</p>"
+        },
+        {
+          "heading": "Opciones Tras Obtener el Estatus Migratorio",
+          "body": "<p><strong>Homologación (canje):</strong> Si tienes una licencia de conducir de tu país de origen y deseas canjearla. Los documentos no escritos en español deben ser traducidos por un intérprete autorizado en Panamá. A menudo, es más rápido y menos costoso volver a tomar el examen de conducir en Panamá directamente.</p><p><strong>Empezar desde cero:</strong> Si no tienes licencia o no deseas homologar, debes asistir a una escuela de conducir certificada por Sertracen. Panama Contact Services te guía a través de escuelas aliadas.</p>"
+        },
+        {
+          "heading": "Validez de la Licencia",
+          "body": "<p>Las licencias extranjeras son válidas por tres meses y permiten conducir bajo las categorías A, B, C y D. No está autorizado el transporte público con estas categorías.</p><p>En Panamá, la licencia panameña se emite por un período de cuatro años. Para extranjeros con estatus temporal o provisional, la validez coincide con su tarjeta de residencia. Solo los residentes permanentes se benefician de la validez completa de cuatro años.</p>"
+        }
+      ]
+    },
+    "insurance": {
+      "title": "Seguros",
+      "description": "Encuentra las mejores soluciones de seguros en Panamá.",
+      "faq": [
+        {
+          "question": "¿Es mejor contratar un seguro en Panamá o en mi país de origen?",
+          "answer": "Para los extranjeros que viven en Panamá, generalmente es más efectivo y rentable asegurarse localmente. El seguro de salud en Panamá es significativamente más barato que una cobertura equivalente en Norteamérica o Europa, mientras que sigue proporcionando acceso a instalaciones privadas de alta calidad. Panama Contact Services trabaja con corredores para obtener cotizaciones gratuitas, para que puedas comparar directamente."
+        },
+        {
+          "question": "¿Cómo está regulado el mercado de seguros en Panamá?",
+          "answer": "Los seguros en Panamá están regulados por la Superintendencia de Seguros, que garantiza transparencia, solidez financiera y precios justos. El sistema es más simple que los de Europa o Norteamérica — enfocado en coberturas esenciales — lo que hace que las elecciones sean más sencillas. Tanto actores internacionales (como Mapfre y Allianz) como fuertes aseguradoras locales operan en el mercado."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Como centro financiero internacional, Ciudad de Panamá no es la excepción cuando se trata de seguros. Para un extranjero, a menudo es mucho más efectivo asegurarse en Panamá con sus activos que buscar un producto de seguro en su país de origen. Sin embargo, el mundo de los seguros puede parecer a veces un laberinto para el novato, especialmente cuando se enfrenta a un país donde la diferencia en la realidad de infraestructura entre provincias puede ser significativa.</p>"
+        },
+        {
+          "heading": "Especificidades del Enfoque Panameño",
+          "body": "<p>En Panamá, los seguros están regulados por la \"Superintendencia de Seguros\". Esta asegura transparencia, solidez y correcto funcionamiento de los actores del mercado, y enmarca rigurosamente el proceso de evaluación de riesgos y fijación de precios para proteger al asegurado.</p><p>En comparación con Europa y Norteamérica donde los sistemas de seguros están más fragmentados, el sistema panameño es más simple — enfocado en coberturas esenciales, haciendo que las elecciones sean menos complejas. Además de multinacionales como Mapfre o Allianz, algunos fuertes actores locales destacan para individuos y empresas.</p>"
+        },
+        {
+          "heading": "¡Compara Seguros — Es Gratis!",
+          "body": "<p>Panama Contact Service te permite acercarte a un corredor para obtener cotizaciones de seguros sin costo. Te sorprenderás con los precios y nivel de cobertura ofrecidos para seguros de salud en Panamá versus tu país de origen. No dudes en usar nuestro servicio de corretaje con seguimiento en el idioma de tu preferencia.</p>"
+        }
+      ]
+    }
+  },
+  "WhyPanamaPage": {
+    "meta": {
+      "title": "¿Por qué vivir en Panamá? Impuestos, Salud, Calidad de Vida | Panama Contact",
+      "description": "Descubre por qué miles de expatriados eligen Panamá: dólar americano, tributación territorial, salud de primer nivel, estabilidad económica y comunidad internacional."
+    },
+    "heading": "Un Paraíso de Diversidad, Buen Vivir y Prosperidad",
+    "subheading": "Ubicado en la unión de Centro y Sudamérica, Panamá es una joya escondida que ofrece a los viajeros una experiencia inolvidable y a los inversionistas un clima de negocios favorable.",
+    "introHeading": "Bienvenido a Panamá",
+    "introBody1": "Panamá fascina con su variedad de paisajes — desde las playas prístinas del Pacífico hasta las aguas cristalinas del Mar Caribe, pasando por exuberantes bosques tropicales. El país istmeño es un verdadero Edén natural, que reúne un panorama condensado de paisajes de toda América Latina, de la cual es el centro neurálgico.",
+    "introBody2": "Recorre la majestuosa Cordillera Central o explora la increíble biodiversidad de los parques nacionales de Portobelo o Coiba, Patrimonio de la Humanidad por la UNESCO. Desde la cumbre del Volcán Barú, en las mañanas despejadas, puedes vislumbrar ambos océanos en un abrir y cerrar de ojos.",
+    "introBody3": "Más allá de sus impresionantes paisajes, Panamá también es reconocido por la cálida hospitalidad de sus habitantes. Tierra de acogida para muchos pueblos a lo largo de su historia, los panameños reciben con los brazos abiertos a los extranjeros. En Ciudad de Panamá o en pequeños pueblos pintorescos, siempre serás recibido con una sonrisa amigable.",
+    "ctaLabel": "¿Listo para mudarte?",
+    "ctaHeading": "Descubre Todo lo que Esta Joya Latinoamericana Tiene para Ofrecer",
+    "ctaButton": "Reserva una Consulta Gratuita",
+    "readMore": "Saber más",
+    "backToOverview": "Volver a Por qué Panamá",
+    "cards": {
+      "life-quality": {
+        "title": "Calidad de Vida",
+        "subtitle": "Buen Vivir",
+        "shortDescription": "Panamá ofrece una alta calidad de vida tanto a sus residentes nacionales como extranjeros, con un costo de vida relativamente bajo, infraestructura moderna y una sociedad multicultural acogedora.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>Panamá ofrece una alta calidad de vida tanto a sus residentes nacionales como extranjeros. Una de sus principales atracciones es un costo de vida relativamente bajo en comparación con las grandes ciudades de Norteamérica y Europa, permitiendo a los residentes disfrutar de un mayor poder adquisitivo que en sus países de origen.</p><p>Es importante señalar que Panamá no es un país barato en comparación con algunos países vecinos, con un nivel de vida similar al de los países del sur de Europa. El salario neto mensual promedio después de impuestos en Panamá en 2023 es de alrededor de $1,050 — comparable al de Portugal. El uso del dólar estadounidense como moneda oficial contribuye significativamente a esto, garantizando estabilidad y evitando la hiperinflación.</p>"
+          },
+          {
+            "heading": "Infraestructura de Calidad",
+            "body": "<p>La infraestructura en Panamá ha sido objeto de una inversión significativa durante la última década, permitiendo al país ofrecer servicios confiables en las principales ciudades. Electricidad y agua corriente están disponibles en todas las áreas urbanas, al igual que acceso a internet de alta velocidad, televisión por cable y buena cobertura móvil.</p><p>En materia de transporte, Ciudad de Panamá está magníficamente servida por su aeropuerto (PTY) — un hub internacional y sede regional de varias aerolíneas. Para moverse por la ciudad, el metro y los servicios de Uber funcionan perfectamente. A nivel nacional, todo el lado del Pacífico está servido por la famosa Carretera Panamericana. El país también ofrece diversas opciones de ocio modernas para todos los gustos: clubes de golf, centros comerciales, restaurantes de estándar internacional, resorts de playa, parques y eventos culturales. En materia de salud, Ciudad de Panamá y las áreas urbanizadas ofrecen instalaciones médicas modernas de estándar internacional.</p>"
+          },
+          {
+            "heading": "Seguridad y Educación en Panamá",
+            "body": "<p>Panamá es considerado un país seguro con bajas tasas de criminalidad, mejorando consistentemente en los últimos años. Si bien existen áreas remotas afectadas por el narcotráfico, la violencia es generalmente rara fuera de estas zonas tensas. El Índice Global de Paz otorga a Panamá una alta calificación de paz, similar al Reino Unido e Italia.</p><p>En el campo de la educación, Panamá ofrece escuelas internacionales con currículos americano, británico, francés y alemán para expatriados. Estas escuelas ofrecen educación de alta calidad desde preescolar hasta niveles avanzados, ubicadas principalmente en ciudades con importantes poblaciones de expatriados.</p>"
+          },
+          {
+            "heading": "Panamá: Acogedor para Turistas y Expatriados",
+            "body": "<p>Con su historia reciente, Panamá es acogedor con los extranjeros, y esta dimensión multicultural facilita la integración. El español es el idioma oficial hablado casi en todas partes, coexistiendo con lenguas nativas, inglés y otros idiomas de la inmigración. Esta variedad facilita la comunicación y la convivencia.</p><p>Gracias a su ubicación geográfica, Panamá es un centro turístico regional con infraestructura aérea, logística y marítima. El famoso Canal de Panamá es una gran atracción turística, y el país ofrece actividades como buceo, avistamiento de ballenas, observación de aves, senderismo y deportes extremos.</p>"
+          }
+        ]
+      },
+      "healthcare": {
+        "title": "Sistema de Salud",
+        "subtitle": "Salud y Bienestar",
+        "shortDescription": "De acuerdo con la legislación panameña, todo ciudadano tiene el derecho inalienable a la atención médica. El país opera un sistema dual público-privado con instalaciones modernas y médicos capacitados internacionalmente.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>De acuerdo con la legislación panameña, todo ciudadano tiene el derecho inalienable a la atención médica, y el sistema de salud público funciona teóricamente para todos. Este servicio, ofrecido en diversos centros de salud, generalmente tiene un costo bajo, aunque es gratuito para niños menores de cinco años.</p><p>Los centros de salud están establecidos en todos los municipios urbanos, y a pesar de que la Organización Panamericana de la Salud señala una menor presencia en áreas rurales, el acceso a la atención sigue siendo relativamente uniforme. Sin embargo, la calidad de la atención, especialmente para especialidades, varía enormemente en todo el país. Este sistema público opera junto a un sistema de salud privado bien establecido.</p>"
+          },
+          {
+            "heading": "Sistema de Salud Público",
+            "body": "<p>El sistema de salud público panameño es gestionado por dos entidades. En primer lugar, el Ministerio de Salud (MINSA), que asegura equidad y calidad, coordina la asistencia en Centros de Salud, incluyendo para extranjeros. En segundo lugar, la Caja del Seguro Social (CSS) regula los seguros relacionados con el trabajo y pensiones y proporciona acceso a servicios de maternidad y enfermedad en sus centros de salud en todo el país.</p><p>Panamá ha logrado avances significativos en salud durante los últimos veinte años, y el sistema es a menudo citado como uno de los mejores en Centroamérica, aunque existen disparidades entre áreas urbanas y rurales en términos de disponibilidad y calidad de la atención.</p>"
+          },
+          {
+            "heading": "Sistema de Salud Privado",
+            "body": "<p>Junto al sistema público, Panamá cuenta con clínicas y consultorios privados de renombre en las principales ciudades, generalmente considerados de mayor calidad. En Ciudad de Panamá, Colón o David, a menudo encontrarás médicos de habla inglesa formados en las mejores universidades internacionales.</p><p>Aunque solo el 10% de los panameños tiene seguro privado, muchos expatriados optan por esta vía. Si planeas establecerte permanentemente en el país, es aconsejable informarte sobre los seguros locales, que a menudo ofrecen tarifas más ventajosas y mejor cobertura.</p>"
+          }
+        ]
+      },
+      "economic-stability": {
+        "title": "Estabilidad Económica",
+        "subtitle": "Hub Estratégico",
+        "shortDescription": "En 1914, Panamá completó la inauguración de su prestigioso canal. Desde entonces, el país ha construido una economía diversificada y resiliente que se erige como un modelo de éxito en América Latina.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>En 1914, Panamá completó una hazaña monumental con la inauguración de su prestigioso canal — un sueño iniciado por Ferdinand de Lesseps en 1881. El icónico canal es más que una maravilla de ingeniería; ha catalizado la estabilidad económica de Panamá, atrayendo a inversores globales. Revolucionó el transporte global acortando distancias y reduciendo costos entre los océanos Atlántico y Pacífico.</p>"
+          },
+          {
+            "heading": "Posición Geográfica Estratégica y Diversidad Económica",
+            "body": "<p>Ubicado en la encrucijada del mundo, Panamá ha capitalizado su ubicación única. Es conocido no solo por su canal sino también por su próspero sector logístico y portuario. La creación del Centro Bancario Internacional en 1970 marcó el surgimiento de un floreciente sector financiero que continúa atrayendo bancos e inversores, contribuyendo al crecimiento del PIB.</p><p>Panamá no ha puesto todos los huevos en una sola canasta. Más allá del canal y las zonas francas, el país ha diversificado su economía hacia turismo, finanzas, bienes raíces, agricultura y servicios. Esta diversificación ha reforzado su resiliencia ante las turbulencias económicas globales.</p>"
+          },
+          {
+            "heading": "Impacto de la Relación de Panamá con Estados Unidos",
+            "body": "<p>La historia económica de Panamá está marcada por sus estrechos lazos con Estados Unidos. La dictadura militar de Omar Torrijos Herrera en 1968, las reformas nacionalistas y el Tratado Torrijos-Carter de 1977 fueron clave para dar forma a la identidad económica de Panamá. La adopción del dólar estadounidense como moneda oficial ha asegurado estabilidad monetaria y simplificado las transacciones internacionales.</p><p>El fin de la presencia militar estadounidense en 1999 y la devolución del control total del canal marcaron un punto de inflexión en la historia de Panamá. Este paso llevó a una mayor independencia y una modernización económica sin precedentes.</p>"
+          },
+          {
+            "heading": "Un Modelo de Éxito en América Latina",
+            "body": "<p>Hoy, Panamá se destaca como un faro de éxito económico en América Latina. Su impresionante crecimiento del PIB de más del 10% en 2022 es un testimonio de su vitalidad. A pesar de los desafíos planteados por la crisis del Covid-19, Panamá continúa siendo un destino principal para emprendedores e inversores de todo el mundo.</p><p>En resumen, Panamá se ha establecido como un actor principal en la economía global. Su estabilidad, diversificación, relación especial con Estados Unidos y posición estratégica lo convierten en un hub único para el comercio, la inversión y la innovación.</p>"
+          }
+        ]
+      },
+      "welcoming-country": {
+        "title": "Oportunidades de Inversión",
+        "subtitle": "Dinámico y Acogedor",
+        "shortDescription": "En los últimos quince años, Panamá se ha posicionado como un destino principal para la inversión extranjera directa en América Latina, con un crecimiento resiliente y oportunidades diversas en sectores clave.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>En los últimos quince años, Panamá se ha posicionado como un destino principal para la inversión extranjera directa en América Latina. En comparación con sus vecinos, el país se destacó al resistir la crisis financiera global, con un crecimiento del PIB de 1.24% en 2009, seguido de 11.31% en 2011.</p><p>El affaire de los Panama Papers, seguido por el impacto de la pandemia de COVID-19, puso una congelación en la floreciente economía del país. Después de una contracción en 2020, se observó un fuerte rebote en 2022 que continúa en 2023.</p>"
+          },
+          {
+            "heading": "Panamá: Estratégico e Invertible",
+            "body": "<p>Panamá sirve como un puente entre continentes. Su canal interoceánico ampliado duplica la capacidad de tránsito marítimo, actuando como un motor de la economía global. El país es un cruce logístico para el almacenamiento y distribución de carga global, vinculado con Norteamérica, Sudamérica, el Caribe, Europa y Asia.</p><p>Con estabilidad financiera basada en el dólar estadounidense, una zona franca crucial, el Aeropuerto Internacional de Tocumen, el metro y otra infraestructura, Panamá es atractivo para inversores. Su posición geográfica y tamaño lo hacen central para cinco cables de fibra óptica submarina, convirtiéndolo en una ubicación privilegiada para empresas de telecomunicaciones.</p>"
+          },
+          {
+            "heading": "Sectores Clave en Demanda",
+            "body": "<ul><li><p><strong>Logística e Infraestructura Portuaria</strong> — La expansión del canal y los corredores multimodales de carga crean una demanda sostenida de inversión logística.</p></li><li><p><strong>Bienes Raíces y Turismo</strong> — Desde desarrollos de lujo en Ciudad de Panamá hasta ecolodges en Bocas del Toro, el mercado inmobiliario atrae capital internacional sostenido.</p></li><li><p><strong>Servicios Financieros y Fintech</strong> — El centro bancario de Panamá y el creciente ecosistema fintech ofrecen fuertes retornos para los inversores del sector financiero.</p></li><li><p><strong>Energía Renovable</strong> — El gobierno incentiva activamente los proyectos solares, eólicos e hidroeléctricos como parte de una agenda de sostenibilidad a largo plazo.</p></li><li><p><strong>Telecomunicaciones</strong> — Con cinco cables de fibra óptica submarina convergiendo en el istmo, Panamá es un hub natural para centros de datos e infraestructura de telecomunicaciones.</p></li><li><p><strong>Agroindustria</strong> — Las diversas zonas climáticas de Panamá soportan una amplia gama de exportaciones agrícolas, desde café y cacao hasta frutas tropicales y mariscos.</p></li></ul>"
+          }
+        ]
+      },
+      "financial-hub": {
+        "title": "Hub Financiero Internacional",
+        "subtitle": "Finanzas Globales",
+        "shortDescription": "El sistema financiero de Panamá está experimentando cambios significativos, alineándose con las tendencias globales a través de avances tecnológicos — manteniéndose en una posición sólida en la arena financiera internacional.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>El sistema financiero de Panamá está experimentando cambios significativos, alineándose con las tendencias globales. Estos cambios son impulsados por los avances tecnológicos y las características únicas del sistema financiero del país. La combinación de una regulación robusta, una estructura financiera bien desarrollada y la integración de tecnologías avanzadas mantiene a Panamá en una posición sólida en la arena financiera internacional.</p>"
+          },
+          {
+            "heading": "Características del Sistema Financiero Panameño",
+            "body": "<p>La economía panameña se caracteriza por su sistema monetario bancario, utilizando el dólar estadounidense como moneda común. Opera sin un banco central y está fuertemente conectada a la economía global. La estructura del sistema financiero incluye bancos, casas de valores, fondos de pensiones, compañías de seguros y cooperativas, representando el 7.31% del PIB en 2021, con activos totales de $148,218 millones.</p><p>El sector está regulado por un modelo de supervisión con una entidad supervisora separada para cada mercado financiero, coordinada dentro del Consejo de Coordinación Financiera (CCF). Panamá tenía 66 bancos supervisados por la Superintendencia de Bancos para 4 millones de habitantes en 2023.</p>"
+          },
+          {
+            "heading": "Modernización y Transformación Digital",
+            "body": "<p>Los expertos destacan la necesidad de invertir en digitalización, tanto en las interacciones con clientes como en los procesos internos. Aunque algunos bancos tienen interfaces eficientes y fáciles de usar para el cliente, las operaciones internas y los procesos aún requieren mejoras significativas.</p><p>No obstante, el sistema financiero panameño ha mantenido una notable estabilidad macroeconómica, sin ninguna crisis bancaria sistémica atribuible a desequilibrios intrínsecos en el sistema bancario. La operación simultánea de bancos internacionales y locales permite una competitividad y eficiencia significativas.</p>"
+          }
+        ]
+      },
+      "tax-pressure": {
+        "title": "Presión Fiscal Moderada",
+        "subtitle": "Eficiencia Fiscal",
+        "shortDescription": "El régimen tributario moderado y bien estructurado de Panamá para empresas e individuos lo hace particularmente atractivo para residentes, inversores y empresas de todo el mundo — construido sobre el principio de tributación territorial.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>Panamá no solo se destaca como un lugar de maravilla natural y cultural sino también como un país donde prevalecen la tributación preferencial, la seguridad financiera y la estabilidad económica. Su régimen tributario moderado y bien estructurado lo hace particularmente atractivo para residentes, inversores y empresas de todo el mundo.</p><p>El sistema tributario de Panamá se basa principalmente en el principio de territorialidad, donde solo se gravan los ingresos generados en territorio nacional. Esto ha permitido que Panamá se destaque como un destino atractivo para las inversiones extranjeras.</p>"
+          },
+          {
+            "heading": "Impuestos Directos Aplicables a Sociedades",
+            "body": "<ul><li><p><strong>Impuesto sobre la Renta:</strong> Equivalente al impuesto de sociedades, aplicado sobre las ganancias obtenidas por empresas con residencia fiscal en Panamá. La tasa impositiva es del 25%, aunque puede llegar al 30% para algunas entidades públicas o semipúblicas. Existe una tasa efectiva mínima para entidades con ingresos superiores a $1.5 millones USD.</p></li><li><p><strong>La tasa única:</strong> Un impuesto anual fijo aplicado sobre diversas entidades establecidas en Panamá, con un monto de $300 USD, excepto para las fundaciones de interés privado, que contribuyen $350 USD.</p></li><li><p><strong>Declaración jurada del agente residente:</strong> Desde 2022, los abogados que representan a empresas deben presentar una declaración jurada de las cuentas de las empresas anualmente. Esta tarifa de $350 USD es pagada por el abogado y repercutida a su cliente.</p></li><li><p><strong>Impuesto Complementario:</strong> Un pago anticipado del impuesto sobre dividendos pagadero por los accionistas que los reciben. Solo aplica a entidades que distribuyen menos del 40% de sus ganancias netas después de impuestos. La tasa aplicable es del 10%.</p></li></ul>"
+          },
+          {
+            "heading": "Impuestos Directos Aplicables a Individuos",
+            "body": "<ul><li><p><strong>Impuesto sobre la Renta:</strong> Panamá tiene un sistema de impuesto sobre la renta progresivo relativamente simple para individuos: 0% para ingresos entre $0 y $11,000 USD; 15% para ingresos entre $11,000 y $50,000 USD; y 25% para ingresos superiores a $50,000 USD.</p></li><li><p><strong>Impuesto sobre Dividendos:</strong> Una retención en la fuente para individuos sobre acciones mantenidas tanto en entidades panameñas como extranjeras. La tasa es del 10% para dividendos de fuentes panameñas y del 5% para dividendos de fuentes extranjeras.</p></li><li><p><strong>Impuesto sobre Ganancias de Capital:</strong> Aplicado a una tasa del 15% sobre las ganancias obtenidas de la venta de acciones e inmuebles.</p></li></ul><p>Estas regulaciones tributarias demuestran el compromiso de Panamá de crear un entorno económico estable y seguro. Las reformas recientes reflejan la intención del país de alinearse con los estándares internacionales mientras retiene su atractivo único en términos de tributación.</p>"
+          }
+        ]
+      }
+    }
+  },
+  "ServiceDetail": {
+    "backToServices": "Volver a servicios",
+    "backToWhyPanama": "Volver a ¿Por qué Panamá?",
+    "ctaTitle": "¿Necesitas ayuda con esto?",
+    "ctaBody": "Nuestros expertos están listos para guiarte en cada paso del proceso. Consulta inicial gratuita.",
+    "ctaButton": "Agendar consulta gratuita",
+    "contactTitle": "Contáctanos directamente",
+    "relatedTitle": "Servicios relacionados",
+    "faqTitle": "Preguntas frecuentes",
+    "allTopics": "Todos los temas"
+  },
+  "ContactPage": {
+    "meta": {
+      "title": "Contáctanos | Panama Contact Services",
+      "description": "Ponte en contacto con nuestros expertos en reubicación. Consulta inicial gratuita disponible."
+    },
+    "heading": "Ponte en contacto",
+    "subheading": "Nuestro equipo generalmente responde dentro de 24 horas.",
+    "name": "Tu nombre",
+    "email": "Tu correo electrónico",
+    "message": "Tu mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado! Nos pondremos en contacto pronto.",
+    "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
+    "or": "O reserva directamente",
+    "bookCall": "Agenda una llamada gratuita de 30 min",
+    "bookCallBody": "Evita idas y vueltas — agenda una llamada de 30 minutos con uno de nuestros expertos en reubicación y obtén respuestas a todas tus preguntas.",
+    "contactInfo": "Información de contacto",
+    "phone": "Teléfono",
+    "address": "Dirección"
+  }
+}

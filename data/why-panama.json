@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "life-quality",
+    "orderScore": 1,
+    "image": "/images/why-panama/life-quality.jpg"
+  },
+  {
+    "slug": "healthcare",
+    "orderScore": 2,
+    "image": "/images/why-panama/healthcare.jpg"
+  },
+  {
+    "slug": "economic-stability",
+    "orderScore": 3,
+    "image": "/images/why-panama/economic-stability.jpg"
+  },
+  {
+    "slug": "welcoming-country",
+    "orderScore": 4,
+    "image": "/images/why-panama/welcoming-country.jpg"
+  },
+  {
+    "slug": "financial-hub",
+    "orderScore": 5,
+    "image": "/images/why-panama/financial-hub.jpg"
+  },
+  {
+    "slug": "tax-pressure",
+    "orderScore": 6,
+    "image": "/images/why-panama/tax-pressure.jpg"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "services": [
+    { "slug": "friendly-nations", "tag": "VISA", "orderScore": 1, "image": "/services/friendly-nations.png" },
+    { "slug": "digital-nomad", "tag": "VISA", "orderScore": 2, "image": "/services/digital-nomad.png" },
+    { "slug": "qualified-investor", "tag": "VISA", "orderScore": 3, "image": "/services/qualified-investor.png" },
+    { "slug": "retiring", "tag": "VISA", "orderScore": 4, "image": "/services/retiring.png" },
+
+    { "slug": "income-tax", "tag": "SETUP", "orderScore": 5, "image": "/services/income-tax.jpg" },
+    { "slug": "real-estate", "tag": "SETUP", "orderScore": 6, "image": "/services/real-estate.jpg" },
+    { "slug": "bank-account", "tag": "SETUP", "orderScore": 7, "image": "/services/bank-account.jpg" },
+    { "slug": "business", "tag": "SETUP", "orderScore": 8, "image": "/services/business.png" },
+    { "slug": "goods-import", "tag": "SETUP", "orderScore": 9, "image": "/services/goods-import.jpg" },
+
+    { "slug": "driver-s-license", "tag": "LIFESTYLE", "orderScore": 10, "image": "/services/drivers-license.jpg" },
+    { "slug": "insurance", "tag": "LIFESTYLE", "orderScore": 11, "image": "/services/insurance.jpg" }
+  ]
+}
