@@ -17,6 +17,7 @@ export async function generateMetadata({ params }) {
       url: `https://panama-contact.com/${locale === 'en' ? '' : locale}`,
       siteName: 'Panama Contact Services',
       type: 'website',
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Panama Contact Services' }],
     },
   };
 }

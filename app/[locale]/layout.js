@@ -36,6 +36,23 @@ export async function generateMetadata({ params }) {
         pt: '/pt',
       },
     },
+    icons: {
+      icon: [
+        { url: '/icons/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/icons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      ],
+      apple: [{ url: '/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    },
+    manifest: '/icons/site.webmanifest',
+    openGraph: {
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Panama Contact Services — Your relocation experts in Panama' }],
+      locale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['/og-image.jpg'],
+    },
   };
 }
 
@@ -58,7 +75,7 @@ export default async function LocaleLayout({ children, params }) {
     email: 'info@panama-contact.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Edificio Dekel - Oficina 4 - Nivel 200, Plaza Santa Ana',
+      streetAddress: 'Local 1 - Edificio Antigua Domingo, Plaza Santa Ana',
       addressLocality: 'Ciudad de Panamá',
       addressCountry: 'PA',
     },

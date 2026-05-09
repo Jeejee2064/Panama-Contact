@@ -68,8 +68,8 @@ export default function Footer() {
               <p className="flex items-start gap-2.5 text-gray-500 text-xs mt-1">
                 <MapPin size={14} className="mt-0.5 text-gray-500 shrink-0" />
                 <span>
-                  Edificio Dekel – Oficina 4 – Nivel 200<br />
-                  Plaza Santa Ana – Ciudad de Panamá
+                  Local 1 - Edificio Antigua Domingo<br />
+                  Plaza Santa Ana, Panama City, Panama
                 </span>
               </p>
             </div>

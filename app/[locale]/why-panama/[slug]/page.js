@@ -30,10 +30,14 @@ export async function generateMetadata({ params }) {
   if (!item) return {};
 
   const cardTitle = t(`cards.${canonicalSlug}.title`);
+  const cardMeta = t.raw(`cards.${canonicalSlug}.meta`);
   const canonical = `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}/why-panama/${slug}`;
   return {
-    title: `${cardTitle} in Panama — Complete Guide | Panama Contact`,
-    description: t(`cards.${canonicalSlug}.shortDescription`),
+    title: cardMeta?.title ?? `${cardTitle} in Panama — Complete Guide | Panama Contact`,
+    description: cardMeta?.description ?? t(`cards.${canonicalSlug}.shortDescription`),
+    openGraph: {
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Panama Contact Services' }],
+    },
     alternates: {
       canonical,
       languages: Object.fromEntries(
@@ -163,9 +167,9 @@ export default async function WhyPanamaDetail({ params }) {
               {/* CTA card */}
               <FadeIn>
                 <div className="bg-[#FF491A] rounded-2xl p-6 text-white">
-                  <h3 className="font-bold text-lg mb-2">Ready to take the next step?</h3>
+                  <h3 className="font-bold text-lg mb-2">{t('sidebarCtaTitle')}</h3>
                   <p className="text-white/80 text-sm mb-5 leading-relaxed">
-                    Book a free consultation with our Panama specialists and get personalized guidance.
+                    {t('sidebarCtaBody')}
                   </p>
                   <a
                     href="https://calendly.com/panama-contact-info/30min"
@@ -182,7 +186,7 @@ export default async function WhyPanamaDetail({ params }) {
               {/* Contact */}
               <FadeIn delay={0.1}>
                 <div className="rounded-2xl p-6 border border-[#324158]/10">
-                  <h3 className="font-semibold text-[#324158] mb-3">Contact Us</h3>
+                  <h3 className="font-semibold text-[#324158] mb-3">{t('sidebarContactTitle')}</h3>
                   <a
                     href="mailto:info@panama-contact.com"
                     className="text-[#FF491A] text-sm hover:underline block mb-1"
@@ -204,7 +208,7 @@ export default async function WhyPanamaDetail({ params }) {
               {related.length > 0 && (
                 <FadeIn delay={0.15}>
                   <div className="rounded-2xl p-6 border border-[#324158]/10">
-                    <h3 className="font-semibold text-[#324158] mb-4">Explore More</h3>
+                    <h3 className="font-semibold text-[#324158] mb-4">{t('sidebarExploreMore')}</h3>
                     <div className="flex flex-col gap-3">
                       {related.map((s) => (
                         <Link

@@ -70,6 +70,14 @@ export default function Header() {
           open ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
+        <button
+          onClick={() => setOpen(false)}
+          className="absolute top-6 right-6 text-white hover:text-[#FF4D1C] transition-colors"
+          aria-label="Close menu"
+        >
+          <X size={32} />
+        </button>
+
         {links.map((link) => (
           <Link
             key={link.href}
@@ -80,6 +88,16 @@ export default function Header() {
             {link.label.toUpperCase()}
           </Link>
         ))}
+
+        <a
+          href="https://calendly.com/panama-contact-info/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setOpen(false)}
+          className="mt-4 bg-[#FF4D1C] hover:bg-[#e6451a] text-white font-bold px-8 py-4 rounded-full transition-colors text-sm uppercase tracking-widest"
+        >
+          {t('freeConsultation')}
+        </a>
       </div>
     </header>
   );

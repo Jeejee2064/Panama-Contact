@@ -30,8 +30,11 @@ export async function generateMetadata({ params }) {
 
   const canonical = `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}/services/${slug}`;
   return {
-    title: `${item.title} in Panama — Expert Guide & Services | Panama Contact`,
-    description: item.description,
+    title: item.meta?.title ?? `${item.title} in Panama — Expert Guide & Services | Panama Contact`,
+    description: item.meta?.description ?? item.description,
+    openGraph: {
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Panama Contact Services' }],
+    },
     alternates: {
       canonical,
       languages: Object.fromEntries(
