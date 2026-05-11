@@ -96,7 +96,7 @@
   "ServicesPage": {
     "meta": {
       "title": "Servicios para Expatriados en Panamá — Visas, Empresa, Inmobiliaria | Panama Contact",
-      "description": "Asesoramiento experto para instalarse en Panamá. Visa naciones amigas, nómada digital, constitución de empresa, cuenta bancaria, bienes raíces. Consulta gratuita."
+      "description": "Asesoramiento experto para instalarse en Panamá. Visa países amigos, nómada digital, constitución de empresa, cuenta bancaria, bienes raíces. Consulta gratuita."
     },
     "sectionLabel": "Servicios",
     "heading": "Nuestros Servicios",
@@ -114,8 +114,8 @@
   },
   "services": {
     "friendly-nations": {
-      "title": "Visa de Naciones Amigas en Panamá",
-      "description": "La visa de naciones amigas permite a ciudadanos de ciertos países obtener residencia en Panamá.",
+      "title": "Visa de Países Amigos en Panamá",
+      "description": "La visa de países amigos permite a ciudadanos de ciertos países obtener residencia en Panamá.",
       "faq": [
         {
           "question": "¿Cómo obtener la residencia en Panamá siendo extranjero?",
@@ -137,11 +137,11 @@
       "sections": [
         {
           "heading": "Marco Legal Actual",
-          "body": "<p>El Servicio Nacional de Migración recibirá tu solicitud bajo el programa \"Permiso de Residencia Permanente para Ciudadanos de Naciones con Relaciones de Amistad, Comercio y Profesionales con Panamá\". Este programa, conocido comúnmente como la \"visa de naciones amigas\", fue creado por el Decreto Ejecutivo 343, de fecha 16 de mayo de 2012, y posteriormente modificado por el Decreto Ejecutivo 197 del 7 de mayo de 2021. Cabe señalar que desde 2022, los solicitantes obtienen primero un permiso probatorio por dos años antes de poder solicitar la residencia permanente.</p>"
+          "body": "<p>El Servicio Nacional de Migración recibirá tu solicitud bajo el programa \"Permiso de Residencia Permanente para Ciudadanos de Naciones con Relaciones de Amistad, Comercio y Profesionales con Panamá\". Este programa, conocido comúnmente como la \"visa de países amigos\", fue creado por el Decreto Ejecutivo 343, de fecha 16 de mayo de 2012, y posteriormente modificado por el Decreto Ejecutivo 197 del 7 de mayo de 2021. Cabe señalar que desde 2022, los solicitantes obtienen primero un permiso probatorio por dos años antes de poder solicitar la residencia permanente.</p>"
         },
         {
           "heading": "Razones para Solicitarla",
-          "body": "<p>Existen tres opciones para obtener residencia panameña a través de la visa de naciones amigas:</p><ul><li><strong>Empleo:</strong> Se requiere un contrato de trabajo de una empresa legalmente establecida en territorio panameño. Obtener un permiso de trabajo es legalmente obligatorio si se elige esta vía.</li><li><strong>Bienes raíces:</strong> Compra de una propiedad con un valor mínimo de $200,000.</li><li><strong>Inversión bancaria:</strong> Mantener un monto igual o mayor a $200,000 en una entidad bancaria panameña por tres años.</li></ul>"
+          "body": "<p>Existen tres opciones para obtener residencia panameña a través de la visa de países amigos:</p><ul><li><strong>Empleo:</strong> Se requiere un contrato de trabajo de una empresa legalmente establecida en territorio panameño. Obtener un permiso de trabajo es legalmente obligatorio si se elige esta vía.</li><li><strong>Bienes raíces:</strong> Compra de una propiedad con un valor mínimo de $200,000.</li><li><strong>Inversión bancaria:</strong> Mantener un monto igual o mayor a $200,000 en una entidad bancaria panameña por tres años.</li></ul>"
         },
         {
           "heading": "Documentación Principal",
@@ -153,16 +153,16 @@
         },
         {
           "heading": "Países Elegibles (50 Nacionalidades)",
-          "body": "<p>Las siguientes 50 nacionalidades son actualmente elegibles para la Visa de Naciones Amigas. Los ciudadanos de otros países pueden optar a programas alternativos — contáctenos para evaluar su situación.</p><ul class=\"columns-2 sm:columns-3\"><li>Andorra</li><li>Argentina</li><li>Australia</li><li>Austria</li><li>Bélgica</li><li>Brasil</li><li>Canadá</li><li>Chile</li><li>Costa Rica</li><li>Croacia</li><li>Chipre</li><li>República Checa</li><li>Dinamarca</li><li>Estonia</li><li>Finlandia</li><li>Francia</li><li>Alemania</li><li>Grecia</li><li>Hong Kong</li><li>Hungría</li><li>Irlanda</li><li>Israel</li><li>Japón</li><li>Letonia</li><li>Liechtenstein</li><li>Lituania</li><li>Luxemburgo</li><li>Malta</li><li>México</li><li>Mónaco</li><li>Países Bajos</li><li>Nueva Zelanda</li><li>Noruega</li><li>Paraguay</li><li>Perú</li><li>Polonia</li><li>Portugal</li><li>San Marino</li><li>Serbia</li><li>Singapur</li><li>Eslovaquia</li><li>Sudáfrica</li><li>Corea del Sur</li><li>España</li><li>Suecia</li><li>Suiza</li><li>Taiwán</li><li>Reino Unido</li><li>Estados Unidos de América</li><li>Uruguay</li></ul>"
+          "body": "<p>Las siguientes 50 nacionalidades son actualmente elegibles para la Visa de Países Amigos. Los ciudadanos de otros países pueden optar a programas alternativos — contáctenos para evaluar su situación.</p><ul class=\"columns-2 sm:columns-3\"><li>Andorra</li><li>Argentina</li><li>Australia</li><li>Austria</li><li>Bélgica</li><li>Brasil</li><li>Canadá</li><li>Chile</li><li>Costa Rica</li><li>Croacia</li><li>Chipre</li><li>República Checa</li><li>Dinamarca</li><li>Estonia</li><li>Finlandia</li><li>Francia</li><li>Alemania</li><li>Grecia</li><li>Hong Kong</li><li>Hungría</li><li>Irlanda</li><li>Israel</li><li>Japón</li><li>Letonia</li><li>Liechtenstein</li><li>Lituania</li><li>Luxemburgo</li><li>Malta</li><li>México</li><li>Mónaco</li><li>Países Bajos</li><li>Nueva Zelanda</li><li>Noruega</li><li>Paraguay</li><li>Perú</li><li>Polonia</li><li>Portugal</li><li>San Marino</li><li>Serbia</li><li>Singapur</li><li>Eslovaquia</li><li>Sudáfrica</li><li>Corea del Sur</li><li>España</li><li>Suecia</li><li>Suiza</li><li>Taiwán</li><li>Reino Unido</li><li>Estados Unidos de América</li><li>Uruguay</li></ul>"
         },
         {
           "heading": "Beneficios Relacionados",
-          "body": "<p>La visa de naciones amigas permite a los beneficiarios obtener establecimiento permanente en Panamá, ofreciendo integración cultural y social mientras abre oportunidades económicas. Una vez establecido permanentemente en Panamá, se abre ante ti la posibilidad de adquirir la nacionalidad panameña.</p>"
+          "body": "<p>La visa de países amigos permite a los beneficiarios obtener establecimiento permanente en Panamá, ofreciendo integración cultural y social mientras abre oportunidades económicas. Una vez establecido permanentemente en Panamá, se abre ante ti la posibilidad de adquirir la nacionalidad panameña.</p>"
         }
       ],
       "meta": {
-        "title": "Visa de Naciones Amigas Panamá 2026 — Requisitos y Proceso | Panama Contact",
-        "description": "Obtenga la residencia en Panamá con la Visa de Naciones Amigas. Proceso de 3 a 6 meses para ciudadanos de más de 50 países. Consulta gratuita disponible."
+        "title": "Visa de Países Amigos Panamá 2026 — Requisitos y Proceso | Panama Contact",
+        "description": "Obtenga la residencia en Panamá con la Visa de Países Amigos. Proceso de 3 a 6 meses para ciudadanos de más de 50 países. Consulta gratuita disponible."
       }
     },
     "digital-nomad": {
