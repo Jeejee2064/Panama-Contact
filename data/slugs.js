@@ -5,9 +5,9 @@
 export const serviceSlugMap = {
   'friendly-nations': {
     en: 'friendly-nations-visa-panama',
-    fr: 'visa-nations-amies-panama',
-    es: 'visa-naciones-amigas-panama',
-    pt: 'visto-nacoes-amigas-panama',
+    fr: 'visa-pays-amis-panama',
+    es: 'visa-paises-amigas-panama',
+    pt: 'visto-paises-amigas-panama',
   },
   'digital-nomad': {
     en: 'digital-nomad-visa-panama',
