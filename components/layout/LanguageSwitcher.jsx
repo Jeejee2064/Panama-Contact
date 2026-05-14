@@ -8,13 +8,14 @@ import {
   resolveWhyPanamaSlug, localizeWhyPanamaSlug,
 } from '@/data/slugs';
 
-const locales = ['en', 'fr', 'es', 'pt'];
+const locales = ['en', 'fr', 'es', 'pt', 'de'];
 
 const flagMap = {
   en: 'us',
   fr: 'fr',
   es: 'es',
-  pt: 'pt'
+  pt: 'pt',
+  de: 'de',
 };
 
 export default function LanguageSwitcher() {
