@@ -1,7 +1,7 @@
 import { serviceSlugMap, whyPanamaSlugMap } from '@/data/slugs';
 
 const BASE = 'https://panama-contact.com';
-const LOCALES = ['en', 'fr', 'es', 'pt'];
+const LOCALES = ['en', 'fr', 'es', 'pt', 'de'];
 
 // locale → path prefix (en has none due to localePrefix: 'as-needed')
 const prefix = (locale) => (locale === 'en' ? '' : `/${locale}`);

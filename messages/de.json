@@ -1,0 +1,768 @@
+{
+  "Nav": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "whyPanama": "Warum Panama?",
+    "contact": "Kontakt",
+    "freeConsultation": "Kostenlose Beratung buchen!"
+  },
+  "Footer": {
+    "tagline": "Ihr vertrauenswürdiger Umzugspartner in Panama.",
+    "services": "Unsere Dienstleistungen",
+    "quickLinks": "Schnellzugriff",
+    "home": "Startseite",
+    "services2": "Dienstleistungen",
+    "whyPanama": "Warum Panama?",
+    "contact": "Kontakt",
+    "freeConsultation": "Kostenlose Beratung buchen",
+    "ctaHeading": "Bereit für Ihren Umzug?"
+  },
+  "HomePage": {
+    "meta": {
+      "title": "Panama Contact Services | Umzug & Visa-Experten in Panama",
+      "description": "Ihr vertrauenswürdiger Partner für den Umzug nach Panama. Visa, Bankkonten, Immobilien, Steuererklärungen und mehr. Expertenberatung auf Deutsch, Englisch, Französisch und Spanisch."
+    },
+    "hero": {
+      "eyebrow": "Ihre Umzugsexperten in Panama",
+      "headline": "Ihr Umzug nach Panama,",
+      "headlineAccent": "einfach gemacht.",
+      "subheadline": "Mit Experten an Ihrer Seite.",
+      "body": "Planen Sie einen Umzug nach Panama? Wir haben alles für Sie. Von der Eröffnung eines Bankkontos bis zur Erlangung eines Aufenthaltstitels — unser Expertenteam und unser landesweites Netzwerk zuverlässiger Partner sorgen dafür, dass Ihr Übergang reibungslos, stressfrei und kosteneffizient verläuft.",
+      "cta": "Kontakt aufnehmen",
+      "ctaSecondary": "Unsere Dienstleistungen",
+      "ctaTertiary": "Warum Panama?"
+    },
+    "features": {
+      "sectionLabel": "Panamá Contact Services",
+      "headline": "Ihr vertrauenswürdiger Umzugspartner in Panama.",
+      "description": "Planen Sie einen Umzug nach Panama? Wir haben alles für Sie. Von der Eröffnung eines Bankkontos bis zur Erlangung eines Aufenthaltstitels — unser Expertenteam und unser landesweites Netzwerk zuverlässiger Partner sorgen dafür, dass Ihr Übergang reibungslos, stressfrei und kosteneffizient verläuft. Überlassen Sie uns die Details — damit Sie sich auf Ihr neues Leben im Paradies konzentrieren können.",
+      "tailored": {
+        "title": "Eine maßgeschneiderte Lösung",
+        "body": "Weil jeder Kunde einzigartig ist, hat jeder Kunde seine eigene Lösung."
+      },
+      "local": {
+        "title": "Ein lokales Team",
+        "body": "Besuchen Sie uns in unserem Büro in Panama City. Unser Team aus Fachleuten ist den ganzen Tag vor Ort."
+      },
+      "international": {
+        "title": "Internationale Kompetenz",
+        "body": "Mit einer Präsenz in Nordamerika und Europa sprechen wir Ihre Sprache und verstehen Ihren Hintergrund."
+      },
+      "transparent": {
+        "title": "Ein transparenter Service",
+        "body": "Alle unsere Arbeiten sind detailliert und garantiert. Keine versteckten Kosten. Alle Fristen sind garantiert."
+      }
+    },
+    "whyUs": {
+      "sectionLabel": "Warum wir",
+      "heading": "Warum sind wir die Besten?",
+      "subheading": "Bei Panamá Contact Services bieten wir nicht nur Umzugshilfe — wir bieten Ihnen Sicherheit. Unser Team verbindet lokales Know-how mit internationalen Standards, um ein nahtloses, effizientes und vollständig personalisiertes Erlebnis zu gewährleisten.",
+      "items": {
+        "experienced": {
+          "title": "Ein erfahrenes Team",
+          "body": "Panamá Contact Services besteht aus Fachleuten, die das Land kennen und vollständig integriert sind. Unsere Kunden sind unsere besten Referenzen."
+        },
+        "longTerm": {
+          "title": "Eine langfristige Vertrauensbeziehung",
+          "body": "Wir bieten regelmäßige und umfassende langfristige Unterstützung. Wir sind immer für Sie da — kostenlos, für jede Beratung, auch Jahre nach der Inanspruchnahme unserer Dienstleistungen."
+        },
+        "global": {
+          "title": "Eine globale Lösung",
+          "body": "Da jede Maßnahme Konsequenzen hat, nehmen wir uns die Zeit, die Migrations-, Steuer- und Finanzsituation unserer Kunden in ihrer Gesamtheit zu analysieren, bevor wir ein Produkt oder eine Dienstleistung empfehlen."
+        },
+        "multilingual": {
+          "title": "Ein mehrsprachiges internationales Team",
+          "body": "Mit einer Präsenz in Nordamerika (Montreal) und Europa (Barcelona, Lissabon) können wir Ihre Fragen auf Spanisch, Englisch, Französisch und Portugiesisch beantworten."
+        },
+        "deadlines": {
+          "title": "Einhaltung von Fristen",
+          "body": "Wir machen keine falschen Versprechungen. Aber wir halten die versprochenen Fristen ein und verpflichten uns, Sie für jeden Schaden zu entschädigen, der durch Verzögerungen entsteht, für die wir verantwortlich sind."
+        }
+      }
+    },
+    "services": {
+      "sectionLabel": "Was wir tun",
+      "heading": "Unsere Dienstleistungen",
+      "cta": "Alle Dienstleistungen",
+      "readMore": "Mehr erfahren"
+    },
+    "cta": {
+      "eyebrow": "Kostenlose Beratung",
+      "heading": "Wissen Sie nicht, was zu Ihrer Situation passt?",
+      "subheading": "Holen Sie sich Ihre kostenlose Beratung!",
+      "cta": "Kostenlose Beratung buchen"
+    }
+  },
+  "ServicesPage": {
+    "meta": {
+      "title": "Panama Aufenthalt & Expat-Dienstleistungen — Visa, Unternehmen, Immobilien | Panama Contact",
+      "description": "Expertenberatung für Ihren Umzug nach Panama. Friendly-Nations-Visum, Digital-Nomad-Visum, Unternehmensgründung, Bankkonten, Immobilien und mehr. Kostenlose Beratung."
+    },
+    "sectionLabel": "Dienstleistungen",
+    "heading": "Unsere Dienstleistungen",
+    "subheading": "Wir begleiten Sie bei jedem Schritt Ihres Projekts in Panama.",
+    "filterAll": "Alle",
+    "filterVisa": "Visa",
+    "filterSetup": "Gründung",
+    "filterLifestyle": "Lebensstil",
+    "readMore": "Mehr lesen",
+    "faq": {
+      "heading": "Häufige Fragen zu Panama",
+      "subheading": "Alles, was Sie wissen müssen, bevor Sie nach Panama ziehen."
+    }
+  },
+  "services": {
+    "friendly-nations": {
+      "title": "Friendly-Nations-Visum in Panama",
+      "description": "Das Friendly-Nations-Visum ermöglicht Bürgern bestimmter Länder, einen Aufenthaltstitel in Panama zu erlangen.",
+      "faq": [
+        {
+          "question": "Wie erhält man als Ausländer eine Aufenthaltserlaubnis in Panama?",
+          "answer": "Um als Ausländer eine Aufenthaltserlaubnis in Panama zu erhalten, müssen Sie einen Antrag im Rahmen eines Einwanderungsprogramms stellen, das Ihrer Nationalität und Ihrem Profil entspricht. Die am häufigsten genutzten Optionen sind das Friendly-Nations-Visum, die Aufenthaltserlaubnis für qualifizierte Investoren und das Rentenvisum. Das Friendly-Nations-Visum ermöglicht Ihnen, eine Aufenthaltserlaubnis durch den Nachweis einer wirtschaftlichen oder beruflichen Verbindung zu Panama zu erhalten. Das Rentenvisum richtet sich an Personen, die mit einem Renteneinkommen von mindestens 1.000 USD pro Monat in Panama leben möchten. Die Aufenthaltserlaubnis in Panama erfordert apostillierte Dokumente und die Erfüllung der Anforderungen des gewählten Programms."
+        },
+        {
+          "question": "Was sind die Voraussetzungen für eine Aufenthaltserlaubnis in Panama?",
+          "answer": "Die Voraussetzungen umfassen einen gültigen Reisepass, eine apostillierte Strafregisterbescheinigung und die Erfüllung eines gültigen Einwanderungsprogramms. Die Aufenthaltserlaubnis kann nicht erteilt werden, wenn der Antragsteller vorbestraft ist oder auf internationalen Kontrolllisten erscheint."
+        },
+        {
+          "question": "Was kostet eine Aufenthaltserlaubnis in Panama im Jahr 2026?",
+          "answer": "Die Kosten hängen vom gewählten Visumtyp ab. Im Allgemeinen belaufen sich die Rechts- und Verwaltungskosten auf 5.000 bis 10.000 USD pro Person. Die Aufenthaltserlaubnis für qualifizierte Investoren erfordert eine Mindestinvestition von 300.000 USD, während das Rentenvisum ein monatliches Einkommen von mindestens 1.000 USD erfordert."
+        },
+        {
+          "question": "Wie lange dauert es, eine Aufenthaltserlaubnis in Panama zu erhalten?",
+          "answer": "In den meisten Fällen dauert es 3 bis 6 Monate ab Einreichung der vollständigen Unterlagen. Die Aufenthaltserlaubnis für qualifizierte Investoren kann innerhalb von 30 Tagen erlangt werden. Die Bearbeitungszeit kann je nach Nationalität, Visumtyp und Vollständigkeit der Akte variieren."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Aktueller Rechtsrahmen",
+          "body": "<p>Der Nationale Migrationsdienst prüft Ihren Antrag im Rahmen des Programms \"Daueraufenthaltsgenehmigung für Bürger von Nationen mit freundschaftlichen, kommerziellen und beruflichen Beziehungen zu Panama\". Dieses Programm, allgemein als \"Friendly-Nations-Visum\" bekannt, wurde durch den Erlass Nr. 343 vom 16. Mai 2012 geschaffen und später durch den Erlass Nr. 197 vom 7. Mai 2021 geändert. Seit 2022 erhalten Antragsteller zunächst eine Probeerlaubnis für zwei Jahre, bevor sie einen Antrag auf dauerhafte Aufenthaltserlaubnis stellen können.</p>"
+        },
+        {
+          "heading": "Gründe für den Antrag",
+          "body": "<p>Es gibt drei Möglichkeiten, über das Friendly-Nations-Visum eine panamaische Aufenthaltserlaubnis zu erhalten:</p><ul><li><strong>Beschäftigung:</strong> Ein Arbeitsvertrag mit einem legal auf panamaischem Gebiet ansässigen Unternehmen ist erforderlich. Die Beantragung einer Arbeitserlaubnis ist gesetzlich vorgeschrieben, wenn dieser Weg gewählt wird.</li><li><strong>Immobilien:</strong> Kauf einer Immobilie mit einem Mindestwert von 200.000 USD.</li><li><strong>Bankanlage:</strong> Aufrechterhaltung eines Betrags von mindestens 200.000 USD bei einer panamaischen Bank für drei Jahre.</li></ul>"
+        },
+        {
+          "heading": "Hauptdokumentation",
+          "body": "<ul><li>Rechtliche Vertretung durch einen Anwalt.</li><li>Fünf Passfotos und eine notariell beglaubigte Reisepasskopie.</li><li>Strafregisterbescheinigung aus dem Wohnsitzland.</li><li>Ärztliches Attest.</li><li>An panamaische Institutionen ausgestellte Schecks.</li><li>Nachweis des Antragsgrundes (Arbeitsvertrag, Vermögenswerte usw.).</li><li>Für Angehörige: Nachweis der Familienbeziehung und finanziellen Stabilität.</li></ul>"
+        },
+        {
+          "heading": "Anspruchsvoraussetzungen",
+          "body": "<p>Interessenten müssen die Staatsbürgerschaft eines der als freundlich geltenden Länder in kommerzieller und diplomatischer Hinsicht mit Panama besitzen. Dies erstreckt sich auf nahe Verwandte — Eltern, Nachkommen und Ehepartner. Wenn Ihr Land nicht auf der Liste steht, stehen andere Alternativen zur Verfügung — kontaktieren Sie Panama Contact Services, um die beste Option für Ihre persönliche Situation zu prüfen.</p>"
+        },
+        {
+          "heading": "Berechtigte Länder (50 Nationalitäten)",
+          "body": "<p>Die folgenden 50 Nationalitäten sind derzeit für das Friendly-Nations-Visum qualifiziert. Bürger anderer Länder können unter alternativen Programmen berechtigt sein — kontaktieren Sie uns, um Ihre Situation zu prüfen.</p><ul class=\"columns-2 sm:columns-3\"><li>Andorra</li><li>Argentinien</li><li>Australien</li><li>Österreich</li><li>Belgien</li><li>Brasilien</li><li>Kanada</li><li>Chile</li><li>Costa Rica</li><li>Kroatien</li><li>Zypern</li><li>Tschechische Republik</li><li>Dänemark</li><li>Estland</li><li>Finnland</li><li>Frankreich</li><li>Deutschland</li><li>Griechenland</li><li>Hongkong</li><li>Ungarn</li><li>Irland</li><li>Israel</li><li>Japan</li><li>Lettland</li><li>Liechtenstein</li><li>Litauen</li><li>Luxemburg</li><li>Malta</li><li>Mexiko</li><li>Monaco</li><li>Niederlande</li><li>Neuseeland</li><li>Norwegen</li><li>Paraguay</li><li>Peru</li><li>Polen</li><li>Portugal</li><li>San Marino</li><li>Serbien</li><li>Singapur</li><li>Slowakei</li><li>Südafrika</li><li>Südkorea</li><li>Spanien</li><li>Schweden</li><li>Schweiz</li><li>Taiwan</li><li>Vereinigtes Königreich</li><li>Vereinigte Staaten von Amerika</li><li>Uruguay</li></ul>"
+        },
+        {
+          "heading": "Verbundene Vorteile",
+          "body": "<p>Das Friendly-Nations-Visum ermöglicht es den Begünstigten, eine dauerhafte Niederlassung in Panama zu erlangen, die kulturelle und soziale Integration fördert und wirtschaftliche Möglichkeiten eröffnet. Nach dauerhafter Niederlassung in Panama besteht die Möglichkeit, die panamaische Staatsangehörigkeit zu erwerben.</p>"
+        }
+      ],
+      "meta": {
+        "title": "Friendly-Nations-Visum Panama 2026 — Voraussetzungen & Verfahren | Panama Contact",
+        "description": "Beantragen Sie das Panama Friendly-Nations-Visum mit professioneller Unterstützung. Aufenthaltserlaubnis in 3–6 Monaten für Bürger von 50+ Ländern. Kostenlose Beratung verfügbar."
+      }
+    },
+    "digital-nomad": {
+      "title": "Digital-Nomad-Visum",
+      "description": "Arbeiten Sie aus der Ferne in Panama und genießen Sie dabei einen einzigartigen Lebensstil.",
+      "faq": [
+        {
+          "question": "Kann ich als Ausländer aus Panama remote arbeiten?",
+          "answer": "Ja. Das Digital-Nomad-Visum ermöglicht es Ihnen, bis zu 9 Monate aus Panama heraus remote zu leben und zu arbeiten, einmalig verlängerbar für denselben Zeitraum. Sie müssen einen Vertrag mit einem ausländischen Unternehmen oder ausländischen Kunden haben und mindestens 36.000 USD pro Jahr verdienen. Sie dürfen unter diesem Visum nicht von einem panamaischen Unternehmen eingestellt werden."
+        },
+        {
+          "question": "Welche Dokumente werden für das Digital-Nomad-Visum benötigt?",
+          "answer": "Erforderliche Unterlagen: gültiger Reisepass mit mindestens 6 Monaten Restgültigkeit, apostillierte Strafregisterbescheinigung, internationale Krankenversicherung für Panama, eidesstattliche Erklärung über die Nichtannahme lokaler Beschäftigung, Nachweis der Existenz des ausländischen Unternehmens sowie ein Arbeitsvertrag oder Einkommensnachweis aus dem Ausland von mindestens 36.000 USD pro Jahr."
+        },
+        {
+          "question": "Wie lange kann ich mit einem Touristenvisum in Panama bleiben?",
+          "answer": "EU-Bürger können sich bis zu 3 Monate hintereinander mit einem Touristenvisum in Panama aufhalten. Kanadische Staatsbürger haben 6 Monate. Das Digital-Nomad-Visum ist eine gute Möglichkeit, den Aufenthalt zu verlängern und das Leben im Land zu testen, ohne eine vollständige Aufenthaltserlaubnis zu beantragen."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Das Digital-Nomad-Visum von Panama ermöglicht es Ihnen, Arbeit und Abenteuer zu verbinden, ohne das Land am Ende Ihres Touristenvisums verlassen zu müssen. Erschwinglich, kann das Digital-Nomad-Visum auch eine gute Möglichkeit sein, das Leben im Land zu testen, ohne einen Aufenthaltsantrag zu stellen. Europäer dürfen sich mit einem Touristenvisum in Panama nur drei Monate am Stück aufhalten; bei kanadischen Staatsbürgern beträgt dieser Zeitraum 6 Monate.</p><p>Dieses 2021 im Zuge der COVID-19-Krise eingeführte Programm zielt nicht nur darauf ab, den Tourismus zu fördern, sondern auch die lokale Wirtschaft anzukurbeln und junge Ausländer, die in innovativen Bereichen arbeiten, mit dem Land vertraut zu machen.</p>"
+        },
+        {
+          "heading": "Dauer und Bedingungen",
+          "body": "<p>Das Digital-Nomad-Visum wurde am 7. Mai 2021 eingeführt. Es ist 9 Monate gültig und kann einmal für den gleichen Zeitraum verlängert werden. Inhaber dürfen in Panama arbeiten, sofern sie einen Vertrag mit einem ausländischen Unternehmen aufrechterhalten und ein Mindestjahreseinkommen von 36.000 USD nachweisen.</p><p>Dies gilt nur, wenn Sie Verträge mit Unternehmen oder Kunden im Ausland haben. Sie können mit diesem Visum nicht von einem panamaischen Unternehmen eingestellt werden.</p>"
+        },
+        {
+          "heading": "Erforderliche Dokumente",
+          "body": "<ul><li>Gültiger Reisepass mit mindestens 6 Monaten Restgültigkeit.</li><li>Apostillierte und übersetzte Strafregisterbescheinigung.</li><li>Internationale Krankenversicherung für Panama.</li><li>Eidesstattliche Erklärung über die Nichtannahme von Stellenangeboten in Panama.</li><li>Nachweis der Existenz des ausländischen Unternehmens.</li><li>Aktueller Arbeitsvertrag oder Einkommensnachweis aus dem Ausland (mindestens 36.000 USD/Jahr).</li><li>Selbstständige müssen Verträge mit ausländischen Kunden vorlegen.</li></ul>"
+        },
+        {
+          "heading": "Wichtige Tipps",
+          "body": "<p>Vollständigkeit und Richtigkeit der Unterlagen sind entscheidend. Unstimmigkeiten oder Fehler können zu Verzögerungen oder Ablehnungen führen. Halten Sie Kopien aller eingereichten Unterlagen während des gesamten Verfahrens bereit. Halten Sie regelmäßig Kontakt zu Panama Contact Services während des Prozesses.</p>"
+        }
+      ],
+      "meta": {
+        "title": "Panama Digital-Nomad-Visum 2026 — Voraussetzungen & Antrag | Panama Contact",
+        "description": "Leben und arbeiten Sie remote aus Panama mit dem Digital-Nomad-Visum. 9-monatige verlängerbare Erlaubnis ohne Steuer auf ausländische Einkünfte. Expertenberatung inklusive."
+      }
+    },
+    "qualified-investor": {
+      "title": "Qualifiziertes Investorenvisum",
+      "description": "Investieren Sie in Panama und erhalten Sie schnell eine Aufenthaltserlaubnis.",
+      "faq": [
+        {
+          "question": "Wie schnell kann ich über das Qualifizierte Investorenvisum eine Aufenthaltserlaubnis erhalten?",
+          "answer": "Das Qualifizierte Investorenvisum hat ein gesetzliches Bearbeitungsfenster von nur 30 Tagen ab Einreichung einer vollständigen Akte — der schnellste Aufenthaltsweg in Panama. Das Verfahren kann aus der Ferne eingeleitet werden, obwohl Sie für den Abschluss nach Panama reisen müssen."
+        },
+        {
+          "question": "Welche Investitionsmöglichkeiten gibt es für das Qualifizierte Investorenvisum?",
+          "answer": "Es gibt drei Optionen: (1) eine Finanzanlage von mindestens 500.000 USD bei einem in Panama registrierten Wertpapierhaus; (2) eine Festgeldanlage von 750.000 USD bei einer panamaischen Bank; oder (3) ein Immobilienkauf von mindestens 300.000 USD (bzw. 500.000 USD nach Oktober 2024). Die Immobilie muss mindestens fünf Jahre gehalten werden. Alle investierten Mittel müssen aus dem Ausland stammen."
+        },
+        {
+          "question": "Muss ich in Panama leben, um die qualifizierte Investorenresidenz aufrechtzuerhalten?",
+          "answer": "Sie müssen Panama mindestens einmal alle 24 Monate besuchen, um Ihren Aufenthaltsstatus aufrechtzuerhalten. Für einen Antrag auf Steuerwohnsitz müssen Sie mindestens 183 Tage pro Jahr in Panama verbringen und Verbindungen zum Land nachweisen."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Dieses im Oktober 2020 eingeführte Visum kann auf verschiedene Arten erlangt werden: durch den Erwerb von Immobilien, den Kauf von Wertpapieren bei einem in Panama registrierten Wertpapierhaus oder die Investition in eine Festgeldanlage bei einer lokalen Bank. Das Verfahren kann aus der Ferne eingeleitet werden, obwohl Sie für den Abschluss nach Panama reisen müssen. Der Visumprozess dauert nach der notwendigen Investition und dem Zusammenstellen der erforderlichen Dokumentation nur 30 Tage.</p>"
+        },
+        {
+          "heading": "Option 1 — Finanzanlage: 500.000 USD",
+          "body": "<p><strong>Erforderliche Investition:</strong> Mindestens 500.000 USD durch eine Finanzanlage in Panama.</p><p><strong>Dokumentation:</strong> Zusätzlich zu allgemeinen Unterlagen (Strafregister, Handelskammerbescheinigung usw.) müssen Sie einen beglaubigten Brief des Wertpapierhauses vorlegen, der die getätigte Investition beschreibt.</p>"
+        },
+        {
+          "heading": "Option 2 — Festgeldanlage: 750.000 USD",
+          "body": "<p><strong>Erforderliche Investition:</strong> 750.000 USD in Festgeldanlagen bei einer panamaischen Bank.</p><p><strong>Dokumentation:</strong> Beglaubigte Briefe der Bankinstitution, die bestätigen, dass die Mittel aus dem Ausland überwiesen wurden.</p>"
+        },
+        {
+          "heading": "Option 3 — Immobilien: 300.000 / 500.000 USD",
+          "body": "<p><strong>Erforderliche Investition:</strong> Mindestens 300.000 USD bis Oktober 2024, danach 500.000 USD. Kann auch über einen Kaufvorvertrag beantragt werden.</p><p><strong>Haltefrist:</strong> Die Immobilie muss mindestens fünf Jahre gehalten werden.</p><p><strong>Dokumentation:</strong> Eigentumsurkunden und/oder Kaufverträge.</p>"
+        },
+        {
+          "heading": "Verfahren und Hauptbedingungen",
+          "body": "<p><strong>Anwalt erforderlich:</strong> Das gesamte Verfahren muss von einem Anwalt in Panama durchgeführt werden.</p><p><strong>Bearbeitungszeit:</strong> In der Regel 30 Tage ab Antragstellung.</p><p><strong>Aufrechterhaltung:</strong> Sie müssen Panama mindestens einmal alle 24 Monate besuchen.</p><p><strong>Mittelherkunft:</strong> Alle investierten Mittel müssen aus dem Ausland stammen.</p><p><strong>Steuerwohnsitz:</strong> Der Antragsteller muss mindestens 183 Tage auf panamaischem Gebiet verbringen und Verbindungen im Land nachweisen.</p>"
+        }
+      ],
+      "meta": {
+        "title": "Qualifiziertes Investorenvisum Panama 2026 — ab 300.000 USD | Panama Contact",
+        "description": "Erhalten Sie eine dauerhafte Aufenthaltserlaubnis in Panama durch eine Investition ab 300.000 USD. Schnellzulassung in 30 Tagen. Professionelle Rundum-Unterstützung."
+      }
+    },
+    "retiring": {
+      "title": "Rentenvisum",
+      "description": "Genießen Sie Ihren Ruhestand in Panama mit exklusiven Vorteilen.",
+      "faq": [
+        {
+          "question": "Wie viel Einkommen benötige ich für das Panama-Rentenvisum?",
+          "answer": "Sie müssen eine garantierte lebenslange Rente von mindestens 1.000 USD pro Monat nachweisen. Liegt Ihre Rente zwischen 750 und 1.000 USD, kann sie durch eine Immobilieninvestition von mindestens 100.000 USD ergänzt werden. Es gibt keine Altersgrenze nach oben, das Mindestalter beträgt 25 Jahre. Für jeden Angehörigen werden zusätzlich 250 USD/Monat benötigt."
+        },
+        {
+          "question": "Welche Rabatte gewährt das Panama-Rentenvisum?",
+          "answer": "Die Pensionado-Karte gewährt erhebliche Rabatte in ganz Panama: 15% auf Arztrechnungen und Darlehen, 20% auf ärztliche Konsultationen und verschreibungspflichtige Medikamente, 25% auf Restaurants und Energierechnungen, 30% auf öffentliche Verkehrsmittel und 50% auf Freizeitaktivitäten wie Kinos und Konzerte. Rentner profitieren auch von einer Steuerbefreiung bei der Einfuhr persönlicher Gegenstände und eines Fahrzeugs bei der Ankunft."
+        },
+        {
+          "question": "Erlaubt das Rentenvisum mir, in Panama zu arbeiten?",
+          "answer": "Das Rentenvisum gewährt keine Arbeitserlaubnis — Sie können nicht von einem panamaischen Unternehmen eingestellt werden. Das Besitzen und Betreiben eines eigenen Unternehmens in Panama ist jedoch unter diesem Visum nicht verboten."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Berechtigung für das Rentenvisum",
+          "body": "<p>Das Rentenvisum diskriminiert nicht aufgrund des Alters — es konzentriert sich auf garantiertes Einkommen. Sie müssen eine lebenslange Rente von mindestens 1.000 USD/Monat nachweisen. Das erforderliche Mindestalter beträgt 25 Jahre. Dieses Visum gewährt kein Recht auf eine Arbeitserlaubnis, aber das Besitzen eines Unternehmens ist nicht verboten.</p><p><strong>Mindesteinkommen:</strong> 1.000 USD/Monat. Liegt die Rente zwischen 750–1.000 USD, kann sie durch eine Immobilieninvestition von mindestens 100.000 USD ergänzt werden.</p><p><strong>Angehörige:</strong> Zusätzlich 250 USD/Monat pro Angehörigem. Abhängige Kinder müssen ledig und unter 18 sein oder unter 25, wenn sie studieren.</p>"
+        },
+        {
+          "heading": "Erforderliche Dokumente",
+          "body": "<ul><li>Rentenbescheinigung einer staatlichen oder privaten Stelle, authentifiziert.</li><li>Öffentliche Eigentumsregisterbescheinigung, wenn Sie Eigentum in Panama besitzen.</li><li>Strafregisterbescheinigung aus Ihrem Herkunftsland, vom panamaischen Konsulat authentifiziert.</li><li>Authentifizierte Heirats- und/oder Geburtsurkunden für Ehepartner und Kinder.</li></ul>"
+        },
+        {
+          "heading": "Antragsverfahren",
+          "body": "<ul><li>Registrierung beim Nationalen Migrationsdienst.</li><li>Einreichung aller erforderlichen Unterlagen, ggf. ins Spanische übersetzt.</li><li>Zahlung der Migrationsgebühren und Rückführungskaution.</li></ul><p><strong>Prüfung und Genehmigung:</strong> Die Prüfung kann mehrere Monate dauern. Nach Genehmigung wird eine vorläufige Aufenthaltsgenehmigung ausgestellt.</p>"
+        },
+        {
+          "heading": "Vorteile des Rentenvisums",
+          "body": "<p><strong>15% Rabatt:</strong> Fast-Food-Restaurants, Arztrechnungen (ohne Versicherung), Augen- oder Zahnpflegechecks, Darlehen.</p><p><strong>20% Rabatt:</strong> Arztbesuche, Fachdienstleistungen, verschreibungspflichtige Medikamente.</p><p><strong>25% Rabatt:</strong> Speisegaststätten, öffentliche Versorgungsrechnungen, Flugtickets.</p><p><strong>30% Rabatt:</strong> Herbergen (Freitag–Sonntag), Transport (Züge, Busse, Schiffe).</p><p><strong>50% Rabatt:</strong> Freizeitaktivitäten (Kinos, Konzerte, Sportveranstaltungen), Hotels an Wochentagen (Montag–Donnerstag).</p><p><strong>Steuerbefreiung</strong> bei der Einfuhr persönlicher Gegenstände und Fahrzeuge bei der Ankunft in Panama.</p>"
+        },
+        {
+          "heading": "Wichtige Tipps",
+          "body": "<p>Vollständigkeit und Richtigkeit der Unterlagen sind entscheidend. Unstimmigkeiten oder Fehler können zu Verzögerungen oder Ablehnungen führen. Halten Sie Kopien aller eingereichten Unterlagen bereit und halten Sie regelmäßig Kontakt zu Panama Contact Services.</p>"
+        }
+      ],
+      "meta": {
+        "title": "Panama Pensionado-Visum 2026 — Im Ruhestand in Panama | Panama Contact",
+        "description": "Genießen Sie Ihren Ruhestand in Panama mit dem Pensionado-Visum ab 1.000 USD/Monat. Exklusive Rabatte und tropischer Lebensstil mit unserer Expertenunterstützung."
+      }
+    },
+    "bank-account": {
+      "title": "Kontoeröffnung",
+      "description": "Eröffnen Sie persönliche oder Unternehmenskonten in Panama mit Expertenunterstützung.",
+      "faq": [
+        {
+          "question": "Wie eröffnet man als Ausländer ein Bankkonto in Panama?",
+          "answer": "Als Ausländer ein Bankkonto in Panama zu eröffnen ist möglich, aber Banken in Panama wenden strenge Compliance-Kontrollen an. Sie müssen einen gültigen Reisepass, Bankreferenzen und Unterlagen zur Herkunft der Mittel vorlegen. Das Eröffnen eines Bankkontos aus der Ferne ist möglich, wenn die Akte korrekt strukturiert und durch Intermediäre mit lokaler Bankbeziehung eingereicht wird."
+        },
+        {
+          "question": "Was sind die Anforderungen für Ausländer, ein Bankkonto in Panama zu eröffnen?",
+          "answer": "Die Anforderungen umfassen einen gültigen Reisepass, Bankreferenzen, Einkommensnachweis und Dokumentation zur Herkunft der Mittel. Für Unternehmenskonten sind Firmendokumente und Angaben zum wirtschaftlich Berechtigten erforderlich. Es ist nicht möglich, ein Bankkonto zu eröffnen, wenn der Antragsteller auf Sanktionslisten erscheint oder die Mittelherkunft nicht nachweisen kann."
+        },
+        {
+          "question": "Wie lange dauert die Eröffnung eines Bankkontos in Panama?",
+          "answer": "In der Regel 2 bis 4 Wochen ab Einreichung einer vollständigen Akte. Die Eröffnung kann länger dauern, wenn die Bank zusätzliche Informationen anfordert oder das Profil eine erweiterte Sorgfaltspflicht erfordert."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Die Eröffnung eines ersten Bankkontos in Panama ist entscheidend, ob für eine Privatperson oder eine juristische Person. Panama Contact Services erleichtert diesen aufwändigen Prozess, indem Sie bei jedem Schritt begleitet werden, bis Ihr Konto eröffnet und Ihre Produkte verfügbar sind. Wir bieten umfassende Unterstützung, die das Verstehen des Prozesses, die Kommunikation mit Banken und die Verwaltung administrativer Aufgaben umfasst.</p>"
+        },
+        {
+          "heading": "Eröffnung eines Unternehmenskontos",
+          "body": "<p>In Panama gibt es hauptsächlich zwei Arten von Unternehmenskonten: Konten für panamaische juristische Personen (in Panama registrierte Unternehmen) und Konten für ausländische juristische Personen (im Ausland registrierte Unternehmen). Nach dem Panama-Papers-Skandal hat sich der Bankenregulierungsrahmen verschärft, insbesondere für Offshore-Unternehmen. Panama Contact Services ist Ihr bevorzugter Partner bei der Navigation durch diese Vorschriften.</p>"
+        },
+        {
+          "heading": "Eröffnung eines Privatkontos",
+          "body": "<p>Ein Ausländer kann ein Privatkonto in Panama eröffnen, unabhängig davon, ob er Einwohner ist oder nicht. Mit etwa vierzig Banken, die für Privatpersonen offen sind, bietet Panama eine große Auswahl — von einfachen Privatkundenbanken mit sehr geringen Gebühren bis hin zu Privatbanken mit personalisierter Unterstützung nach internationalen Standards.</p>"
+        }
+      ],
+      "meta": {
+        "title": "Bankkonto in Panama eröffnen 2026 — Leitfaden für Nicht-Residenten | Panama Contact",
+        "description": "Eröffnen Sie als Ausländer oder Nicht-Resident ein persönliches oder Geschäftskonto in Panama. Schritt-für-Schritt-Unterstützung von Panama Contact Services."
+      }
+    },
+    "business": {
+      "title": "Unternehmensgründung",
+      "description": "Gründen Sie Ihr Unternehmen in Panama mit vollständiger Unterstützung.",
+      "faq": [
+        {
+          "question": "Wie gründet man als Ausländer ein Unternehmen in Panama?",
+          "answer": "Als Ausländer ein Unternehmen in Panama zu gründen ist ein schneller Prozess, der ohne Aufenthaltserlaubnis möglich ist. Die am häufigsten verwendeten Strukturen sind die Sociedad Anónima (S.A.), die Sociedad de Responsabilidad Limitada (S.R.L.) und die Private Interest Foundation. Die S.A. ist die am weitesten verbreitete Option für kommerzielle Aktivitäten und internationale Investitionen."
+        },
+        {
+          "question": "Was sind die Anforderungen für die Gründung eines Unternehmens in Panama?",
+          "answer": "Die Anforderungen umfassen einen gültigen Reisepass, Angaben zur geplanten Tätigkeit und Compliance-Formulare. Es ist obligatorisch, einen Resident Agent zu benennen und die wirtschaftlich Berechtigten zu erklären. Eine Aufenthaltserlaubnis ist nicht erforderlich. Unternehmen müssen jährliche Pflichten erfüllen wie die tasa única und die Aufrechterhaltung des Resident Agent."
+        },
+        {
+          "question": "Was kostet die Gründung eines Unternehmens in Panama?",
+          "answer": "Die Kosten hängen von der gewählten Struktur ab. Die Gründung einer S.A., S.R.L. oder Private Interest Foundation kostet in der Regel zwischen 1.500 und 2.000 USD. Dazu kommen jährliche Kosten wie die tasa única, der Resident Agent und Verwaltungsdienstleistungen von insgesamt ca. 600 bis 1.000 USD pro Jahr."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Möchten Sie Ihr Unternehmen in Panama gründen? Es gibt grundlegende Anforderungen für die Gründung gemäß lokaler Gesetzgebung. Diese Schritte gewährleisten optimalen Schutz Ihrer Investition und minimieren potenzielle Risiken. Seit 2005 hat Panama die Verfahren für Unternehmensgründungen durch verschiedene fiskalische und kommerzielle Reformen vereinfacht.</p>"
+        },
+        {
+          "heading": "Gründung einer Aktiengesellschaft (S.A.)",
+          "body": "<p>Etwa 90% der Unternehmen in Panama sind als Aktiengesellschaften tätig. Diese Strukturen schützen die Identität der Aktionäre und begrenzen die Risiken auf Kapital und Vermögenswerte. Die Gründung dauert in Panama zwischen 5 und 7 Werktagen.</p>"
+        },
+        {
+          "heading": "Wahl eines Unternehmensstandorts",
+          "body": "<p>Der Standort kann Ihr Privatwohnsitz oder speziell erworbene Räumlichkeiten als Firmensitz sein. Sie können diesen Raum besitzen oder mieten.</p>"
+        },
+        {
+          "heading": "Erlangung des \"Aviso de Operaciones\"",
+          "body": "<p>Dies ist die einzige staatlich erforderliche Genehmigung für die Aufnahme Ihrer Tätigkeit. Nach der Erlangung können Sie die Handels-, Steuer- und Kommunalbehörden in einem einzigen Schritt über Ihre Betriebsabsicht informieren.</p>"
+        },
+        {
+          "heading": "Eröffnung eines Bankkontos",
+          "body": "<p>Obwohl nicht obligatorisch, wird die Eröffnung eines Bankkontos nach der Unternehmensgründung dringend empfohlen. Diese Aufgabe kann ohne Kenntnisse und zuverlässige Kontakte im Land besonders herausfordernd sein.</p>"
+        },
+        {
+          "heading": "Personalregistrierung",
+          "body": "<p>Es ist unbedingt erforderlich, Ihr Personal beim Arbeitsministerium und der Sozialversicherung zu registrieren. Umgeben Sie sich mit einem renommierten Buchhalter, der diese Registrierungen tatsächlich durchführt, um unangenehme Überraschungen zu vermeiden.</p>"
+        },
+        {
+          "heading": "Registrierung bei AMPYME",
+          "body": "<p>Unternehmen mit einer Anfangsinvestition von weniger als 150.000 USD müssen sich bei AMPYME (Autoridad de la Micro, Pequeña y Mediana Empresa) registrieren. Dies ermöglicht Steuervorteile, einschließlich einer Befreiung für die ersten zwei Einkommenserklärungen.</p>"
+        }
+      ],
+      "meta": {
+        "title": "Unternehmensgründung in Panama 2026 — S.A. & GmbH | Panama Contact",
+        "description": "Gründen Sie schnell und kostengünstig eine Aktiengesellschaft oder GmbH in Panama. Steuerfreundliche, international anerkannte Strukturen. Expertenunterstützung bei der Registrierung."
+      }
+    },
+    "real-estate": {
+      "title": "Immobilien",
+      "description": "Finden und finanzieren Sie Ihre Traumimmobilie in Panama.",
+      "faq": [
+        {
+          "question": "Kann ein Ausländer in Panama Immobilien kaufen?",
+          "answer": "Ja, ein Ausländer kann in Panama Immobilien mit denselben Rechten wie ein panamaischer Staatsbürger kaufen. Das Gesetz erlaubt Ausländern den Erwerb von Immobilien in eigenem Namen oder über ein Unternehmen oder eine Stiftung. Eine Aufenthaltserlaubnis ist nicht obligatorisch, erleichtert aber Bank- und Verwaltungsverfahren."
+        },
+        {
+          "question": "Was sind die Anforderungen für den Kauf einer Immobilie in Panama?",
+          "answer": "Erforderlich sind ein gültiger Reisepass und ein unterzeichneter Kaufvertrag. In der Praxis ist auch eine Due-Diligence-Prüfung notwendig, um zu überprüfen, dass die Immobilie lastenfrei ist und korrekt im Grundbuch eingetragen ist."
+        },
+        {
+          "question": "Was kostet der Kauf einer Immobilie in Panama?",
+          "answer": "Die Kosten umfassen den Immobilienpreis zuzüglich Steuern und Anwaltsgebühren. Die Hauptkosten sind eine 2%ige Übertragungssteuer sowie eine 3%ige Quellensteuer. Anwalts- und Notarkosten sowie Grundbucheintragungsgebühren belaufen sich in der Praxis auf etwa 3% bis 5% des Immobilienwerts."
+        },
+        {
+          "question": "Kann der Kauf einer Immobilie in Panama zu einer Aufenthaltserlaubnis führen?",
+          "answer": "Ja. Die Aufenthaltserlaubnis für qualifizierte Investoren ermöglicht dauerhafte Aufenthaltserlaubnis durch eine Mindestinvestition von 300.000 USD in Immobilien mit einer gesetzlichen Bearbeitungszeit von 30 Tagen. Das Friendly-Nations-Visum ermöglicht vorläufige Aufenthaltserlaubnis durch eine Mindestinvestition von 200.000 USD."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Panama Contact Services unterstützt Sie bei der Suche nach der perfekten Wohnung oder dem perfekten Haus in Panama. Unser Ansatz zeichnet sich durch ein gründliches Verständnis der Nuancen des Landes aus, kombiniert mit einem starken Kontaktnetzwerk. Wir arbeiten mit lizenzierten Immobilienmaklern in Panama zusammen, um Immobilien zu finden, die Ihren Anforderungen entsprechen.</p><p>Der Immobilienmarkt Panamas ist so vielfältig wie seine Landschaften — von der pulsierenden Metropole Panama City bis zu den bergigen Gebieten von Chiriqui und den verlockenden Küsten der Provinz Bocas del Toro.</p>"
+        },
+        {
+          "heading": "Finanzierung Ihrer Immobilie in Panama",
+          "body": "<p>Unser Team sucht nach den besten Konditionen für Sie und verhandelt eine Hypothek mit Banken unabhängig von Ihrer Situation. Entgegen der Annahme, dass Banken keine Ausländer finanzieren, kann Panama Contact Services das Gegenteil beweisen. Wenn Sie Einwohner sind, beschränken Sie sich nicht auf Ihre Bank — Vergleiche sind kostenlos!</p>"
+        },
+        {
+          "heading": "Verkauf Ihrer Immobilie",
+          "body": "<p>Wenn Sie eine Immobilie in Panama verkaufen und eine ausländische Kundschaft ansprechen möchten, öffnet Panama Contact Services mit seinem registrierten Maklerpartner in Nordamerika die Türen zum nordamerikanischen Markt für Sie. Dieser Service ist kostenlos.</p>"
+        }
+      ],
+      "meta": {
+        "title": "Immobilien kaufen in Panama 2026 — Leitfaden für ausländische Käufer | Panama Contact",
+        "description": "Ausländer können in Panama Immobilien mit denselben Rechten wie Staatsbürger kaufen. Finden Sie Ihr ideales Zuhause oder Investitionsobjekt mit unseren vertrauenswürdigen lokalen Experten."
+      }
+    },
+    "income-tax": {
+      "title": "Einkommensteuererklärung",
+      "description": "Wir unterstützen Sie bei Ihren Steuerpflichten in Panama.",
+      "faq": [
+        {
+          "question": "Wer muss in Panama eine Einkommensteuererklärung einreichen?",
+          "answer": "Jede natürliche oder juristische Person, die Einkünfte in Panama erzielt, muss jährlich eine Einkommenssteuererklärung (ISR) einreichen. Privatpersonen haben bis zum 15. März jedes Jahres Zeit; juristische Personen bis zum 31. März. Verlängerungen um einen Monat sind möglich, müssen aber rechtzeitig beantragt werden. Seit 2022 erfordern Bruttojahreseinkommen über 11.000 USD eine Validierung durch einen Wirtschaftsprüfer."
+        },
+        {
+          "question": "Welche Arten von Einkommensteuererklärungen gibt es in Panama?",
+          "answer": "Es gibt fünf Arten: eine Normale Erklärung (für Angestellte, freie Berufe und Händler), eine Erklärung ohne Aktivitäten (für Steuerpflichtige ohne Aktivität im Jahr), eine Abschlusserklärung (für Unternehmen, die ihren Betrieb einstellen), eine Erstmalige Erklärung (zum ersten Mal eingereicht) und eine Berichtigungserklärung (zur Korrektur früherer Einreichungen)."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Die Einkommenssteuererklärung (ISR) ist ein Dokument, in dem natürliche und juristische Personen ihre Einkünfte und Ausgaben während eines Steuerjahres in Panama angeben. Diese Erklärung ist für jeden, der Einkünfte im Land erzielt, jährlich obligatorisch.</p>"
+        },
+        {
+          "heading": "Fristen für die Einkommensteuererklärung",
+          "body": "<p>Privatpersonen haben bis zum <strong>15. März</strong> jedes Jahres Zeit. Juristische Personen müssen dies bis zum <strong>31. März</strong> tun. Verlängerungen um einen Monat sind möglich, müssen aber rechtzeitig beantragt werden, um Strafen zu vermeiden.</p>"
+        },
+        {
+          "heading": "Arten von ISR-Erklärungen",
+          "body": "<p><strong>Normale Erklärung:</strong> Für Angestellte, freie Berufe und Händler.</p><p><strong>Erklärung ohne Aktivitäten:</strong> Für Steuerpflichtige ohne Aktivitäten oder Transaktionen im Steuerjahr.</p><p><strong>Abschlusserklärung:</strong> Für Unternehmen, die sich auflösen oder ihren Betrieb einstellen.</p><p><strong>Erstmalige Erklärung:</strong> Zum ersten Mal eingereicht, um Einkünfte, Ausgaben und Abzüge zu erklären.</p><p><strong>Berichtigungserklärung:</strong> Zur Korrektur von Fehlern in zuvor eingereichten Erklärungen. Kann zu Strafen führen, wenn nicht rechtzeitig eingereicht.</p>"
+        },
+        {
+          "heading": "Einkommensteuererklärung im ersten Jahr",
+          "body": "<p>Es ist wichtig, zwischen der Steuererklärung und der Steuerzahlung zu unterscheiden. Die Erklärung ist ein Dokument, das online ausgefüllt und eingereicht werden muss — basierend auf den erklärten Einkünften und Ausgaben kann ein zu zahlender Steuerbetrag entstehen oder nicht.</p><p>Konsultieren Sie einen kompetenten Buchhalter, der mit den verschiedenen Arten von Erklärungen vertraut ist.</p>"
+        }
+      ],
+      "meta": {
+        "title": "Einkommensteuererklärung Panama 2026 — Steuerleitfaden für Expats | Panama Contact",
+        "description": "Reichen Sie Ihre jährliche Einkommensteuererklärung in Panama korrekt und rechtzeitig ein. Expertensteuerberatung für Einwohner, Expats und Unternehmen. Strafen vermeiden."
+      }
+    },
+    "goods-import": {
+      "title": "Warenimport",
+      "description": "Importieren Sie Waren nach Panama mit Expertenunterstützung.",
+      "faq": [
+        {
+          "question": "Welche Dokumente werden für den Import von Waren nach Panama benötigt?",
+          "answer": "Erforderliche Unterlagen: Handelsrechnung und Packliste, Konnossement oder Luftfrachtbrief, von einem autorisierten Zollagenten unterzeichnete Importerklärung sowie die entsprechende Genehmigung für beschränkte Waren. Für den menschlichen Verzehr bestimmte Lebensmittel und Kosmetika benötigen zusätzlich eine Verkaufsbescheinigung (CFS) von Panamas Gesundheitsbehörde."
+        },
+        {
+          "question": "Fallen Zollkosten beim Import nach Panama an?",
+          "answer": "Ja. Eine Zollsteuer wird je nach Produktart erhoben und muss bei der Zollabfertigung bezahlt werden. Zusätzliche Konsular- und Verbrauchssteuern können ebenfalls anfallen, obwohl Ausnahmen je nach Produktkategorie und anwendbaren Handelsabkommen bestehen."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Dank seines internationalen Flughafens und des Panamakanals, der von Schiffen aus aller Welt befahren wird, ist Panama stark mit der übrigen Welt verbunden und gewährleistet einen konstanten Importfluss. Die Einfuhr von Produkten wird durch Verwaltungsverfahren erleichtert, die in der Theorie einfach sind, in der Praxis jedoch komplizierter sein können als erwartet. Panama Contact Services unterstützt in Zusammenarbeit mit Partnern wie Zollagenten sowohl Unternehmen als auch Privatpersonen während des gesamten Prozesses.</p>"
+        },
+        {
+          "heading": "Erforderliche Dokumentation",
+          "body": "<ul><li>Handelsrechnung und Packliste (Menge, Produktart, Versandort).</li><li>Konnossementmanifest für Steuerzwecke mit dem Namen des Empfängers.</li><li>Entsprechende Genehmigung für beschränkte Importe.</li><li>Von einem autorisierten Zollagenten unterzeichnete Importerklärung.</li><li>Handelsrechnung auf Englisch und Spanisch (Original + vier Kopien).</li><li>Luftfrachtbrief für Luftsendungen.</li><li>Konnossement für Seefracht.</li><li>Transportbrief für Landfracht.</li></ul>"
+        },
+        {
+          "heading": "Lebensmittelimportbeschränkungen",
+          "body": "<p>Die Gesundheitsbehörde Panamas verlangt eine zusätzliche Überprüfung für eine Verkaufsbescheinigung (CFS) für Lebensmittel, die für den menschlichen Verzehr bestimmt sind, und andere Produkte wie Kosmetika. Der Import muss über einen der dafür vorgesehenen Häfen oder Flughäfen erfolgen. Konsultieren Sie uns, bevor Sie Ihre Sendung abschicken.</p>"
+        },
+        {
+          "heading": "Zollkosten",
+          "body": "<p>Eine Zollsteuer wird entsprechend dem importierten Produkt erhoben und muss bei der Zollabfertigung bezahlt werden. Weitere Konsular- und Verbrauchssteuern werden ebenfalls erhoben, obwohl Ausnahmen bestehen können.</p>"
+        }
+      ],
+      "meta": {
+        "title": "Waren nach Panama importieren 2026 — Zoll & Abgaben | Panama Contact",
+        "description": "Navigieren Sie durch Panamas Zollprozess und importieren Sie Ihr Hab und Gut, Fahrzeug oder Waren. Klare Anleitung zu Abgaben, Dokumentation und Befreiungen."
+      }
+    },
+    "driver-s-license": {
+      "title": "Führerschein",
+      "description": "Erwerben Sie Ihren panamaischen Führerschein als Ausländer.",
+      "faq": [
+        {
+          "question": "Kann ich meinen ausländischen Führerschein in Panama verwenden?",
+          "answer": "Ja, aber nur wenn Sie als Tourist einreisen. Ein gültiger ausländischer Führerschein kann für 90 Tage ab Ihrem Einreisedatum verwendet werden. Sobald Sie jedoch einen Migrationsprozess in Panama einleiten, gelten Sie nicht mehr als Tourist und dürfen nicht mit einem ausländischen Führerschein fahren — auch wenn die 90 Tage noch nicht abgelaufen sind. Es droht eine Geldstrafe von 50 USD und im Falle eines Unfalls deckt Ihre Versicherung Sie möglicherweise nicht ab."
+        },
+        {
+          "question": "Wie bekomme ich als Ausländer einen panamaischen Führerschein?",
+          "answer": "Sie haben zwei Möglichkeiten, sobald Sie einen Migrationsstatus haben: Homologation (Umtausch Ihres ausländischen Führerscheins) oder Neubeginn mit einer von Sertracen zertifizierten panamaischen Fahrschule. Dokumente, die nicht auf Spanisch sind, müssen offiziell übersetzt werden. In vielen Fällen ist das Ablegen der Prüfung schneller und kostengünstiger als die Homologation."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>In Panama werden die zu beachtenden Vorschriften von \"Sertracen\" festgelegt, der Behörde, die für die Regulierung und Überwachung des Straßenverkehrs und -transports zuständig ist. Wenn Sie zum ersten Mal als Tourist mit einem gültigen Führerschein aus Ihrem Heimatland nach Panama einreisen, können Sie diesen für 90 Tage ab dem Einreisedatum verwenden.</p>"
+        },
+        {
+          "heading": "⚠️ Wichtiger Hinweis",
+          "body": "<p>Die Einleitung Ihres Migrationsprozesses verbietet Ihnen sofort die Verwendung Ihres ausländischen Führerscheins in Panama. Als kein Tourist mehr haben Sie kein Recht mehr, ein Fahrzeug auf panamaischem Boden zu führen, auch wenn die 90-Tage-Frist noch nicht abgelaufen ist. Sie müssen warten, bis Sie einen panamaischen Führerschein haben, um wieder fahren zu dürfen. Neben einer Geldstrafe von 50 USD kann die Polizei Ihr Fahrzeug immobilisieren, und im Falle eines Unfalls sind Sie möglicherweise nicht durch Ihre Versicherung gedeckt.</p>"
+        },
+        {
+          "heading": "Optionen nach Erhalt des Migrationsstatus",
+          "body": "<p><strong>Homologation (Umtausch):</strong> Wenn Sie einen Führerschein aus Ihrem Heimatland haben und diesen umtauschen möchten. Nicht auf Spanisch verfasste Dokumente müssen von einem autorisierten Dolmetscher in Panama übersetzt werden. Oft ist es schneller und kostengünstiger, die Fahrprüfung direkt in Panama abzulegen.</p><p><strong>Neubeginn:</strong> Wenn Sie keinen Führerschein haben oder keine Homologation wünschen, müssen Sie eine von Sertracen zertifizierte Fahrschule besuchen. Panama Contact Services begleitet Sie durch Partnerschulen.</p>"
+        },
+        {
+          "heading": "Gültigkeit des Führerscheins",
+          "body": "<p>Ausländische Führerscheine sind drei Monate gültig und erlauben das Fahren in den Kategorien A, B, C und D. Das Fahren im öffentlichen Verkehr ist mit diesen Kategorien nicht gestattet.</p><p>In Panama wird der panamaische Führerschein für einen Zeitraum von vier Jahren ausgestellt. Für Ausländer mit vorläufigem oder provisorischem Status fällt die Gültigkeitsdauer mit ihrer Aufenthaltsgenehmigung zusammen. Nur dauerhafte Einwohner profitieren von der vollen Gültigkeit von vier Jahren.</p>"
+        }
+      ],
+      "meta": {
+        "title": "Führerschein Panama 2026 — Umtausch & Beantragung | Panama Contact",
+        "description": "Tauschen Sie Ihren ausländischen Führerschein gegen einen panamaischen um oder beantragen Sie ihn von Grund auf. Schneller, einfacher Prozess mit unserer Schritt-für-Schritt-Unterstützung."
+      }
+    },
+    "insurance": {
+      "title": "Versicherung",
+      "description": "Finden Sie die besten Versicherungslösungen in Panama.",
+      "faq": [
+        {
+          "question": "Ist es besser, eine Versicherung in Panama oder in meinem Heimatland abzuschließen?",
+          "answer": "Für Ausländer, die in Panama leben, ist es generell effektiver und kostengünstiger, lokal zu versichern. Krankenversicherungen in Panama sind deutlich günstiger als vergleichbare Deckungen in Nordamerika oder Europa, bieten dabei aber Zugang zu hochwertigen privaten Einrichtungen. Panama Contact Services arbeitet mit Brokern zusammen, um kostenlose Angebote zu erhalten, damit Sie direkt vergleichen können."
+        },
+        {
+          "question": "Wie ist der Versicherungsmarkt in Panama reguliert?",
+          "answer": "Versicherungen in Panama werden von der Superintendencia de Seguros (Versicherungsaufsicht) reguliert, die Transparenz, finanzielle Solidität und faire Preisgestaltung gewährleistet. Das System ist einfacher als in Europa oder Nordamerika. Sowohl internationale Akteure (wie Mapfre und Allianz) als auch starke lokale Versicherer sind auf dem Markt tätig."
+        }
+      ],
+      "sections": [
+        {
+          "heading": null,
+          "body": "<p>Als internationales Finanzzentrum bildet Panama City keine Ausnahme, wenn es um Versicherungen geht. Für einen Ausländer ist es oft viel effektiver, in Panama mit seinen Vermögenswerten zu versichern als ein Versicherungsprodukt im Heimatland zu suchen. Allerdings kann die Welt der Versicherungen für den Neuling manchmal wie ein Labyrinth erscheinen, besonders wenn man mit einem Land konfrontiert ist, in dem der Unterschied in der Infrastruktur zwischen den Provinzen erheblich sein kann.</p>"
+        },
+        {
+          "heading": "Besonderheiten des panamaischen Ansatzes",
+          "body": "<p>In Panama werden Versicherungen durch die \"Superintendencia de Seguros\" (Versicherungsaufsicht) reguliert. Sie gewährleistet Transparenz, Solidität und ordnungsgemäßes Funktionieren der Marktteilnehmer und rahmt streng den Risikobewertungs- und Preisgestaltungsprozess zum Schutz der Versicherten ein.</p><p>Im Vergleich zu Europa und Nordamerika, wo die Versicherungssysteme fragmentierter sind, ist das panamaische System einfacher — konzentriert auf wesentliche Deckungen. Neben multinationalen Unternehmen wie Mapfre oder Allianz ragen einige starke lokale Akteure heraus.</p>"
+        },
+        {
+          "heading": "Versicherungen vergleichen — Kostenlos!",
+          "body": "<p>Panama Contact Services ermöglicht Ihnen, über einen Broker Versicherungsangebote kostenlos einzuholen. Sie werden von den Preisen und dem Deckungsumfang für Krankenversicherungen in Panama im Vergleich zu Ihrem Heimatland überrascht sein. Zögern Sie nicht, unseren Maklerdienst mit Begleitung in Ihrer bevorzugten Sprache zu nutzen.</p>"
+        }
+      ],
+      "meta": {
+        "title": "Versicherung in Panama 2026 — Kranken-, Lebens- & Sachversicherung | Panama Contact",
+        "description": "Holen Sie sich die richtige Versicherungsdeckung in Panama — Kranken-, Lebens-, Sach- und mehr. Persönliche Beratung von unseren lokalen Versicherungsspezialisten."
+      }
+    }
+  },
+  "WhyPanamaPage": {
+    "meta": {
+      "title": "Warum nach Panama ziehen? Steuern, Gesundheit, Lebenshaltungskosten & mehr | Panama Contact",
+      "description": "Entdecken Sie, warum Tausende von Expats Panama wählen: US-Dollar-Wirtschaft, territoriale Besteuerung, erstklassige Gesundheitsversorgung, 80+ internationale Banken und eine warme Expat-Gemeinschaft."
+    },
+    "heading": "Ein Paradies der Vielfalt, des guten Lebens & des Wohlstands",
+    "subheading": "Panama, an der Kreuzung von Mittel- und Südamerika gelegen, ist ein verborgenes Juwel, das Reisenden ein unvergessliches Erlebnis und Investoren ein günstiges Geschäftsklima bietet.",
+    "introHeading": "Willkommen in Panama",
+    "introBody1": "Panama fasziniert mit seiner Vielfalt an Landschaften — von den unberührten Stränden des Pazifiks bis hin zu den kristallklaren Gewässern des Karibischen Meeres, durch üppige tropische Wälder. Das Landbrückenland ist ein wahres natürliches Eden, das ein verdichtetes Panorama der Landschaften aus ganz Lateinamerika vereint.",
+    "introBody2": "Wandern Sie durch die majestätische Zentralkordillere oder erkunden Sie die erstaunliche Biodiversität der Nationalparks Portobello oder Coiba, ein UNESCO-Weltkulturerbe. Vom Gipfel des Baru-Vulkans können Sie an klaren Morgen beide Ozeane auf einen Blick sehen.",
+    "introBody3": "Neben seinen atemberaubenden Landschaften ist Panama auch für die herzliche Gastfreundschaft seiner Einwohner bekannt. Als Aufnahmeland vieler Völker empfangen Panamaer Ausländer herzlich mit offenen Armen. In Panama City oder in kleinen malerischen Dörfern werden Sie immer mit einem freundlichen Lächeln begrüßt.",
+    "ctaLabel": "Bereit für den Umzug?",
+    "ctaHeading": "Entdecken Sie alles, was dieses lateinamerikanische Juwel zu bieten hat",
+    "ctaButton": "Kostenlose Beratung buchen",
+    "readMore": "Mehr erfahren",
+    "backToOverview": "Zurück zu Warum Panama",
+    "cards": {
+      "life-quality": {
+        "title": "Lebensqualität",
+        "subtitle": "Gutes Leben",
+        "shortDescription": "Panama bietet sowohl seinen nationalen als auch ausländischen Einwohnern eine hohe Lebensqualität mit relativ niedrigen Lebenshaltungskosten, moderner Infrastruktur und einer einladenden multikulturellen Gesellschaft.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>Panama bietet sowohl seinen nationalen als auch ausländischen Einwohnern eine hohe Lebensqualität. Eine seiner Hauptattraktionen sind relativ niedrige Lebenshaltungskosten im Vergleich zu großen Städten in Nordamerika und Europa, was den Einwohnern eine höhere Kaufkraft als in ihren Heimatländern ermöglicht.</p><p>Es ist jedoch wichtig zu beachten, dass Panama im Vergleich zu einigen Nachbarländern kein billiges Land ist, mit einem Lebensstandard ähnlich dem südeuropäischer Länder. Das durchschnittliche monatliche Nettoeinkommen nach Steuern liegt bei etwa 1.050 USD — vergleichbar mit Portugal. Die Verwendung des US-Dollars als offizielle Währung trägt erheblich zur Stabilität bei.</p>"
+          },
+          {
+            "heading": "Hochwertige Infrastruktur",
+            "body": "<p>Die Infrastruktur in Panama wurde in den letzten zehn Jahren erheblich ausgebaut. Strom, fließendes Wasser, Hochgeschwindigkeitsinternet und Mobilfunkabdeckung sind in allen städtischen Gebieten verfügbar.</p><p>Panama City wird von seinem Flughafen (PTY) — einem internationalen Drehkreuz — hervorragend bedient. Metro und Uber funktionieren perfekt. Das Land bietet moderne Freizeitoptionen für alle Geschmäcker: Golfclubs, Einkaufszentren, Restaurants nach internationalem Standard, Strandurlaubsorte, Parks und kulturelle Veranstaltungen.</p>"
+          },
+          {
+            "heading": "Sicherheit und Bildung in Panama",
+            "body": "<p>Panama gilt als sicheres Land mit niedrigen Kriminalitätsraten. Der Global Peace Index gibt Panama eine hohe Friedensbewertung, ähnlich dem Vereinigten Königreich und Italien, und das US-Außenministerium betrachtet das gesamte Land als sicher zu besuchen.</p><p>Im Bildungsbereich bietet Panama internationale Schulen mit amerikanischen, britischen, französischen und deutschen Lehrplänen für Expats, die qualitativ hochwertige Bildung vom Vorschulalter bis zur Oberstufe anbieten.</p>"
+          },
+          {
+            "heading": "Panama: Einladend für Touristen und Expats",
+            "body": "<p>Aufgrund seiner jüngeren Geschichte ist Panama gegenüber Ausländern aufgeschlossen, und diese multikulturelle Dimension erleichtert die Integration. Spanisch ist die offizielle Sprache, koexistiert mit indigenen Sprachen und Englisch.</p><p>Dank seiner geografischen Lage ist Panama ein regionaler Touristenmittelpunkt. Der berühmte Panamakanal ist eine wichtige Attraktion, und das Land bietet Aktivitäten wie Tauchen, Walbeobachtung, Vogelbeobachtung und Wandern.</p>"
+          }
+        ],
+        "meta": {
+          "title": "Lebensqualität in Panama 2026 — Kosten, Sicherheit & Lebensstil | Panama Contact",
+          "description": "Entdecken Sie, warum Panama eine außergewöhnliche Lebensqualität bietet: niedrige Lebenshaltungskosten, moderne Infrastruktur, Sicherheit und eine einladende multikulturelle Gesellschaft."
+        }
+      },
+      "healthcare": {
+        "title": "Gesundheitssystem",
+        "subtitle": "Gesundheit & Wohlbefinden",
+        "shortDescription": "Gemäß der panamaischen Gesetzgebung hat jeder Bürger das unveräußerliche Recht auf medizinische Versorgung. Das Land betreibt ein duales öffentlich-privates System mit modernen Einrichtungen und international ausgebildeten Ärzten.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>Gemäß der panamaischen Gesetzgebung hat jeder Bürger das unveräußerliche Recht auf medizinische Versorgung, und das öffentliche Gesundheitssystem funktioniert theoretisch für alle. Dieser Dienst ist in der Regel kostengünstig, obwohl er für Kinder unter fünf Jahren kostenlos ist.</p><p>Gesundheitszentren sind in allen städtischen Gemeinden eingerichtet und der Zugang zur Versorgung bleibt relativ gleichmäßig. Das öffentliche System arbeitet neben einem gut etablierten privaten Gesundheitssystem.</p>"
+          },
+          {
+            "heading": "Öffentliches Gesundheitssystem",
+            "body": "<p>Das öffentliche Gesundheitssystem Panamas wird von zwei Einrichtungen verwaltet: dem Gesundheitsministerium (MINSA), das Gerechtigkeit und Qualität sicherstellt, und dem Sozialversicherungsfonds (CSS), der arbeits- und rentenversicherungsbezogene Leistungen regelt.</p><p>Panama hat in den letzten zwanzig Jahren erhebliche Fortschritte im Gesundheitswesen erzielt und wird oft als eines der besten in Mittelamerika zitiert.</p>"
+          },
+          {
+            "heading": "Privates Gesundheitssystem",
+            "body": "<p>Neben dem öffentlichen System verfügt Panama in den Großstädten über renommierte Kliniken und Privatpraxen, die generell als qualitativ hochwertiger gelten. In Panama City finden Sie oft Englisch sprechende Ärzte, die an internationalen Spitzenuniversitäten ausgebildet wurden.</p><p>Wenn Sie planen, sich dauerhaft im Land niederzulassen, empfiehlt es sich, sich über lokale Versicherungen zu informieren, die oft günstigere Tarife und bessere Deckung bieten.</p>"
+          }
+        ],
+        "meta": {
+          "title": "Gesundheitsversorgung in Panama 2026 — Öffentliches & privates System | Panama Contact",
+          "description": "Erkunden Sie Panamas duales öffentlich-privates Gesundheitssystem. Moderne Krankenhäuser, international ausgebildete Ärzte und erschwingliche private Versicherungsoptionen."
+        }
+      },
+      "economic-stability": {
+        "title": "Wirtschaftliche Stabilität",
+        "subtitle": "Strategisches Zentrum",
+        "shortDescription": "1914 vollendete Panama die Eröffnung seines berühmten Kanals. Seitdem hat das Land eine diversifizierte, widerstandsfähige Wirtschaft aufgebaut, die als Erfolgsmodell in Lateinamerika gilt.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>1914 vollendete Panama eine monumentale Leistung mit der Einweihung seines berühmten Kanals — ein Traum, den Ferdinand de Lesseps 1881 begonnen hatte. Der ikonische Kanal ist mehr als ein technisches Wunderwerk; er hat Panamas wirtschaftliche Stabilität katalysiert und globale Investoren angezogen.</p>"
+          },
+          {
+            "heading": "Strategische geografische Lage und wirtschaftliche Vielfalt",
+            "body": "<p>An der Kreuzung der Welt gelegen, hat Panama seine einzigartige Lage genutzt. Es ist nicht nur für seinen Kanal bekannt, sondern auch für seinen florierenden Logistik- und Hafensektor. Die Gründung des Internationalen Bankzentrums 1970 markierte den Aufstieg eines blühenden Finanzsektors.</p><p>Panama hat seine Wirtschaft diversifiziert und Sektoren wie Tourismus, Finanzen, Immobilien, Landwirtschaft und Dienstleistungen entwickelt.</p>"
+          },
+          {
+            "heading": "Auswirkungen der Beziehung Panamas zu den Vereinigten Staaten",
+            "body": "<p>Panamas Wirtschaftsgeschichte ist auch durch seine engen Beziehungen zu den Vereinigten Staaten geprägt. Die Übernahme des US-Dollars als offizielle Währung hat monetäre Stabilität gewährleistet und internationale Transaktionen vereinfacht.</p><p>Das Ende der US-Militärpräsenz 1999 und die Rückgabe der vollen Kontrolle über den Kanal markierten einen Wendepunkt und führten zu verstärkter Unabhängigkeit und beispielloser wirtschaftlicher Modernisierung.</p>"
+          },
+          {
+            "heading": "Ein Erfolgsmodell in Lateinamerika",
+            "body": "<p>Heute hebt sich Panama als Leuchtturm des wirtschaftlichen Erfolgs in Lateinamerika hervor. Sein beeindruckendes BIP-Wachstum von über 10% im Jahr 2022 zeugt von seiner Vitalität. Trotz der Herausforderungen durch die COVID-19-Krise ist Panama weiterhin ein erstklassiges Ziel für Unternehmer und Investoren weltweit.</p>"
+          }
+        ],
+        "meta": {
+          "title": "Wirtschaftliche Stabilität Panamas — Wachstum, Investitionen & Dollarisierung | Panama Contact",
+          "description": "Erfahren Sie, warum Panama Lateinamerikas wirtschaftliche Erfolgsgeschichte ist. Dollarisierte Wirtschaft, starkes BIP-Wachstum, strategische Kanalposition und investitionsfreundliches Klima."
+        }
+      },
+      "welcoming-country": {
+        "title": "Investitionsmöglichkeiten",
+        "subtitle": "Dynamisch & Einladend",
+        "shortDescription": "In den letzten fünfzehn Jahren hat sich Panama als erstklassiges Ziel für ausländische Direktinvestitionen in Lateinamerika positioniert, mit robustem Wachstum und vielfältigen Möglichkeiten in Schlüsselsektoren.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>In den letzten fünfzehn Jahren hat sich Panama als erstklassiges Ziel für ausländische Direktinvestitionen in Lateinamerika positioniert. Im Vergleich zu seinen Nachbarn zeichnete sich das Land dadurch aus, dass es die globale Finanzkrise überstehen konnte, mit einem BIP-Wachstum von 1,24% im Jahr 2009, gefolgt von 11,31% im Jahr 2011.</p><p>Nach einer Kontraktion im Jahr 2020 wurde 2022 ein starker Aufschwung beobachtet, der sich bis 2023 fortsetzt.</p>"
+          },
+          {
+            "heading": "Panama: Strategisch & investierbar",
+            "body": "<p>Panama dient als Brücke zwischen Kontinenten. Sein erweiterter interozeaner Kanal verdoppelt die maritime Transitkapazität. Das Land ist ein logistischer Knotenpunkt für globale Frachtspeicherung und -verteilung, verbunden mit Nord- und Südamerika, der Karibik, Europa und Asien.</p><p>Mit finanzieller Stabilität auf Basis des US-Dollars, einer wichtigen Freihandelszone, dem internationalen Flughafen Tocumen und weiterer Infrastruktur ist Panama für Investoren attraktiv.</p>"
+          },
+          {
+            "heading": "Schlüsselsektoren mit Nachfrage",
+            "body": "<ul><li><p><strong>Logistik &amp; Hafeninfrastruktur</strong> — Kanalerweiterung und multimodale Frachtkorridore schaffen nachhaltigen Bedarf an Logistikinvestitionen.</p></li><li><p><strong>Immobilien &amp; Tourismus</strong> — Vom Luxusentwicklungen in Panama City bis zu Öko-Lodges in Bocas del Toro zieht der Immobilienmarkt internationales Kapital an.</p></li><li><p><strong>Finanzdienstleistungen &amp; Fintech</strong> — Panamas Bankenzentrum und wachsendes Fintech-Ökosystem bieten starke Renditen für Investoren.</p></li><li><p><strong>Erneuerbare Energien</strong> — Die Regierung fördert aktiv Solar-, Wind- und Wasserkraftprojekte.</p></li><li><p><strong>Telekommunikation</strong> — Mit fünf Unterseeglasfaserkabeln ist Panama ein natürlicher Hub für Rechenzentren und Telekommunikationsinfrastruktur.</p></li><li><p><strong>Agrarwirtschaft</strong> — Panamas vielfältige Klimazonen unterstützen Agrarexporte von Kaffee und Kakao bis hin zu tropischen Früchten.</p></li></ul>"
+          }
+        ],
+        "meta": {
+          "title": "Investitionsmöglichkeiten in Panama 2026 — Leitfaden für ausländische Investoren | Panama Contact",
+          "description": "Entdecken Sie, warum Panama ausländische Investoren anzieht: keine Steuer auf ausländische Einkünfte, Förderprogramme, wachsende Immobilien und ein stabiles Geschäftsumfeld."
+        }
+      },
+      "financial-hub": {
+        "title": "Internationaler Finanzplatz",
+        "subtitle": "Globale Finanzen",
+        "shortDescription": "Panamas Finanzsystem durchläuft erhebliche Veränderungen und passt sich durch technologische Fortschritte an globale Trends an — damit bleibt es in einer starken Position im internationalen Finanzbereich.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>Panamas Finanzsystem durchläuft erhebliche Veränderungen, getrieben durch technologische Fortschritte und die einzigartigen Merkmale des Finanzsystems des Landes. Regulatoren und wichtige Akteure sind sich einig, dass Modernisierung unerlässlich ist, um Wettbewerbsfähigkeit und Transparenz zu verbessern.</p><p>Die Kombination aus robuster Regulierung, einer gut entwickelten Finanzstruktur und der Integration fortschrittlicher Technologien hält Panama in einer starken Position im internationalen Finanzbereich.</p>"
+          },
+          {
+            "heading": "Merkmale des panamaischen Finanzsystems",
+            "body": "<p>Die panamaische Wirtschaft ist durch ihr Bankenwährungssystem gekennzeichnet, das den US-Dollar als gemeinsame Währung verwendet. Es arbeitet ohne Zentralbank und ist stark mit der Weltwirtschaft verbunden. Die Finanzstruktur umfasst Banken, Wertpapierhäuser, Pensionsfonds, Versicherungsgesellschaften und Genossenschaften, die 2021 7,31% des BIP ausmachten.</p><p>Das Sektor wird von einem Aufsichtsmodell mit einer separaten Aufsichtsbehörde für jeden Finanzmarkt reguliert, koordiniert innerhalb des Finanzkoordinierungsrats (CCF).</p>"
+          },
+          {
+            "heading": "Modernisierung und digitale Transformation",
+            "body": "<p>Experten betonen die Notwendigkeit, in Digitalisierung zu investieren. Das panamaische Finanzsystem hat jedoch eine bemerkenswerte makroökonomische Stabilität aufrechterhalten. Panama hatte 2023 66 von der Bankaufsicht überwachte Banken für 4 Millionen Einwohner — vergleichbar mit Frankreich zum selben Zeitpunkt.</p>"
+          }
+        ],
+        "meta": {
+          "title": "Panama als Finanzplatz — Banking, Freizonen & Handel | Panama Contact",
+          "description": "Panama ist Zentralamerikas führendes Finanzzentrum. Internationales Banking, Colón-Freizone und ein unternehmensfreundlicher regulatorischer Rahmen."
+        }
+      },
+      "tax-pressure": {
+        "title": "Moderate Steuerbelastung",
+        "subtitle": "Steuereffizienz",
+        "shortDescription": "Panamas moderates und gut strukturiertes Steuersystem für Unternehmen und Privatpersonen macht es besonders attraktiv für Einwohner, Investoren und Unternehmen weltweit — basierend auf dem Grundsatz der territorialen Besteuerung.",
+        "sections": [
+          {
+            "heading": null,
+            "body": "<p>Panama hebt sich nicht nur als Ort natürlicher und kultureller Wunder hervor, sondern auch als Land, in dem bevorzugte Besteuerung, finanzielle Sicherheit und wirtschaftliche Stabilität vorherrschen. Panamas Steuersystem basiert hauptsächlich auf dem Territorialitätsprinzip, bei dem nur in Panama erwirtschaftete Einkünfte besteuert werden.</p>"
+          },
+          {
+            "heading": "Direkte Steuern für Unternehmen",
+            "body": "<ul><li><p><strong>Körperschaftsteuer:</strong> Erhoben auf Gewinne steueransässiger Unternehmen in Panama. Der Steuersatz beträgt 25%, obwohl er für einige öffentliche Einrichtungen 30% erreichen kann. Es gibt einen Mindesteffektivsteuersatz für Unternehmen mit Umsätzen über 1,5 Millionen USD.</p></li><li><p><strong>Die \"tasa única\"-Steuer:</strong> Eine jährliche Pauschalsteuer von 300 USD für in Panama eingetragene Einrichtungen (Stiftungen: 350 USD).</p></li><li><p><strong>Eidesstattliche Erklärung des Resident Agent:</strong> Seit 2022 müssen Anwälte, die Unternehmen vertreten, jährlich eine eidesstattliche Erklärung der Unternehmenskonten einreichen. Diese Gebühr von 350 USD wird an den Mandanten weitergegeben.</p></li><li><p><strong>Ergänzungssteuer:</strong> Eine Vorauszahlung der Dividendensteuer, die nur für Einrichtungen gilt, die weniger als 40% ihrer Nettogewinne ausschütten. Der Satz beträgt 10% der Differenz zwischen den nicht ausgeschütteten Gewinnen und 40% derselben Nettogewinne.</p></li></ul>"
+          },
+          {
+            "heading": "Direkte Steuern für Privatpersonen",
+            "body": "<ul><li><p><strong>Einkommensteuer:</strong> Progressives System: 0% für Einkommen bis 11.000 USD; 15% für Einkommen zwischen 11.000 und 50.000 USD; 25% für Einkommen über 50.000 USD.</p></li><li><p><strong>Dividendensteuer:</strong> 10% für Dividenden aus panamaischen Quellen und 5% für Dividenden aus ausländischen Quellen.</p></li><li><p><strong>Kapitalertragsteuer:</strong> 15% auf Gewinne aus dem Verkauf von Anteilen und Immobilien.</p></li></ul><p>Diese Steuervorschriften zeigen Panamas Engagement für ein stabiles wirtschaftliches Umfeld. Die Mäßigung der Steuerbelastung zieht eine breite Palette von Investoren und Unternehmen an und stärkt den Status des Landes als Finanzzentrum.</p>"
+          }
+        ],
+        "meta": {
+          "title": "Steuersystem Panama 2026 — Territoriale Besteuerung für Expats | Panama Contact",
+          "description": "Panama wendet ein territoriales Steuersystem an — keine Steuer auf ausländische Einkünfte. Entdecken Sie die vollen Steuervorteile für Expats, Rentner und Investoren."
+        }
+      }
+    },
+    "sidebarCtaTitle": "Bereit für den nächsten Schritt?",
+    "sidebarCtaBody": "Buchen Sie eine kostenlose Beratung mit unseren Panama-Spezialisten und erhalten Sie eine persönliche Beratung.",
+    "sidebarContactTitle": "Kontaktieren Sie uns",
+    "sidebarExploreMore": "Mehr entdecken"
+  },
+  "ServiceDetail": {
+    "backToServices": "Zurück zu den Dienstleistungen",
+    "backToWhyPanama": "Zurück zu Warum Panama",
+    "ctaTitle": "Benötigen Sie Hilfe dabei?",
+    "ctaBody": "Unsere Experten begleiten Sie bei jedem Schritt des Prozesses. Kostenlose Erstberatung.",
+    "ctaButton": "Kostenlose Beratung buchen",
+    "contactTitle": "Direkter Kontakt",
+    "relatedTitle": "Ähnliche Dienstleistungen",
+    "faqTitle": "Häufig gestellte Fragen",
+    "allTopics": "Alle Themen"
+  },
+  "ContactPage": {
+    "meta": {
+      "title": "Kontakt | Panama Contact Services",
+      "description": "Nehmen Sie Kontakt mit unseren Umzugsexperten auf. Kostenlose Erstberatung verfügbar."
+    },
+    "heading": "Kontakt aufnehmen",
+    "subheading": "Unser Team antwortet in der Regel innerhalb von 24 Stunden.",
+    "name": "Ihr Name",
+    "email": "E-Mail",
+    "message": "Ihre Nachricht",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht gesendet! Wir melden uns bald.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "or": "Oder direkt buchen",
+    "bookCall": "Kostenlosen 30-Minuten-Anruf buchen",
+    "bookCallBody": "Überspringen Sie das Hin und Her — buchen Sie einen 30-Minuten-Anruf mit einem unserer Umzugsexperten und erhalten Sie Antworten auf alle Ihre Fragen.",
+    "contactInfo": "Kontaktinformationen",
+    "phone": "Telefon",
+    "address": "Adresse",
+    "emailReply": "Antwort innerhalb von 24h",
+    "whatsappReply": "Schnelle Antwort",
+    "bookCallCta": "30-Min. kostenlose Beratung"
+  }
+}
