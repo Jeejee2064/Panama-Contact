@@ -46,8 +46,11 @@ export default function Header() {
             {t('freeConsultation')}
           </Link>
 
-          {/* 🍔 Burger */}
-          <div className="flex items-center mt-6 pr-6 md:pr-12">
+          {/* 🌍 Language & 🍔 Burger */}
+          <div className="flex items-center gap-6 mt-6 pr-6 md:pr-12">
+            <div className="text-white">
+              <LanguageSwitcher />
+            </div>
             <button
               onClick={() => setOpen(!open)}
               className="text-white hover:text-gray-300 transition-colors"
