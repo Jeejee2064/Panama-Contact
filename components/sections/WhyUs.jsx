@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import FadeIn from '@/components/animations/FadeIn';
 
 export default function WhyUs() {
@@ -112,16 +111,10 @@ export default function WhyUs() {
             </div>
           </FadeIn>
 
-          {/* Picture */}
+          {/* Logo block */}
           <FadeIn delay={0.3}>
-            <div className="relative h-64 md:h-full min-h-[220px] rounded-2xl overflow-hidden">
-              <Image
-                src="/Businessman.avif"
-                alt="Business professional"
-                fill
-                sizes="(max-width: 768px) 100vw, 25vw"
-                className="object-cover"
-              />
+            <div className="h-64 md:h-full min-h-[220px] rounded-2xl bg-[#1a2b45] flex items-center justify-center">
+              <img src="/logo-blanc.avif" alt="Panama Contact" className="w-2/3 object-contain" />
             </div>
           </FadeIn>
 
