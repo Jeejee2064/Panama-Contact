@@ -26,6 +26,7 @@ const REQUIRED_FIELDS = [
   'apellidos', 'primer_y_segundo_nombre', 'fecha_de_nacimiento', 'lugar_de_nacimiento',
   'nacionalidad', 'sexo', 'estado_civil',
   'numero_pasaporte', 'pasaporte_expedido_en', 'fecha_expedicion_pasaporte', 'fecha_vencimiento_pasaporte',
+  'estatura', 'color_cabello', 'color_ojos', 'color_piel',
   'nombre_completo_padre', 'nombre_completo_madre',
   'direccion_domicilio_panama', 'con_quienes_reside', 'piensa_permanecer_domicilio',
   'direccion_postal_fax_email', 'nombre_propietario_domicilio', 'direccion_pais_origen', 'telefono_domicilio',
@@ -210,6 +211,13 @@ export async function POST(request) {
   for (const field of REQUIRED_FIELDS) {
     if (!data[field] || String(data[field]).trim() === '') {
       return Response.json({ error: `Missing required field: ${field}` }, { status: 400 });
+    }
+  }
+  // Conditional required: spouse fields
+  const SPOUSE_STATUSES = ['Casado', 'Union libre'];
+  if (SPOUSE_STATUSES.includes(data.estado_civil)) {
+    for (const f of ['nombre_conyuge', 'nacionalidad_conyuge', 'tipo_documento_conyuge', 'numero_documento_conyuge']) {
+      if (!data[f]?.trim()) return Response.json({ error: `Missing required field: ${f}` }, { status: 400 });
     }
   }
   // Conditional required: familiares_en_panama_detalle

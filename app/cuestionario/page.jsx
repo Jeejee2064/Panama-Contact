@@ -29,10 +29,10 @@ const STEPS = [
           { value: 'Union libre', label: 'Unión libre / Common law' },
         ],
       },
-      { name: 'estatura', label: 'Estatura / Height (meters)', type: 'text', required: false },
-      { name: 'color_cabello', label: 'Color de cabello / Hair color', type: 'text', required: false },
-      { name: 'color_ojos', label: 'Color de ojos / Eye color', type: 'text', required: false },
-      { name: 'color_piel', label: 'Color de piel / Skin color', type: 'text', required: false },
+      { name: 'estatura', label: 'Estatura / Height (meters)', type: 'text', required: true },
+      { name: 'color_cabello', label: 'Color de cabello / Hair color', type: 'text', required: true },
+      { name: 'color_ojos', label: 'Color de ojos / Eye color', type: 'text', required: true },
+      { name: 'color_piel', label: 'Color de piel / Skin color', type: 'text', required: true },
     ],
   },
   {
@@ -45,18 +45,7 @@ const STEPS = [
       { name: 'fecha_vencimiento_pasaporte', label: 'Fecha de vencimiento / Expiry date', type: 'date', required: true },
     ],
   },
-  {
-    title: 'Familia / Family',
-    fields: [
-      { name: 'nombre_completo_padre', label: 'Nombre completo del padre y su nacionalidad / Father\'s full name and nationality', type: 'text', required: true },
-      { name: 'nombre_completo_madre', label: 'Nombre completo de la madre y su nacionalidad / Mother\'s full name and nationality', type: 'text', required: true },
-      { name: 'nombre_conyuge', label: 'Nombre del cónyuge / Spouse\'s name', type: 'text', required: false },
-      { name: 'nacionalidad_conyuge', label: 'Nacionalidad del cónyuge / Spouse\'s nationality', type: 'text', required: false },
-      { name: 'tipo_documento_conyuge', label: 'Tipo de documento del cónyuge / Spouse\'s document type', type: 'text', required: false },
-      { name: 'numero_documento_conyuge', label: 'N° del documento del cónyuge / Spouse\'s document number', type: 'text', required: false },
-      { name: 'personas_ingresaron_con_usted', label: 'Nombre y parentesco de las personas que ingresaron con usted / Name and relationship of people who entered with you', type: 'textarea', required: false },
-    ],
-  },
+  { title: 'Familia / Family', special: 'step3' },
   {
     title: 'Domicilio en Panamá / Address in Panama',
     fields: [
@@ -115,6 +104,8 @@ const STEPS = [
   // Step 10: Third party — handled specially (conditional textarea)
   { title: 'Llenado por tercero / Filled by Third Party', special: 'step10' },
 ];
+
+const SPOUSE_STATUSES = ['Casado', 'Union libre'];
 
 const STEP8_RADIOS = [
   { name: 'visitado_panama', label: '¿Ha visitado Panamá? / Have you visited Panama?' },
@@ -234,6 +225,44 @@ function renderField(field, { register, errors }) {
 
 // ─── Special step components ──────────────────────────────────────────────────
 
+function Step3({ register, errors, watch }) {
+  const estadoCivil = watch('estado_civil');
+  const hasSpouse = SPOUSE_STATUSES.includes(estadoCivil);
+
+  return (
+    <div className="flex flex-col gap-5">
+      {[
+        { name: 'nombre_completo_padre', label: 'Nombre completo del padre y su nacionalidad / Father\'s full name and nationality' },
+        { name: 'nombre_completo_madre', label: 'Nombre completo de la madre y su nacionalidad / Mother\'s full name and nationality' },
+      ].map(({ name, label }) => (
+        <div key={name} className="flex flex-col">
+          <FieldLabel label={label} required={true} />
+          <input type="text" {...register(name, { required: 'Requerido / Required' })} className={inputClass(!!errors[name])} />
+          {errors[name] && <p className="text-xs text-red-500 mt-1">{errors[name].message}</p>}
+        </div>
+      ))}
+
+      {hasSpouse && [
+        { name: 'nombre_conyuge', label: 'Nombre del cónyuge / Spouse\'s name' },
+        { name: 'nacionalidad_conyuge', label: 'Nacionalidad del cónyuge / Spouse\'s nationality' },
+        { name: 'tipo_documento_conyuge', label: 'Tipo de documento del cónyuge / Spouse\'s document type' },
+        { name: 'numero_documento_conyuge', label: 'N° del documento del cónyuge / Spouse\'s document number' },
+      ].map(({ name, label }) => (
+        <div key={name} className="flex flex-col">
+          <FieldLabel label={label} required={true} />
+          <input type="text" {...register(name, { required: 'Requerido / Required' })} className={inputClass(!!errors[name])} />
+          {errors[name] && <p className="text-xs text-red-500 mt-1">{errors[name].message}</p>}
+        </div>
+      ))}
+
+      <div className="flex flex-col">
+        <FieldLabel label="Nombre y parentesco de las personas que ingresaron con usted / Name and relationship of people who entered with you" required={false} />
+        <textarea rows={3} {...register('personas_ingresaron_con_usted')} className={inputClass(false)} />
+      </div>
+    </div>
+  );
+}
+
 function Step8({ register, errors, watch }) {
   const familiares = watch('familiares_en_panama');
   return (
@@ -350,6 +379,13 @@ export default function CuestionarioPage() {
   // Collect required field names for the current step
   function requiredFieldsForStep(idx) {
     const s = STEPS[idx];
+    if (s.special === 'step3') {
+      const names = ['nombre_completo_padre', 'nombre_completo_madre'];
+      if (SPOUSE_STATUSES.includes(watch('estado_civil'))) {
+        names.push('nombre_conyuge', 'nacionalidad_conyuge', 'tipo_documento_conyuge', 'numero_documento_conyuge');
+      }
+      return names;
+    }
     if (s.special === 'step8') {
       const names = STEP8_RADIOS.map((q) => q.name);
       const famVal = watch('familiares_en_panama');
@@ -467,6 +503,9 @@ export default function CuestionarioPage() {
               <h2 className="text-xl font-bold text-gray-900 mb-6">{currentStep.title}</h2>
 
               <div className="flex flex-col gap-5">
+                {currentStep.special === 'step3' && (
+                  <Step3 register={register} errors={errors} watch={watch} />
+                )}
                 {currentStep.special === 'step8' && (
                   <Step8 register={register} errors={errors} watch={watch} />
                 )}
