@@ -69,8 +69,8 @@ const STEPS = [
       { name: 'ocupacion', label: 'Ocupación / Occupation', type: 'text', required: true },
       { name: 'actividad_desempenada', label: 'Actividad desempeñada / Activity performed', type: 'text', required: true },
       { name: 'nombre_empleador', label: 'Nombre, dirección y teléfono del empleador / Employer name, address and phone', type: 'text', required: false },
-      { name: 'titulos_diplomas', label: 'Títulos o diplomas / Degrees or diplomas', type: 'text', required: false },
-      { name: 'universidad_institucion', label: 'Universidad o institución / University or institution', type: 'text', required: false },
+      { name: 'titulos_diplomas', label: 'Títulos o diplomas / Degrees or diplomas', type: 'text', required: true },
+      { name: 'universidad_institucion', label: 'Universidad o institución / University or institution', type: 'text', required: true },
     ],
   },
   {
