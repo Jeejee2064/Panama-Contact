@@ -7,8 +7,19 @@ export const metadata = {
 
 export default function CuestionarioLayout({ children }) {
   return (
-    <html lang="es">
-      <body className="bg-gray-50 text-gray-900 antialiased">
+    <html lang="es" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try {
+              if (localStorage.getItem('pcs-theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+              }
+            } catch (e) {}`,
+          }}
+        />
+      </head>
+      <body className="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 antialiased transition-colors">
         {children}
       </body>
     </html>

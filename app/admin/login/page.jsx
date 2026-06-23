@@ -20,7 +20,7 @@ export default function AdminLogin() {
       if (authError) {
         setError('Email ou mot de passe incorrect / Incorrect email or password');
       } else {
-        router.push('/admin/submissions');
+        router.push('/admin');
         router.refresh();
       }
     } finally {

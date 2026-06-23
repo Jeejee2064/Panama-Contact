@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 
-export default function SubmissionsTable({ rows }) {
+export default function ImmigracionTable({ rows }) {
   if (!rows.length) {
     return <p className="text-sm text-gray-500 py-8 text-center">Aucun résultat / No results</p>;
   }
@@ -22,32 +22,21 @@ export default function SubmissionsTable({ rows }) {
           </thead>
           <tbody className="divide-y divide-gray-50">
             {rows.map((row) => (
-              <tr
-                key={row.id}
-                className="hover:bg-orange-50 transition cursor-pointer"
-              >
+              <tr key={row.id} className="hover:bg-orange-50 transition cursor-pointer">
                 <td className="px-4 py-3 font-medium text-gray-900">
-                  <Link href={`/admin/submissions/${row.id}`} className="block w-full">
-                    {row.apellidos}
-                  </Link>
+                  <Link href={`/admin/immigracion/${row.id}`} className="block w-full">{row.apellidos}</Link>
                 </td>
                 <td className="px-4 py-3 text-gray-700">
-                  <Link href={`/admin/submissions/${row.id}`} className="block w-full">
-                    {row.primer_y_segundo_nombre}
-                  </Link>
+                  <Link href={`/admin/immigracion/${row.id}`} className="block w-full">{row.primer_y_segundo_nombre}</Link>
                 </td>
                 <td className="px-4 py-3 text-gray-600 hidden sm:table-cell">
-                  <Link href={`/admin/submissions/${row.id}`} className="block w-full">
-                    {row.nacionalidad}
-                  </Link>
+                  <Link href={`/admin/immigracion/${row.id}`} className="block w-full">{row.nacionalidad}</Link>
                 </td>
                 <td className="px-4 py-3 text-gray-600 hidden md:table-cell">
-                  <Link href={`/admin/submissions/${row.id}`} className="block w-full">
-                    {row.fecha_llegada_panama || '—'}
-                  </Link>
+                  <Link href={`/admin/immigracion/${row.id}`} className="block w-full">{row.fecha_llegada_panama || '—'}</Link>
                 </td>
                 <td className="px-4 py-3">
-                  <Link href={`/admin/submissions/${row.id}`} className="block">
+                  <Link href={`/admin/immigracion/${row.id}`} className="block">
                     <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${
                       row.read ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
                     }`}>
@@ -56,7 +45,7 @@ export default function SubmissionsTable({ rows }) {
                   </Link>
                 </td>
                 <td className="px-4 py-3 text-gray-400 text-xs hidden sm:table-cell">
-                  <Link href={`/admin/submissions/${row.id}`} className="block w-full">
+                  <Link href={`/admin/immigracion/${row.id}`} className="block w-full">
                     {new Date(row.created_at).toLocaleDateString('fr-FR')}
                   </Link>
                 </td>

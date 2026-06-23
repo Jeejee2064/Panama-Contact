@@ -1,45 +1,10 @@
-import { createClient } from '@supabase/supabase-js';
-import { Resend } from 'resend';
+import { createSupabaseServerClient } from '@/lib/supabase/server';
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import AdminNav from '@/components/admin/AdminNav';
+import CopyField from '@/components/admin/CopyField';
 
-function getServiceClient() {
-  return createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
-  );
-}
-
-// In-memory rate limiter: IP → [timestamps]
-const rateMap = new Map();
-const RATE_LIMIT = 5;
-const RATE_WINDOW_MS = 60 * 60 * 1000; // 1 hour
-
-function checkRateLimit(ip) {
-  const now = Date.now();
-  const hits = (rateMap.get(ip) || []).filter((t) => now - t < RATE_WINDOW_MS);
-  if (hits.length >= RATE_LIMIT) return false;
-  hits.push(now);
-  rateMap.set(ip, hits);
-  return true;
-}
-
-const REQUIRED_FIELDS = [
-  'apellidos', 'primer_y_segundo_nombre', 'fecha_de_nacimiento', 'lugar_de_nacimiento',
-  'nacionalidad', 'sexo', 'estado_civil',
-  'numero_pasaporte', 'pasaporte_expedido_en', 'fecha_expedicion_pasaporte', 'fecha_vencimiento_pasaporte',
-  'estatura', 'color_cabello', 'color_ojos', 'color_piel',
-  'nombre_completo_padre', 'nombre_completo_madre',
-  'direccion_domicilio_panama', 'con_quienes_reside', 'piensa_permanecer_domicilio',
-  'direccion_postal_fax_email', 'nombre_propietario_domicilio', 'direccion_pais_origen', 'telefono_domicilio',
-  'profesion_ocupacion', 'ocupacion', 'actividad_desempenada',
-  'razon_presencia_panama', 'tiempo_permanencia_panama', 'medios_economicos',
-  'puerto_de_entrada', 'pais_de_procedencia', 'compania_transporte', 'fecha_llegada_panama',
-  'nombre_responsable', 'direccion_responsable', 'telefono_responsable',
-  'visitado_panama', 'visa_aprobada', 'visa_negada', 'visa_cancelada_revocada',
-  'solicitud_residencia_previa', 'familiares_en_panama', 'contrato_trabajo_panama', 'intencion_estudiar_panama',
-  'residencia_legal', 'detenido_condenado', 'negado_entrada_deportacion', 'trafico_personas',
-  'sustancia_controlada', 'explotacion_recursos', 'enfermedad_contagiosa', 'prohibiciones_decreto_ley',
-  'solicitud_llenada_otra_persona',
-];
+export const dynamic = 'force-dynamic';
 
 const SECTIONS = [
   { title: 'Identidad / Identity', fields: [
@@ -134,131 +99,83 @@ const SECTIONS = [
     ['explotacion_recursos_detalle', 'Explicación / Explanation'],
     ['enfermedad_contagiosa', '¿Ha sufrido alguna enfermedad contagiosa importante? / Significant contagious disease?'],
     ['enfermedad_contagiosa_detalle', 'Explicación / Explanation'],
-    ['prohibiciones_decreto_ley', 'Art. 50 Decreto Ley N°3 del 22 feb 2008 — prohibiciones / prohibitions'],
+    ['prohibiciones_decreto_ley', 'Art. 50 Decreto Ley N°3 / Prohibitions'],
     ['prohibiciones_decreto_ley_detalle', 'Explicación / Explanation'],
   ]},
   { title: 'Llenado por tercero / Filled by Third Party', fields: [
     ['solicitud_llenada_otra_persona', '¿Esta solicitud fue llenada por otra persona? / Form filled by someone else?'],
-    ['datos_persona_que_lleno', 'Datos de la persona que llenó la solicitud / Details of the person who filled the form'],
+    ['datos_persona_que_lleno', 'Datos de la persona que llenó la solicitud / Details of person who filled the form'],
   ]},
 ];
 
-function buildEmailHtml(data, id) {
-  const sectionHtml = SECTIONS.map((section) => {
-    const rows = section.fields
-      .filter(([key]) => data[key])
-      .map(([key, label]) => `
-        <tr>
-          <td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;vertical-align:top;width:50%">
-            <div style="font-size:11px;color:#999;margin-bottom:2px">${label}</div>
-            <div style="font-size:14px;color:#1a1a1a">${String(data[key]).replace(/\n/g, '<br>')}</div>
-          </td>
-        </tr>
-      `).join('');
+export default async function ImmigracionDetail({ params }) {
+  const { id } = await params;
 
-    if (!rows) return '';
-    return `
-      <tr><td colspan="2" style="padding:16px 12px 4px;background:#f8f8f8">
-        <strong style="font-size:12px;color:#666;text-transform:uppercase;letter-spacing:1px">${section.title}</strong>
-      </td></tr>
-      ${rows}
-    `;
-  }).join('');
-
-  return `
-    <!DOCTYPE html>
-    <html>
-    <body style="font-family:sans-serif;background:#f5f5f5;margin:0;padding:24px">
-      <div style="max-width:720px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
-        <div style="background:#000;padding:20px 24px">
-          <div style="color:#fff;font-size:18px;font-weight:bold">Panama Contact</div>
-          <div style="color:#FF491A;font-size:13px;margin-top:4px">Nuevo cuestionario de inmigración</div>
-        </div>
-        <div style="padding:16px 24px;background:#fff3ef;border-bottom:2px solid #FF491A">
-          <a href="https://panama-contact.com/admin/submissions/${id}" style="color:#FF491A;font-weight:bold;font-size:14px;text-decoration:none">
-            Ver cuestionario completo en el panel admin →
-          </a>
-        </div>
-        <table style="width:100%;border-collapse:collapse">
-          ${sectionHtml}
-        </table>
-      </div>
-    </body>
-    </html>
-  `;
-}
-
-export async function POST(request) {
-  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
-
-  if (!checkRateLimit(ip)) {
-    return Response.json({ error: 'Too many requests' }, { status: 429 });
-  }
-
-  let data;
-  try {
-    data = await request.json();
-  } catch {
-    return Response.json({ error: 'Invalid JSON' }, { status: 400 });
-  }
-
-  // Honeypot
-  if (data.website) {
-    return Response.json({ success: true });
-  }
-
-  // Validate required fields
-  for (const field of REQUIRED_FIELDS) {
-    if (!data[field] || String(data[field]).trim() === '') {
-      return Response.json({ error: `Missing required field: ${field}` }, { status: 400 });
-    }
-  }
-  // Conditional required: spouse fields
-  const SPOUSE_STATUSES = ['Casado', 'Union libre'];
-  if (SPOUSE_STATUSES.includes(data.estado_civil)) {
-    for (const f of ['nombre_conyuge', 'nacionalidad_conyuge', 'tipo_documento_conyuge', 'numero_documento_conyuge']) {
-      if (!data[f]?.trim()) return Response.json({ error: `Missing required field: ${f}` }, { status: 400 });
-    }
-  }
-  // Conditional required: familiares_en_panama_detalle
-  if (data.familiares_en_panama === 'Sí' && !data.familiares_en_panama_detalle?.trim()) {
-    return Response.json({ error: 'Missing field: familiares_en_panama_detalle' }, { status: 400 });
-  }
-  // Conditional required: datos_persona_que_lleno
-  if (data.solicitud_llenada_otra_persona === 'Sí' && !data.datos_persona_que_lleno?.trim()) {
-    return Response.json({ error: 'Missing field: datos_persona_que_lleno' }, { status: 400 });
-  }
-
-  // Strip honeypot from stored data
-  const { website: _hp, ...cleanData } = data;
-
-  // Insert into Supabase (service role bypasses RLS — safe, server-side only)
-  const supabase = getServiceClient();
-  const { data: row, error: dbError } = await supabase
-    .from('submissions')
-    .insert([cleanData])
-    .select('id')
+  const supabase = await createSupabaseServerClient();
+  const { data: row } = await supabase
+    .from('immigration_submissions')
+    .select('*')
+    .eq('id', id)
     .single();
 
-  if (dbError) {
-    console.error('Supabase insert error:', dbError);
-    return Response.json({ error: 'Database error' }, { status: 500 });
+  if (!row) notFound();
+
+  // Mark as read (admin is authenticated, RLS update policy applies)
+  if (!row.read) {
+    await supabase.from('immigration_submissions').update({ read: true }).eq('id', id);
   }
 
-  // Send email
-  try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
-      from: 'Panama Contact <noreply@panama-contact.com>',
-      to: process.env.EMAIL_ADMIN || 'info@panama-contact.com',
-      replyTo: data.direccion_postal_fax_email || undefined,
-      subject: `Nuevo cuestionario – ${data.apellidos} ${data.primer_y_segundo_nombre}`,
-      html: buildEmailHtml(cleanData, row.id),
-    });
-  } catch (emailErr) {
-    console.error('Resend error:', emailErr);
-    // Don't fail the request — submission is saved
-  }
+  const submittedAt = new Date(row.created_at).toLocaleString('fr-FR', {
+    year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',
+  });
 
-  return Response.json({ success: true, id: row.id });
+  return (
+    <div className="min-h-screen flex flex-col bg-gray-50">
+      <AdminNav />
+      <main className="flex-1 max-w-4xl mx-auto w-full px-4 py-8">
+        <div className="flex items-center justify-between mb-6">
+          <Link href="/admin/immigracion" className="text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1">
+            ← Volver / Back
+          </Link>
+          <span className="text-xs text-gray-400">{submittedAt}</span>
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4">
+          <div className="px-6 py-4 border-b border-gray-100 flex items-center gap-3">
+            <h1 className="text-xl font-bold text-gray-900">
+              {row.apellidos}, {row.primer_y_segundo_nombre}
+            </h1>
+            <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${
+              row.read ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+            }`}>
+              {row.read ? 'Lu / Read' : 'Non lu / Unread'}
+            </span>
+          </div>
+        </div>
+
+        {SECTIONS.map((section) => {
+          const populated = section.fields.filter(([key]) => row[key]);
+          if (!populated.length) return null;
+          return (
+            <div key={section.title} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4">
+              <div className="px-6 py-3 bg-gray-50 border-b border-gray-100">
+                <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">{section.title}</h2>
+              </div>
+              <div className="divide-y divide-gray-50">
+                {populated.map(([key, label]) => (
+                  <div key={key} className="px-6 py-3 flex items-start justify-between gap-4">
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs text-gray-400 mb-0.5">{label}</div>
+                      <div className="text-sm text-gray-900 whitespace-pre-wrap">{row[key]}</div>
+                    </div>
+                    <CopyField value={String(row[key])} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </main>
+    </div>
+  );
 }
