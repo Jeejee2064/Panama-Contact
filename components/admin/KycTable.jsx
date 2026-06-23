@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function KycTable({ rows }) {
   if (!rows.length) {
-    return <p className="text-sm text-gray-500 py-8 text-center">Aucun résultat / No results</p>;
+    return <p className="text-sm text-gray-500 py-8 text-center">Sin resultados / No results</p>;
   }
 
   return (
@@ -42,7 +42,7 @@ export default function KycTable({ rows }) {
                     <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${
                       row.read ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
                     }`}>
-                      {row.read ? 'Lu' : 'Non lu'}
+                      {row.read ? 'Leído' : 'No leído'}
                     </span>
                   </Link>
                 </td>

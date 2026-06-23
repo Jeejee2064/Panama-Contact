@@ -107,7 +107,7 @@ function renderField(field, { register, errors, values, control }) {
 
   if (field.type === 'tel') {
     return (
-      <div key={field.name} className="flex flex-col">
+      <div key={field.name} data-field={field.name} className="flex flex-col">
         <FieldLabel label={field.label} required={required} />
         <Controller
           name={field.name}
@@ -123,7 +123,7 @@ function renderField(field, { register, errors, values, control }) {
   }
   if (field.type === 'date') {
     return (
-      <div key={field.name} className="flex flex-col">
+      <div key={field.name} data-field={field.name} className="flex flex-col">
         <FieldLabel label={field.label} required={required} />
         <Controller
           name={field.name}
@@ -139,7 +139,7 @@ function renderField(field, { register, errors, values, control }) {
   }
   if (field.type === 'text' || field.type === 'email') {
     return (
-      <div key={field.name} className="flex flex-col">
+      <div key={field.name} data-field={field.name} className="flex flex-col">
         <FieldLabel label={field.label} required={required} />
         <input
           type={field.type}
@@ -152,7 +152,7 @@ function renderField(field, { register, errors, values, control }) {
   }
   if (field.type === 'textarea') {
     return (
-      <div key={field.name} className="flex flex-col">
+      <div key={field.name} data-field={field.name} className="flex flex-col">
         <FieldLabel label={field.label} required={required} />
         <textarea rows={3} {...register(field.name, { required: requiredMsg })} className={inputClass(!!err)} />
         {err && <p className="text-xs text-red-500 mt-1">{err.message}</p>}
@@ -161,7 +161,7 @@ function renderField(field, { register, errors, values, control }) {
   }
   if (field.type === 'radio') {
     return (
-      <div key={field.name} className="flex flex-col gap-1">
+      <div key={field.name} data-field={field.name} className="flex flex-col gap-1">
         <FieldLabel label={field.label} required={required} />
         <RadioPills name={field.name} options={field.options} register={register} error={err} required={requiredMsg} />
       </div>
@@ -169,7 +169,7 @@ function renderField(field, { register, errors, values, control }) {
   }
   if (field.type === 'select') {
     return (
-      <div key={field.name} className="flex flex-col">
+      <div key={field.name} data-field={field.name} className="flex flex-col">
         <FieldLabel label={field.label} required={required} />
         <select {...register(field.name, { required: requiredMsg })} className={inputClass(!!err)}>
           <option value="">— seleccionar / select —</option>
@@ -184,7 +184,7 @@ function renderField(field, { register, errors, values, control }) {
       ? (v) => (Array.isArray(v) && v.length > 0) || 'Seleccione al menos una opción / Select at least one option'
       : undefined;
     return (
-      <div key={field.name} className="flex flex-col gap-1">
+      <div key={field.name} data-field={field.name} className="flex flex-col gap-1">
         <FieldLabel label={field.label} required={required} />
         <CheckboxGroup name={field.name} options={field.options} register={register} error={err} validate={validate} />
       </div>
@@ -236,12 +236,13 @@ function ReferencesStep({ fields, append, remove, register, errors, minRows, con
         <div key={field.id} className="border border-gray-200 dark:border-gray-700 rounded-xl p-4 grid sm:grid-cols-2 gap-3">
           {REFERENCE_FIELDS.map(([key, label]) => {
             const err = errors?.reference_contacts?.[index]?.[key];
+            const fieldPath = `reference_contacts.${index}.${key}`;
             if (key === 'phone') {
               return (
-                <div key={key} className="flex flex-col">
+                <div key={key} data-field={fieldPath} className="flex flex-col">
                   <FieldLabel label={label} required={true} />
                   <Controller
-                    name={`reference_contacts.${index}.${key}`}
+                    name={fieldPath}
                     control={control}
                     rules={{ required: 'Requerido / Required' }}
                     render={({ field: { value, onChange } }) => (
@@ -253,11 +254,11 @@ function ReferencesStep({ fields, append, remove, register, errors, minRows, con
               );
             }
             return (
-              <div key={key} className="flex flex-col">
+              <div key={key} data-field={fieldPath} className="flex flex-col">
                 <FieldLabel label={label} required={true} />
                 <input
                   type={key === 'email' ? 'email' : 'text'}
-                  {...register(`reference_contacts.${index}.${key}`, {
+                  {...register(fieldPath, {
                     required: 'Requerido / Required',
                     validate: key === 'email' ? validateEmail : undefined,
                   })}
@@ -296,12 +297,13 @@ function BeneficialOwnersStep({ fields, append, remove, register, errors, minRow
         <div key={field.id} className="border border-gray-200 dark:border-gray-700 rounded-xl p-4 grid sm:grid-cols-2 gap-3">
           {BENEFICIAL_OWNER_FIELDS.map(([key, label]) => {
             const err = errors?.le_beneficial_owners?.[index]?.[key];
+            const fieldPath = `le_beneficial_owners.${index}.${key}`;
             if (key === 'date_of_birth' || key === 'date_acquired_status') {
               return (
-                <div key={key} className="flex flex-col">
+                <div key={key} data-field={fieldPath} className="flex flex-col">
                   <FieldLabel label={label} required={true} />
                   <Controller
-                    name={`le_beneficial_owners.${index}.${key}`}
+                    name={fieldPath}
                     control={control}
                     rules={{ required: 'Requerido / Required' }}
                     render={({ field: { value, onChange } }) => (
@@ -313,11 +315,11 @@ function BeneficialOwnersStep({ fields, append, remove, register, errors, minRow
               );
             }
             return (
-              <div key={key} className="flex flex-col">
+              <div key={key} data-field={fieldPath} className="flex flex-col">
                 <FieldLabel label={label} required={true} />
                 <input
                   type="text"
-                  {...register(`le_beneficial_owners.${index}.${key}`, { required: 'Requerido / Required' })}
+                  {...register(fieldPath, { required: 'Requerido / Required' })}
                   className={inputClass(!!err)}
                 />
                 {err && <p className="text-xs text-red-500 mt-1">{err.message}</p>}
@@ -346,23 +348,24 @@ function DocumentsStep({ docsConfig, documents, setDocuments, draftId, error }) 
   return (
     <div className="flex flex-col gap-4">
       {docsConfig.map((doc) => (
-        <FileUploadField
-          key={doc.key}
-          draftId={draftId}
-          docKey={doc.key}
-          label={doc.label}
-          instructions={doc.instructions}
-          required={true}
-          value={documents[doc.key] || null}
-          onChange={(val) =>
-            setDocuments((prev) => {
-              const next = { ...prev };
-              if (val) next[doc.key] = val;
-              else delete next[doc.key];
-              return next;
-            })
-          }
-        />
+        <div key={doc.key} data-field={`document-${doc.key}`}>
+          <FileUploadField
+            draftId={draftId}
+            docKey={doc.key}
+            label={doc.label}
+            instructions={doc.instructions}
+            required={true}
+            value={documents[doc.key] || null}
+            onChange={(val) =>
+              setDocuments((prev) => {
+                const next = { ...prev };
+                if (val) next[doc.key] = val;
+                else delete next[doc.key];
+                return next;
+              })
+            }
+          />
+        </div>
       ))}
       {error && <p className="text-sm text-red-500">{error}</p>}
     </div>
@@ -372,7 +375,7 @@ function DocumentsStep({ docsConfig, documents, setDocuments, draftId, error }) 
 function FinalStep({ register, errors }) {
   return (
     <div className="flex flex-col gap-5">
-      <label className="flex items-start gap-3 cursor-pointer">
+      <label data-field="declaration_lawful_resources" className="flex items-start gap-3 cursor-pointer">
         <input
           type="checkbox"
           {...register('declaration_lawful_resources', { required: 'Debe aceptar esta declaración / You must accept this declaration' })}
@@ -385,7 +388,7 @@ function FinalStep({ register, errors }) {
       </label>
       {errors.declaration_lawful_resources && <p className="text-xs text-red-500">{errors.declaration_lawful_resources.message}</p>}
 
-      <label className="flex items-start gap-3 cursor-pointer">
+      <label data-field="declaration_no_third_party_deposits" className="flex items-start gap-3 cursor-pointer">
         <input
           type="checkbox"
           {...register('declaration_no_third_party_deposits', { required: 'Debe aceptar esta declaración / You must accept this declaration' })}
@@ -398,7 +401,7 @@ function FinalStep({ register, errors }) {
       </label>
       {errors.declaration_no_third_party_deposits && <p className="text-xs text-red-500">{errors.declaration_no_third_party_deposits.message}</p>}
 
-      <div className="flex flex-col">
+      <div data-field="signature_full_name" className="flex flex-col">
         <FieldLabel label="Nombre completo (firma) / Full name (signature)" required={true} />
         <input type="text" {...register('signature_full_name', { required: 'Requerido / Required' })} className={inputClass(!!errors.signature_full_name)} />
         {errors.signature_full_name && <p className="text-xs text-red-500 mt-1">{errors.signature_full_name.message}</p>}
@@ -442,7 +445,7 @@ export default function KycPage() {
   const [done, setDone] = useState(false);
   const [serverError, setServerError] = useState('');
 
-  const { register, handleSubmit, trigger, watch, control, formState: { errors } } = useForm({
+  const { register, handleSubmit, trigger, watch, control, getFieldState, formState: { errors } } = useForm({
     mode: 'onBlur',
     defaultValues: {
       reference_contacts: Array.from({ length: MIN_REFERENCES }, () => ({ name: '', relationship: '', phone: '', email: '' })),
@@ -476,6 +479,22 @@ export default function KycPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  function scrollToField(selector) {
+    const el = document.querySelector(selector);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function scrollToFirstError(fieldNames) {
+    // getFieldState reads live internal state — `errors` from the render
+    // closure can be stale right after an awaited trigger() call.
+    for (const name of fieldNames) {
+      if (getFieldState(name).error) {
+        scrollToField(`[data-field="${name}"]`);
+        return;
+      }
+    }
+  }
+
   async function goNext() {
     if (currentStep.special === 'type') {
       if (!clientType) { setTypeError('Por favor seleccione un tipo de cliente / Please select a client type'); return; }
@@ -485,8 +504,12 @@ export default function KycPage() {
       return;
     }
     if (currentStep.special === 'documents') {
-      const allUploaded = docsConfig.every((d) => documents[d.key]);
-      if (!allUploaded) { setDocumentsError('Por favor suba todos los documentos requeridos. / Please upload all required documents.'); return; }
+      const missing = docsConfig.find((d) => !documents[d.key]);
+      if (missing) {
+        setDocumentsError('Por favor suba todos los documentos requeridos. / Please upload all required documents.');
+        scrollToField(`[data-field="document-${missing.key}"]`);
+        return;
+      }
       setDocumentsError('');
       setStepIndex((i) => i + 1);
       scrollToTop();
@@ -497,13 +520,18 @@ export default function KycPage() {
     if (valid) {
       setStepIndex((i) => Math.min(i + 1, totalSteps - 1));
       scrollToTop();
+    } else {
+      scrollToFirstError(fieldsToValidate);
     }
   }
 
   async function onSubmit(formData) {
     const fieldsToValidate = requiredFieldsForStep(currentStep, watch());
     const valid = await trigger(fieldsToValidate);
-    if (!valid) return;
+    if (!valid) {
+      scrollToFirstError(fieldsToValidate);
+      return;
+    }
 
     setSubmitting(true);
     setServerError('');

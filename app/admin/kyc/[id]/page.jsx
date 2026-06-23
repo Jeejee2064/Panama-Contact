@@ -63,7 +63,7 @@ export default async function KycDetail({ params }) {
             <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${
               row.read ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
             }`}>
-              {row.read ? 'Lu / Read' : 'Non lu / Unread'}
+              {row.read ? 'Leído / Read' : 'No leído / Unread'}
             </span>
           </div>
         </div>

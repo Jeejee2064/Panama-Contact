@@ -40,7 +40,7 @@ export default function AdminNav() {
         onClick={logout}
         className="text-white text-sm opacity-70 hover:opacity-100 transition"
       >
-        Déconnexion / Logout
+        Cerrar sesión / Logout
       </button>
     </header>
   );

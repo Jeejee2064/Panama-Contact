@@ -18,7 +18,7 @@ export default function AdminLogin() {
       const supabase = createSupabaseBrowserClient();
       const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
       if (authError) {
-        setError('Email ou mot de passe incorrect / Incorrect email or password');
+        setError('Email o contraseña incorrectos / Incorrect email or password');
       } else {
         router.push('/admin');
         router.refresh();
@@ -37,7 +37,7 @@ export default function AdminLogin() {
 
       <div className="flex-1 flex items-center justify-center p-6">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 w-full max-w-sm">
-          <h1 className="text-2xl font-bold text-gray-900 mb-6">Connexion admin</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-6">Acceso admin</h1>
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div>
               <label className="block text-xs text-gray-500 mb-1">Email</label>
@@ -50,7 +50,7 @@ export default function AdminLogin() {
               />
             </div>
             <div>
-              <label className="block text-xs text-gray-500 mb-1">Mot de passe / Password</label>
+              <label className="block text-xs text-gray-500 mb-1">Contraseña / Password</label>
               <input
                 type="password"
                 required
@@ -65,7 +65,7 @@ export default function AdminLogin() {
               disabled={loading}
               className="w-full py-3 rounded-full bg-[#FF491A] text-white text-sm font-bold hover:bg-[#e6451a] transition disabled:opacity-60 mt-2"
             >
-              {loading ? 'Connexion...' : 'Se connecter'}
+              {loading ? 'Conectando...' : 'Iniciar sesión'}
             </button>
           </form>
         </div>

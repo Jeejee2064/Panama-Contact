@@ -61,9 +61,9 @@ export default async function KycListPage({ searchParams }) {
 
         <div className="flex flex-wrap gap-2 mb-4">
           {[
-            { value: 'all', label: 'Tous / All' },
-            { value: 'unread', label: 'Non lus / Unread' },
-            { value: 'read', label: 'Lus / Read' },
+            { value: 'all', label: 'Todos / All' },
+            { value: 'unread', label: 'No leídos / Unread' },
+            { value: 'read', label: 'Leídos / Read' },
           ].map((f) => (
             <Link
               key={f.value}

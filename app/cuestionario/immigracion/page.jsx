@@ -197,7 +197,7 @@ function renderField(field, { register, errors, control }) {
   const err = errors[field.name];
   if (field.type === 'tel') {
     return (
-      <div key={field.name} className="flex flex-col">
+      <div key={field.name} data-field={field.name} className="flex flex-col">
         <FieldLabel label={field.label} required={field.required} />
         <Controller
           name={field.name}
@@ -213,7 +213,7 @@ function renderField(field, { register, errors, control }) {
   }
   if (field.type === 'date') {
     return (
-      <div key={field.name} className="flex flex-col">
+      <div key={field.name} data-field={field.name} className="flex flex-col">
         <FieldLabel label={field.label} required={field.required} />
         <Controller
           name={field.name}
@@ -229,7 +229,7 @@ function renderField(field, { register, errors, control }) {
   }
   if (field.type === 'text') {
     return (
-      <div key={field.name} className="flex flex-col">
+      <div key={field.name} data-field={field.name} className="flex flex-col">
         <FieldLabel label={field.label} required={field.required} />
         <input
           type="text"
@@ -242,7 +242,7 @@ function renderField(field, { register, errors, control }) {
   }
   if (field.type === 'textarea') {
     return (
-      <div key={field.name} className="flex flex-col">
+      <div key={field.name} data-field={field.name} className="flex flex-col">
         <FieldLabel label={field.label} required={field.required} />
         <textarea
           rows={3}
@@ -255,7 +255,7 @@ function renderField(field, { register, errors, control }) {
   }
   if (field.type === 'radio') {
     return (
-      <div key={field.name} className="flex flex-col gap-1">
+      <div key={field.name} data-field={field.name} className="flex flex-col gap-1">
         <FieldLabel label={field.label} required={field.required} />
         <RadioPills name={field.name} options={field.options} register={register} error={err} required={field.required ? 'Requerido / Required' : false} />
       </div>
@@ -263,7 +263,7 @@ function renderField(field, { register, errors, control }) {
   }
   if (field.type === 'select') {
     return (
-      <div key={field.name} className="flex flex-col">
+      <div key={field.name} data-field={field.name} className="flex flex-col">
         <FieldLabel label={field.label} required={field.required} />
         <select
           {...register(field.name, { required: field.required ? 'Requerido / Required' : false })}
@@ -293,7 +293,7 @@ function Step3({ register, errors, watch }) {
         { name: 'nombre_completo_padre', label: 'Nombre completo del padre y su nacionalidad / Father\'s full name and nationality' },
         { name: 'nombre_completo_madre', label: 'Nombre completo de la madre y su nacionalidad / Mother\'s full name and nationality' },
       ].map(({ name, label }) => (
-        <div key={name} className="flex flex-col">
+        <div key={name} data-field={name} className="flex flex-col">
           <FieldLabel label={label} required={true} />
           <input type="text" {...register(name, { required: 'Requerido / Required' })} className={inputClass(!!errors[name])} />
           {errors[name] && <p className="text-xs text-red-500 mt-1">{errors[name].message}</p>}
@@ -306,14 +306,14 @@ function Step3({ register, errors, watch }) {
         { name: 'tipo_documento_conyuge', label: 'Tipo de documento del cónyuge / Spouse\'s document type' },
         { name: 'numero_documento_conyuge', label: 'N° del documento del cónyuge / Spouse\'s document number' },
       ].map(({ name, label }) => (
-        <div key={name} className="flex flex-col">
+        <div key={name} data-field={name} className="flex flex-col">
           <FieldLabel label={label} required={true} />
           <input type="text" {...register(name, { required: 'Requerido / Required' })} className={inputClass(!!errors[name])} />
           {errors[name] && <p className="text-xs text-red-500 mt-1">{errors[name].message}</p>}
         </div>
       ))}
 
-      <div className="flex flex-col">
+      <div data-field="personas_ingresaron_con_usted" className="flex flex-col">
         <FieldLabel label="Nombre y parentesco de las personas que ingresaron con usted / Name and relationship of people who entered with you" required={false} />
         <textarea rows={3} {...register('personas_ingresaron_con_usted')} className={inputClass(false)} />
       </div>
@@ -326,7 +326,7 @@ function Step8({ register, errors, watch }) {
   return (
     <div className="flex flex-col gap-5">
       {STEP8_RADIOS.map((q) => (
-        <div key={q.name} className="flex flex-col gap-1">
+        <div key={q.name} data-field={q.name} className="flex flex-col gap-1">
           <FieldLabel label={q.label} required={true} />
           <RadioPills
             name={q.name}
@@ -336,7 +336,7 @@ function Step8({ register, errors, watch }) {
             required="Requerido / Required"
           />
           {q.conditional && familiares === 'Sí' && (
-            <div className="mt-2">
+            <div data-field="familiares_en_panama_detalle" className="mt-2">
               <FieldLabel label="Nombre y parentesco / Name and relationship" required={true} />
               <textarea
                 rows={3}
@@ -361,7 +361,7 @@ function Step9({ register, errors, watch }) {
         const val = watch(q.name);
         const detailName = q.name + '_detalle';
         return (
-          <div key={q.name} className="flex flex-col gap-1">
+          <div key={q.name} data-field={q.name} className="flex flex-col gap-1">
             <FieldLabel label={q.label} required={true} />
             <RadioPills
               name={q.name}
@@ -371,7 +371,7 @@ function Step9({ register, errors, watch }) {
               required="Requerido / Required"
             />
             {val === 'Sí' && (
-              <div className="mt-2">
+              <div data-field={detailName} className="mt-2">
                 <FieldLabel label="Por favor explique / Please explain" required={true} />
                 <textarea
                   rows={3}
@@ -394,7 +394,7 @@ function Step10({ register, errors, watch }) {
   const llenada = watch('solicitud_llenada_otra_persona');
   return (
     <div className="flex flex-col gap-5">
-      <div className="flex flex-col gap-1">
+      <div data-field="solicitud_llenada_otra_persona" className="flex flex-col gap-1">
         <FieldLabel label="¿Esta solicitud fue llenada por otra persona? / Was this form filled out by someone else?" required={true} />
         <RadioPills
           name="solicitud_llenada_otra_persona"
@@ -405,7 +405,7 @@ function Step10({ register, errors, watch }) {
         />
       </div>
       {llenada === 'Sí' && (
-        <div className="flex flex-col gap-1">
+        <div data-field="datos_persona_que_lleno" className="flex flex-col gap-1">
           <FieldLabel label="Datos de la persona que llenó la solicitud (nombre, dirección, nacionalidad, estado civil, N° documento, parentesco) / Details of the person who filled the form (name, address, nationality, marital status, ID/passport number, relationship)" required={true} />
           <textarea
             rows={5}
@@ -429,7 +429,7 @@ export default function ImmigracionPage() {
   const [done, setDone] = useState(false);
   const [serverError, setServerError] = useState('');
 
-  const { register, handleSubmit, trigger, watch, control, formState: { errors } } = useForm({ mode: 'onBlur' });
+  const { register, handleSubmit, trigger, watch, control, getFieldState, formState: { errors } } = useForm({ mode: 'onBlur' });
 
   const totalSteps = STEPS.length;
   const currentStep = STEPS[step];
@@ -469,12 +469,28 @@ export default function ImmigracionPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  function scrollToFirstError(fieldNames) {
+    // getFieldState reads live internal state — `errors` from the render
+    // closure can be stale right after an awaited trigger() call.
+    for (const name of fieldNames) {
+      if (getFieldState(name).error) {
+        const el = document.querySelector(`[data-field="${name}"]`);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+      }
+    }
+  }
+
   async function goNext() {
     const fieldsToValidate = requiredFieldsForStep(step);
     const valid = await trigger(fieldsToValidate);
     if (valid) {
       setStep((s) => Math.min(s + 1, totalSteps - 1));
       scrollToTop();
+    } else {
+      scrollToFirstError(fieldsToValidate);
     }
   }
 
@@ -482,7 +498,10 @@ export default function ImmigracionPage() {
     // Last step validation
     const fieldsToValidate = requiredFieldsForStep(step);
     const valid = await trigger(fieldsToValidate);
-    if (!valid) return;
+    if (!valid) {
+      scrollToFirstError(fieldsToValidate);
+      return;
+    }
 
     setSubmitting(true);
     setServerError('');
