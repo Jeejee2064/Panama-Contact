@@ -4,6 +4,11 @@ import { useForm, Controller } from 'react-hook-form';
 import CuestionarioHeader from '@/components/cuestionario/CuestionarioHeader';
 import PhoneField from '@/components/cuestionario/PhoneField';
 import DateSelect from '@/components/cuestionario/DateSelect';
+import {
+  EYE_COLOR_OPTIONS, HAIR_COLOR_OPTIONS, SKIN_COLOR_OPTIONS,
+  SPOUSE_DOCUMENT_TYPE_OPTIONS, COUNTRY_OPTIONS, OCCUPATION_OPTIONS,
+  ENTRY_PORT_OPTIONS, TRANSPORT_COMPANY_OPTIONS,
+} from '@/data/immigration-options';
 
 // ─── Field definitions per step ───────────────────────────────────────────────
 
@@ -17,7 +22,7 @@ const STEPS = [
       { name: 'apellido_de_casada', label: 'Apellido de casada / Maiden name', type: 'text', required: false },
       { name: 'fecha_de_nacimiento', label: 'Fecha de nacimiento / Date of birth', type: 'date', required: true },
       { name: 'lugar_de_nacimiento', label: 'Lugar de nacimiento / Place of birth (country, city, province)', type: 'text', required: true },
-      { name: 'nacionalidad', label: 'Nacionalidad / Nationality', type: 'text', required: true },
+      { name: 'nacionalidad', label: 'Nacionalidad / Nationality', type: 'select', required: true, options: COUNTRY_OPTIONS },
       {
         name: 'sexo', label: 'Sexo / Sex', type: 'radio', required: true,
         options: [{ value: 'Masculino', label: 'Masculino / Male' }, { value: 'Femenino', label: 'Femenino / Female' }],
@@ -33,9 +38,9 @@ const STEPS = [
         ],
       },
       { name: 'estatura', label: 'Estatura / Height (meters)', type: 'text', required: true },
-      { name: 'color_cabello', label: 'Color de cabello / Hair color', type: 'text', required: true },
-      { name: 'color_ojos', label: 'Color de ojos / Eye color', type: 'text', required: true },
-      { name: 'color_piel', label: 'Color de piel / Skin color', type: 'text', required: true },
+      { name: 'color_cabello', label: 'Color de cabello / Hair color', type: 'select', required: true, options: HAIR_COLOR_OPTIONS },
+      { name: 'color_ojos', label: 'Color de ojos / Eye color', type: 'select', required: true, options: EYE_COLOR_OPTIONS },
+      { name: 'color_piel', label: 'Color de piel / Skin color', type: 'select', required: true, options: SKIN_COLOR_OPTIONS },
     ],
   },
   {
@@ -69,7 +74,7 @@ const STEPS = [
     title: 'Profesión / Occupation',
     fields: [
       { name: 'profesion_ocupacion', label: 'Profesión u ocupación / Profession or occupation', type: 'text', required: true },
-      { name: 'ocupacion', label: 'Ocupación / Occupation', type: 'text', required: true },
+      { name: 'ocupacion', label: 'Ocupación / Occupation', type: 'select', required: true, options: OCCUPATION_OPTIONS },
       { name: 'actividad_desempenada', label: 'Actividad desempeñada / Activity performed', type: 'text', required: true },
       { name: 'nombre_empleador', label: 'Nombre, dirección y teléfono del empleador / Employer name, address and phone', type: 'text', required: false },
       { name: 'titulos_diplomas', label: 'Títulos o diplomas / Degrees or diplomas', type: 'text', required: true },
@@ -83,9 +88,9 @@ const STEPS = [
       { name: 'tiempo_permanencia_panama', label: '¿Cuánto tiempo planea permanecer? / How long do you plan to stay?', type: 'text', required: true },
       { name: 'fecha_regreso_pais_origen', label: '¿Cuándo planea regresar? / When do you plan to return?', type: 'date', required: false },
       { name: 'medios_economicos', label: '¿Con qué medios económicos? / What financial means do you have?', type: 'text', required: true },
-      { name: 'puerto_de_entrada', label: 'Puerto de entrada / Port of entry', type: 'text', required: true },
-      { name: 'pais_de_procedencia', label: 'País de procedencia / Country of origin', type: 'text', required: true },
-      { name: 'compania_transporte', label: 'Compañía de transporte / Transport company', type: 'text', required: true },
+      { name: 'puerto_de_entrada', label: 'Puerto de entrada / Port of entry', type: 'select', required: true, options: ENTRY_PORT_OPTIONS },
+      { name: 'pais_de_procedencia', label: 'País de procedencia / Country of origin', type: 'select', required: true, options: COUNTRY_OPTIONS },
+      { name: 'compania_transporte', label: 'Compañía de transporte / Transport company', type: 'select', required: true, options: TRANSPORT_COMPANY_OPTIONS },
       { name: 'fecha_llegada_panama', label: 'Fecha de llegada a Panamá / Date of arrival in Panama', type: 'date', required: true },
     ],
   },
@@ -302,13 +307,20 @@ function Step3({ register, errors, watch }) {
 
       {hasSpouse && [
         { name: 'nombre_conyuge', label: 'Nombre del cónyuge / Spouse\'s name' },
-        { name: 'nacionalidad_conyuge', label: 'Nacionalidad del cónyuge / Spouse\'s nationality' },
-        { name: 'tipo_documento_conyuge', label: 'Tipo de documento del cónyuge / Spouse\'s document type' },
+        { name: 'nacionalidad_conyuge', label: 'Nacionalidad del cónyuge / Spouse\'s nationality', options: COUNTRY_OPTIONS },
+        { name: 'tipo_documento_conyuge', label: 'Tipo de documento del cónyuge / Spouse\'s document type', options: SPOUSE_DOCUMENT_TYPE_OPTIONS },
         { name: 'numero_documento_conyuge', label: 'N° del documento del cónyuge / Spouse\'s document number' },
-      ].map(({ name, label }) => (
+      ].map(({ name, label, options }) => (
         <div key={name} data-field={name} className="flex flex-col">
           <FieldLabel label={label} required={true} />
-          <input type="text" {...register(name, { required: 'Requerido / Required' })} className={inputClass(!!errors[name])} />
+          {options ? (
+            <select {...register(name, { required: 'Requerido / Required' })} className={inputClass(!!errors[name])}>
+              <option value="">— seleccionar / select —</option>
+              {options.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+            </select>
+          ) : (
+            <input type="text" {...register(name, { required: 'Requerido / Required' })} className={inputClass(!!errors[name])} />
+          )}
           {errors[name] && <p className="text-xs text-red-500 mt-1">{errors[name].message}</p>}
         </div>
       ))}
