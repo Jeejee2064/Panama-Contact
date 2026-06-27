@@ -65,6 +65,7 @@ const STEPS = [
         options: [{ value: 'Sí', label: 'Sí / Yes' }, { value: 'No', label: 'No' }],
       },
       { name: 'direccion_postal_fax_email', label: 'Dirección postal, fax o e-mail / Postal address, fax or email', type: 'text', required: true },
+      { name: 'email', label: 'Correo electrónico / Email', type: 'email', required: true },
       { name: 'nombre_propietario_domicilio', label: 'Nombre del propietario o arrendatario / Name of owner or tenant', type: 'text', required: true },
       { name: 'direccion_pais_origen', label: 'Dirección en país de origen / Address in country of origin', type: 'text', required: true },
       { name: 'telefono_domicilio', label: 'Teléfono de domicilio / Home phone', type: 'tel', required: true },
@@ -239,6 +240,22 @@ function renderField(field, { register, errors, control }) {
         <input
           type="text"
           {...register(field.name, { required: field.required ? 'Requerido / Required' : false })}
+          className={inputClass(!!err)}
+        />
+        {err && <p className="text-xs text-red-500 mt-1">{err.message}</p>}
+      </div>
+    );
+  }
+  if (field.type === 'email') {
+    return (
+      <div key={field.name} data-field={field.name} className="flex flex-col">
+        <FieldLabel label={field.label} required={field.required} />
+        <input
+          type="email"
+          {...register(field.name, {
+            required: field.required ? 'Requerido / Required' : false,
+            pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Email inválido / Invalid email' },
+          })}
           className={inputClass(!!err)}
         />
         {err && <p className="text-xs text-red-500 mt-1">{err.message}</p>}

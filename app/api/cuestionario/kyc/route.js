@@ -98,7 +98,7 @@ function buildEmailHtml(data, id) {
     <body style="font-family:sans-serif;background:#f5f5f5;margin:0;padding:24px">
       <div style="max-width:720px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
         <div style="background:#000;padding:20px 24px">
-          <div style="color:#fff;font-size:18px;font-weight:bold">Panama Contact</div>
+          <div style="color:#fff;font-size:18px;font-weight:bold">Panama Contact Services</div>
           <div style="color:#FF491A;font-size:13px;margin-top:4px">Nuevo formulario KYC (${data.client_type === 'legal' ? 'Empresa' : 'Persona Natural'})</div>
         </div>
         <div style="padding:16px 24px;background:#fff3ef;border-bottom:2px solid #FF491A">
@@ -116,6 +116,32 @@ function buildEmailHtml(data, id) {
           <tr><td colspan="2" style="padding:16px 12px 4px;background:#f8f8f8"><strong style="font-size:12px;color:#666;text-transform:uppercase;letter-spacing:1px">Documentos / Documents</strong></td></tr>
           ${docRows}
         </table>
+      </div>
+    </body>
+    </html>
+  `;
+}
+
+function buildClientConfirmationHtml(displayName) {
+  return `
+    <!DOCTYPE html>
+    <html>
+    <body style="font-family:sans-serif;background:#f5f5f5;margin:0;padding:24px">
+      <div style="max-width:600px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
+        <div style="background:#000;padding:20px 24px">
+          <div style="color:#fff;font-size:18px;font-weight:bold">Panama Contact Services</div>
+        </div>
+        <div style="padding:24px;color:#1a1a1a;font-size:14px;line-height:1.6">
+          <p>Estimado/a ${displayName},</p>
+          <p>Su formulario KYC ha sido recibido exitosamente. Hemos guardado correctamente toda su información.</p>
+          <p>Nuestro equipo en Panama Contact Services revisará su expediente y se pondrá en contacto con usted a la brevedad.</p>
+          <p>Gracias por su confianza.</p>
+          <hr style="border:none;border-top:1px solid #f0f0f0;margin:24px 0">
+          <p>Dear ${displayName},</p>
+          <p>Your KYC form has been received successfully. We have correctly saved all your information.</p>
+          <p>Our team at Panama Contact Services will review your file and will contact you shortly.</p>
+          <p>Thank you for your trust.</p>
+        </div>
       </div>
     </body>
     </html>
@@ -227,17 +253,34 @@ export async function POST(request) {
     return Response.json({ error: 'Database error' }, { status: 500 });
   }
 
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const clientEmail = data.np_personal_email || data.le_email;
+
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
-      from: 'Panama Contact <noreply@panama-contact.com>',
+    const { error: sendErr } = await resend.emails.send({
+      from: 'Panama Contact Services <noreply@panama-contact.com>',
       to: process.env.EMAIL_ADMIN || 'info@panama-contact.com',
-      replyTo: data.np_personal_email || data.le_email || undefined,
+      replyTo: clientEmail || undefined,
       subject: `Nuevo KYC (${data.client_type === 'legal' ? 'Empresa' : 'Persona Natural'}) – ${display_name}`,
       html: buildEmailHtml(row, inserted.id),
     });
+    if (sendErr) console.error('Resend error:', sendErr);
   } catch (emailErr) {
     console.error('Resend error:', emailErr);
+  }
+
+  if (clientEmail) {
+    try {
+      const { error: sendErr } = await resend.emails.send({
+        from: 'Panama Contact Services <noreply@panama-contact.com>',
+        to: clientEmail,
+        subject: 'Hemos recibido su formulario KYC / We have received your KYC form – Panama Contact Services',
+        html: buildClientConfirmationHtml(display_name),
+      });
+      if (sendErr) console.error('Resend error (client confirmation):', sendErr);
+    } catch (emailErr) {
+      console.error('Resend error (client confirmation):', emailErr);
+    }
   }
 
   return Response.json({ success: true, id: inserted.id });

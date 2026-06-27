@@ -29,7 +29,7 @@ const REQUIRED_FIELDS = [
   'estatura', 'color_cabello', 'color_ojos', 'color_piel',
   'nombre_completo_padre', 'nombre_completo_madre',
   'direccion_domicilio_panama', 'con_quienes_reside', 'piensa_permanecer_domicilio',
-  'direccion_postal_fax_email', 'nombre_propietario_domicilio', 'direccion_pais_origen', 'telefono_domicilio',
+  'direccion_postal_fax_email', 'email', 'nombre_propietario_domicilio', 'direccion_pais_origen', 'telefono_domicilio',
   'profesion_ocupacion', 'ocupacion', 'actividad_desempenada', 'titulos_diplomas', 'universidad_institucion',
   'razon_presencia_panama', 'tiempo_permanencia_panama', 'medios_economicos',
   'puerto_de_entrada', 'pais_de_procedencia', 'compania_transporte', 'fecha_llegada_panama',
@@ -78,6 +78,7 @@ const SECTIONS = [
     ['con_quienes_reside', '¿Con quiénes reside? / Who do you live with?'],
     ['piensa_permanecer_domicilio', '¿Piensa permanecer en este domicilio? / Do you plan to stay at this address?'],
     ['direccion_postal_fax_email', 'Dirección postal, fax o e-mail / Postal address, fax or email'],
+    ['email', 'Correo electrónico / Email'],
     ['nombre_propietario_domicilio', 'Nombre del propietario o arrendatario / Name of owner or tenant'],
     ['direccion_pais_origen', 'Dirección en país de origen / Address in country of origin'],
     ['telefono_domicilio', 'Teléfono de domicilio / Home phone'],
@@ -171,7 +172,7 @@ function buildEmailHtml(data, id) {
     <body style="font-family:sans-serif;background:#f5f5f5;margin:0;padding:24px">
       <div style="max-width:720px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
         <div style="background:#000;padding:20px 24px">
-          <div style="color:#fff;font-size:18px;font-weight:bold">Panama Contact</div>
+          <div style="color:#fff;font-size:18px;font-weight:bold">Panama Contact Services</div>
           <div style="color:#FF491A;font-size:13px;margin-top:4px">Nuevo cuestionario de inmigración</div>
         </div>
         <div style="padding:16px 24px;background:#fff3ef;border-bottom:2px solid #FF491A">
@@ -182,6 +183,65 @@ function buildEmailHtml(data, id) {
         <table style="width:100%;border-collapse:collapse">
           ${sectionHtml}
         </table>
+      </div>
+    </body>
+    </html>
+  `;
+}
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function buildClientConfirmationHtml(data) {
+  const fullName = `${data.apellidos} ${data.primer_y_segundo_nombre}`;
+  return `
+    <!DOCTYPE html>
+    <html>
+    <body style="font-family:sans-serif;background:#f5f5f5;margin:0;padding:24px">
+      <div style="max-width:600px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
+        <div style="background:#000;padding:20px 24px">
+          <div style="color:#fff;font-size:18px;font-weight:bold">Panama Contact Services</div>
+        </div>
+        <div style="padding:24px;color:#1a1a1a;font-size:14px;line-height:1.6">
+          <p>Estimado/a ${fullName},</p>
+          <p>Su registro se ha completado exitosamente. Gracias por haberse registrado con nosotros. Hemos recibido y guardado correctamente toda su información.</p>
+          <p><strong>Notas importantes – Para el día de su cita en Inmigración:</strong></p>
+          <p><strong>Vestimenta no permitida:</strong></p>
+          <ul>
+            <li>Shorts y minifaldas.</li>
+            <li>Camisas sin mangas (camisillas/bividí).</li>
+            <li>Escotes pronunciados.</li>
+            <li>Ropa muy corta o transparente.</li>
+            <li>Pantalones rotos.</li>
+            <li>Sandalias playeras o chanclas.</li>
+          </ul>
+          <p><strong>Recomendaciones:</strong></p>
+          <ul>
+            <li>Se recomienda el uso de zapatos cerrados y pantalones o faldas largas.</li>
+            <li>Las instalaciones suelen tener el aire acondicionado muy frío; lleve abrigo o suéter.</li>
+            <li>Si su trámite requiere fotografías tamaño carné, evite ropa sin mangas o escotada.</li>
+          </ul>
+          <p>Gracias por su confianza. Para cualquier consulta adicional, quedamos a su disposición.</p>
+          <hr style="border:none;border-top:1px solid #f0f0f0;margin:24px 0">
+          <p>Dear ${fullName},</p>
+          <p>Your registration has been completed successfully. Thank you for registering with us. We have received and correctly saved all your information.</p>
+          <p><strong>Important notes – For the day of your Immigration appointment:</strong></p>
+          <p><strong>Clothing not allowed:</strong></p>
+          <ul>
+            <li>Shorts and miniskirts.</li>
+            <li>Sleeveless shirts (tank tops).</li>
+            <li>Low-cut necklines.</li>
+            <li>Very short or sheer clothing.</li>
+            <li>Ripped/torn pants.</li>
+            <li>Beach sandals or flip-flops.</li>
+          </ul>
+          <p><strong>Recommendations:</strong></p>
+          <ul>
+            <li>Closed-toe shoes and long pants or skirts are recommended.</li>
+            <li>The facilities are usually very cold due to air conditioning; bring a jacket or sweater.</li>
+            <li>If your procedure requires passport-style photos, avoid sleeveless or low-cut clothing.</li>
+          </ul>
+          <p>Thank you for your trust. For any further questions, we remain at your disposal.</p>
+        </div>
       </div>
     </body>
     </html>
@@ -228,6 +288,10 @@ export async function POST(request) {
   if (data.solicitud_llenada_otra_persona === 'Sí' && !data.datos_persona_que_lleno?.trim()) {
     return Response.json({ error: 'Missing field: datos_persona_que_lleno' }, { status: 400 });
   }
+  // Validate email format
+  if (!EMAIL_RE.test(data.email)) {
+    return Response.json({ error: 'Invalid email' }, { status: 400 });
+  }
 
   // Strip honeypot from stored data
   const { website: _hp, ...cleanData } = data;
@@ -245,19 +309,33 @@ export async function POST(request) {
     return Response.json({ error: 'Database error' }, { status: 500 });
   }
 
-  // Send email
+  // Send emails
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
-      from: 'Panama Contact <noreply@panama-contact.com>',
+    const { error: sendErr } = await resend.emails.send({
+      from: 'Panama Contact Services <noreply@panama-contact.com>',
       to: process.env.EMAIL_ADMIN || 'info@panama-contact.com',
-      replyTo: data.direccion_postal_fax_email || undefined,
+      replyTo: data.email,
       subject: `Nuevo cuestionario – ${data.apellidos} ${data.primer_y_segundo_nombre}`,
       html: buildEmailHtml(cleanData, row.id),
     });
+    if (sendErr) console.error('Resend error:', sendErr);
   } catch (emailErr) {
     console.error('Resend error:', emailErr);
     // Don't fail the request — submission is saved
+  }
+
+  try {
+    const { error: sendErr } = await resend.emails.send({
+      from: 'Panama Contact Services <noreply@panama-contact.com>',
+      to: data.email,
+      subject: 'Su registro ha sido recibido / Your registration has been received – Panama Contact Services',
+      html: buildClientConfirmationHtml(cleanData),
+    });
+    if (sendErr) console.error('Resend error (client confirmation):', sendErr);
+  } catch (emailErr) {
+    console.error('Resend error (client confirmation):', emailErr);
   }
 
   return Response.json({ success: true, id: row.id });

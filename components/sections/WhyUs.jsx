@@ -116,7 +116,7 @@ export default function WhyUs() {
           <FadeIn delay={0.3}>
             <div className="relative h-64 md:h-full min-h-[220px] rounded-2xl overflow-hidden">
               <Image
-                src="/whywearebest.jpeg"
+                src="/3GJeB.jpg.jpeg"
                 alt="Why we are the best"
                 fill
                 sizes="(max-width: 768px) 100vw, 25vw"

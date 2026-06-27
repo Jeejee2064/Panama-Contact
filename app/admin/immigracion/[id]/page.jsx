@@ -43,6 +43,7 @@ const SECTIONS = [
     ['con_quienes_reside', '¿Con quiénes reside? / Who do you live with?'],
     ['piensa_permanecer_domicilio', '¿Piensa permanecer en este domicilio? / Do you plan to stay at this address?'],
     ['direccion_postal_fax_email', 'Dirección postal, fax o e-mail / Postal address, fax or email'],
+    ['email', 'Correo electrónico / Email'],
     ['nombre_propietario_domicilio', 'Nombre del propietario o arrendatario / Name of owner or tenant'],
     ['direccion_pais_origen', 'Dirección en país de origen / Address in country of origin'],
     ['telefono_domicilio', 'Teléfono de domicilio / Home phone'],
