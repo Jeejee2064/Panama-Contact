@@ -45,11 +45,21 @@ export default async function KycDetail({ params }) {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <AdminNav />
       <main className="flex-1 max-w-4xl mx-auto w-full px-4 py-8">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-6 gap-3">
           <Link href="/admin/kyc" className="text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1">
             ← Volver / Back
           </Link>
-          <span className="text-xs text-gray-400">{submittedAt}</span>
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-gray-400">{submittedAt}</span>
+            <a
+              href={`/api/admin/kyc/${id}/pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-sm px-4 py-2 rounded-full bg-[#FF491A] text-white font-medium hover:bg-[#e6451a] transition"
+            >
+              <Download size={14} /> Descargar PDF
+            </a>
+          </div>
         </div>
 
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4">

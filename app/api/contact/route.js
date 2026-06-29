@@ -22,9 +22,9 @@ function buildEmailHtml({ name, email, message }) {
     <html>
     <body style="font-family:sans-serif;background:#f5f5f5;margin:0;padding:24px">
       <div style="max-width:720px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
-        <div style="background:#000;padding:20px 24px">
-          <div style="color:#fff;font-size:18px;font-weight:bold">Panama Contact Services</div>
-          <div style="color:#FF491A;font-size:13px;margin-top:4px">Nuevo mensaje de contacto</div>
+        <div style="background:#1e2b3a;padding:20px 24px">
+          <img src="https://panama-contact.com/logo-blanc-fond-trans.png" width="130" height="87" alt="Panama Contact Services" style="display:block;border:0;outline:none;text-decoration:none;height:87px;width:130px;max-width:130px" />
+          <div style="color:#FF491A;font-size:13px;margin-top:10px">Nuevo mensaje de contacto</div>
         </div>
         <table style="width:100%;border-collapse:collapse">
           <tr>

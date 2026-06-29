@@ -97,9 +97,9 @@ function buildEmailHtml(data, id) {
     <html>
     <body style="font-family:sans-serif;background:#f5f5f5;margin:0;padding:24px">
       <div style="max-width:720px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
-        <div style="background:#000;padding:20px 24px">
-          <div style="color:#fff;font-size:18px;font-weight:bold">Panama Contact Services</div>
-          <div style="color:#FF491A;font-size:13px;margin-top:4px">Nuevo formulario KYC (${data.client_type === 'legal' ? 'Empresa' : 'Persona Natural'})</div>
+        <div style="background:#1e2b3a;padding:20px 24px">
+          <img src="https://panama-contact.com/logo-blanc-fond-trans.png" width="130" height="87" alt="Panama Contact Services" style="display:block;border:0;outline:none;text-decoration:none;height:87px;width:130px;max-width:130px" />
+          <div style="color:#FF491A;font-size:13px;margin-top:10px">Nuevo formulario KYC (${data.client_type === 'legal' ? 'Empresa' : 'Persona Natural'})</div>
         </div>
         <div style="padding:16px 24px;background:#fff3ef;border-bottom:2px solid #FF491A">
           <a href="https://panama-contact.com/admin/kyc/${id}" style="color:#FF491A;font-weight:bold;font-size:14px;text-decoration:none">
@@ -128,8 +128,8 @@ function buildClientConfirmationHtml(displayName) {
     <html>
     <body style="font-family:sans-serif;background:#f5f5f5;margin:0;padding:24px">
       <div style="max-width:600px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
-        <div style="background:#000;padding:20px 24px">
-          <div style="color:#fff;font-size:18px;font-weight:bold">Panama Contact Services</div>
+        <div style="background:#1e2b3a;padding:20px 24px">
+          <img src="https://panama-contact.com/logo-blanc-fond-trans.png" width="130" height="87" alt="Panama Contact Services" style="display:block;border:0;outline:none;text-decoration:none;height:87px;width:130px;max-width:130px" />
         </div>
         <div style="padding:24px;color:#1a1a1a;font-size:14px;line-height:1.6">
           <p>Estimado/a ${displayName},</p>
@@ -141,6 +141,21 @@ function buildClientConfirmationHtml(displayName) {
           <p>Your KYC form has been received successfully. We have correctly saved all your information.</p>
           <p>Our team at Panama Contact Services will review your file and will contact you shortly.</p>
           <p>Thank you for your trust.</p>
+        </div>
+        <div style="background:#1e2b3a;padding:24px;text-align:center">
+          <div style="color:#fff;font-size:13px;font-weight:bold;margin-bottom:10px">Panama Contact Services</div>
+          <div style="font-size:12px;line-height:1.7">
+            <a href="https://wa.me/50764357515" style="color:#FF4D1C;text-decoration:none">+507 6435-7515</a>
+            <span style="color:#4a5a6b">&nbsp;|&nbsp;</span>
+            <a href="mailto:info@panama-contact.com" style="color:#FF4D1C;text-decoration:none">info@panama-contact.com</a>
+          </div>
+          <div style="color:#9aa5b1;font-size:11px;line-height:1.6;margin-top:10px">
+            Local 1 - Edificio Antigua Domingo<br>
+            Plaza Santa Ana, Panama City, Panama
+          </div>
+          <div style="color:#6b7888;font-size:10px;margin-top:14px">
+            © ${new Date().getFullYear()} Panamá Contact Services. All rights reserved.
+          </div>
         </div>
       </div>
     </body>

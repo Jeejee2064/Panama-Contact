@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { Download } from 'lucide-react';
 
 export default function KycTable({ rows }) {
   if (!rows.length) {
@@ -17,6 +18,7 @@ export default function KycTable({ rows }) {
               <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider hidden sm:table-cell">Detalle</th>
               <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">Statut</th>
               <th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider hidden sm:table-cell">Fecha de envío</th>
+              <th className="px-4 py-3 w-10"></th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-50">
@@ -50,6 +52,18 @@ export default function KycTable({ rows }) {
                   <Link href={`/admin/kyc/${row.id}`} className="block w-full">
                     {new Date(row.created_at).toLocaleDateString('fr-FR')}
                   </Link>
+                </td>
+                <td className="px-4 py-3">
+                  <a
+                    href={`/api/admin/kyc/${row.id}/pdf`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center justify-center w-8 h-8 rounded-full hover:bg-orange-100 text-gray-500 hover:text-[#FF491A] transition"
+                    title="Descargar PDF"
+                  >
+                    <Download size={15} />
+                  </a>
                 </td>
               </tr>
             ))}
