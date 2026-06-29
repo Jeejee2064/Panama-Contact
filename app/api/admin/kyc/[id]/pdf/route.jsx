@@ -79,7 +79,7 @@ function FieldRow({ label, value }) {
 
 function SignatureBlock() {
   return (
-    <View style={styles.signatureBlock}>
+    <View style={styles.signatureBlock} wrap={false}>
       <View style={styles.signatureLine}>
         <Text style={styles.signatureLabel}>Firma del cliente / Client signature</Text>
       </View>
@@ -110,7 +110,7 @@ function KycDocument({ row }) {
             });
             if (!populated.length) return null;
             return (
-              <View key={section.title}>
+              <View key={section.title} wrap={false}>
                 <Text style={styles.sectionTitle}>{section.title}</Text>
                 {populated.map((f) => <FieldRow key={f.name} label={f.label} value={row[f.name]} />)}
               </View>
@@ -118,7 +118,7 @@ function KycDocument({ row }) {
           })}
 
           {owners.length > 0 && (
-            <View>
+            <View wrap={false}>
               <Text style={styles.sectionTitle}>Beneficiarios finales / Beneficial Owners</Text>
               {owners.map((owner, i) => (
                 <View key={i} style={{ marginBottom: 6 }}>
@@ -131,7 +131,7 @@ function KycDocument({ row }) {
             </View>
           )}
 
-          <View>
+          <View wrap={false}>
             <Text style={styles.sectionTitle}>Forma de pago y declaración / Payment &amp; Declaration</Text>
             {SHARED_DECLARATION_FIELDS.filter((f) => row[f.name]).map((f) => (
               <FieldRow key={f.name} label={f.label} value={row[f.name]} />
@@ -139,7 +139,7 @@ function KycDocument({ row }) {
           </View>
 
           {refs.length > 0 && (
-            <View>
+            <View wrap={false}>
               <Text style={styles.sectionTitle}>Referencias / References</Text>
               {refs.map((ref, i) => (
                 <View key={i} style={{ marginBottom: 6 }}>
@@ -152,7 +152,7 @@ function KycDocument({ row }) {
             </View>
           )}
 
-          <View>
+          <View wrap={false}>
             <Text style={styles.sectionTitle}>Declaración final / Final Declaration</Text>
             <FieldRow label="Firma (nombre completo) / Signature (full name)" value={row.signature_full_name} />
           </View>

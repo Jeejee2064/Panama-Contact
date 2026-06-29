@@ -76,7 +76,7 @@ function FieldRow({ label, value }) {
 
 function SignatureBlock() {
   return (
-    <View style={styles.signatureBlock}>
+    <View style={styles.signatureBlock} wrap={false}>
       <View style={styles.signatureLine}>
         <Text style={styles.signatureLabel}>Firma del cliente / Client signature</Text>
       </View>
@@ -100,7 +100,7 @@ function ImmigracionDocument({ row }) {
             const populated = section.fields.filter(([key]) => row[key]);
             if (!populated.length) return null;
             return (
-              <View key={section.title}>
+              <View key={section.title} wrap={false}>
                 <Text style={styles.sectionTitle}>{section.title}</Text>
                 {populated.map(([key, label]) => (
                   <FieldRow key={key} label={label} value={row[key]} />
