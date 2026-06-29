@@ -135,12 +135,19 @@ function buildClientConfirmationHtml(displayName) {
           <p>Estimado/a ${displayName},</p>
           <p>Su formulario KYC ha sido recibido exitosamente. Hemos guardado correctamente toda su información.</p>
           <p>Nuestro equipo en Panama Contact Services revisará su expediente y se pondrá en contacto con usted a la brevedad.</p>
+          <p>¿Tiene alguna duda? ¿Desea contratar servicios adicionales? Agende una consulta gratuita con nuestro equipo.</p>
           <p>Gracias por su confianza.</p>
           <hr style="border:none;border-top:1px solid #f0f0f0;margin:24px 0">
           <p>Dear ${displayName},</p>
           <p>Your KYC form has been received successfully. We have correctly saved all your information.</p>
           <p>Our team at Panama Contact Services will review your file and will contact you shortly.</p>
+          <p>Have a question? Want to add more services? Book a free consultation with our team.</p>
           <p>Thank you for your trust.</p>
+          <div style="text-align:center;margin-top:24px">
+            <a href="https://calendly.com/panama-contact-info/30min" style="display:inline-block;background:#FF491A;color:#ffffff;text-decoration:none;font-weight:bold;font-size:13px;padding:12px 28px;border-radius:24px">
+              Agendar consulta gratuita / Book Free Consultation →
+            </a>
+          </div>
         </div>
         <div style="background:#1e2b3a;padding:24px;text-align:center">
           <div style="color:#fff;font-size:13px;font-weight:bold;margin-bottom:10px">Panama Contact Services</div>
