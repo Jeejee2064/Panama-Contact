@@ -72,11 +72,11 @@ export default async function LocaleLayout({ children, params }) {
     name: 'Panama Contact Services',
     description: 'Expert relocation, residency visa, company formation, banking, and real estate services in Panama.',
     url: 'https://panama-contact.com',
-    telephone: '+50764357515',
+    telephone: ['+50764357515', '+5073185882'],
     email: 'info@panama-contact.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Local 1 - Edificio Antigua Domingo, Plaza Santa Ana',
+      streetAddress: 'Ph Jeronimo, Avenida B y calle 10 este, planta baja - San Felipe',
       addressLocality: 'Ciudad de Panamá',
       addressCountry: 'PA',
     },

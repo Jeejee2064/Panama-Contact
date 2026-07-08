@@ -154,11 +154,13 @@ function buildClientConfirmationHtml(displayName) {
           <div style="font-size:12px;line-height:1.7">
             <a href="https://wa.me/50764357515" style="color:#FF4D1C;text-decoration:none">+507 6435-7515</a>
             <span style="color:#4a5a6b">&nbsp;|&nbsp;</span>
+            <a href="tel:+5073185882" style="color:#FF4D1C;text-decoration:none">+507 318-5882</a>
+            <span style="color:#4a5a6b">&nbsp;|&nbsp;</span>
             <a href="mailto:info@panama-contact.com" style="color:#FF4D1C;text-decoration:none">info@panama-contact.com</a>
           </div>
           <div style="color:#9aa5b1;font-size:11px;line-height:1.6;margin-top:10px">
-            Local 1 - Edificio Antigua Domingo<br>
-            Plaza Santa Ana, Panama City, Panama
+            Ph Jeronimo, Avenida B y calle 10 este, planta baja<br>
+            San Felipe, Ciudad de Panamá, Panamá
           </div>
           <div style="color:#6b7888;font-size:10px;margin-top:14px">
             © ${new Date().getFullYear()} Panamá Contact Services. All rights reserved.

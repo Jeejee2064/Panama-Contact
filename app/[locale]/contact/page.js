@@ -88,8 +88,17 @@ export default async function ContactPage({ params }) {
                     <Phone size={18} className="text-orange-500" />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-0.5">{t('phone')}</p>
+                    <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-0.5">WhatsApp</p>
                     <p className="text-gray-700 font-medium group-hover:text-orange-500 transition-colors">+507 6435-7515</p>
+                  </div>
+                </a>
+                <a href="tel:+5073185882" className="flex items-center gap-4 group">
+                  <div className="w-10 h-10 bg-orange-50 group-hover:bg-orange-100 rounded-xl flex items-center justify-center transition-colors shrink-0">
+                    <Phone size={18} className="text-orange-500" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-0.5">{t('phone')}</p>
+                    <p className="text-gray-700 font-medium group-hover:text-orange-500 transition-colors">+507 318-5882</p>
                   </div>
                 </a>
                 <div className="flex items-start gap-4">
@@ -99,9 +108,9 @@ export default async function ContactPage({ params }) {
                   <div>
                     <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-0.5">{t('address')}</p>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Local 1 - Edificio Antigua Domingo<br />
-                      Plaza Santa Ana<br />
-                      Panama City, Panama
+                      Ph Jeronimo, Avenida B y calle 10 este<br />
+                      planta baja - San Felipe<br />
+                      Ciudad de Panamá, Panamá
                     </p>
                   </div>
                 </div>

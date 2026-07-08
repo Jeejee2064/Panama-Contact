@@ -1,7 +1,7 @@
 import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Mail, MapPin, ExternalLink } from 'lucide-react';
+import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 
 const WA_ICON = (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 shrink-0">
@@ -59,6 +59,13 @@ export default function Footer() {
                 +507 6435-7515
               </a>
               <a
+                href="tel:+5073185882"
+                className="flex items-center gap-2.5 hover:text-[#FF4D1C] transition-colors"
+              >
+                <Phone size={14} className="text-[#FF4D1C] shrink-0" />
+                +507 318-5882
+              </a>
+              <a
                 href="mailto:info@panama-contact.com"
                 className="flex items-center gap-2.5 hover:text-[#FF4D1C] transition-colors"
               >
@@ -68,8 +75,9 @@ export default function Footer() {
               <p className="flex items-start gap-2.5 text-gray-500 text-xs mt-1">
                 <MapPin size={14} className="mt-0.5 text-gray-500 shrink-0" />
                 <span>
-                  Local 1 - Edificio Antigua Domingo<br />
-                  Plaza Santa Ana, Panama City, Panama
+                  Ph Jeronimo, Avenida B y calle 10 este<br />
+                  planta baja - San Felipe<br />
+                  Ciudad de Panamá, Panamá
                 </span>
               </p>
             </div>
