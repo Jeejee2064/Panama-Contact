@@ -41,6 +41,13 @@ export async function proxy(request) {
     return NextResponse.next();
   }
 
+  // Search engine site-verification files (Google, Bing, etc.) live at the
+  // root as static .html files — they must be served as-is, not rewritten
+  // with a locale prefix, or verification fetches 404.
+  if (pathname.endsWith('.html')) {
+    return NextResponse.next();
+  }
+
   return handleI18nRouting(request);
 }
 

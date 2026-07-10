@@ -72,6 +72,18 @@ export default async function ServiceDetailPage({ params }) {
     .sort((a, b) => a.orderScore - b.orderScore)
     .slice(0, 3);
 
+  const relatedItems = related.map((s) => ({
+    href: `/services/${localizeServiceSlug(s.slug, locale)}`,
+    label: tServices(`${s.slug}.title`),
+  }));
+  // Free tax tools surfaced alongside the real related services on the income-tax page.
+  if (canonicalSlug === 'income-tax') {
+    relatedItems.push(
+      { href: '/panama-income-tax-calculator', label: tDetail('incomeTaxCalculatorLink') },
+      { href: '/panama-tax-calculator', label: tDetail('taxExposureQuizLink') },
+    );
+  }
+
   const baseUrl = `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}`;
   const stripHtml = (html) => html?.replace(/<[^>]*>/g, '') ?? '';
 
@@ -197,19 +209,19 @@ export default async function ServiceDetailPage({ params }) {
               </FadeIn>
 
               {/* Related services */}
-              {related.length > 0 && (
+              {relatedItems.length > 0 && (
                 <FadeIn delay={0.15}>
                   <div className="rounded-2xl p-6 border border-[#324158]/10">
                     <h3 className="font-semibold text-[#324158] mb-4">{tDetail('relatedTitle')}</h3>
                     <div className="flex flex-col gap-3">
-                      {related.map((s) => (
+                      {relatedItems.map((item) => (
                         <Link
-                          key={s.slug}
-                          href={`/services/${localizeServiceSlug(s.slug, locale)}`}
+                          key={item.href}
+                          href={item.href}
                           className="text-sm text-[#324158]/60 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-orange-200 group-hover:bg-orange-500 transition-colors shrink-0" />
-                          {tServices(`${s.slug}.title`)}
+                          {item.label}
                         </Link>
                       ))}
                     </div>

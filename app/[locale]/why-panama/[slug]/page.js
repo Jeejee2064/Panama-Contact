@@ -76,6 +76,18 @@ export default async function WhyPanamaDetail({ params }) {
     .sort((a, b) => a.orderScore - b.orderScore)
     .slice(0, 3);
 
+  const relatedItems = related.map((s) => ({
+    href: `/why-panama/${localizeWhyPanamaSlug(s.slug, locale)}`,
+    label: t(`cards.${s.slug}.title`),
+  }));
+  // Free tax tools surfaced alongside the real related items on the tax-pressure page.
+  if (canonicalSlug === 'tax-pressure') {
+    relatedItems.push(
+      { href: '/panama-tax-calculator', label: t('taxExposureQuizLink') },
+      { href: '/panama-income-tax-calculator', label: t('incomeTaxCalculatorLink') },
+    );
+  }
+
   const baseUrl = `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}`;
 
   const breadcrumbSchema = {
@@ -205,19 +217,19 @@ export default async function WhyPanamaDetail({ params }) {
               </FadeIn>
 
               {/* Related items */}
-              {related.length > 0 && (
+              {relatedItems.length > 0 && (
                 <FadeIn delay={0.15}>
                   <div className="rounded-2xl p-6 border border-[#324158]/10">
                     <h3 className="font-semibold text-[#324158] mb-4">{t('sidebarExploreMore')}</h3>
                     <div className="flex flex-col gap-3">
-                      {related.map((s) => (
+                      {relatedItems.map((item) => (
                         <Link
-                          key={s.slug}
-                          href={`/why-panama/${localizeWhyPanamaSlug(s.slug, locale)}`}
+                          key={item.href}
+                          href={item.href}
                           className="text-sm text-[#324158]/60 hover:text-[#FF491A] transition-colors flex items-center gap-2 group"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-[#FF491A]/30 group-hover:bg-[#FF491A] transition-colors shrink-0" />
-                          {t(`cards.${s.slug}.title`)}
+                          {item.label}
                         </Link>
                       ))}
                     </div>

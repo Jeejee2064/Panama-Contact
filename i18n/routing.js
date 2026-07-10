@@ -44,5 +44,26 @@ export const routing = defineRouting({
       pt: '/por-que-panama/[slug]',
       de: '/warum-panama/[slug]',
     },
+    '/panama-tax-calculator': {
+      en: '/panama-tax-calculator',
+      fr: '/calculateur-impots-panama',
+      es: '/calculadora-impuestos-panama',
+      pt: '/calculadora-impostos-panama',
+      de: '/steuerrechner-panama',
+    },
+    '/panama-income-tax-calculator': {
+      en: '/panama-income-tax-calculator',
+      fr: '/calculateur-impot-revenu-panama',
+      es: '/calculadora-impuesto-renta-panama',
+      pt: '/calculadora-imposto-renda-panama',
+      de: '/einkommensteuerrechner-panama',
+    },
+    '/privacy-policy': {
+      en: '/privacy-policy',
+      fr: '/politique-de-confidentialite',
+      es: '/politica-de-privacidad',
+      pt: '/politica-de-privacidade',
+      de: '/datenschutzerklaerung',
+    },
   },
 });

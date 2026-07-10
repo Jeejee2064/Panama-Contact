@@ -1,13 +1,49 @@
 'use client';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Calendar } from 'lucide-react';
+
+// These 2 tool pages have no dark hero backdrop for the transparent nav to sit on,
+// and don't need the full site menu — a minimal, always-legible header instead.
+const MINIMAL_HEADER_PATHS = {
+  '/panama-tax-calculator': 'TaxExposureQuizPage.hero.heading',
+  '/panama-income-tax-calculator': 'IncomeTaxCalculatorPage.hero.heading',
+};
+
+function MinimalHeader({ titleKey }) {
+  const t = useTranslations();
+  const tNav = useTranslations('Nav');
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1e2b3a] shadow-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+        <Link href="/" className="flex items-center gap-3 shrink-0">
+          <img src="/logo-blanc.avif" alt="Panama Contact" className="h-9 object-contain" />
+        </Link>
+        <p className="hidden sm:block text-white/80 text-sm font-medium truncate">{t(titleKey)}</p>
+        <div className="flex items-center gap-4 shrink-0">
+          <LanguageSwitcher />
+          <a
+            href="https://calendly.com/panama-contact-info/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-[#FF4D1C] hover:bg-[#e6451a] text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2.5 rounded-lg transition-colors"
+          >
+            <Calendar size={14} />
+            <span className="hidden sm:inline">{tNav('freeConsultation')}</span>
+          </a>
+        </div>
+      </div>
+    </header>
+  );
+}
 
 export default function Header() {
   const t = useTranslations('Nav');
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const minimalTitleKey = MINIMAL_HEADER_PATHS[pathname];
 
   const links = [
     { href: '/', label: t('home') },
@@ -19,6 +55,8 @@ export default function Header() {
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : 'auto';
   }, [open]);
+
+  if (minimalTitleKey) return <MinimalHeader titleKey={minimalTitleKey} />;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">

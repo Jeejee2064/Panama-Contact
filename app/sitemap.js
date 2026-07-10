@@ -1,4 +1,5 @@
 import { serviceSlugMap, whyPanamaSlugMap } from '@/data/slugs';
+import { routing } from '@/i18n/routing';
 
 const BASE = 'https://panama-contact.com';
 const LOCALES = ['en', 'fr', 'es', 'pt', 'de'];
@@ -30,6 +31,9 @@ const localizedPaths = {
     pt: '/contato',
     de: '/kontakt',
   },
+  panamaTaxCalculator: routing.pathnames['/panama-tax-calculator'],
+  panamaIncomeTaxCalculator: routing.pathnames['/panama-income-tax-calculator'],
+  privacyPolicy: routing.pathnames['/privacy-policy'],
 };
 
 // Base path for service/why-panama detail pages per locale
@@ -58,6 +62,9 @@ export default function sitemap() {
     { key: 'services',  priority: 0.9, changeFrequency: 'weekly'  },
     { key: 'whyPanama', priority: 0.8, changeFrequency: 'monthly' },
     { key: 'contact',   priority: 0.7, changeFrequency: 'yearly'  },
+    { key: 'panamaTaxCalculator',       priority: 0.9, changeFrequency: 'monthly' },
+    { key: 'panamaIncomeTaxCalculator', priority: 0.9, changeFrequency: 'monthly' },
+    { key: 'privacyPolicy',             priority: 0.3, changeFrequency: 'yearly'  },
   ];
 
   for (const { key, priority, changeFrequency } of staticPages) {

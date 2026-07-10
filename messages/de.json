@@ -15,7 +15,9 @@
     "whyPanama": "Warum Panama?",
     "contact": "Kontakt",
     "freeConsultation": "Kostenlose Beratung buchen",
-    "ctaHeading": "Bereit für Ihren Umzug?"
+    "ctaHeading": "Bereit für Ihren Umzug?",
+    "taxCalculator": "Steuerpflicht-Quiz",
+    "incomeTaxCalculator": "Einkommensteuerrechner"
   },
   "HomePage": {
     "meta": {
@@ -728,7 +730,10 @@
     "sidebarCtaTitle": "Bereit für den nächsten Schritt?",
     "sidebarCtaBody": "Buchen Sie eine kostenlose Beratung mit unseren Panama-Spezialisten und erhalten Sie eine persönliche Beratung.",
     "sidebarContactTitle": "Kontaktieren Sie uns",
-    "sidebarExploreMore": "Mehr entdecken"
+    "sidebarExploreMore": "Mehr entdecken",
+    "freeToolsHeading": "Kostenlose Steuertools",
+    "incomeTaxCalculatorLink": "Einkommensteuerrechner",
+    "taxExposureQuizLink": "Steuerpflicht-Quiz"
   },
   "ServiceDetail": {
     "backToServices": "Zurück zu den Dienstleistungen",
@@ -739,7 +744,10 @@
     "contactTitle": "Direkter Kontakt",
     "relatedTitle": "Ähnliche Dienstleistungen",
     "faqTitle": "Häufig gestellte Fragen",
-    "allTopics": "Alle Themen"
+    "allTopics": "Alle Themen",
+    "freeToolsHeading": "Kostenlose Steuertools",
+    "incomeTaxCalculatorLink": "Einkommensteuerrechner",
+    "taxExposureQuizLink": "Steuerpflicht-Quiz"
   },
   "ContactPage": {
     "meta": {
@@ -764,5 +772,324 @@
     "emailReply": "Antwort innerhalb von 24h",
     "whatsappReply": "Schnelle Antwort",
     "bookCallCta": "30-Min. kostenlose Beratung"
+  },
+  "IncomeTaxCalculatorPage": {
+    "meta": {
+      "title": "Panama Einkommensteuerrechner (ISR) 2026 | Kostenlose Schätzung | Panama Contact",
+      "description": "Schätzen Sie Ihre persönliche Einkommensteuer in Panama (ISR) in wenigen Sekunden. Kostenloser Rechner mit den Steuersätzen 2026, Abzügen und Nettoeinkommen — ganz ohne E-Mail-Angabe."
+    },
+    "hero": {
+      "eyebrow": "Kostenloses Tool",
+      "heading": "Panama Einkommensteuerrechner",
+      "subheading": "Schätzen Sie, was Sie im Rahmen der panamaischen Einkommensteuer (ISR) auf Einkünfte panamaischer Herkunft schulden — sofort und kostenlos."
+    },
+    "ratesVerifiedLabel": "Steuersätze für 2026 geprüft",
+    "intro": {
+      "heading": "So funktioniert die persönliche Einkommensteuer in Panama",
+      "body": "Panama besteuert Privatpersonen nur auf Einkünfte panamaischer Herkunft, nach einem progressiven Tarif (ISR). Einkünfte ausländischer Herkunft sind im Rahmen des territorialen Steuersystems Panamas in der Regel steuerfrei — unabhängig davon, wo Sie leben, wird Einkommen, das außerhalb Panamas erzielt wird (ausländisches Gehalt, ausländische Kunden, ausländische Investitionen), hier normalerweise nicht besteuert.",
+      "bracketsHeading": "ISR-Steuersätze in Panama 2026",
+      "bracketsIntro": "Die persönliche Einkommensteuer Panamas wendet einen progressiven 3-Stufen-Tarif auf Einkünfte panamaischer Herkunft an:",
+      "brackets": [
+        {
+          "range": "0 – 11.000 $",
+          "rate": "0 % — steuerfrei"
+        },
+        {
+          "range": "11.000,01 – 50.000 $",
+          "rate": "15 % auf den Betrag über 11.000 $"
+        },
+        {
+          "range": "Über 50.000 $",
+          "rate": "5.850 $ + 25 % auf den Betrag über 50.000 $"
+        }
+      ],
+      "deductionsHeading": "Welche Abzüge können Ihre Einkommensteuer in Panama senken?",
+      "deductionsIntro": "Sobald Ihr Einkommen panamaischer Herkunft feststeht, können mehrere Abzüge Ihre Steuerbemessungsgrundlage senken — jeweils mit eigener Obergrenze:",
+      "deductions": [
+        "Hypothekenzinsen für einen Hauptwohnsitz in Panama — begrenzt auf 15.000 $",
+        "Altersvorsorge-/Rentenbeiträge — der niedrigere Betrag aus 10 % des Bruttoeinkommens oder 15.000 $",
+        "Spenden — begrenzt auf 50.000 $",
+        "Ausbildungskosten",
+        "Medizinische Kosten, Studienkreditzinsen, Krankenversicherungsbeiträge und Berufsverbandsbeiträge"
+      ],
+      "exclusionsHeading": "Was dieser Rechner nicht enthält",
+      "exclusionsBody": "Dieses Tool schätzt ausschließlich die persönliche Einkommensteuer (ISR). Sozialversicherungsbeiträge (CSS) und die ITBMS-Verkaufssteuer sind ausgeschlossen und werden separat nach anderen Regeln berechnet."
+    },
+    "form": {
+      "grossIncomeLabel": "Jährliches Bruttoeinkommen (panamaischer Herkunft, in USD)",
+      "grossIncomePlaceholder": "z. B. 60000",
+      "includeDeductionsToggle": "Abzugsfähige Ausgaben einbeziehen",
+      "marriedFilingJointly": "Gemeinsame Veranlagung (verheiratet)",
+      "standardDeductionsHeading": "Standardabzüge",
+      "mortgageInterestLabel": "Hypothekenzinsen (Hauptwohnsitz in Panama)",
+      "retirementLabel": "Altersvorsorgebeiträge",
+      "donationsLabel": "Spenden",
+      "advancedDeductionsToggle": "Erweiterte Abzüge",
+      "educationalLabel": "Ausbildungskosten",
+      "medicalLabel": "Medizinische Kosten",
+      "studentLoanInterestLabel": "Zinsen für Studienkredite",
+      "healthInsuranceLabel": "Krankenversicherungsbeiträge",
+      "membershipFeesLabel": "Berufsverbandsbeiträge",
+      "calculateButton": "Meine Steuer berechnen"
+    },
+    "results": {
+      "heading": "Ihr geschätztes Ergebnis",
+      "taxableIncome": "Zu versteuerndes Einkommen",
+      "tax": "Geschätzte ISR (Einkommensteuer)",
+      "effectiveRate": "Effektiver Steuersatz",
+      "netAnnual": "Jährliches Nettoeinkommen",
+      "netMonthly": "Monatliches Nettoeinkommen",
+      "comparisonHeading": "Ihre Ersparnis durch Abzüge",
+      "withoutDeductions": "Steuer ohne Abzüge",
+      "withDeductions": "Steuer mit Ihren Abzügen",
+      "savings": "Sie sparen"
+    },
+    "cta": {
+      "bookConsultation": "Steuerberatung Buchen",
+      "downloadReport": "Meinen Personalisierten Steuerbericht Herunterladen"
+    },
+    "crossLink": {
+      "heading": "Nicht sicher, ob Sie in Panama überhaupt steuerpflichtig sind?",
+      "body": "Machen Sie unser 2-minütiges Quiz, um Ihre Steuerpflicht in Panama zu prüfen, bevor Sie die Zahlen berechnen.",
+      "cta": "Meine Steuerpflicht prüfen"
+    },
+    "faq": [
+      {
+        "question": "Ist dieser Panama-Einkommensteuerrechner kostenlos?",
+        "answer": "Ja, völlig kostenlos, ohne E-Mail oder Anmeldung. Sie erhalten Ihre vollständige Schätzung sofort; wir fragen nur nach Kontaktdaten, wenn Sie einen personalisierten PDF-Bericht herunterladen oder eine Beratung buchen möchten."
+      },
+      {
+        "question": "Besteuert Panama Einkünfte ausländischer Herkunft?",
+        "answer": "Nein. Panama wendet ein territoriales Steuersystem an, sodass Einkünfte, die außerhalb Panamas erzielt werden — von einem ausländischen Arbeitgeber, ausländischen Kunden oder ausländischen Investitionen — unabhängig von Ihrem Wohnsitz in der Regel von der panamaischen Einkommensteuer befreit sind."
+      },
+      {
+        "question": "Was gilt als Einkommen panamaischer Herkunft?",
+        "answer": "Im Allgemeinen Einkünfte aus in Panama geleisteter Arbeit, aus einem in Panama registrierten, lokal tätigen Unternehmen, aus der Vermietung von Immobilien in Panama oder aus in Panama erbrachten freiberuflichen Dienstleistungen."
+      },
+      {
+        "question": "Beinhaltet dieser Rechner die Sozialversicherung (CSS) oder die ITBMS?",
+        "answer": "Nein. Dieses Tool schätzt ausschließlich die persönliche Einkommensteuer (ISR). Sozialversicherungsbeiträge (CSS) und die ITBMS-Verkaufssteuer werden separat berechnet und sind in dieser Schätzung nicht enthalten."
+      },
+      {
+        "question": "Wie genau ist diese Schätzung?",
+        "answer": "Sie wendet die offiziellen ISR-Steuersätze für 2026 sowie Standardabzugsregeln auf die von Ihnen eingegebenen Zahlen an. Ihre tatsächliche Steuerschuld kann je nach Ihren spezifischen Unterlagen und Umständen abweichen. Wir empfehlen daher, dies vor der Steuererklärung mit einem zugelassenen Steuerberater zu bestätigen."
+      },
+      {
+        "question": "Welche Abzüge kann ich in Panama geltend machen?",
+        "answer": "Übliche Abzüge umfassen Hypothekenzinsen für einen Hauptwohnsitz in Panama, Altersvorsorgebeiträge, Ausbildungs- und medizinische Kosten, Spenden sowie bestimmte Versicherungsbeiträge — jeweils mit eigener Obergrenze. Die vollständige Liste finden Sie im Bereich „Erweiterte Abzüge\" des Rechners."
+      }
+    ],
+    "relatedServicesHeading": "Verwandte Dienstleistungen entdecken",
+    "territorialTaxSystemLink": "Panamas territoriales Steuersystem",
+    "contactUsLink": "Kontaktieren Sie uns",
+    "faqHeading": "Häufig gestellte Fragen"
+  },
+  "TaxLeadForm": {
+    "heading": "Erhalten Sie Ihren personalisierten Steuerbericht",
+    "body": "Wir senden Ihnen einen PDF-Bericht und eine Kopie Ihrer Ergebnisse per E-Mail — garantiert ohne Spam.",
+    "firstNameLabel": "Vorname",
+    "emailLabel": "E-Mail",
+    "consentPrefix": "Ich stimme der ",
+    "consentLinkText": "Datenschutzerklärung",
+    "consentSuffix": " zu und möchte meinen Bericht per E-Mail erhalten.",
+    "submitButton": "Bericht zusenden",
+    "sendingButton": "Wird gesendet...",
+    "successMessage": "Schauen Sie in Ihr Postfach — Ihr personalisierter Steuerbericht ist unterwegs!",
+    "errorMessage": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  },
+  "TaxExposureQuizPage": {
+    "meta": {
+      "title": "Kostenloses Panama Steuerpflicht-Quiz — Bin Ich Steuerpflichtig? | Panama Contact",
+      "description": "Machen Sie unser kostenloses 2-minütiges Quiz, um Ihre Steuerpflicht in Panama zu prüfen. Finden Sie heraus, ob Ihr Einkommen im Rahmen des territorialen Steuersystems Panamas steuerpflichtig ist."
+    },
+    "hero": {
+      "eyebrow": "Kostenloses Tool",
+      "heading": "Panama Steuerpflicht-Quiz",
+      "subheading": "Beantworten Sie ein paar kurze Fragen, um herauszufinden, ob — und in welchem Umfang — das panamaische Steuerrecht auf Sie zutrifft."
+    },
+    "intro": {
+      "heading": "Sind Sie tatsächlich in Panama steuerpflichtig?",
+      "body": "Panama besteuert nur Einkünfte panamaischer Herkunft. Dieses Quiz geht auf Ihren Wohnsitz, Ihre Einkommensquellen sowie ein etwaiges Unternehmen oder Mieteinkünfte in Panama ein, um Ihre gesamte Steuerpflicht einzuschätzen und Punkte zu kennzeichnen, die eine genauere Prüfung verdienen.",
+      "territorialHeading": "Panamas territoriales Steuersystem erklärt",
+      "territorialBody": "Im Gegensatz zu den meisten Ländern besteuert Panama nicht allein aufgrund von Staatsangehörigkeit oder Wohnsitz — es besteuert danach, wo das Einkommen erzielt wird. Ein Gehalt, das von einem ausländischen Arbeitgeber für im Ausland geleistete Arbeit gezahlt wird, ist steuerfrei, selbst wenn Sie dauerhaft in Panama leben. Umgekehrt ist Einkommen, das innerhalb Panamas erzielt wird — durch ein lokales Unternehmen, eine lokale Anstellung oder eine panamaische Mietimmobilie — steuerpflichtig, selbst wenn Sie ganz woanders leben.",
+      "triggersHeading": "Was typischerweise Steuerpflicht in Panama auslöst",
+      "triggers": [
+        "Betrieb eines panamaischen Unternehmens, das panamaische Kunden abrechnet oder im Land Geschäfte tätigt",
+        "Vermietung von Immobilien in Panama",
+        "Physische Arbeit innerhalb Panamas, auch für einen ausländischen Arbeitgeber",
+        "Führung eines lokalen Einzelhandels-, Dienstleistungs- oder Gastgewerbebetriebs",
+        "Mehrere gemischte Einkommensquellen, die ausländische und panamaische Herkunft kombinieren"
+      ],
+      "whyHeading": "Warum Sie zuerst dieses Quiz machen sollten",
+      "whyBody": "Die meisten Menschen nehmen an, dass ein Umzug nach Panama bedeutet, dass ihr gesamtes weltweites Einkommen dort steuerpflichtig wird — das stimmt nicht. Dieses Quiz dient dazu, schnell zu trennen, welches Einkommen tatsächlich der panamaischen Steuer unterliegt und welches nicht, bevor Sie mit dem Einkommensteuerrechner in die genauen Zahlen einsteigen."
+    },
+    "steps": {
+      "residency": {
+        "question": "Wie ist Ihr aktueller Aufenthaltsstatus in Panama?",
+        "options": {
+          "resident": "Ich bin Einwohner Panamas / Visuminhaber",
+          "notYetNoPanamaIncome": "Ich bin noch kein Einwohner und habe überhaupt kein Einkommen panamaischer Herkunft"
+        }
+      },
+      "incomeSource": {
+        "question": "Woher stammt der Großteil Ihres Einkommens?",
+        "options": {
+          "onlyForeign": "Nur aus dem Ausland (100 % ausländische Herkunft)",
+          "mostlyForeign": "Überwiegend aus dem Ausland, mit etwas Einkommen in Panama",
+          "mostlyPanama": "Überwiegend in Panama",
+          "onlyPanama": "Nur in Panama"
+        }
+      },
+      "panamaCompany": {
+        "question": "Besitzen oder betreiben Sie ein Unternehmen in Panama?",
+        "options": {
+          "none": "Nein, ich habe kein Unternehmen in Panama",
+          "panamaSourceIncome": "Ja, und es erzielt Einkünfte panamaischer Herkunft",
+          "foreignSourceIncome": "Ja, aber seine Einkünfte sind ausländischer Herkunft (Offshore-Geschäft)"
+        }
+      },
+      "rental": {
+        "question": "Besitzen Sie eine Mietimmobilie in Panama, die Mieteinnahmen erzielt?",
+        "options": {
+          "no": "Nein",
+          "yes": "Ja"
+        }
+      },
+      "multipleIncome": {
+        "question": "Wie viele verschiedene Einkommensquellen haben Sie (Gehalt, Unternehmen, Investitionen, Vermietung usw.)?",
+        "options": {
+          "one": "Nur eine",
+          "two": "Zwei",
+          "threeOrMore": "Drei oder mehr"
+        }
+      }
+    },
+    "nextButton": "Weiter",
+    "backButton": "Zurück",
+    "results": {
+      "low": {
+        "title": "Geringe Steuerpflicht — Sie Sind Wahrscheinlich Nicht in Panama Steuerpflichtig",
+        "checklist": [
+          "Ihr Einkommen stammt vollständig von außerhalb Panamas",
+          "Sie betreiben kein Unternehmen, das Einkünfte panamaischer Herkunft erzielt",
+          "Sie besitzen keine Mietimmobilie in Panama"
+        ],
+        "services": [
+          "Freundesländer-Visum (Aufenthalt in Panama)",
+          "Digital-Nomad-Visum"
+        ],
+        "cta": "Aufenthaltsoptionen in Panama erkunden"
+      },
+      "limited": {
+        "title": "Begrenzte Steuerpflicht — Etwas Einkommen Panamaischer Herkunft zu Beobachten",
+        "checklist": [
+          "Sie haben etwas Einkommen panamaischer Herkunft",
+          "Sie betreiben noch kein Unternehmen in Panama mit lokalem Einkommen",
+          "Ihre Steuerpflicht ist gering, sollte aber beobachtet werden"
+        ],
+        "services": [
+          "Einkommensteuererklärung (ISR)",
+          "Steuerberatung"
+        ],
+        "cta": "Kurze Steuerberatung erhalten"
+      },
+      "potential": {
+        "title": "Mögliche Steuerpflicht — Sie Könnten Einkommensteuer in Panama Schulden",
+        "checklist": [
+          "Sie erzielen Einkünfte direkt in Panama",
+          "Sie betreiben möglicherweise ein Unternehmen in Panama mit lokalem Einkommen oder besitzen eine Mietimmobilie",
+          "Die richtigen Abzüge könnten Ihre Steuerschuld erheblich senken"
+        ],
+        "services": [
+          "Einkommensteuererklärung (ISR)",
+          "Unternehmensgründung und Steuerstrukturierung",
+          "Steuerberatung"
+        ],
+        "cta": "Meine genaue Steuerschuld berechnen"
+      },
+      "complex": {
+        "title": "Komplexe Steuersituation — Professionelle Prüfung Dringend Empfohlen",
+        "checklist": [
+          "Sie haben mehrere Einkommensquellen und/oder ein Unternehmen in Panama mit lokalem Einkommen",
+          "Sie könnten zusätzliche Steuerpflicht durch Mieteinkünfte haben",
+          "Compliance- und Erklärungspflichten treffen wahrscheinlich auf Ihre Situation zu"
+        ],
+        "services": [
+          "Vollständige Steuer-Compliance-Prüfung",
+          "Unternehmensgründung und Restrukturierung",
+          "Laufende Buchhaltungsunterstützung"
+        ],
+        "cta": "Vollständige Steuerprüfung buchen"
+      }
+    },
+    "warningsHeading": "Bitte beachten",
+    "block5": {
+      "heading": "Meine Einkommensteuer schätzen",
+      "body": "Da Sie Einkommen in Panama erzielen, holen Sie sich eine genaue Schätzung dessen, was Sie schulden würden.",
+      "cta": "Meine Einkommensteuer in Panama berechnen"
+    },
+    "crossLink": {
+      "heading": "Lieber eine schnelle Schätzung?",
+      "body": "Wenn Sie bereits wissen, dass Sie Einkommen panamaischer Herkunft haben, springen Sie direkt zum Einkommensteuerrechner.",
+      "cta": "Zum Einkommensteuerrechner"
+    },
+    "faq": [
+      {
+        "question": "Bin ich in Panama steuerpflichtig, wenn ich im Ausland lebe?",
+        "answer": "Die Besteuerung in Panama richtet sich nach der Herkunft des Einkommens, nicht nach Ihrem Wohnsitz. Wenn Sie im Ausland leben, aber Einkommen panamaischer Herkunft erzielen — zum Beispiel über ein panamaisches Unternehmen oder eine Mietimmobilie —, kann dieses Einkommen weiterhin in Panama steuerpflichtig sein."
+      },
+      {
+        "question": "Was gilt als Einkommen panamaischer Herkunft?",
+        "answer": "Einkünfte aus in Panama geleisteter Arbeit, aus einem in Panama ansässigen, lokal tätigen Unternehmen, aus der Vermietung von Immobilien in Panama oder aus im Land erbrachten freiberuflichen Dienstleistungen."
+      },
+      {
+        "question": "Macht mich der Besitz eines Unternehmens in Panama steuerpflichtig?",
+        "answer": "Nicht automatisch. Wenn Ihr panamaisches Unternehmen nur Einkünfte ausländischer Herkunft erzielt (z. B. durch Rechnungsstellung an ausländische Kunden für außerhalb Panamas erbrachte Leistungen), ist dieses Einkommen in der Regel steuerfrei. Die panamaische Steuer greift, wenn die Einkünfte des Unternehmens innerhalb Panamas erzielt werden."
+      },
+      {
+        "question": "Sind Mieteinkünfte in Panama steuerpflichtig?",
+        "answer": "Ja. Die Vermietung einer in Panama gelegenen Immobilie erzeugt Einkommen panamaischer Herkunft, das unabhängig von Ihrem Aufenthaltsstatus in der Regel der Einkommensteuer unterliegt."
+      },
+      {
+        "question": "Wie genau ist dieses Quiz?",
+        "answer": "Dieses Quiz ist ein Screening-Tool, das anhand Ihrer Antworten Ihr wahrscheinliches Maß an Steuerpflicht anzeigt. Es ist ein hilfreicher Ausgangspunkt, aber kein Ersatz für eine vollständige Prüfung durch einen zugelassenen Steuerfachmann."
+      },
+      {
+        "question": "Was soll ich tun, wenn mein Ergebnis KOMPLEX ist?",
+        "answer": "Wir empfehlen, eine Beratung mit unserem Team zu buchen, damit ein zugelassener Steuerberater Ihre spezifische Struktur prüft, Ihre Erklärungspflichten bestätigt und Möglichkeiten zur Optimierung Ihrer Steuersituation aufzeigt."
+      }
+    ],
+    "relatedServicesHeading": "Verwandte Dienstleistungen entdecken",
+    "territorialTaxSystemLink": "Panamas territoriales Steuersystem",
+    "contactUsLink": "Kontaktieren Sie uns",
+    "recommendedServicesHeading": "Empfohlene Dienstleistungen",
+    "cta": {
+      "bookConsultation": "Steuerberatung Buchen",
+      "downloadReport": "Meinen Personalisierten Steuerbericht Herunterladen"
+    },
+    "faqHeading": "Häufig gestellte Fragen"
+  },
+  "PrivacyPolicyPage": {
+    "meta": {
+      "title": "Datenschutzerklärung | Panama Contact Services",
+      "description": "Wie Panama Contact Services personenbezogene Daten erhebt, verwendet und schützt, im Einklang mit dem panamaischen Gesetz 81 von 2019 zum Schutz personenbezogener Daten."
+    },
+    "heading": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert: 10. Juli 2026",
+    "intro": "Panama Contact Services („wir\") respektiert Ihre Privatsphäre. Diese Richtlinie erklärt, welche personenbezogenen Daten wir über diese Website erheben — einschließlich unserer kostenlosen Steuerrechner und unseres Quiz —, warum wir sie erheben und welche Rechte Sie daran haben, im Einklang mit dem panamaischen Gesetz 81 von 2019 zum Schutz personenbezogener Daten.",
+    "sections": {
+      "dataCollectedTitle": "Was wir erheben",
+      "dataCollectedBody": "Wenn Sie unser Kontaktformular, unsere Fragebögen oder Steuertools nutzen und sich für die Anforderung eines personalisierten Berichts oder einer Beratung entscheiden, erheben wir die Informationen, die Sie freiwillig angeben: Ihren Namen, Ihre E-Mail-Adresse und — je nach Formular — Telefonnummer, Land und Ihre Antworten (z. B. Einkommenszahlen oder Quiz-Antworten). Diese Angaben sind für die Nutzung unserer kostenlosen Rechner nicht erforderlich; die Ergebnisse werden ohne jegliche Datenerhebung angezeigt, sofern Sie nicht ausdrücklich einen Bericht oder eine Beratung anfordern.",
+      "howWeUseItTitle": "Wie wir sie verwenden",
+      "howWeUseItBody": "Wir verwenden Ihre Angaben, um Ihnen den angeforderten Bericht oder Inhalt zuzusenden, Beratungsanfragen nachzugehen und unsere Dienstleistungen zu verbessern. Wir verkaufen Ihre personenbezogenen Daten nicht an Dritte.",
+      "dataSharingTitle": "Dienstleister",
+      "dataSharingBody": "Wir nutzen Supabase zur sicheren Speicherung übermittelter Daten und Resend zum Versand transaktionaler E-Mails (z. B. Ihres personalisierten Steuerberichts). Diese Anbieter verarbeiten Daten in unserem Auftrag und sind vertraglich zum Schutz dieser Daten verpflichtet.",
+      "retentionTitle": "Datenspeicherung",
+      "retentionBody": "Wir speichern Ihre Angaben so lange, wie es zur Bearbeitung Ihrer Anfrage oder zur Erbringung der angeforderten Leistung erforderlich ist, oder wie gesetzlich vorgeschrieben.",
+      "rightsTitle": "Ihre Rechte",
+      "rightsBody": "Gemäß Gesetz 81 von 2019 haben Sie das Recht auf Auskunft, Berichtigung, Löschung oder Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten. Um eines dieser Rechte auszuüben, kontaktieren Sie uns bitte über die unten stehenden Angaben.",
+      "contactTitle": "Kontaktieren Sie uns",
+      "contactBody": "Bei datenschutzbezogenen Fragen oder Anliegen schreiben Sie uns an info@panama-contact.com."
+    }
   }
 }

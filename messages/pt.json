@@ -15,7 +15,9 @@
     "whyPanama": "Por que o Panamá?",
     "contact": "Contato",
     "freeConsultation": "Agendar consulta gratuita",
-    "ctaHeading": "Pronto para dar o passo?"
+    "ctaHeading": "Pronto para dar o passo?",
+    "taxCalculator": "Questionário de exposição fiscal",
+    "incomeTaxCalculator": "Calculadora de imposto de renda"
   },
   "HomePage": {
     "meta": {
@@ -729,7 +731,10 @@
     "sidebarCtaTitle": "Pronto para dar o próximo passo?",
     "sidebarCtaBody": "Reserve uma consulta gratuita com os nossos especialistas no Panamá e obtenha orientação personalizada.",
     "sidebarContactTitle": "Contacte-nos",
-    "sidebarExploreMore": "Explorar mais"
+    "sidebarExploreMore": "Explorar mais",
+    "freeToolsHeading": "Ferramentas fiscais gratuitas",
+    "incomeTaxCalculatorLink": "Calculadora de imposto de renda",
+    "taxExposureQuizLink": "Questionário de exposição fiscal"
   },
   "ServiceDetail": {
     "backToServices": "Voltar aos serviços",
@@ -740,7 +745,10 @@
     "contactTitle": "Entre em contato diretamente",
     "relatedTitle": "Serviços relacionados",
     "faqTitle": "Perguntas frequentes",
-    "allTopics": "Todos os tópicos"
+    "allTopics": "Todos os tópicos",
+    "freeToolsHeading": "Ferramentas fiscais gratuitas",
+    "incomeTaxCalculatorLink": "Calculadora de imposto de renda",
+    "taxExposureQuizLink": "Questionário de exposição fiscal"
   },
   "ContactPage": {
     "meta": {
@@ -765,5 +773,324 @@
     "emailReply": "Resposta em 24h",
     "whatsappReply": "Resposta rápida",
     "bookCallCta": "Consulta gratuita de 30 min"
+  },
+  "IncomeTaxCalculatorPage": {
+    "meta": {
+      "title": "Calculadora de Imposto de Renda no Panamá (ISR) 2026 | Estimativa Gratuita | Panama Contact",
+      "description": "Estime seu imposto de renda pessoal no Panamá (ISR) em segundos. Calculadora gratuita com as taxas de 2026, deduções e renda líquida — sem necessidade de e-mail."
+    },
+    "hero": {
+      "eyebrow": "Ferramenta Gratuita",
+      "heading": "Calculadora de Imposto de Renda no Panamá",
+      "subheading": "Estime quanto você deve no imposto de renda pessoal do Panamá (ISR) sobre rendimentos de fonte panamenha — instantaneamente e de graça."
+    },
+    "ratesVerifiedLabel": "Taxas verificadas em 2026",
+    "intro": {
+      "heading": "Como funciona o imposto de renda pessoal no Panamá",
+      "body": "O Panamá tributa pessoas físicas apenas sobre rendimentos de fonte panamenha, por meio de uma tabela progressiva (ISR). Rendimentos de fonte estrangeira geralmente são isentos sob o sistema fiscal territorial do Panamá — independentemente de onde você mora, a renda gerada fora do Panamá (salário estrangeiro, clientes estrangeiros, investimentos estrangeiros) normalmente não é tributada aqui.",
+      "bracketsHeading": "Faixas do ISR no Panamá em 2026",
+      "bracketsIntro": "O imposto de renda pessoal do Panamá aplica uma tabela progressiva de 3 faixas sobre a renda de fonte panamenha:",
+      "brackets": [
+        {
+          "range": "US$ 0 – US$ 11.000",
+          "rate": "0% — isento"
+        },
+        {
+          "range": "US$ 11.000,01 – US$ 50.000",
+          "rate": "15% sobre o excedente acima de US$ 11.000"
+        },
+        {
+          "range": "Acima de US$ 50.000",
+          "rate": "US$ 5.850 + 25% sobre o excedente acima de US$ 50.000"
+        }
+      ],
+      "deductionsHeading": "Quais deduções podem reduzir seu imposto de renda no Panamá?",
+      "deductionsIntro": "Uma vez estabelecida sua renda de fonte panamenha, várias deduções podem reduzir sua base tributável — cada uma com seu próprio limite:",
+      "deductions": [
+        "Juros de hipoteca de uma residência principal no Panamá — limitado a US$ 15.000",
+        "Contribuições de aposentadoria — o menor entre 10% da renda bruta ou US$ 15.000",
+        "Doações beneficentes — limitado a US$ 50.000",
+        "Despesas educacionais",
+        "Despesas médicas, juros de empréstimo estudantil, prêmios de seguro saúde e taxas de associação profissional"
+      ],
+      "exclusionsHeading": "O que esta calculadora não inclui",
+      "exclusionsBody": "Esta ferramenta estima apenas o imposto de renda pessoal (ISR). Ela exclui as contribuições da previdência social (CSS) e o imposto ITBMS, calculados separadamente sob regras diferentes."
+    },
+    "form": {
+      "grossIncomeLabel": "Renda bruta anual (fonte panamenha, em USD)",
+      "grossIncomePlaceholder": "ex. 60000",
+      "includeDeductionsToggle": "Incluir despesas dedutíveis",
+      "marriedFilingJointly": "Declaração conjunta (casados)",
+      "standardDeductionsHeading": "Deduções padrão",
+      "mortgageInterestLabel": "Juros de hipoteca (residência principal no Panamá)",
+      "retirementLabel": "Contribuições de aposentadoria",
+      "donationsLabel": "Doações beneficentes",
+      "advancedDeductionsToggle": "Deduções avançadas",
+      "educationalLabel": "Despesas educacionais",
+      "medicalLabel": "Despesas médicas",
+      "studentLoanInterestLabel": "Juros de empréstimo estudantil",
+      "healthInsuranceLabel": "Prêmios de seguro saúde",
+      "membershipFeesLabel": "Taxas de associação profissional",
+      "calculateButton": "Calcular meu imposto"
+    },
+    "results": {
+      "heading": "Seu resultado estimado",
+      "taxableIncome": "Renda tributável",
+      "tax": "ISR estimado (imposto de renda)",
+      "effectiveRate": "Alíquota efetiva",
+      "netAnnual": "Renda líquida anual",
+      "netMonthly": "Renda líquida mensal",
+      "comparisonHeading": "Sua economia com deduções",
+      "withoutDeductions": "Imposto sem deduções",
+      "withDeductions": "Imposto com suas deduções",
+      "savings": "Você economiza"
+    },
+    "cta": {
+      "bookConsultation": "Agendar uma Consultoria Fiscal",
+      "downloadReport": "Baixar Meu Relatório Fiscal Personalizado"
+    },
+    "crossLink": {
+      "heading": "Não sabe se você é tributável no Panamá?",
+      "body": "Faça nosso questionário de 2 minutos para verificar sua exposição fiscal no Panamá antes de calcular os números.",
+      "cta": "Verificar minha exposição fiscal"
+    },
+    "faq": [
+      {
+        "question": "Esta calculadora de imposto de renda no Panamá é gratuita?",
+        "answer": "Sim, totalmente gratuita, sem necessidade de e-mail ou cadastro. Você recebe sua estimativa completa instantaneamente; só pedimos seus dados de contato caso opte por baixar um relatório em PDF personalizado ou agendar uma consultoria."
+      },
+      {
+        "question": "O Panamá tributa rendimentos de fonte estrangeira?",
+        "answer": "Não. O Panamá utiliza um sistema fiscal territorial, portanto rendimentos gerados fora do Panamá — de um empregador estrangeiro, clientes estrangeiros ou investimentos estrangeiros — geralmente são isentos do imposto de renda panamenho, independentemente de onde você reside."
+      },
+      {
+        "question": "O que conta como renda de fonte panamenha?",
+        "answer": "De modo geral, rendimentos gerados por trabalho realizado no Panamá, por uma empresa registrada no Panamá que opera localmente, pelo aluguel de imóveis no Panamá, ou por serviços profissionais prestados dentro do Panamá."
+      },
+      {
+        "question": "Esta calculadora inclui a previdência social (CSS) ou o ITBMS?",
+        "answer": "Não. Esta ferramenta estima apenas o imposto de renda pessoal (ISR). As contribuições da previdência social (CSS) e o imposto ITBMS são calculados separadamente e não estão incluídos nesta estimativa."
+      },
+      {
+        "question": "Quão precisa é esta estimativa?",
+        "answer": "Ela aplica as faixas oficiais do ISR de 2026 e as regras padrão de dedução aos valores que você inserir. Sua obrigação real pode variar conforme sua documentação e circunstâncias específicas, por isso recomendamos confirmar com um contador licenciado antes de declarar."
+      },
+      {
+        "question": "Quais deduções posso reivindicar no Panamá?",
+        "answer": "Deduções comuns incluem juros de hipoteca de uma residência principal no Panamá, contribuições de aposentadoria, despesas educacionais e médicas, doações beneficentes e certos prêmios de seguro — cada uma sujeita a seu próprio limite. Consulte a seção 'Deduções avançadas' da calculadora para a lista completa."
+      }
+    ],
+    "relatedServicesHeading": "Explore serviços relacionados",
+    "territorialTaxSystemLink": "O sistema fiscal territorial do Panamá",
+    "contactUsLink": "Fale conosco",
+    "faqHeading": "Perguntas frequentes"
+  },
+  "TaxLeadForm": {
+    "heading": "Receba seu relatório fiscal personalizado",
+    "body": "Enviaremos um relatório em PDF e uma cópia dos seus resultados por e-mail — sem spam, nunca.",
+    "firstNameLabel": "Nome",
+    "emailLabel": "E-mail",
+    "consentPrefix": "Concordo com a ",
+    "consentLinkText": "política de privacidade",
+    "consentSuffix": " e em receber meu relatório por e-mail.",
+    "submitButton": "Enviar meu relatório",
+    "sendingButton": "Enviando...",
+    "successMessage": "Verifique sua caixa de entrada — seu relatório fiscal personalizado está a caminho!",
+    "errorMessage": "Algo deu errado. Por favor, tente novamente."
+  },
+  "TaxExposureQuizPage": {
+    "meta": {
+      "title": "Questionário Gratuito de Exposição Fiscal no Panamá — Sou Tributável? | Panama Contact",
+      "description": "Faça nosso questionário gratuito de 2 minutos para verificar sua exposição fiscal no Panamá. Descubra se sua renda é tributável sob o sistema fiscal territorial do Panamá."
+    },
+    "hero": {
+      "eyebrow": "Ferramenta Gratuita",
+      "heading": "Questionário de Exposição Fiscal no Panamá",
+      "subheading": "Responda algumas perguntas rápidas para descobrir se — e o quanto — a legislação fiscal do Panamá se aplica a você."
+    },
+    "intro": {
+      "heading": "Você é realmente tributável no Panamá?",
+      "body": "O Panamá tributa apenas rendimentos de fonte panamenha. Este questionário percorre sua residência, fontes de renda e qualquer empresa ou renda de aluguel no Panamá para estimar sua exposição fiscal geral e sinalizar o que merece uma análise mais detalhada.",
+      "territorialHeading": "O sistema fiscal territorial do Panamá explicado",
+      "territorialBody": "Ao contrário da maioria dos países, o Panamá não tributa com base apenas na cidadania ou residência — ele tributa com base em onde a renda é gerada. Um salário pago por um empregador estrangeiro por trabalho realizado no exterior é isento, mesmo que você more no Panamá em tempo integral. Por outro lado, a renda gerada dentro do Panamá — de uma empresa local, um emprego local ou um imóvel de aluguel panamenho — é tributável mesmo que você more em outro lugar.",
+      "triggersHeading": "O que normalmente gera exposição fiscal no Panamá",
+      "triggers": [
+        "Operar uma empresa no Panamá que fatura clientes panamenhos ou faz negócios dentro do país",
+        "Alugar imóveis localizados no Panamá",
+        "Trabalhar fisicamente dentro do Panamá, mesmo para um empregador estrangeiro",
+        "Administrar um negócio local de varejo, serviços ou hotelaria",
+        "Ter múltiplas fontes de renda mistas que combinam origens estrangeiras e panamenhas"
+      ],
+      "whyHeading": "Por que fazer este questionário primeiro",
+      "whyBody": "A maioria das pessoas presume que se mudar para o Panamá significa que toda a sua renda mundial se torna tributável lá — não é o caso. Este questionário existe para separar rapidamente a renda que está realmente exposta ao imposto panamenho daquela que não está, antes de você entrar em números exatos com a calculadora de imposto de renda."
+    },
+    "steps": {
+      "residency": {
+        "question": "Qual é o seu status de residência atual no Panamá?",
+        "options": {
+          "resident": "Sou residente do Panamá / possuo visto",
+          "notYetNoPanamaIncome": "Ainda não sou residente e não tenho nenhuma renda de fonte panamenha"
+        }
+      },
+      "incomeSource": {
+        "question": "De onde vem a maior parte da sua renda?",
+        "options": {
+          "onlyForeign": "Somente do exterior (100% de fonte estrangeira)",
+          "mostlyForeign": "Principalmente do exterior, com alguma renda no Panamá",
+          "mostlyPanama": "Principalmente no Panamá",
+          "onlyPanama": "Somente no Panamá"
+        }
+      },
+      "panamaCompany": {
+        "question": "Você possui ou opera uma empresa no Panamá?",
+        "options": {
+          "none": "Não, não tenho uma empresa no Panamá",
+          "panamaSourceIncome": "Sim, e ela gera renda de fonte panamenha",
+          "foreignSourceIncome": "Sim, mas sua renda é de fonte estrangeira (operações offshore)"
+        }
+      },
+      "rental": {
+        "question": "Você possui um imóvel para aluguel no Panamá que gera renda de aluguel?",
+        "options": {
+          "no": "Não",
+          "yes": "Sim"
+        }
+      },
+      "multipleIncome": {
+        "question": "Quantas fontes de renda distintas você tem (salário, negócio, investimentos, aluguel, etc.)?",
+        "options": {
+          "one": "Apenas uma",
+          "two": "Duas",
+          "threeOrMore": "Três ou mais"
+        }
+      }
+    },
+    "nextButton": "Próximo",
+    "backButton": "Voltar",
+    "results": {
+      "low": {
+        "title": "Baixa Exposição Fiscal — Você Provavelmente Não é Tributável no Panamá",
+        "checklist": [
+          "Sua renda vem inteiramente de fora do Panamá",
+          "Você não opera uma empresa que gere renda de fonte panamenha",
+          "Você não possui imóvel para aluguel no Panamá"
+        ],
+        "services": [
+          "Visto de Países Amigos (residência no Panamá)",
+          "Visto de Nômade Digital"
+        ],
+        "cta": "Explorar opções de residência no Panamá"
+      },
+      "limited": {
+        "title": "Exposição Fiscal Limitada — Alguma Renda de Fonte Panamenha a Acompanhar",
+        "checklist": [
+          "Você tem alguma renda de fonte panamenha",
+          "Ainda não opera uma empresa no Panamá que gere renda local",
+          "Sua exposição é modesta, mas vale a pena acompanhar"
+        ],
+        "services": [
+          "Declaração de Imposto de Renda Pessoal (ISR)",
+          "Consultoria Fiscal"
+        ],
+        "cta": "Obter uma consultoria fiscal rápida"
+      },
+      "potential": {
+        "title": "Exposição Fiscal Potencial — Você Pode Dever Imposto de Renda no Panamá",
+        "checklist": [
+          "Você gera renda diretamente dentro do Panamá",
+          "Você pode operar uma empresa no Panamá com renda local ou possuir imóvel para aluguel",
+          "As deduções certas podem reduzir significativamente o que você deve"
+        ],
+        "services": [
+          "Declaração de Imposto de Renda Pessoal (ISR)",
+          "Constituição de Empresa e Estruturação Fiscal",
+          "Consultoria Fiscal"
+        ],
+        "cta": "Calcular minha obrigação fiscal exata"
+      },
+      "complex": {
+        "title": "Situação Fiscal Complexa — Análise Profissional Fortemente Recomendada",
+        "checklist": [
+          "Você tem múltiplas fontes de renda e/ou uma empresa no Panamá que gera renda local",
+          "Você pode ter exposição adicional de renda de aluguel",
+          "É provável que sua situação exija conformidade e obrigações de declaração"
+        ],
+        "services": [
+          "Revisão Completa de Conformidade Fiscal",
+          "Constituição e Reestruturação de Empresa",
+          "Suporte Contábil Contínuo"
+        ],
+        "cta": "Agendar uma revisão fiscal completa"
+      }
+    },
+    "warningsHeading": "Observação",
+    "block5": {
+      "heading": "Estimar meu imposto de renda",
+      "body": "Como você tem renda gerada no Panamá, obtenha uma estimativa precisa do que deveria pagar.",
+      "cta": "Calcular meu imposto de renda no Panamá"
+    },
+    "crossLink": {
+      "heading": "Prefere uma estimativa rápida?",
+      "body": "Se você já sabe que tem renda de fonte panamenha, vá direto para a calculadora de imposto de renda.",
+      "cta": "Ir para a calculadora de imposto de renda"
+    },
+    "faq": [
+      {
+        "question": "Sou tributável no Panamá se moro no exterior?",
+        "answer": "Os impostos no Panamá são baseados na origem da renda, não em onde você mora. Se você mora no exterior, mas gera renda de fonte panamenha — por exemplo, de uma empresa panamenha ou um imóvel para aluguel — essa renda ainda pode ser tributável no Panamá."
+      },
+      {
+        "question": "O que conta como renda de fonte panamenha?",
+        "answer": "Renda gerada por trabalho realizado no Panamá, por uma empresa baseada no Panamá que opera localmente, pelo aluguel de imóveis no Panamá, ou por serviços profissionais prestados dentro do país."
+      },
+      {
+        "question": "Ter uma empresa no Panamá me torna tributável?",
+        "answer": "Não automaticamente. Se sua empresa panamenha gera apenas renda de fonte estrangeira (por exemplo, faturando clientes no exterior por serviços prestados fora do Panamá), essa renda geralmente é isenta. O imposto panamenho se aplica quando a renda da empresa é gerada dentro do Panamá."
+      },
+      {
+        "question": "A renda de aluguel no Panamá é tributável?",
+        "answer": "Sim. Alugar um imóvel localizado no Panamá gera renda de fonte panamenha, geralmente sujeita a imposto de renda independentemente do seu status de residência."
+      },
+      {
+        "question": "Quão preciso é este questionário?",
+        "answer": "Este questionário é uma ferramenta de triagem que sinaliza seu nível provável de exposição fiscal com base em suas respostas. É um bom ponto de partida, não um substituto para uma revisão completa por um profissional fiscal licenciado."
+      },
+      {
+        "question": "O que devo fazer se meu resultado for COMPLEXO?",
+        "answer": "Recomendamos agendar uma consultoria com nossa equipe para que um contador licenciado revise sua estrutura específica, confirme suas obrigações de declaração e identifique formas de otimizar sua posição fiscal."
+      }
+    ],
+    "relatedServicesHeading": "Explore serviços relacionados",
+    "territorialTaxSystemLink": "O sistema fiscal territorial do Panamá",
+    "contactUsLink": "Fale conosco",
+    "recommendedServicesHeading": "Serviços recomendados",
+    "cta": {
+      "bookConsultation": "Agendar uma Consultoria Fiscal",
+      "downloadReport": "Baixar Meu Relatório Fiscal Personalizado"
+    },
+    "faqHeading": "Perguntas frequentes"
+  },
+  "PrivacyPolicyPage": {
+    "meta": {
+      "title": "Política de Privacidade | Panama Contact Services",
+      "description": "Como a Panama Contact Services coleta, usa e protege seus dados pessoais, em conformidade com a Lei 81 de 2019 de Proteção de Dados Pessoais do Panamá."
+    },
+    "heading": "Política de Privacidade",
+    "lastUpdated": "Última atualização: 10 de julho de 2026",
+    "intro": "A Panama Contact Services (\"nós\") respeita sua privacidade. Esta política explica quais dados pessoais coletamos por meio deste site — incluindo nossas calculadoras fiscais e questionário gratuitos — por que os coletamos e quais direitos você tem sobre eles, em conformidade com a Lei 81 de 2019 de Proteção de Dados Pessoais do Panamá.",
+    "sections": {
+      "dataCollectedTitle": "O que coletamos",
+      "dataCollectedBody": "Quando você usa nosso formulário de contato, questionários ou ferramentas fiscais e opta por solicitar um relatório personalizado ou uma consultoria, coletamos as informações que você fornece voluntariamente: nome, e-mail e — dependendo do formulário — telefone, país e suas respostas (por exemplo, valores de renda ou respostas do questionário). Não exigimos essas informações para usar nossas calculadoras gratuitas; os resultados são exibidos sem qualquer coleta de dados, a menos que você solicite explicitamente um relatório ou consultoria.",
+      "howWeUseItTitle": "Como usamos",
+      "howWeUseItBody": "Usamos suas informações para enviar o relatório ou conteúdo solicitado, dar seguimento a solicitações de consultoria e melhorar nossos serviços. Não vendemos seus dados pessoais a terceiros.",
+      "dataSharingTitle": "Provedores de serviços",
+      "dataSharingBody": "Usamos o Supabase para armazenar dados enviados com segurança e o Resend para enviar e-mails transacionais (como seu relatório fiscal personalizado). Esses provedores processam dados em nosso nome e são contratualmente obrigados a protegê-los.",
+      "retentionTitle": "Retenção de dados",
+      "retentionBody": "Mantemos suas informações pelo tempo necessário para responder à sua solicitação ou fornecer o serviço solicitado, ou conforme exigido por lei.",
+      "rightsTitle": "Seus direitos",
+      "rightsBody": "Sob a Lei 81 de 2019, você tem o direito de acessar, retificar, cancelar ou se opor ao tratamento de seus dados pessoais. Para exercer qualquer um desses direitos, entre em contato conosco usando os dados abaixo.",
+      "contactTitle": "Fale conosco",
+      "contactBody": "Para qualquer dúvida ou solicitação relacionada à privacidade, envie um e-mail para info@panama-contact.com."
+    }
   }
 }

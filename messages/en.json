@@ -15,7 +15,9 @@
     "whyPanama": "Why Panama?",
     "contact": "Contact",
     "freeConsultation": "Book Free Consultation",
-    "ctaHeading": "Ready to make your move?"
+    "ctaHeading": "Ready to make your move?",
+    "taxCalculator": "Tax exposure quiz",
+    "incomeTaxCalculator": "Income tax calculator"
   },
   "HomePage": {
     "meta": {
@@ -728,7 +730,10 @@
     "sidebarCtaTitle": "Ready to take the next step?",
     "sidebarCtaBody": "Book a free consultation with our Panama specialists and get personalized guidance.",
     "sidebarContactTitle": "Contact Us",
-    "sidebarExploreMore": "Explore More"
+    "sidebarExploreMore": "Explore More",
+    "freeToolsHeading": "Free tax tools",
+    "incomeTaxCalculatorLink": "Income tax calculator",
+    "taxExposureQuizLink": "Tax exposure quiz"
   },
   "ServiceDetail": {
     "backToServices": "Back to services",
@@ -739,7 +744,10 @@
     "contactTitle": "Contact us directly",
     "relatedTitle": "Related services",
     "faqTitle": "Frequently Asked Questions",
-    "allTopics": "All topics"
+    "allTopics": "All topics",
+    "freeToolsHeading": "Free tax tools",
+    "incomeTaxCalculatorLink": "Income tax calculator",
+    "taxExposureQuizLink": "Tax exposure quiz"
   },
   "ContactPage": {
     "meta": {
@@ -764,5 +772,324 @@
     "emailReply": "Reply within 24h",
     "whatsappReply": "Quick response",
     "bookCallCta": "30-min free consultation"
+  },
+  "IncomeTaxCalculatorPage": {
+    "meta": {
+      "title": "Panama Income Tax Calculator (ISR) 2026 | Free Estimate | Panama Contact",
+      "description": "Estimate your Panama personal income tax (ISR) in seconds. Free calculator with 2026 brackets, deductions, and net income — no email required."
+    },
+    "hero": {
+      "eyebrow": "Free Tool",
+      "heading": "Panama Income Tax Calculator",
+      "subheading": "Estimate what you owe under Panama’s personal income tax (ISR) on Panamanian-source income — instantly, for free."
+    },
+    "ratesVerifiedLabel": "Rates verified 2026",
+    "intro": {
+      "heading": "How Panama personal income tax works",
+      "body": "Panama taxes individuals only on Panamanian-source income under a progressive scale (ISR). Foreign-source income is generally exempt under Panama's territorial tax system — regardless of where you live, income earned outside Panama (a foreign salary, foreign clients, foreign investments) typically isn't taxed here.",
+      "bracketsHeading": "2026 Panama ISR tax brackets",
+      "bracketsIntro": "Panama’s personal income tax applies a 3-bracket progressive scale to Panamanian-source income:",
+      "brackets": [
+        {
+          "range": "$0 – $11,000",
+          "rate": "0% — tax-free"
+        },
+        {
+          "range": "$11,000.01 – $50,000",
+          "rate": "15% on the amount over $11,000"
+        },
+        {
+          "range": "Over $50,000",
+          "rate": "$5,850 + 25% on the amount over $50,000"
+        }
+      ],
+      "deductionsHeading": "What deductions can reduce your Panama income tax?",
+      "deductionsIntro": "Once your Panamanian-source income is established, several deductions can lower your taxable base — each with its own cap:",
+      "deductions": [
+        "Mortgage interest on a primary residence in Panama — capped at $15,000",
+        "Retirement / pension contributions — the lower of 10% of gross income or $15,000",
+        "Charitable donations — capped at $50,000",
+        "Educational expenses",
+        "Medical expenses, student loan interest, health insurance premiums, and professional membership fees"
+      ],
+      "exclusionsHeading": "What this calculator doesn’t include",
+      "exclusionsBody": "This tool estimates personal income tax (ISR) only. It excludes Social Security contributions (CSS) and the ITBMS sales tax, which are calculated separately under different rules."
+    },
+    "form": {
+      "grossIncomeLabel": "Annual gross income (Panamanian-source, USD)",
+      "grossIncomePlaceholder": "e.g. 60000",
+      "includeDeductionsToggle": "Include deductible expenses",
+      "marriedFilingJointly": "Married filing jointly",
+      "standardDeductionsHeading": "Standard deductions",
+      "mortgageInterestLabel": "Mortgage interest (primary residence in Panama)",
+      "retirementLabel": "Retirement / pension contributions",
+      "donationsLabel": "Charitable donations",
+      "advancedDeductionsToggle": "Advanced deductions",
+      "educationalLabel": "Educational expenses",
+      "medicalLabel": "Medical expenses",
+      "studentLoanInterestLabel": "Student loan interest",
+      "healthInsuranceLabel": "Health insurance premiums",
+      "membershipFeesLabel": "Professional membership fees",
+      "calculateButton": "Calculate my tax"
+    },
+    "results": {
+      "heading": "Your estimated result",
+      "taxableIncome": "Taxable income",
+      "tax": "Estimated ISR (income tax)",
+      "effectiveRate": "Effective tax rate",
+      "netAnnual": "Net annual income",
+      "netMonthly": "Net monthly income",
+      "comparisonHeading": "Your deductions savings",
+      "withoutDeductions": "Tax without deductions",
+      "withDeductions": "Tax with your deductions",
+      "savings": "You save"
+    },
+    "cta": {
+      "bookConsultation": "Book a Tax Consultation",
+      "downloadReport": "Download My Personalized Tax Report"
+    },
+    "crossLink": {
+      "heading": "Not sure if you’re even taxable in Panama?",
+      "body": "Take our 2-minute quiz to check your Panama tax exposure before running the numbers.",
+      "cta": "Check my tax exposure"
+    },
+    "faq": [
+      {
+        "question": "Is this Panama income tax calculator free?",
+        "answer": "Yes, completely free with no email or sign-up required. You get your full estimate instantly; we only ask for contact details if you choose to download a personalized PDF report or book a consultation."
+      },
+      {
+        "question": "Does Panama tax foreign-source income?",
+        "answer": "No. Panama uses a territorial tax system, so income earned outside Panama — from a foreign employer, foreign clients, or foreign investments — is generally exempt from Panamanian income tax, regardless of where you live."
+      },
+      {
+        "question": "What income counts as Panamanian-source?",
+        "answer": "Broadly, income generated by work performed in Panama, by a Panama-registered company operating locally, from renting Panama real estate, or from professional services rendered within Panama."
+      },
+      {
+        "question": "Does this calculator include social security (CSS) or ITBMS?",
+        "answer": "No. This tool estimates personal income tax (ISR) only. Social security contributions (CSS) and the ITBMS sales tax are calculated separately and are not included in this estimate."
+      },
+      {
+        "question": "How accurate is this estimate?",
+        "answer": "It applies the official 2026 ISR brackets and standard deduction rules to the figures you enter. Your actual liability can vary based on your specific documentation and circumstances, so we recommend confirming with a licensed CPA before filing."
+      },
+      {
+        "question": "What deductions can I claim in Panama?",
+        "answer": "Common deductions include mortgage interest on a primary residence in Panama, retirement contributions, educational and medical expenses, charitable donations, and certain insurance premiums — each subject to its own cap. See the calculator's 'Advanced deductions' section for the full list."
+      }
+    ],
+    "relatedServicesHeading": "Explore related services",
+    "territorialTaxSystemLink": "Panama's territorial tax system",
+    "contactUsLink": "Contact us",
+    "faqHeading": "Frequently Asked Questions"
+  },
+  "TaxLeadForm": {
+    "heading": "Get your personalized tax report",
+    "body": "We'll email you a PDF report and a copy of your results — no spam, ever.",
+    "firstNameLabel": "First name",
+    "emailLabel": "Email",
+    "consentPrefix": "I agree to the ",
+    "consentLinkText": "privacy policy",
+    "consentSuffix": " and to receive my report by email.",
+    "submitButton": "Send me my report",
+    "sendingButton": "Sending...",
+    "successMessage": "Check your inbox — your personalized tax report is on its way!",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "TaxExposureQuizPage": {
+    "meta": {
+      "title": "Free Panama Tax Exposure Quiz — Am I Taxable in Panama? | Panama Contact",
+      "description": "Take our free 2-minute quiz to check your Panama tax exposure. Find out if your income is taxable under Panama’s territorial tax system."
+    },
+    "hero": {
+      "eyebrow": "Free Tool",
+      "heading": "Panama Tax Exposure Quiz",
+      "subheading": "Answer a few quick questions to find out whether — and how much — Panama tax law applies to you."
+    },
+    "intro": {
+      "heading": "Are you actually taxable in Panama?",
+      "body": "Panama only taxes Panamanian-source income. This quiz walks through your residency, income sources, and any Panama company or rental income to estimate your overall tax exposure and flag anything worth a closer look.",
+      "territorialHeading": "Panama's territorial tax system explained",
+      "territorialBody": "Unlike most countries, Panama does not tax based on citizenship or residency alone — it taxes based on where the income is generated. A salary paid by a foreign employer for work performed abroad is exempt, even if you live in Panama full-time. Conversely, income generated inside Panama — from a local company, a local job, or a Panamanian rental property — is taxable even if you live somewhere else entirely.",
+      "triggersHeading": "What typically triggers Panama tax exposure",
+      "triggers": [
+        "Operating a Panama company that invoices Panamanian clients or does business inside the country",
+        "Renting out real estate located in Panama",
+        "Performing work physically inside Panama, even for a foreign employer",
+        "Running a local retail, service, or hospitality business",
+        "Having multiple, mixed income streams that combine foreign and Panamanian sources"
+      ],
+      "whyHeading": "Why take this quiz first",
+      "whyBody": "Most people assume moving to Panama means their worldwide income becomes taxable there — it doesn’t. This quiz exists to quickly separate the income that’s actually exposed to Panamanian tax from the income that isn’t, before you dive into exact numbers with the income tax calculator."
+    },
+    "steps": {
+      "residency": {
+        "question": "What is your current residency status in Panama?",
+        "options": {
+          "resident": "I am a Panama resident / visa holder",
+          "notYetNoPanamaIncome": "I'm not a resident yet and have no Panama-source income at all"
+        }
+      },
+      "incomeSource": {
+        "question": "Where does most of your income come from?",
+        "options": {
+          "onlyForeign": "Only outside Panama (100% foreign-source)",
+          "mostlyForeign": "Mostly outside Panama, with some Panama income",
+          "mostlyPanama": "Mostly in Panama",
+          "onlyPanama": "Only in Panama"
+        }
+      },
+      "panamaCompany": {
+        "question": "Do you own or operate a company in Panama?",
+        "options": {
+          "none": "No, I don’t have a Panama company",
+          "panamaSourceIncome": "Yes, and it generates Panama-source income",
+          "foreignSourceIncome": "Yes, but its income is foreign-source (offshore operations)"
+        }
+      },
+      "rental": {
+        "question": "Do you own rental property in Panama that generates rental income?",
+        "options": {
+          "no": "No",
+          "yes": "Yes"
+        }
+      },
+      "multipleIncome": {
+        "question": "How many distinct income streams do you have (salary, business, investments, rental, etc.)?",
+        "options": {
+          "one": "Just one",
+          "two": "Two",
+          "threeOrMore": "Three or more"
+        }
+      }
+    },
+    "nextButton": "Next",
+    "backButton": "Back",
+    "results": {
+      "low": {
+        "title": "Low Tax Exposure — You're Likely Not Taxable in Panama",
+        "checklist": [
+          "Your income comes entirely from outside Panama",
+          "You don't operate a company generating Panama-source income",
+          "You don't own rental property in Panama"
+        ],
+        "services": [
+          "Friendly Nations Visa (Panama residency)",
+          "Digital Nomad Visa"
+        ],
+        "cta": "Explore Panama residency options"
+      },
+      "limited": {
+        "title": "Limited Tax Exposure — Some Panama-Source Income to Track",
+        "checklist": [
+          "You have some income sourced from Panama",
+          "You don't yet operate a Panama company generating local income",
+          "Your exposure is modest but worth tracking"
+        ],
+        "services": [
+          "Personal Income Tax Filing (ISR)",
+          "Tax Consultation"
+        ],
+        "cta": "Get a quick tax consultation"
+      },
+      "potential": {
+        "title": "Potential Tax Exposure — You May Owe Panama Income Tax",
+        "checklist": [
+          "You generate income directly within Panama",
+          "You may operate a Panama company with local income or own rental property",
+          "The right deductions could meaningfully reduce what you owe"
+        ],
+        "services": [
+          "Personal Income Tax Filing (ISR)",
+          "Company Formation & Tax Structuring",
+          "Tax Consultation"
+        ],
+        "cta": "Calculate my exact tax liability"
+      },
+      "complex": {
+        "title": "Complex Tax Situation — Professional Review Strongly Recommended",
+        "checklist": [
+          "You have multiple income streams and/or a Panama company generating local income",
+          "You may have additional exposure from rental income",
+          "Compliance and filing requirements likely apply to your situation"
+        ],
+        "services": [
+          "Full Tax Compliance Review",
+          "Company Formation & Restructuring",
+          "Ongoing CPA & Accounting Support"
+        ],
+        "cta": "Book a full tax review"
+      }
+    },
+    "warningsHeading": "Please note",
+    "block5": {
+      "heading": "Estimate my income tax",
+      "body": "Since you have Panama-source income, get a precise estimate of what you’d owe.",
+      "cta": "Calculate my Panama income tax"
+    },
+    "crossLink": {
+      "heading": "Prefer a quick estimate instead?",
+      "body": "If you already know you have Panama-source income, jump straight to the income tax calculator.",
+      "cta": "Go to the income tax calculator"
+    },
+    "faq": [
+      {
+        "question": "Am I taxable in Panama if I live abroad?",
+        "answer": "Panama taxes are based on where income is sourced, not where you live. If you reside abroad but earn Panama-source income — for example from a Panama company or rental property — that income can still be taxable in Panama."
+      },
+      {
+        "question": "What counts as Panama-source income?",
+        "answer": "Income generated by work performed in Panama, by a Panama-based company operating locally, from renting real estate in Panama, or from professional services rendered within the country."
+      },
+      {
+        "question": "Does owning a Panama company make me taxable?",
+        "answer": "Not automatically. If your Panama company only generates foreign-source income (for example, invoicing overseas clients for services performed outside Panama), that income is generally exempt. Panama tax applies when the company’s income is generated within Panama."
+      },
+      {
+        "question": "Is rental income in Panama taxable?",
+        "answer": "Yes. Renting out property located in Panama produces Panama-source income, which is generally subject to income tax regardless of your residency status."
+      },
+      {
+        "question": "How accurate is this quiz?",
+        "answer": "This quiz is a screening tool that flags your likely level of tax exposure based on your answers. It's a helpful starting point, not a substitute for a full review by a licensed tax professional."
+      },
+      {
+        "question": "What should I do if my result is COMPLEX?",
+        "answer": "We recommend booking a consultation with our team so a licensed CPA can review your specific structure, confirm your filing obligations, and identify ways to optimize your tax position."
+      }
+    ],
+    "relatedServicesHeading": "Explore related services",
+    "territorialTaxSystemLink": "Panama's territorial tax system",
+    "contactUsLink": "Contact us",
+    "recommendedServicesHeading": "Recommended services",
+    "cta": {
+      "bookConsultation": "Book a Tax Consultation",
+      "downloadReport": "Download My Personalized Tax Report"
+    },
+    "faqHeading": "Frequently Asked Questions"
+  },
+  "PrivacyPolicyPage": {
+    "meta": {
+      "title": "Privacy Policy | Panama Contact Services",
+      "description": "How Panama Contact Services collects, uses, and protects your personal data, in line with Panama’s Law 81 of 2019 on Personal Data Protection."
+    },
+    "heading": "Privacy Policy",
+    "lastUpdated": "Last updated: July 10, 2026",
+    "intro": "Panama Contact Services (\"we\", \"us\") respects your privacy. This policy explains what personal data we collect through this website — including our free tax calculators and quiz — why we collect it, and what rights you have over it, in accordance with Panama’s Law 81 of 2019 on Personal Data Protection.",
+    "sections": {
+      "dataCollectedTitle": "What we collect",
+      "dataCollectedBody": "When you use our contact form, questionnaires, or tax tools and choose to request a personalized report or consultation, we collect the information you voluntarily provide: your name, email address, and — depending on the form — phone number, country, and your form answers (e.g. income figures or quiz responses). We do not require this information to use our free calculators; results are shown without any data collection unless you explicitly request a report or consultation.",
+      "howWeUseItTitle": "How we use it",
+      "howWeUseItBody": "We use your information to send you the report or content you requested, to follow up on consultation requests, and to improve our services. We do not sell your personal data to third parties.",
+      "dataSharingTitle": "Service providers",
+      "dataSharingBody": "We use Supabase to store submitted data securely and Resend to send transactional emails (such as your personalized tax report). These providers process data on our behalf and are contractually bound to protect it.",
+      "retentionTitle": "Data retention",
+      "retentionBody": "We retain your information for as long as needed to respond to your request or provide the service you asked for, or as required by law.",
+      "rightsTitle": "Your rights",
+      "rightsBody": "Under Law 81 of 2019, you have the right to access, rectify, cancel, or oppose the processing of your personal data. To exercise any of these rights, contact us using the details below.",
+      "contactTitle": "Contact us",
+      "contactBody": "For any privacy-related question or request, email us at info@panama-contact.com."
+    }
   }
 }

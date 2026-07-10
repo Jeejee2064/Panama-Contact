@@ -124,6 +124,8 @@ export default function Footer() {
                 <li><Link href="/services" className="text-sm hover:text-[#FF4D1C] transition-colors">{t('services')}</Link></li>
                 <li><Link href="/why-panama" className="text-sm hover:text-[#FF4D1C] transition-colors">{t('whyPanama')}</Link></li>
                 <li><Link href="/contact" className="text-sm hover:text-[#FF4D1C] transition-colors">{t('contact')}</Link></li>
+                <li><Link href="/panama-income-tax-calculator" className="text-sm hover:text-[#FF4D1C] transition-colors">{t('incomeTaxCalculator')}</Link></li>
+                <li><Link href="/panama-tax-calculator" className="text-sm hover:text-[#FF4D1C] transition-colors">{t('taxCalculator')}</Link></li>
               </ul>
             </div>
 

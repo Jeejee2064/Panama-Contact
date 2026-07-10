@@ -34,6 +34,12 @@ export default function AdminNav() {
           >
             KYC
           </Link>
+          <Link
+            href="/admin/leads"
+            className={`text-sm transition ${pathname.startsWith('/admin/leads') ? 'text-white font-semibold' : 'text-white/60 hover:text-white'}`}
+          >
+            Leads
+          </Link>
         </nav>
       </div>
       <button
