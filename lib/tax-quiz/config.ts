@@ -7,12 +7,19 @@ import type { QuizStep, ResultTierContent, Bucket } from './types';
 // satisfying the "step 1 can jump to step 5" requirement) and every flag the
 // scoring engine needs. Swap/extend STEPS with the client's real steps without
 // touching lib/tax-quiz/score.ts or the UI — the engine is fully data-driven.
+// Sentinel "next" id: not a real step, intercepted by the UI as a terminal
+// informational screen (US citizens/Green Card holders are taxed on worldwide
+// income regardless of Panama's territorial system) rather than continuing
+// the quiz or resolving a bucket — the rest of the Panama-only scoring model
+// doesn't apply to this situation.
+export const US_ALERT_STEP_ID = 'us-alert';
+
 export const STEPS: QuizStep[] = [
   {
     id: 'residency',
     questionKey: 'residency',
     options: [
-      { value: 'resident', labelKey: 'resident', score: 5, next: 'income-source' },
+      { value: 'resident', labelKey: 'resident', score: 5, next: 'us-person' },
       {
         value: 'not-yet-no-panama-income',
         labelKey: 'notYetNoPanamaIncome',
@@ -22,6 +29,14 @@ export const STEPS: QuizStep[] = [
         // non-linear jump, not just a straight line through every step.
         next: 'multiple-income',
       },
+    ],
+  },
+  {
+    id: 'us-person',
+    questionKey: 'usPerson',
+    options: [
+      { value: 'no', labelKey: 'no', score: 0, next: 'income-source' },
+      { value: 'yes', labelKey: 'yes', flags: ['us-person'], score: 0, next: US_ALERT_STEP_ID },
     ],
   },
   {

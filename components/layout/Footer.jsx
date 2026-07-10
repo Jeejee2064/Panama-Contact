@@ -1,7 +1,11 @@
-import { Link } from '@/i18n/navigation';
+'use client';
+import { Link, usePathname } from '@/i18n/navigation';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+
+// These 2 tool pages have no site footer at all.
+const NO_FOOTER_PATHS = new Set(['/panama-tax-calculator', '/panama-income-tax-calculator']);
 
 const WA_ICON = (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 shrink-0">
@@ -11,6 +15,9 @@ const WA_ICON = (
 
 export default function Footer() {
   const t = useTranslations('Footer');
+  const pathname = usePathname();
+
+  if (NO_FOOTER_PATHS.has(pathname)) return null;
 
   const servicesCol1 = [
     { href: '/services/insurance',        label: 'Insurance' },

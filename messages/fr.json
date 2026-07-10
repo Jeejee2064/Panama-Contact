@@ -880,9 +880,6 @@
         "answer": "Les déductions courantes incluent les intérêts hypothécaires d'une résidence principale au Panama, les cotisations retraite, les frais de scolarité et médicaux, les dons de bienfaisance, et certaines primes d'assurance — chacune soumise à son propre plafond. Consultez la section « Déductions avancées » du calculateur pour la liste complète."
       }
     ],
-    "relatedServicesHeading": "Découvrez nos services associés",
-    "territorialTaxSystemLink": "Le système fiscal territorial du Panama",
-    "contactUsLink": "Nous contacter",
     "faqHeading": "Questions fréquentes"
   },
   "TaxLeadForm": {
@@ -962,6 +959,13 @@
           "one": "Une seule",
           "two": "Deux",
           "threeOrMore": "Trois ou plus"
+        }
+      },
+      "usPerson": {
+        "question": "Êtes-vous citoyen américain ou titulaire d'une Green Card ?",
+        "options": {
+          "no": "Non",
+          "yes": "Oui"
         }
       }
     },
@@ -1060,15 +1064,16 @@
         "answer": "Nous recommandons de réserver une consultation avec notre équipe afin qu'un expert-comptable agréé examine votre structure spécifique, confirme vos obligations déclaratives et identifie des moyens d'optimiser votre situation fiscale."
       }
     ],
-    "relatedServicesHeading": "Découvrez nos services associés",
-    "territorialTaxSystemLink": "Le système fiscal territorial du Panama",
-    "contactUsLink": "Nous contacter",
     "recommendedServicesHeading": "Services recommandés",
     "cta": {
       "bookConsultation": "Réserver une Consultation Fiscale",
       "downloadReport": "Télécharger Mon Rapport Fiscal Personnalisé"
     },
-    "faqHeading": "Questions fréquentes"
+    "faqHeading": "Questions fréquentes",
+    "usAlert": {
+      "heading": "Vous pourriez aussi avoir des obligations fiscales aux États-Unis",
+      "body": "Si vous êtes citoyen américain ou titulaire d'une Green Card, l'IRS impose votre revenu mondial peu importe où vous vivez — le système fiscal territorial du Panama ne change rien à vos obligations déclaratives américaines. Vous devez probablement encore déposer des déclarations fiscales américaines, et éventuellement des déclarations FBAR/FATCA, même si votre revenu est totalement exonéré au Panama. Cela nécessite une planification fiscale transfrontalière avec quelqu'un qui comprend les deux systèmes."
+    }
   },
   "PrivacyPolicyPage": {
     "meta": {

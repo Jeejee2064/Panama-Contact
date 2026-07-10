@@ -879,9 +879,6 @@
         "answer": "Common deductions include mortgage interest on a primary residence in Panama, retirement contributions, educational and medical expenses, charitable donations, and certain insurance premiums — each subject to its own cap. See the calculator's 'Advanced deductions' section for the full list."
       }
     ],
-    "relatedServicesHeading": "Explore related services",
-    "territorialTaxSystemLink": "Panama's territorial tax system",
-    "contactUsLink": "Contact us",
     "faqHeading": "Frequently Asked Questions"
   },
   "TaxLeadForm": {
@@ -961,6 +958,13 @@
           "one": "Just one",
           "two": "Two",
           "threeOrMore": "Three or more"
+        }
+      },
+      "usPerson": {
+        "question": "Are you a U.S. citizen or Green Card holder?",
+        "options": {
+          "no": "No",
+          "yes": "Yes"
         }
       }
     },
@@ -1059,15 +1063,16 @@
         "answer": "We recommend booking a consultation with our team so a licensed CPA can review your specific structure, confirm your filing obligations, and identify ways to optimize your tax position."
       }
     ],
-    "relatedServicesHeading": "Explore related services",
-    "territorialTaxSystemLink": "Panama's territorial tax system",
-    "contactUsLink": "Contact us",
     "recommendedServicesHeading": "Recommended services",
     "cta": {
       "bookConsultation": "Book a Tax Consultation",
       "downloadReport": "Download My Personalized Tax Report"
     },
-    "faqHeading": "Frequently Asked Questions"
+    "faqHeading": "Frequently Asked Questions",
+    "usAlert": {
+      "heading": "You may have U.S. tax obligations too",
+      "body": "As a U.S. citizen or Green Card holder, the IRS taxes your worldwide income regardless of where you live — Panama's territorial tax system doesn't change your U.S. filing obligations. You likely still need to file U.S. tax returns, and possibly FBAR/FATCA disclosures, even if your income is fully exempt in Panama. This requires cross-border tax planning with someone who understands both systems."
+    }
   },
   "PrivacyPolicyPage": {
     "meta": {

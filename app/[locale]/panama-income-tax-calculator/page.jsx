@@ -2,20 +2,12 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { locales } from '@/i18n/config';
 import { routing } from '@/i18n/routing';
-import { localizeServiceSlug, localizeWhyPanamaSlug } from '@/data/slugs';
 import FadeIn from '@/components/animations/FadeIn';
 import FaqAccordion from '@/components/ui/FaqAccordion';
 import PanamaIncomeTaxCalculator from '@/components/calculators/PanamaIncomeTaxCalculator';
 import { ArrowRight } from 'lucide-react';
 
 const PATHNAME = '/panama-income-tax-calculator';
-
-// Ordered by relevance to a tax/residency-focused visitor.
-const RELATED_SERVICE_SLUGS = [
-  'income-tax', 'business', 'friendly-nations', 'qualified-investor',
-  'retiring', 'real-estate', 'bank-account', 'digital-nomad',
-  'insurance', 'goods-import', 'driver-s-license',
-];
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -45,7 +37,6 @@ export default async function PanamaIncomeTaxCalculatorPage({ params }) {
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: 'IncomeTaxCalculatorPage' });
-  const tServices = await getTranslations({ locale, namespace: 'services' });
   const faqItems = t.raw('faq') ?? [];
   const baseUrl = `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}`;
 
@@ -82,7 +73,7 @@ export default async function PanamaIncomeTaxCalculatorPage({ params }) {
       : null;
 
   return (
-    <div className="pt-20">
+    <div className="pt-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
       {faqSchema && (
@@ -92,10 +83,10 @@ export default async function PanamaIncomeTaxCalculatorPage({ params }) {
       {/* Compact title — the tool itself is the priority, not a big hero band */}
       <section className="pt-8 pb-2 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-2xl md:text-3xl font-[Gravesend] text-[#324158] mb-2">
+          <h1 className="text-2xl md:text-3xl font-[Gravesend] text-[#324158] mb-2 text-balance">
             {t('hero.heading')}
           </h1>
-          <p className="text-[#324158]/60 text-sm md:text-base">{t('hero.subheading')}</p>
+          <p className="text-[#324158]/60 text-sm md:text-base text-left">{t('hero.subheading')}</p>
         </div>
       </section>
 
@@ -108,7 +99,21 @@ export default async function PanamaIncomeTaxCalculatorPage({ params }) {
         </div>
       </section>
 
-      {/* SSR SEO copy (static, indexable) — moved below the tool */}
+      {/* Cross-link to Page A (quiz) — before the long SEO explainer */}
+      <section className="py-12 px-4 bg-orange-50">
+        <div className="max-w-3xl mx-auto text-center">
+          <h3 className="text-xl font-[Gravesend] text-[#324158] mb-2">{t('crossLink.heading')}</h3>
+          <p className="text-[#324158]/70 mb-5">{t('crossLink.body')}</p>
+          <Link
+            href="/panama-tax-calculator"
+            className="inline-flex items-center gap-2 text-orange-600 font-semibold hover:text-orange-700 transition-colors"
+          >
+            {t('crossLink.cta')} <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
+
+      {/* SSR SEO copy (static, indexable) */}
       <section className="py-14 px-4 border-t border-gray-100 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-[Gravesend] text-[#324158] mb-4">{t('intro.heading')}</h2>
@@ -138,47 +143,6 @@ export default async function PanamaIncomeTaxCalculatorPage({ params }) {
 
           <h3 className="text-lg font-[Gravesend] text-[#324158] mb-3">{t('intro.exclusionsHeading')}</h3>
           <p className="text-[#324158]/70 leading-relaxed">{t('intro.exclusionsBody')}</p>
-        </div>
-      </section>
-
-      {/* Cross-link to Page A (quiz) */}
-      <section className="py-12 px-4 bg-orange-50">
-        <div className="max-w-3xl mx-auto text-center">
-          <h3 className="text-xl font-[Gravesend] text-[#324158] mb-2">{t('crossLink.heading')}</h3>
-          <p className="text-[#324158]/70 mb-5">{t('crossLink.body')}</p>
-          <Link
-            href="/panama-tax-calculator"
-            className="inline-flex items-center gap-2 text-orange-600 font-semibold hover:text-orange-700 transition-colors"
-          >
-            {t('crossLink.cta')} <ArrowRight size={16} />
-          </Link>
-        </div>
-      </section>
-
-      {/* Internal links to related services */}
-      <section className="py-14 px-4 border-t border-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-[Gravesend] text-[#324158] mb-6">{t('relatedServicesHeading')}</h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-            {RELATED_SERVICE_SLUGS.map((slug) => (
-              <Link
-                key={slug}
-                href={`/services/${localizeServiceSlug(slug, locale)}`}
-                className="flex items-center justify-between gap-2 rounded-xl border border-[#324158]/10 hover:border-orange-300 hover:bg-orange-50 transition-colors p-4 text-sm font-medium text-[#324158] group"
-              >
-                {tServices(`${slug}.title`)}
-                <ArrowRight size={14} className="text-gray-300 group-hover:text-orange-500 transition-colors shrink-0" />
-              </Link>
-            ))}
-          </div>
-          <div className="flex flex-wrap gap-4 text-sm">
-            <Link href={`/why-panama/${localizeWhyPanamaSlug('tax-pressure', locale)}`} className="text-[#324158]/60 hover:text-orange-500 transition-colors underline">
-              {t('territorialTaxSystemLink')}
-            </Link>
-            <Link href="/contact" className="text-[#324158]/60 hover:text-orange-500 transition-colors underline">
-              {t('contactUsLink')}
-            </Link>
-          </div>
         </div>
       </section>
 

@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { ArrowLeft, ArrowRight, Calendar, AlertTriangle, FileDown } from 'lucide-react';
-import { STEPS, FIRST_STEP_ID, hasIncomeCalcTrigger } from '@/lib/tax-quiz/config';
+import { STEPS, FIRST_STEP_ID, US_ALERT_STEP_ID, hasIncomeCalcTrigger } from '@/lib/tax-quiz/config';
 import { resolveQuiz } from '@/lib/tax-quiz/score';
 import { TAX_DISCLAIMER } from '@/lib/panama-tax/disclaimer';
-import PanamaIncomeTaxCalculator from '@/components/calculators/PanamaIncomeTaxCalculator';
 import TaxLeadCaptureForm from '@/components/leads/TaxLeadCaptureForm';
 
 function findStep(stepId) {
@@ -18,6 +18,7 @@ export default function TaxExposureQuiz() {
   const [answers, setAnswers] = useState([]);
   const [stepStack, setStepStack] = useState([FIRST_STEP_ID]);
   const [resolution, setResolution] = useState(null);
+  const [showUsAlert, setShowUsAlert] = useState(false);
   const [showLeadForm, setShowLeadForm] = useState(false);
 
   const currentStepId = stepStack[stepStack.length - 1];
@@ -27,7 +28,9 @@ export default function TaxExposureQuiz() {
     const nextAnswers = [...answers.filter((a) => a.stepId !== currentStepId), { stepId: currentStepId, value: option.value }];
     setAnswers(nextAnswers);
 
-    if (option.next === null) {
+    if (option.next === US_ALERT_STEP_ID) {
+      setShowUsAlert(true);
+    } else if (option.next === null) {
       setResolution(resolveQuiz(nextAnswers));
     } else {
       setStepStack([...stepStack, option.next]);
@@ -36,6 +39,26 @@ export default function TaxExposureQuiz() {
 
   function goBack() {
     if (stepStack.length > 1) setStepStack(stepStack.slice(0, -1));
+  }
+
+  if (showUsAlert) {
+    return (
+      <div className="max-w-xl mx-auto flex flex-col gap-6">
+        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <h2 className="text-xl font-[Gravesend] text-[#324158] mb-3">{t('usAlert.heading')}</h2>
+          <p className="text-sm text-[#324158]/70 leading-relaxed">{t('usAlert.body')}</p>
+        </div>
+        <a
+          href="https://calendly.com/panama-contact-info/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 bg-[#FF491A] hover:bg-[#e63e15] text-white font-bold px-6 py-4 rounded-xl transition-all hover:scale-[1.02] shadow-md"
+        >
+          <Calendar size={18} />
+          {t('cta.bookConsultation')}
+        </a>
+      </div>
+    );
   }
 
   if (resolution) {
@@ -81,7 +104,7 @@ export default function TaxExposureQuiz() {
           )}
 
           {services.length > 0 && (
-            <div className="mb-6">
+            <div>
               <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wide mb-2">
                 {t('recommendedServicesHeading')}
               </h3>
@@ -93,28 +116,6 @@ export default function TaxExposureQuiz() {
             </div>
           )}
         </div>
-
-        {resolution.warnings.length > 0 && (
-          <div className="flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4">
-            <AlertTriangle size={18} className="text-amber-500 shrink-0 mt-0.5" />
-            <div>
-              <p className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-1">{t('warningsHeading')}</p>
-              {resolution.warnings.map((w) => (
-                <p key={w} className="text-sm text-amber-700">{w}</p>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {showIncomeCalc && (
-          <div className="rounded-2xl border border-orange-100 p-6 bg-orange-50/50">
-            <h3 className="font-[Gravesend] text-[#324158] text-lg mb-1">{t('block5.heading')}</h3>
-            <p className="text-sm text-[#324158]/60 mb-5">{t('block5.body')}</p>
-            <PanamaIncomeTaxCalculator embedded hideHeading />
-          </div>
-        )}
-
-        <p className="text-xs text-gray-400 leading-relaxed border-t border-gray-100 pt-4">{TAX_DISCLAIMER}</p>
 
         <div className="flex flex-col sm:flex-row gap-3">
           <a
@@ -137,6 +138,33 @@ export default function TaxExposureQuiz() {
         </div>
 
         {showLeadForm && <TaxLeadCaptureForm sourcePage="A" answers={reportPayload} />}
+
+        {showIncomeCalc && (
+          <div className="rounded-2xl border border-orange-100 p-6 bg-orange-50/50">
+            <h3 className="font-[Gravesend] text-[#324158] text-lg mb-1">{t('block5.heading')}</h3>
+            <p className="text-sm text-[#324158]/60 mb-5">{t('block5.body')}</p>
+            <Link
+              href="/panama-income-tax-calculator"
+              className="inline-flex items-center gap-2 bg-white border border-orange-200 hover:border-orange-400 text-[#324158] font-bold px-5 py-3 rounded-xl transition-colors"
+            >
+              {t('block5.cta')} <ArrowRight size={16} />
+            </Link>
+          </div>
+        )}
+
+        {resolution.warnings.length > 0 && (
+          <div className="flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4">
+            <AlertTriangle size={18} className="text-amber-500 shrink-0 mt-0.5" />
+            <div>
+              <p className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-1">{t('warningsHeading')}</p>
+              {resolution.warnings.map((w) => (
+                <p key={w} className="text-sm text-amber-700">{w}</p>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <p className="text-xs text-gray-400 leading-relaxed border-t border-gray-100 pt-4">{TAX_DISCLAIMER}</p>
       </div>
     );
   }

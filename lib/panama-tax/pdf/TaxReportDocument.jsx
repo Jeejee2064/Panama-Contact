@@ -36,9 +36,6 @@ const styles = StyleSheet.create({
   },
   resultHeadline: { fontSize: 13, fontFamily: 'Helvetica-Bold', color: '#FF491A', marginBottom: 4 },
   recommendationItem: { fontSize: 9.5, lineHeight: 1.5, marginBottom: 4 },
-  footer: { backgroundColor: '#1e2b3a', paddingVertical: 14, alignItems: 'center', marginTop: 30 },
-  footerLogo: { width: 70, height: 47 },
-  footerText: { fontSize: 8, color: '#9aa5b1', marginTop: 8 },
   pageNumber: {
     position: 'absolute', bottom: 14, left: 0, right: 0,
     textAlign: 'center', fontSize: 8, color: '#999999',
@@ -55,16 +52,6 @@ function Header({ title, subtitle }) {
         <Text style={styles.headerTitle}>{title}</Text>
         {subtitle && <Text style={styles.headerSubtitle}>{subtitle}</Text>}
       </View>
-    </View>
-  );
-}
-
-function Footer() {
-  return (
-    <View style={styles.footer} wrap={false}>
-      {/* eslint-disable-next-line jsx-a11y/alt-text -- @react-pdf/renderer Image, not a DOM <img> */}
-      <Image src={LOGO_PATH} style={styles.footerLogo} />
-      <Text style={styles.footerText}>Panama Contact Services — info@panama-contact.com</Text>
     </View>
   );
 }
@@ -171,7 +158,6 @@ export default function TaxReportDocument({
           </View>
         </View>
 
-        <Footer />
         <Text style={styles.pageNumber} render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} fixed />
       </Page>
     </Document>

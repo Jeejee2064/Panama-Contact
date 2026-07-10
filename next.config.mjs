@@ -168,6 +168,13 @@ const nextConfig = {
       { source: '/de/warum-panama/finanzplatz-panama',                            destination: '/de/warum-panama/finanzplatz-banken-panama',                            permanent: true },
       { source: '/de/warum-panama/steuervorteile-panama',                         destination: '/de/warum-panama/territoriales-steuersystem-panama',                    permanent: true },
 
+      // ─── Tax exposure quiz slug fix: was named like a calculator, it's a questionnaire ───
+      { source: '/panama-tax-calculator',              destination: '/am-i-taxable-in-panama',                permanent: true },
+      { source: '/es/calculadora-impuestos-panama',    destination: '/es/soy-sujeto-a-impuestos-en-panama',   permanent: true },
+      { source: '/fr/calculateur-impots-panama',       destination: '/fr/suis-je-imposable-au-panama',        permanent: true },
+      { source: '/pt/calculadora-impostos-panama',     destination: '/pt/sou-tributavel-no-panama',           permanent: true },
+      { source: '/de/steuerrechner-panama',            destination: '/de/bin-ich-in-panama-steuerpflichtig',  permanent: true },
+
       // ─── Old sitemap wrong base paths (wildcard catches) ───────────────────
       { source: '/es/services/:slug*',   destination: '/es/servicios/:slug*',    permanent: true },
       { source: '/pt/services/:slug*',   destination: '/pt/servicos/:slug*',     permanent: true },

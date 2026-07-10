@@ -880,9 +880,6 @@
         "answer": "Las deducciones comunes incluyen intereses hipotecarios de una residencia principal en Panamá, aportes de retiro, gastos educativos y médicos, donaciones benéficas y ciertas primas de seguro — cada una sujeta a su propio límite. Consulta la sección 'Deducciones avanzadas' de la calculadora para ver la lista completa."
       }
     ],
-    "relatedServicesHeading": "Explora servicios relacionados",
-    "territorialTaxSystemLink": "El sistema fiscal territorial de Panamá",
-    "contactUsLink": "Contáctanos",
     "faqHeading": "Preguntas frecuentes"
   },
   "TaxLeadForm": {
@@ -962,6 +959,13 @@
           "one": "Solo una",
           "two": "Dos",
           "threeOrMore": "Tres o más"
+        }
+      },
+      "usPerson": {
+        "question": "¿Eres ciudadano estadounidense o tienes la Green Card?",
+        "options": {
+          "no": "No",
+          "yes": "Sí"
         }
       }
     },
@@ -1060,15 +1064,16 @@
         "answer": "Recomendamos agendar una consulta con nuestro equipo para que un contador público autorizado revise tu estructura específica, confirme tus obligaciones de declaración e identifique formas de optimizar tu posición fiscal."
       }
     ],
-    "relatedServicesHeading": "Explora servicios relacionados",
-    "territorialTaxSystemLink": "El sistema fiscal territorial de Panamá",
-    "contactUsLink": "Contáctanos",
     "recommendedServicesHeading": "Servicios recomendados",
     "cta": {
       "bookConsultation": "Agendar una Consulta Fiscal",
       "downloadReport": "Descargar Mi Informe Fiscal Personalizado"
     },
-    "faqHeading": "Preguntas frecuentes"
+    "faqHeading": "Preguntas frecuentes",
+    "usAlert": {
+      "heading": "Es posible que también tengas obligaciones fiscales en EE.UU.",
+      "body": "Si eres ciudadano estadounidense o tienes la Green Card, el IRS grava tu ingreso mundial sin importar dónde vivas — el sistema fiscal territorial de Panamá no cambia tus obligaciones de declaración en EE.UU. Es probable que aún debas presentar declaraciones de impuestos en EE.UU., y posiblemente informes FBAR/FATCA, incluso si tu ingreso está totalmente exento en Panamá. Esto requiere planificación fiscal transfronteriza con alguien que entienda ambos sistemas."
+    }
   },
   "PrivacyPolicyPage": {
     "meta": {

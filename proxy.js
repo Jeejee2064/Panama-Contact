@@ -41,10 +41,12 @@ export async function proxy(request) {
     return NextResponse.next();
   }
 
-  // Search engine site-verification files (Google, Bing, etc.) live at the
-  // root as static .html files — they must be served as-is, not rewritten
-  // with a locale prefix, or verification fetches 404.
-  if (pathname.endsWith('.html')) {
+  // Root-level crawler files — sitemap.xml, robots.txt, and search-engine
+  // site-verification .html files — must be served as-is, not rewritten
+  // with a locale prefix by next-intl, or they 404 and become invisible
+  // to Google entirely (this was silently breaking sitemap.xml/robots.txt
+  // site-wide, not just the new pages).
+  if (pathname === '/sitemap.xml' || pathname === '/robots.txt' || pathname.endsWith('.html')) {
     return NextResponse.next();
   }
 

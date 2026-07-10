@@ -45,11 +45,11 @@ export const routing = defineRouting({
       de: '/warum-panama/[slug]',
     },
     '/panama-tax-calculator': {
-      en: '/panama-tax-calculator',
-      fr: '/calculateur-impots-panama',
-      es: '/calculadora-impuestos-panama',
-      pt: '/calculadora-impostos-panama',
-      de: '/steuerrechner-panama',
+      en: '/am-i-taxable-in-panama',
+      fr: '/suis-je-imposable-au-panama',
+      es: '/soy-sujeto-a-impuestos-en-panama',
+      pt: '/sou-tributavel-no-panama',
+      de: '/bin-ich-in-panama-steuerpflichtig',
     },
     '/panama-income-tax-calculator': {
       en: '/panama-income-tax-calculator',

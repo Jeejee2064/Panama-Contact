@@ -880,9 +880,6 @@
         "answer": "Deduções comuns incluem juros de hipoteca de uma residência principal no Panamá, contribuições de aposentadoria, despesas educacionais e médicas, doações beneficentes e certos prêmios de seguro — cada uma sujeita a seu próprio limite. Consulte a seção 'Deduções avançadas' da calculadora para a lista completa."
       }
     ],
-    "relatedServicesHeading": "Explore serviços relacionados",
-    "territorialTaxSystemLink": "O sistema fiscal territorial do Panamá",
-    "contactUsLink": "Fale conosco",
     "faqHeading": "Perguntas frequentes"
   },
   "TaxLeadForm": {
@@ -962,6 +959,13 @@
           "one": "Apenas uma",
           "two": "Duas",
           "threeOrMore": "Três ou mais"
+        }
+      },
+      "usPerson": {
+        "question": "Você é cidadão americano ou possui Green Card?",
+        "options": {
+          "no": "Não",
+          "yes": "Sim"
         }
       }
     },
@@ -1060,15 +1064,16 @@
         "answer": "Recomendamos agendar uma consultoria com nossa equipe para que um contador licenciado revise sua estrutura específica, confirme suas obrigações de declaração e identifique formas de otimizar sua posição fiscal."
       }
     ],
-    "relatedServicesHeading": "Explore serviços relacionados",
-    "territorialTaxSystemLink": "O sistema fiscal territorial do Panamá",
-    "contactUsLink": "Fale conosco",
     "recommendedServicesHeading": "Serviços recomendados",
     "cta": {
       "bookConsultation": "Agendar uma Consultoria Fiscal",
       "downloadReport": "Baixar Meu Relatório Fiscal Personalizado"
     },
-    "faqHeading": "Perguntas frequentes"
+    "faqHeading": "Perguntas frequentes",
+    "usAlert": {
+      "heading": "Você também pode ter obrigações fiscais nos EUA",
+      "body": "Se você é cidadão americano ou possui Green Card, o IRS tributa sua renda mundial independentemente de onde você mora — o sistema fiscal territorial do Panamá não muda suas obrigações de declaração nos EUA. Você provavelmente ainda precisa apresentar declarações de impostos nos EUA, e possivelmente divulgações FBAR/FATCA, mesmo que sua renda seja totalmente isenta no Panamá. Isso exige planejamento fiscal transfronteiriço com alguém que entenda os dois sistemas."
+    }
   },
   "PrivacyPolicyPage": {
     "meta": {

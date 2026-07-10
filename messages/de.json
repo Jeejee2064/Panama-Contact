@@ -879,9 +879,6 @@
         "answer": "Übliche Abzüge umfassen Hypothekenzinsen für einen Hauptwohnsitz in Panama, Altersvorsorgebeiträge, Ausbildungs- und medizinische Kosten, Spenden sowie bestimmte Versicherungsbeiträge — jeweils mit eigener Obergrenze. Die vollständige Liste finden Sie im Bereich „Erweiterte Abzüge\" des Rechners."
       }
     ],
-    "relatedServicesHeading": "Verwandte Dienstleistungen entdecken",
-    "territorialTaxSystemLink": "Panamas territoriales Steuersystem",
-    "contactUsLink": "Kontaktieren Sie uns",
     "faqHeading": "Häufig gestellte Fragen"
   },
   "TaxLeadForm": {
@@ -961,6 +958,13 @@
           "one": "Nur eine",
           "two": "Zwei",
           "threeOrMore": "Drei oder mehr"
+        }
+      },
+      "usPerson": {
+        "question": "Sind Sie US-Bürger oder Green-Card-Inhaber?",
+        "options": {
+          "no": "Nein",
+          "yes": "Ja"
         }
       }
     },
@@ -1059,15 +1063,16 @@
         "answer": "Wir empfehlen, eine Beratung mit unserem Team zu buchen, damit ein zugelassener Steuerberater Ihre spezifische Struktur prüft, Ihre Erklärungspflichten bestätigt und Möglichkeiten zur Optimierung Ihrer Steuersituation aufzeigt."
       }
     ],
-    "relatedServicesHeading": "Verwandte Dienstleistungen entdecken",
-    "territorialTaxSystemLink": "Panamas territoriales Steuersystem",
-    "contactUsLink": "Kontaktieren Sie uns",
     "recommendedServicesHeading": "Empfohlene Dienstleistungen",
     "cta": {
       "bookConsultation": "Steuerberatung Buchen",
       "downloadReport": "Meinen Personalisierten Steuerbericht Herunterladen"
     },
-    "faqHeading": "Häufig gestellte Fragen"
+    "faqHeading": "Häufig gestellte Fragen",
+    "usAlert": {
+      "heading": "Sie könnten auch US-Steuerpflichten haben",
+      "body": "Als US-Bürger oder Green-Card-Inhaber besteuert der IRS Ihr weltweites Einkommen unabhängig davon, wo Sie leben — Panamas territoriales Steuersystem ändert nichts an Ihren US-Erklärungspflichten. Sie müssen wahrscheinlich weiterhin US-Steuererklärungen einreichen, möglicherweise auch FBAR/FATCA-Meldungen, selbst wenn Ihr Einkommen in Panama vollständig steuerfrei ist. Dies erfordert grenzüberschreitende Steuerplanung mit jemandem, der beide Systeme versteht."
+    }
   },
   "PrivacyPolicyPage": {
     "meta": {

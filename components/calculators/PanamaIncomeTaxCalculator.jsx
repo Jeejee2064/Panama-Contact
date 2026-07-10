@@ -75,7 +75,7 @@ export default function PanamaIncomeTaxCalculator({ embedded = false, initialGro
   return (
     <div className={embedded ? '' : 'max-w-3xl mx-auto'}>
       {!hideHeading && (
-        <div className="mb-6 flex items-center gap-2">
+        <div className="mb-6 flex items-center justify-end gap-2">
           <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
             <Info size={12} /> {t('ratesVerifiedLabel')}
           </span>
