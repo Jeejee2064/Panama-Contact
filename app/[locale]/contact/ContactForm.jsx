@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
+import posthog from 'posthog-js';
 import { Send, CheckCircle } from 'lucide-react';
 
 const schema = z.object({
@@ -28,6 +29,7 @@ export default function ContactForm({ translations }) {
       });
       if (res.ok) {
         setStatus('success');
+        posthog.capture('contact_form_submitted');
         reset();
       } else {
         setStatus('error');

@@ -3,6 +3,7 @@ import { Resend } from 'resend';
 import { renderToBuffer } from '@react-pdf/renderer';
 import TaxReportDocument from '@/lib/panama-tax/pdf/TaxReportDocument';
 import { TAX_DISCLAIMER } from '@/lib/panama-tax/disclaimer';
+import { getPostHogClient } from '@/lib/posthog-server';
 
 function getServiceClient() {
   return createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
@@ -140,6 +141,17 @@ export async function POST(request) {
     console.error('Supabase insert error:', dbError.message, dbError.details, dbError.hint, dbError.code);
     return Response.json({ error: 'Database error' }, { status: 500 });
   }
+
+  const posthog = getPostHogClient();
+  posthog.capture({
+    distinctId: email.trim(),
+    event: 'tax_report_lead_captured',
+    properties: {
+      source_page: sourcePage,
+      locale: locale || 'en',
+    },
+  });
+  await posthog.flush();
 
   const buffer = await renderToBuffer(
     <TaxReportDocument
