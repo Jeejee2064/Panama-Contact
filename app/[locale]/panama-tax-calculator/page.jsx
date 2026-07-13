@@ -26,6 +26,14 @@ export async function generateMetadata({ params }) {
   return {
     title: t('title'),
     description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: localizedUrl(locale),
+      siteName: 'Panama Contact Services',
+      type: 'website',
+      images: [{ url: '/og-panama-income-tax-calculator.jpg', width: 1200, height: 630, alt: t('title') }],
+    },
     alternates: {
       canonical: localizedUrl(locale),
       languages: Object.fromEntries(locales.map((l) => [l, localizedUrl(l)])),
@@ -38,6 +46,7 @@ export default async function PanamaTaxCalculatorPage({ params }) {
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: 'TaxExposureQuizPage' });
+  const tNav = await getTranslations({ locale, namespace: 'Nav' });
   const faqItems = t.raw('faq') ?? [];
   const baseUrl = `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}`;
 
@@ -45,7 +54,7 @@ export default async function PanamaTaxCalculatorPage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+      { '@type': 'ListItem', position: 1, name: tNav('home'), item: baseUrl },
       { '@type': 'ListItem', position: 2, name: t('hero.heading'), item: localizedUrl(locale) },
     ],
   };
@@ -54,9 +63,12 @@ export default async function PanamaTaxCalculatorPage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: t('hero.heading'),
+    description: t('meta.description'),
     url: localizedUrl(locale),
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'Web',
+    inLanguage: locale,
+    provider: { '@type': 'Organization', name: 'Panama Contact Services', url: 'https://panama-contact.com' },
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   };
 
