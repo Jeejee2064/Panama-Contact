@@ -1,6 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
 import { SECTIONS } from '@/data/immigration-fields';
+import { getPostHogClient } from '@/lib/posthog-server';
 
 function getServiceClient() {
   return createClient(
@@ -223,6 +224,19 @@ export async function POST(request) {
     console.error('Supabase insert error:', dbError);
     return Response.json({ error: 'Database error' }, { status: 500 });
   }
+
+  const posthog = getPostHogClient();
+  posthog.capture({
+    distinctId: cleanData.email,
+    event: 'immigration_questionnaire_submitted',
+    properties: {
+      nationality: cleanData.nacionalidad,
+      marital_status: cleanData.estado_civil,
+      entry_port: cleanData.puerto_de_entrada,
+      country_of_origin: cleanData.pais_de_procedencia,
+    },
+  });
+  await posthog.flush();
 
   // Send emails
   const resend = new Resend(process.env.RESEND_API_KEY);

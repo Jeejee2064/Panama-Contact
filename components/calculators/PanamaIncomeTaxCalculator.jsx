@@ -10,6 +10,7 @@ import { calculateTax } from '@/lib/panama-tax/calculate';
 import { buildIncomeTaxReportPayload } from '@/lib/panama-tax/report';
 import { TAX_DISCLAIMER } from '@/lib/panama-tax/disclaimer';
 import TaxLeadCaptureForm from '@/components/leads/TaxLeadCaptureForm';
+import posthog from 'posthog-js';
 
 const schema = z.object({
   grossIncome: z.coerce.number().min(0),
@@ -70,6 +71,13 @@ export default function PanamaIncomeTaxCalculator({ embedded = false, initialGro
     });
     setResult(computed);
     setShowLeadForm(false);
+    posthog.capture('tax_calculator_calculated', {
+      gross_income: data.grossIncome,
+      include_deductions: data.includeDeductions,
+      married_filing_jointly: data.marriedFilingJointly,
+      effective_rate: computed.effectiveRate,
+      tax_amount: computed.tax,
+    });
   }
 
   return (
@@ -220,6 +228,7 @@ export default function PanamaIncomeTaxCalculator({ embedded = false, initialGro
               href="https://calendly.com/panama-contact-info/30min"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => posthog.capture('consultation_booking_clicked', { source: 'tax_calculator' })}
               className="flex-1 flex items-center justify-center gap-2 bg-[#FF491A] hover:bg-[#e63e15] text-white font-bold px-6 py-4 rounded-xl transition-all hover:scale-[1.02] shadow-md"
             >
               <Calendar size={18} />

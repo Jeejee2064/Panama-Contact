@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
+import posthog from 'posthog-js';
 import CuestionarioHeader from '@/components/cuestionario/CuestionarioHeader';
 import PhoneField from '@/components/cuestionario/PhoneField';
 import DateSelect from '@/components/cuestionario/DateSelect';
@@ -516,6 +517,11 @@ export default function ImmigracionPage() {
     const fieldsToValidate = requiredFieldsForStep(step);
     const valid = await trigger(fieldsToValidate);
     if (valid) {
+      posthog.capture('immigration_questionnaire_step_completed', {
+        step_number: step + 1,
+        step_title: STEPS[step].title,
+        total_steps: totalSteps,
+      });
       setStep((s) => Math.min(s + 1, totalSteps - 1));
       scrollToTop();
     } else {

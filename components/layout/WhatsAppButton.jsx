@@ -1,4 +1,5 @@
 'use client';
+import posthog from 'posthog-js';
 
 const WA_ICON = (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
@@ -19,6 +20,7 @@ export default function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
+        onClick={() => posthog.capture('whatsapp_button_clicked')}
         className="relative flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20b958] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
       >
         {WA_ICON}

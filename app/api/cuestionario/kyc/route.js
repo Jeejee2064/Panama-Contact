@@ -1,5 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
+import { getPostHogClient } from '@/lib/posthog-server';
 import {
   NATURAL_SECTIONS, LEGAL_SECTIONS, NATURAL_DOCUMENTS, LEGAL_DOCUMENTS,
   REFERENCE_FIELDS, BENEFICIAL_OWNER_FIELDS, MIN_REFERENCES,
@@ -277,8 +278,19 @@ export async function POST(request) {
     return Response.json({ error: 'Database error' }, { status: 500 });
   }
 
-  const resend = new Resend(process.env.RESEND_API_KEY);
   const clientEmail = data.np_personal_email || data.le_email;
+
+  const posthog = getPostHogClient();
+  posthog.capture({
+    distinctId: clientEmail || display_name,
+    event: 'kyc_form_submitted',
+    properties: {
+      client_type: data.client_type,
+    },
+  });
+  await posthog.flush();
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
     const { error: sendErr } = await resend.emails.send({

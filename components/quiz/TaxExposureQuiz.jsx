@@ -8,6 +8,7 @@ import { STEPS, FIRST_STEP_ID, US_ALERT_STEP_ID, hasIncomeCalcTrigger } from '@/
 import { resolveQuiz } from '@/lib/tax-quiz/score';
 import { TAX_DISCLAIMER } from '@/lib/panama-tax/disclaimer';
 import TaxLeadCaptureForm from '@/components/leads/TaxLeadCaptureForm';
+import posthog from 'posthog-js';
 
 function findStep(stepId) {
   return STEPS.find((s) => s.id === stepId);
@@ -31,7 +32,12 @@ export default function TaxExposureQuiz() {
     if (option.next === US_ALERT_STEP_ID) {
       setShowUsAlert(true);
     } else if (option.next === null) {
-      setResolution(resolveQuiz(nextAnswers));
+      const resolved = resolveQuiz(nextAnswers);
+      setResolution(resolved);
+      posthog.capture('tax_quiz_completed', {
+        result_bucket: resolved.bucket,
+        steps_answered: nextAnswers.length,
+      });
     } else {
       setStepStack([...stepStack, option.next]);
     }
@@ -122,6 +128,7 @@ export default function TaxExposureQuiz() {
             href="https://calendly.com/panama-contact-info/30min"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => posthog.capture('consultation_booking_clicked', { source: 'tax_quiz' })}
             className="flex-1 flex items-center justify-center gap-2 bg-[#FF491A] hover:bg-[#e63e15] text-white font-bold px-6 py-4 rounded-xl transition-all hover:scale-[1.02] shadow-md"
           >
             <Calendar size={18} />
