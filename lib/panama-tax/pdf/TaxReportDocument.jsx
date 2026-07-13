@@ -82,20 +82,57 @@ function CalculatorResultTable({ result }) {
   );
 }
 
+function DeductionsComparisonTable({ result }) {
+  if (!result || !result.deductions || result.deductions.total <= 0) return null;
+  const rows = [
+    ['Tax without deductions', currency(result.comparison.taxWithoutDeductions)],
+    ['Tax with your deductions', currency(result.comparison.taxWithDeductions)],
+    ['You save', currency(result.comparison.savings)],
+  ];
+  return (
+    <View wrap={false}>
+      <Text style={styles.sectionTitle}>Your deductions savings</Text>
+      {rows.map(([label, value]) => (
+        <View key={label} style={styles.row}>
+          <Text style={styles.label}>{label}</Text>
+          <Text style={styles.value}>{value}</Text>
+        </View>
+      ))}
+    </View>
+  );
+}
+
+function BracketBreakdownTable({ rows }) {
+  if (!rows || rows.length === 0) return null;
+  return (
+    <View wrap={false}>
+      <Text style={styles.sectionTitle}>How your tax was calculated</Text>
+      {rows.map((row) => (
+        <View key={row.min} style={styles.row}>
+          <Text style={styles.label}>
+            {currency(row.min)} – {row.max !== null ? currency(row.max) : 'and above'} ({(row.rate * 100).toFixed(0)}%)
+          </Text>
+          <Text style={styles.value}>{currency(row.taxForBracket)}</Text>
+        </View>
+      ))}
+    </View>
+  );
+}
+
 export default function TaxReportDocument({
-  firstName,
   generatedAt,
   summaryItems = [],
   resultHeadline,
   resultBody,
   calculatorResult,
+  bracketBreakdown,
   recommendations = [],
   disclaimer,
 }) {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        <Header title="Your Personalized Panama Tax Report" subtitle={firstName ? `Prepared for ${firstName}` : undefined} />
+        <Header title="Your Personalized Panama Tax Report" />
 
         <View style={styles.body}>
           <View wrap={false}>
@@ -113,6 +150,19 @@ export default function TaxReportDocument({
           )}
 
           <CalculatorResultTable result={calculatorResult} />
+          <DeductionsComparisonTable result={calculatorResult} />
+          <BracketBreakdownTable rows={bracketBreakdown} />
+
+          {calculatorResult && (
+            <View wrap={false}>
+              <Text style={styles.sectionTitle}>Not included in this estimate</Text>
+              <Text style={styles.paragraph}>
+                This is an income tax (ISR) estimate only. It doesn&apos;t include Social Security
+                contributions (CSS) or the ITBMS sales tax, which are calculated separately under
+                different rules.
+              </Text>
+            </View>
+          )}
 
           {summaryItems.length > 0 && (
             <View wrap={false}>

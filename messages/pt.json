@@ -831,7 +831,8 @@
       "studentLoanInterestLabel": "Juros de empréstimo estudantil",
       "healthInsuranceLabel": "Prêmios de seguro saúde",
       "membershipFeesLabel": "Taxas de associação profissional",
-      "calculateButton": "Calcular meu imposto"
+      "calculateButton": "Calcular meu imposto",
+      "recalculateButton": "Recalcular meu imposto"
     },
     "results": {
       "heading": "Seu resultado estimado",
@@ -880,12 +881,18 @@
         "answer": "Deduções comuns incluem juros de hipoteca de uma residência principal no Panamá, contribuições de aposentadoria, despesas educacionais e médicas, doações beneficentes e certos prêmios de seguro — cada uma sujeita a seu próprio limite. Consulte a seção 'Deduções avançadas' da calculadora para a lista completa."
       }
     ],
-    "faqHeading": "Perguntas frequentes"
+    "faqHeading": "Perguntas frequentes",
+    "territorialityBlock": {
+      "heading": "Esse valor realmente se aplica a você?",
+      "body": "O Panamá tributa em base territorial — a renda gerada fora do Panamá (salário estrangeiro, clientes estrangeiros, investimentos estrangeiros) geralmente é isenta, não importa onde você mora. Se parte ou toda a sua renda vem do exterior, seu imposto real pode ser significativamente menor do que esta estimativa.",
+      "cta": "Fale com um especialista fiscal"
+    },
+    "downloadHint": "Quer o detalhamento completo faixa por faixa e das deduções? Eles estão incluídos no seu relatório PDF para download.",
+    "disclaimer": "Apenas uma estimativa, não constitui aconselhamento jurídico, fiscal ou contábil; consulte um contador licenciado ou advogado. O Panamá utiliza um sistema fiscal territorial — a renda de fonte estrangeira geralmente é isenta. Esta estimativa exclui a previdência social (CSS) e o ITBMS. Valores verificados em {date}."
   },
   "TaxLeadForm": {
     "heading": "Receba seu relatório fiscal personalizado",
     "body": "Enviaremos um relatório em PDF e uma cópia dos seus resultados por e-mail — sem spam, nunca.",
-    "firstNameLabel": "Nome",
     "emailLabel": "E-mail",
     "consentPrefix": "Concordo com a ",
     "consentLinkText": "política de privacidade",
@@ -893,7 +900,8 @@
     "submitButton": "Enviar meu relatório",
     "sendingButton": "Enviando...",
     "successMessage": "Verifique sua caixa de entrada — seu relatório fiscal personalizado está a caminho!",
-    "errorMessage": "Algo deu errado. Por favor, tente novamente."
+    "errorMessage": "Algo deu errado. Por favor, tente novamente.",
+    "phoneLabel": "Telefone (opcional — apenas se preferir ser contatado pelo WhatsApp)"
   },
   "TaxExposureQuizPage": {
     "meta": {
@@ -1073,7 +1081,8 @@
     "usAlert": {
       "heading": "Você também pode ter obrigações fiscais nos EUA",
       "body": "Se você é cidadão americano ou possui Green Card, o IRS tributa sua renda mundial independentemente de onde você mora — o sistema fiscal territorial do Panamá não muda suas obrigações de declaração nos EUA. Você provavelmente ainda precisa apresentar declarações de impostos nos EUA, e possivelmente divulgações FBAR/FATCA, mesmo que sua renda seja totalmente isenta no Panamá. Isso exige planejamento fiscal transfronteiriço com alguém que entenda os dois sistemas."
-    }
+    },
+    "disclaimer": "Apenas uma estimativa, não constitui aconselhamento jurídico, fiscal ou contábil; consulte um contador licenciado ou advogado. O Panamá utiliza um sistema fiscal territorial — a renda de fonte estrangeira geralmente é isenta. Esta estimativa exclui a previdência social (CSS) e o ITBMS. Valores verificados em {date}."
   },
   "PrivacyPolicyPage": {
     "meta": {

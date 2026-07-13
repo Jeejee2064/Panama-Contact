@@ -5,6 +5,7 @@ import { routing } from '@/i18n/routing';
 import FadeIn from '@/components/animations/FadeIn';
 import FaqAccordion from '@/components/ui/FaqAccordion';
 import TaxExposureQuiz from '@/components/quiz/TaxExposureQuiz';
+import PostHogInit from '@/components/analytics/PostHogInit';
 import { ArrowRight } from 'lucide-react';
 
 const PATHNAME = '/panama-tax-calculator';
@@ -74,6 +75,7 @@ export default async function PanamaTaxCalculatorPage({ params }) {
 
   return (
     <div className="pt-10">
+      <PostHogInit tool="quiz" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
       {faqSchema && (

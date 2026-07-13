@@ -7,19 +7,21 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { CheckCircle, Send } from 'lucide-react';
+import { identifyLead, trackPdfFormSubmit, trackQuizLeadSubmit } from '@/lib/analytics';
 
 const schema = z.object({
-  firstName: z.string().min(1),
   email: z.string().email(),
+  phone: z.string().optional(),
   consent: z.literal(true),
   website: z.string().max(0).optional(), // honeypot — must stay empty
 });
 
 /**
- * Minimal, low-friction lead form: first name + email + consent only.
- * Props: sourcePage ('A'|'B'), answers (report payload — see lib/panama-tax/report.ts).
+ * Minimal, low-friction lead form: email (required) + phone (optional) + consent.
+ * Props: sourcePage ('A'|'B'), calcInputs (raw calculation inputs — the
+ * server recomputes the result itself, never trusts client-sent numbers).
  */
-export default function TaxLeadCaptureForm({ sourcePage, answers }) {
+export default function TaxLeadCaptureForm({ sourcePage, calcInputs }) {
   const t = useTranslations('TaxLeadForm');
   const locale = useLocale();
   const [status, setStatus] = useState('idle'); // idle | sending | success | error
@@ -35,19 +37,27 @@ export default function TaxLeadCaptureForm({ sourcePage, answers }) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          firstName: data.firstName,
           email: data.email,
+          phone: data.phone || null,
           consent: data.consent,
           website: data.website,
           sourcePage,
           locale,
-          answers,
+          calcInputs,
         }),
       });
 
       if (!res.ok) {
         setStatus('error');
         return;
+      }
+
+      // Only identify at lead-submit — anonymous before this point.
+      await identifyLead(data.email);
+      if (sourcePage === 'A') {
+        trackQuizLeadSubmit(Boolean(data.phone));
+      } else {
+        trackPdfFormSubmit(Boolean(data.phone));
       }
 
       setStatus('success');
@@ -77,26 +87,24 @@ export default function TaxLeadCaptureForm({ sourcePage, answers }) {
 
       <input type="text" tabIndex={-1} autoComplete="off" {...register('website')} className="hidden" aria-hidden="true" />
 
-      <div className="grid sm:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5">{t('firstNameLabel')}</label>
-          <input
-            {...register('firstName')}
-            className={`w-full px-4 py-3 rounded-xl border text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-shadow ${
-              errors.firstName ? 'border-red-300 bg-red-50' : 'border-gray-200 bg-white hover:border-gray-300'
-            }`}
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1.5">{t('emailLabel')}</label>
-          <input
-            {...register('email')}
-            type="email"
-            className={`w-full px-4 py-3 rounded-xl border text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-shadow ${
-              errors.email ? 'border-red-300 bg-red-50' : 'border-gray-200 bg-white hover:border-gray-300'
-            }`}
-          />
-        </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-1.5">{t('emailLabel')}</label>
+        <input
+          {...register('email')}
+          type="email"
+          className={`w-full px-4 py-3 rounded-xl border text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-shadow ${
+            errors.email ? 'border-red-300 bg-red-50' : 'border-gray-200 bg-white hover:border-gray-300'
+          }`}
+        />
+      </div>
+
+      <div>
+        <label className="block text-xs font-normal text-gray-400 mb-1.5">{t('phoneLabel')}</label>
+        <input
+          {...register('phone')}
+          type="tel"
+          className="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm text-gray-700 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-300 transition-shadow"
+        />
       </div>
 
       <label className="flex items-start gap-2 text-sm text-gray-600">
@@ -109,7 +117,7 @@ export default function TaxLeadCaptureForm({ sourcePage, answers }) {
           {t('consentSuffix')}
         </span>
       </label>
-      {(errors.consent || errors.email || errors.firstName) && (
+      {(errors.consent || errors.email) && (
         <p className="text-xs text-red-500">{t('errorMessage')}</p>
       )}
 

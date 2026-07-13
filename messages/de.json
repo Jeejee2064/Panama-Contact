@@ -830,7 +830,8 @@
       "studentLoanInterestLabel": "Zinsen für Studienkredite",
       "healthInsuranceLabel": "Krankenversicherungsbeiträge",
       "membershipFeesLabel": "Berufsverbandsbeiträge",
-      "calculateButton": "Meine Steuer berechnen"
+      "calculateButton": "Meine Steuer berechnen",
+      "recalculateButton": "Meine Steuer neu berechnen"
     },
     "results": {
       "heading": "Ihr geschätztes Ergebnis",
@@ -879,12 +880,18 @@
         "answer": "Übliche Abzüge umfassen Hypothekenzinsen für einen Hauptwohnsitz in Panama, Altersvorsorgebeiträge, Ausbildungs- und medizinische Kosten, Spenden sowie bestimmte Versicherungsbeiträge — jeweils mit eigener Obergrenze. Die vollständige Liste finden Sie im Bereich „Erweiterte Abzüge\" des Rechners."
       }
     ],
-    "faqHeading": "Häufig gestellte Fragen"
+    "faqHeading": "Häufig gestellte Fragen",
+    "territorialityBlock": {
+      "heading": "Gilt dieser Betrag wirklich für Sie?",
+      "body": "Panama besteuert auf territorialer Basis — Einkommen, das außerhalb Panamas erzielt wird (ausländisches Gehalt, ausländische Kunden, ausländische Investitionen), ist in der Regel steuerfrei, unabhängig davon, wo Sie leben. Wenn ein Teil oder Ihr gesamtes Einkommen aus dem Ausland stammt, könnte Ihre tatsächliche Steuer erheblich niedriger sein als diese Schätzung.",
+      "cta": "Mit einem Steuerexperten sprechen"
+    },
+    "downloadHint": "Möchten Sie die vollständige Aufschlüsselung nach Steuerstufen und Abzügen? Sie ist in Ihrem herunterladbaren PDF-Bericht enthalten.",
+    "disclaimer": "Nur eine Schätzung, keine Rechts-, Steuer- oder Buchhaltungsberatung; wenden Sie sich an einen zugelassenen Steuerberater oder Anwalt. Panama wendet ein territoriales Steuersystem an — Einkünfte ausländischer Herkunft sind in der Regel steuerfrei. Diese Schätzung schließt die Sozialversicherung (CSS) und die ITBMS aus. Zahlen überprüft am {date}."
   },
   "TaxLeadForm": {
     "heading": "Erhalten Sie Ihren personalisierten Steuerbericht",
     "body": "Wir senden Ihnen einen PDF-Bericht und eine Kopie Ihrer Ergebnisse per E-Mail — garantiert ohne Spam.",
-    "firstNameLabel": "Vorname",
     "emailLabel": "E-Mail",
     "consentPrefix": "Ich stimme der ",
     "consentLinkText": "Datenschutzerklärung",
@@ -892,7 +899,8 @@
     "submitButton": "Bericht zusenden",
     "sendingButton": "Wird gesendet...",
     "successMessage": "Schauen Sie in Ihr Postfach — Ihr personalisierter Steuerbericht ist unterwegs!",
-    "errorMessage": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+    "errorMessage": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "phoneLabel": "Telefon (optional — nur falls Sie lieber per WhatsApp kontaktiert werden möchten)"
   },
   "TaxExposureQuizPage": {
     "meta": {
@@ -1072,7 +1080,8 @@
     "usAlert": {
       "heading": "Sie könnten auch US-Steuerpflichten haben",
       "body": "Als US-Bürger oder Green-Card-Inhaber besteuert der IRS Ihr weltweites Einkommen unabhängig davon, wo Sie leben — Panamas territoriales Steuersystem ändert nichts an Ihren US-Erklärungspflichten. Sie müssen wahrscheinlich weiterhin US-Steuererklärungen einreichen, möglicherweise auch FBAR/FATCA-Meldungen, selbst wenn Ihr Einkommen in Panama vollständig steuerfrei ist. Dies erfordert grenzüberschreitende Steuerplanung mit jemandem, der beide Systeme versteht."
-    }
+    },
+    "disclaimer": "Nur eine Schätzung, keine Rechts-, Steuer- oder Buchhaltungsberatung; wenden Sie sich an einen zugelassenen Steuerberater oder Anwalt. Panama wendet ein territoriales Steuersystem an — Einkünfte ausländischer Herkunft sind in der Regel steuerfrei. Diese Schätzung schließt die Sozialversicherung (CSS) und die ITBMS aus. Zahlen überprüft am {date}."
   },
   "PrivacyPolicyPage": {
     "meta": {

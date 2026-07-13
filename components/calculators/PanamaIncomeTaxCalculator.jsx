@@ -1,15 +1,24 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
-import { Calendar, FileDown, Info } from 'lucide-react';
+import { Calendar, FileDown, Info, Globe } from 'lucide-react';
 import { calculateTax } from '@/lib/panama-tax/calculate';
-import { buildIncomeTaxReportPayload } from '@/lib/panama-tax/report';
-import { TAX_DISCLAIMER } from '@/lib/panama-tax/disclaimer';
+import { LAST_VERIFIED } from '@/lib/panama-tax/config';
+import {
+  trackCalculatorView,
+  trackCalculateClick,
+  trackResultView,
+  trackTerritorialityBlockView,
+  trackCalendlyClick,
+  trackPdfFormOpen,
+} from '@/lib/analytics';
 import TaxLeadCaptureForm from '@/components/leads/TaxLeadCaptureForm';
+
+const CALENDLY_URL = 'https://calendly.com/panama-contact-info/30min';
 
 const schema = z.object({
   grossIncome: z.coerce.number().min(0),
@@ -39,7 +48,11 @@ function percent(value) {
 export default function PanamaIncomeTaxCalculator({ embedded = false, initialGross, hideHeading = false }) {
   const t = useTranslations('IncomeTaxCalculatorPage');
   const [result, setResult] = useState(null);
+  const [calcInputs, setCalcInputs] = useState(null);
   const [showLeadForm, setShowLeadForm] = useState(false);
+  const resultsRef = useRef(null);
+  const territorialityRef = useRef(null);
+  const territorialityTracked = useRef(false);
 
   const { register, handleSubmit, watch } = useForm({
     resolver: zodResolver(schema),
@@ -52,8 +65,12 @@ export default function PanamaIncomeTaxCalculator({ embedded = false, initialGro
 
   const includeDeductions = watch('includeDeductions');
 
+  useEffect(() => {
+    trackCalculatorView();
+  }, []);
+
   function onSubmit(data) {
-    const computed = calculateTax({
+    const inputs = {
       grossIncome: data.grossIncome,
       includeDeductions: data.includeDeductions,
       marriedFilingJointly: data.marriedFilingJointly,
@@ -67,10 +84,38 @@ export default function PanamaIncomeTaxCalculator({ embedded = false, initialGro
         healthInsurance: data.healthInsurance,
         membershipFees: data.membershipFees,
       },
-    });
+    };
+    const computed = calculateTax(inputs);
+    setCalcInputs(inputs);
     setResult(computed);
     setShowLeadForm(false);
+    territorialityTracked.current = false;
+    trackCalculateClick(data.grossIncome);
+    trackResultView(data.grossIncome, computed.effectiveRate);
   }
+
+  useEffect(() => {
+    if (result && resultsRef.current) {
+      resultsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [result]);
+
+  useEffect(() => {
+    if (!result || territorialityTracked.current || !territorialityRef.current) return;
+    const el = territorialityRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          trackTerritorialityBlockView();
+          territorialityTracked.current = true;
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [result]);
 
   return (
     <div className={embedded ? '' : 'max-w-3xl mx-auto'}>
@@ -161,12 +206,12 @@ export default function PanamaIncomeTaxCalculator({ embedded = false, initialGro
           type="submit"
           className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-[1.02] shadow-md shadow-orange-200"
         >
-          {t('form.calculateButton')}
+          {result ? t('form.recalculateButton') : t('form.calculateButton')}
         </button>
       </form>
 
       {result && (
-        <div className="mt-10 flex flex-col gap-8">
+        <div ref={resultsRef} className="mt-10 flex flex-col gap-6 scroll-mt-24">
           <div>
             <h3 className="text-lg font-[Gravesend] text-[#324158] mb-4 uppercase">{t('results.heading')}</h3>
             <dl className="grid sm:grid-cols-2 gap-4">
@@ -193,33 +238,14 @@ export default function PanamaIncomeTaxCalculator({ embedded = false, initialGro
             </dl>
           </div>
 
-          {result.deductions.total > 0 && (
-            <div>
-              <h3 className="text-lg font-[Gravesend] text-[#324158] mb-4 uppercase">{t('results.comparisonHeading')}</h3>
-              <dl className="grid sm:grid-cols-3 gap-4">
-                <div className="rounded-xl border border-gray-100 p-4">
-                  <dt className="text-xs text-gray-400 uppercase tracking-wide mb-1">{t('results.withoutDeductions')}</dt>
-                  <dd className="text-lg font-semibold text-gray-900">{currency(result.comparison.taxWithoutDeductions)}</dd>
-                </div>
-                <div className="rounded-xl border border-gray-100 p-4">
-                  <dt className="text-xs text-gray-400 uppercase tracking-wide mb-1">{t('results.withDeductions')}</dt>
-                  <dd className="text-lg font-semibold text-gray-900">{currency(result.comparison.taxWithDeductions)}</dd>
-                </div>
-                <div className="rounded-xl border border-green-100 bg-green-50 p-4">
-                  <dt className="text-xs text-green-600 uppercase tracking-wide mb-1">{t('results.savings')}</dt>
-                  <dd className="text-lg font-semibold text-green-700">{currency(result.comparison.savings)}</dd>
-                </div>
-              </dl>
-            </div>
-          )}
-
-          <p className="text-xs text-gray-400 leading-relaxed border-t border-gray-100 pt-4">{TAX_DISCLAIMER}</p>
+          <p className="text-base font-semibold text-[#324158] text-center">{t('downloadHint')}</p>
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="https://calendly.com/panama-contact-info/30min"
+              href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackCalendlyClick('primary')}
               className="flex-1 flex items-center justify-center gap-2 bg-[#FF491A] hover:bg-[#e63e15] text-white font-bold px-6 py-4 rounded-xl transition-all hover:scale-[1.02] shadow-md"
             >
               <Calendar size={18} />
@@ -227,7 +253,10 @@ export default function PanamaIncomeTaxCalculator({ embedded = false, initialGro
             </a>
             <button
               type="button"
-              onClick={() => setShowLeadForm(true)}
+              onClick={() => {
+                setShowLeadForm(true);
+                trackPdfFormOpen();
+              }}
               className="flex-1 flex items-center justify-center gap-2 border border-[#324158]/20 hover:border-orange-300 hover:bg-orange-50 text-[#324158] font-bold px-6 py-4 rounded-xl transition-colors"
             >
               <FileDown size={18} />
@@ -238,9 +267,14 @@ export default function PanamaIncomeTaxCalculator({ embedded = false, initialGro
           {showLeadForm && (
             <TaxLeadCaptureForm
               sourcePage="B"
-              answers={buildIncomeTaxReportPayload(result)}
+              calcInputs={calcInputs}
             />
           )}
+
+         
+          <p className="text-xs text-gray-400 leading-relaxed border-t border-gray-100 pt-4">
+            {t('disclaimer', { date: LAST_VERIFIED })}
+          </p>
         </div>
       )}
     </div>

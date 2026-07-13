@@ -830,7 +830,8 @@
       "studentLoanInterestLabel": "Student loan interest",
       "healthInsuranceLabel": "Health insurance premiums",
       "membershipFeesLabel": "Professional membership fees",
-      "calculateButton": "Calculate my tax"
+      "calculateButton": "Calculate my tax",
+      "recalculateButton": "Recalculate my tax"
     },
     "results": {
       "heading": "Your estimated result",
@@ -879,12 +880,18 @@
         "answer": "Common deductions include mortgage interest on a primary residence in Panama, retirement contributions, educational and medical expenses, charitable donations, and certain insurance premiums — each subject to its own cap. See the calculator's 'Advanced deductions' section for the full list."
       }
     ],
-    "faqHeading": "Frequently Asked Questions"
+    "faqHeading": "Frequently Asked Questions",
+    "territorialityBlock": {
+      "heading": "Does this amount really apply to you?",
+      "body": "Panama taxes on a territorial basis — income earned outside Panama (a foreign salary, foreign clients, foreign investments) is generally exempt, no matter where you live. If some or all of your income comes from abroad, your real tax bill could be significantly lower than this estimate.",
+      "cta": "Talk to a tax expert"
+    },
+    "downloadHint": "Want the full bracket-by-bracket breakdown and deduction details? They're included in your downloadable PDF report.",
+    "disclaimer": "Estimate only, not legal/tax/accounting advice, consult a licensed CPA/attorney. Panama uses a territorial tax system — foreign-source income is generally exempt. This estimate excludes social security (CSS) and ITBMS. Figures verified {date}."
   },
   "TaxLeadForm": {
     "heading": "Get your personalized tax report",
     "body": "We'll email you a PDF report and a copy of your results — no spam, ever.",
-    "firstNameLabel": "First name",
     "emailLabel": "Email",
     "consentPrefix": "I agree to the ",
     "consentLinkText": "privacy policy",
@@ -892,7 +899,8 @@
     "submitButton": "Send me my report",
     "sendingButton": "Sending...",
     "successMessage": "Check your inbox — your personalized tax report is on its way!",
-    "errorMessage": "Something went wrong. Please try again."
+    "errorMessage": "Something went wrong. Please try again.",
+    "phoneLabel": "Phone (optional — only if you'd rather we reach you on WhatsApp)"
   },
   "TaxExposureQuizPage": {
     "meta": {
@@ -1072,7 +1080,8 @@
     "usAlert": {
       "heading": "You may have U.S. tax obligations too",
       "body": "As a U.S. citizen or Green Card holder, the IRS taxes your worldwide income regardless of where you live — Panama's territorial tax system doesn't change your U.S. filing obligations. You likely still need to file U.S. tax returns, and possibly FBAR/FATCA disclosures, even if your income is fully exempt in Panama. This requires cross-border tax planning with someone who understands both systems."
-    }
+    },
+    "disclaimer": "Estimate only, not legal/tax/accounting advice, consult a licensed CPA/attorney. Panama uses a territorial tax system — foreign-source income is generally exempt. This estimate excludes social security (CSS) and ITBMS. Figures verified {date}."
   },
   "PrivacyPolicyPage": {
     "meta": {

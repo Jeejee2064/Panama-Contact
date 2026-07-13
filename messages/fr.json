@@ -831,7 +831,8 @@
       "studentLoanInterestLabel": "Intérêts de prêt étudiant",
       "healthInsuranceLabel": "Primes d'assurance santé",
       "membershipFeesLabel": "Cotisations professionnelles",
-      "calculateButton": "Calculer mon impôt"
+      "calculateButton": "Calculer mon impôt",
+      "recalculateButton": "Recalculer mon impôt"
     },
     "results": {
       "heading": "Votre résultat estimé",
@@ -880,12 +881,18 @@
         "answer": "Les déductions courantes incluent les intérêts hypothécaires d'une résidence principale au Panama, les cotisations retraite, les frais de scolarité et médicaux, les dons de bienfaisance, et certaines primes d'assurance — chacune soumise à son propre plafond. Consultez la section « Déductions avancées » du calculateur pour la liste complète."
       }
     ],
-    "faqHeading": "Questions fréquentes"
+    "faqHeading": "Questions fréquentes",
+    "territorialityBlock": {
+      "heading": "Ce montant s'applique-t-il vraiment à vous ?",
+      "body": "Le Panama impose sur une base territoriale — les revenus générés hors du Panama (salaire étranger, clients étrangers, investissements étrangers) sont généralement exonérés, peu importe où vous vivez. Si une partie ou la totalité de vos revenus provient de l'étranger, votre impôt réel pourrait être nettement inférieur à cette estimation.",
+      "cta": "Parlez à un expert fiscal"
+    },
+    "downloadHint": "Vous voulez le détail complet tranche par tranche et des déductions ? Ils sont inclus dans votre rapport PDF téléchargeable.",
+    "disclaimer": "Estimation uniquement, ne constitue pas un conseil juridique, fiscal ou comptable ; consultez un expert-comptable ou un avocat agréé. Le Panama applique un système fiscal territorial — les revenus de source étrangère sont généralement exonérés. Cette estimation exclut la sécurité sociale (CSS) et l'ITBMS. Chiffres vérifiés le {date}."
   },
   "TaxLeadForm": {
     "heading": "Obtenez votre rapport fiscal personnalisé",
     "body": "Nous vous enverrons un rapport PDF et une copie de vos résultats par email — jamais de spam.",
-    "firstNameLabel": "Prénom",
     "emailLabel": "Email",
     "consentPrefix": "J'accepte la ",
     "consentLinkText": "politique de confidentialité",
@@ -893,7 +900,8 @@
     "submitButton": "M'envoyer mon rapport",
     "sendingButton": "Envoi en cours...",
     "successMessage": "Vérifiez votre boîte de réception — votre rapport fiscal personnalisé est en route !",
-    "errorMessage": "Une erreur s'est produite. Veuillez réessayer."
+    "errorMessage": "Une erreur s'est produite. Veuillez réessayer.",
+    "phoneLabel": "Téléphone (optionnel — seulement si vous préférez être contacté par WhatsApp)"
   },
   "TaxExposureQuizPage": {
     "meta": {
@@ -1073,7 +1081,8 @@
     "usAlert": {
       "heading": "Vous pourriez aussi avoir des obligations fiscales aux États-Unis",
       "body": "Si vous êtes citoyen américain ou titulaire d'une Green Card, l'IRS impose votre revenu mondial peu importe où vous vivez — le système fiscal territorial du Panama ne change rien à vos obligations déclaratives américaines. Vous devez probablement encore déposer des déclarations fiscales américaines, et éventuellement des déclarations FBAR/FATCA, même si votre revenu est totalement exonéré au Panama. Cela nécessite une planification fiscale transfrontalière avec quelqu'un qui comprend les deux systèmes."
-    }
+    },
+    "disclaimer": "Estimation uniquement, ne constitue pas un conseil juridique, fiscal ou comptable ; consultez un expert-comptable ou un avocat agréé. Le Panama applique un système fiscal territorial — les revenus de source étrangère sont généralement exonérés. Cette estimation exclut la sécurité sociale (CSS) et l'ITBMS. Chiffres vérifiés le {date}."
   },
   "PrivacyPolicyPage": {
     "meta": {

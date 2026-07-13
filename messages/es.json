@@ -831,7 +831,8 @@
       "studentLoanInterestLabel": "Intereses de préstamos estudiantiles",
       "healthInsuranceLabel": "Primas de seguro de salud",
       "membershipFeesLabel": "Cuotas de membresía profesional",
-      "calculateButton": "Calcular mi impuesto"
+      "calculateButton": "Calcular mi impuesto",
+      "recalculateButton": "Recalcular mi impuesto"
     },
     "results": {
       "heading": "Tu resultado estimado",
@@ -880,12 +881,18 @@
         "answer": "Las deducciones comunes incluyen intereses hipotecarios de una residencia principal en Panamá, aportes de retiro, gastos educativos y médicos, donaciones benéficas y ciertas primas de seguro — cada una sujeta a su propio límite. Consulta la sección 'Deducciones avanzadas' de la calculadora para ver la lista completa."
       }
     ],
-    "faqHeading": "Preguntas frecuentes"
+    "faqHeading": "Preguntas frecuentes",
+    "territorialityBlock": {
+      "heading": "¿Este monto realmente te aplica?",
+      "body": "Panamá grava sobre una base territorial — los ingresos generados fuera de Panamá (un salario extranjero, clientes extranjeros, inversiones extranjeras) generalmente están exentos, sin importar dónde vivas. Si parte o la totalidad de tu ingreso proviene del extranjero, tu impuesto real podría ser significativamente menor que esta estimación.",
+      "cta": "Habla con un experto fiscal"
+    },
+    "downloadHint": "¿Quieres el desglose completo tramo por tramo y el detalle de las deducciones? Están incluidos en tu informe PDF descargable.",
+    "disclaimer": "Estimación únicamente, no constituye asesoría legal, fiscal o contable; consulta a un contador público autorizado o abogado con licencia. Panamá utiliza un sistema fiscal territorial — los ingresos de fuente extranjera generalmente están exentos. Esta estimación excluye la seguridad social (CSS) y el ITBMS. Cifras verificadas el {date}."
   },
   "TaxLeadForm": {
     "heading": "Obtén tu informe fiscal personalizado",
     "body": "Te enviaremos un informe en PDF y una copia de tus resultados por correo — sin spam, nunca.",
-    "firstNameLabel": "Nombre",
     "emailLabel": "Correo electrónico",
     "consentPrefix": "Acepto la ",
     "consentLinkText": "política de privacidad",
@@ -893,7 +900,8 @@
     "submitButton": "Enviarme mi informe",
     "sendingButton": "Enviando...",
     "successMessage": "Revisa tu bandeja de entrada — ¡tu informe fiscal personalizado está en camino!",
-    "errorMessage": "Algo salió mal. Por favor, inténtalo de nuevo."
+    "errorMessage": "Algo salió mal. Por favor, inténtalo de nuevo.",
+    "phoneLabel": "Teléfono (opcional — solo si prefieres que te contactemos por WhatsApp)"
   },
   "TaxExposureQuizPage": {
     "meta": {
@@ -1073,7 +1081,8 @@
     "usAlert": {
       "heading": "Es posible que también tengas obligaciones fiscales en EE.UU.",
       "body": "Si eres ciudadano estadounidense o tienes la Green Card, el IRS grava tu ingreso mundial sin importar dónde vivas — el sistema fiscal territorial de Panamá no cambia tus obligaciones de declaración en EE.UU. Es probable que aún debas presentar declaraciones de impuestos en EE.UU., y posiblemente informes FBAR/FATCA, incluso si tu ingreso está totalmente exento en Panamá. Esto requiere planificación fiscal transfronteriza con alguien que entienda ambos sistemas."
-    }
+    },
+    "disclaimer": "Estimación únicamente, no constituye asesoría legal, fiscal o contable; consulta a un contador público autorizado o abogado con licencia. Panamá utiliza un sistema fiscal territorial — los ingresos de fuente extranjera generalmente están exentos. Esta estimación excluye la seguridad social (CSS) y el ITBMS. Cifras verificadas el {date}."
   },
   "PrivacyPolicyPage": {
     "meta": {

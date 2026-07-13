@@ -14,15 +14,15 @@ export default async function LeadsListPage({ searchParams }) {
   const supabase = await createSupabaseServerClient();
 
   let query = supabase
-    .from('tax_calculator_leads')
-    .select('id, created_at, source_page, locale, first_name, email', { count: 'exact' })
+    .from('leads')
+    .select('id, created_at, email, phone, calc_inputs, result_bucket, status', { count: 'exact' })
     .order('created_at', { ascending: false })
     .range(offset, offset + pageSize - 1);
 
-  if (source === 'A' || source === 'B') query = query.eq('source_page', source);
+  if (source === 'A' || source === 'B') query = query.eq('calc_inputs->>sourcePage', source);
 
   if (q) {
-    query = query.or(`first_name.ilike.%${q}%,email.ilike.%${q}%`);
+    query = query.ilike('email', `%${q}%`);
   }
 
   const { data: rows, count } = await query;
@@ -42,7 +42,7 @@ export default async function LeadsListPage({ searchParams }) {
             type="text"
             name="q"
             defaultValue={q}
-            placeholder="Search by name or email…"
+            placeholder="Search by email…"
             className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
           />
           <input type="hidden" name="source" value={source} />

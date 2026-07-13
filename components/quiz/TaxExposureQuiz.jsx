@@ -1,16 +1,33 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { ArrowLeft, ArrowRight, Calendar, AlertTriangle, FileDown } from 'lucide-react';
 import { STEPS, FIRST_STEP_ID, US_ALERT_STEP_ID, hasIncomeCalcTrigger } from '@/lib/tax-quiz/config';
 import { resolveQuiz } from '@/lib/tax-quiz/score';
-import { TAX_DISCLAIMER } from '@/lib/panama-tax/disclaimer';
+import { LAST_VERIFIED } from '@/lib/panama-tax/config';
+import {
+  trackQuizStart,
+  trackQuizStepView,
+  trackQuizStepComplete,
+  trackQuizBackClick,
+  trackQuizAbandon,
+  trackQuizComplete,
+  trackQuizResultView,
+  trackQuizCalendlyClick,
+  trackPdfFormOpen,
+} from '@/lib/analytics';
 import TaxLeadCaptureForm from '@/components/leads/TaxLeadCaptureForm';
 
 function findStep(stepId) {
   return STEPS.find((s) => s.id === stepId);
+}
+
+// Indirected through a module-level helper so timing reads only ever happen
+// inside event handlers/effects, never inline during render.
+function now() {
+  return Date.now();
 }
 
 export default function TaxExposureQuiz() {
@@ -24,21 +41,69 @@ export default function TaxExposureQuiz() {
   const currentStepId = stepStack[stepStack.length - 1];
   const currentStep = findStep(currentStepId);
 
+  const quizStartedAt = useRef(null);
+  const stepMountedAt = useRef(null);
+  const abandonFired = useRef(false);
+  const completed = useRef(false);
+  const latestStepIndex = useRef(stepStack.length);
+  const latestStepId = useRef(currentStepId);
+
+  // quiz_start — once, on mount.
+  useEffect(() => {
+    quizStartedAt.current = now();
+    trackQuizStart();
+  }, []);
+
+  // quiz_step_view — whenever a new question step is shown, and reset its timer.
+  useEffect(() => {
+    if (showUsAlert || resolution) return;
+    stepMountedAt.current = now();
+    latestStepIndex.current = stepStack.length;
+    latestStepId.current = currentStepId;
+    trackQuizStepView(stepStack.length, currentStepId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentStepId]);
+
+  // quiz_abandon — fires once, on tab hide/switch, unless the quiz was already
+  // completed (bucket resolved or US-person short-circuit reached).
+  useEffect(() => {
+    completed.current = Boolean(resolution) || showUsAlert;
+  }, [resolution, showUsAlert]);
+
+  useEffect(() => {
+    function handleVisibilityChange() {
+      if (document.visibilityState !== 'hidden' || abandonFired.current || completed.current) return;
+      abandonFired.current = true;
+      trackQuizAbandon(latestStepIndex.current, latestStepId.current);
+    }
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+  }, []);
+
   function selectOption(option) {
+    const timeOnStepMs = now() - stepMountedAt.current;
+    trackQuizStepComplete(stepStack.length, currentStepId, timeOnStepMs, option.value);
+
     const nextAnswers = [...answers.filter((a) => a.stepId !== currentStepId), { stepId: currentStepId, value: option.value }];
     setAnswers(nextAnswers);
 
     if (option.next === US_ALERT_STEP_ID) {
       setShowUsAlert(true);
     } else if (option.next === null) {
-      setResolution(resolveQuiz(nextAnswers));
+      const resolved = resolveQuiz(nextAnswers);
+      setResolution(resolved);
+      trackQuizComplete(now() - quizStartedAt.current, stepStack.length);
+      trackQuizResultView(resolved.bucket);
     } else {
       setStepStack([...stepStack, option.next]);
     }
   }
 
   function goBack() {
-    if (stepStack.length > 1) setStepStack(stepStack.slice(0, -1));
+    if (stepStack.length > 1) {
+      trackQuizBackClick(currentStepId);
+      setStepStack(stepStack.slice(0, -1));
+    }
   }
 
   if (showUsAlert) {
@@ -52,6 +117,7 @@ export default function TaxExposureQuiz() {
           href="https://calendly.com/panama-contact-info/30min"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackQuizCalendlyClick()}
           className="flex items-center justify-center gap-2 bg-[#FF491A] hover:bg-[#e63e15] text-white font-bold px-6 py-4 rounded-xl transition-all hover:scale-[1.02] shadow-md"
         >
           <Calendar size={18} />
@@ -66,23 +132,6 @@ export default function TaxExposureQuiz() {
     const checklist = t.raw(`results.${bucketKey}.checklist`) ?? [];
     const services = t.raw(`results.${bucketKey}.services`) ?? [];
     const showIncomeCalc = hasIncomeCalcTrigger(resolution.flags);
-
-    const summaryItems = answers.map((a) => {
-      const step = findStep(a.stepId);
-      const option = step?.options.find((o) => o.value === a.value);
-      return {
-        label: t(`steps.${step.questionKey}.question`),
-        value: option ? t(`steps.${step.questionKey}.options.${option.labelKey}`) : a.value,
-      };
-    });
-
-    const reportPayload = {
-      resultHeadline: t(`results.${bucketKey}.title`),
-      resultBody: resolution.warnings.join(' '),
-      summaryItems,
-      calculatorResult: undefined,
-      recommendations: services,
-    };
 
     return (
       <div className="max-w-2xl mx-auto flex flex-col gap-8">
@@ -122,6 +171,7 @@ export default function TaxExposureQuiz() {
             href="https://calendly.com/panama-contact-info/30min"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackQuizCalendlyClick()}
             className="flex-1 flex items-center justify-center gap-2 bg-[#FF491A] hover:bg-[#e63e15] text-white font-bold px-6 py-4 rounded-xl transition-all hover:scale-[1.02] shadow-md"
           >
             <Calendar size={18} />
@@ -129,7 +179,10 @@ export default function TaxExposureQuiz() {
           </a>
           <button
             type="button"
-            onClick={() => setShowLeadForm(true)}
+            onClick={() => {
+              setShowLeadForm(true);
+              trackPdfFormOpen();
+            }}
             className="flex-1 flex items-center justify-center gap-2 border border-[#324158]/20 hover:border-orange-300 hover:bg-orange-50 text-[#324158] font-bold px-6 py-4 rounded-xl transition-colors"
           >
             <FileDown size={18} />
@@ -137,7 +190,7 @@ export default function TaxExposureQuiz() {
           </button>
         </div>
 
-        {showLeadForm && <TaxLeadCaptureForm sourcePage="A" answers={reportPayload} />}
+        {showLeadForm && <TaxLeadCaptureForm sourcePage="A" calcInputs={{ answers }} />}
 
         {showIncomeCalc && (
           <div className="rounded-2xl border border-orange-100 p-6 bg-orange-50/50">
@@ -164,7 +217,9 @@ export default function TaxExposureQuiz() {
           </div>
         )}
 
-        <p className="text-xs text-gray-400 leading-relaxed border-t border-gray-100 pt-4">{TAX_DISCLAIMER}</p>
+        <p className="text-xs text-gray-400 leading-relaxed border-t border-gray-100 pt-4">
+          {t('disclaimer', { date: LAST_VERIFIED })}
+        </p>
       </div>
     );
   }

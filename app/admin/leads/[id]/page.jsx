@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Download } from 'lucide-react';
 import AdminNav from '@/components/admin/AdminNav';
 import CopyField from '@/components/admin/CopyField';
+import { recomputeLeadReport } from '@/lib/leadReport';
 
 export const dynamic = 'force-dynamic';
 
@@ -19,15 +20,15 @@ export default async function LeadDetail({ params }) {
 
   const supabase = await createSupabaseServerClient();
   const { data: row } = await supabase
-    .from('tax_calculator_leads')
+    .from('leads')
     .select('*')
     .eq('id', id)
     .single();
 
   if (!row) notFound();
 
-  const answers = row.answers ?? {};
-  const calc = answers.calculatorResult;
+  const { reportPayload, sourcePage, locale } = await recomputeLeadReport(row.calc_inputs);
+  const calc = reportPayload.calculatorResult;
 
   const submittedAt = new Date(row.created_at).toLocaleString('fr-FR', {
     year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',
@@ -56,12 +57,15 @@ export default async function LeadDetail({ params }) {
 
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4">
           <div className="px-6 py-4 border-b border-gray-100 flex items-center gap-3 flex-wrap">
-            <h1 className="text-xl font-bold text-gray-900">{row.first_name}</h1>
+            <h1 className="text-xl font-bold text-gray-900">{row.email}</h1>
             <span className="text-xs px-2.5 py-1 rounded-full font-medium bg-orange-100 text-orange-700">
-              {SOURCE_LABEL[row.source_page] ?? row.source_page}
+              {SOURCE_LABEL[sourcePage] ?? sourcePage}
             </span>
             <span className="text-xs px-2.5 py-1 rounded-full font-medium bg-gray-100 text-gray-600 uppercase">
-              {row.locale}
+              {locale}
+            </span>
+            <span className="text-xs px-2.5 py-1 rounded-full font-medium bg-gray-100 text-gray-600">
+              {row.status}
             </span>
           </div>
           <div className="px-6 py-4 flex items-center justify-between gap-4">
@@ -71,16 +75,25 @@ export default async function LeadDetail({ params }) {
             </div>
             <CopyField value={row.email} />
           </div>
+          {row.phone && (
+            <div className="px-6 py-4 border-t border-gray-50 flex items-center justify-between gap-4">
+              <div>
+                <div className="text-xs text-gray-400 mb-0.5">Phone</div>
+                <div className="text-sm text-gray-900">{row.phone}</div>
+              </div>
+              <CopyField value={row.phone} />
+            </div>
+          )}
         </div>
 
-        {answers.resultHeadline && (
+        {reportPayload.resultHeadline && (
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4">
             <div className="px-6 py-3 bg-gray-50 border-b border-gray-100">
               <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Result</h2>
             </div>
             <div className="px-6 py-4">
-              <p className="font-semibold text-gray-900 mb-1">{answers.resultHeadline}</p>
-              {answers.resultBody && <p className="text-sm text-gray-600">{answers.resultBody}</p>}
+              <p className="font-semibold text-gray-900 mb-1">{reportPayload.resultHeadline}</p>
+              {reportPayload.resultBody && <p className="text-sm text-gray-600">{reportPayload.resultBody}</p>}
             </div>
           </div>
         )}
@@ -108,13 +121,13 @@ export default async function LeadDetail({ params }) {
           </div>
         )}
 
-        {answers.summaryItems?.length > 0 && (
+        {reportPayload.summaryItems?.length > 0 && (
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4">
             <div className="px-6 py-3 bg-gray-50 border-b border-gray-100">
               <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Answers</h2>
             </div>
             <div className="divide-y divide-gray-50">
-              {answers.summaryItems.map(({ label, value }) => (
+              {reportPayload.summaryItems.map(({ label, value }) => (
                 <div key={label} className="px-6 py-3 flex items-start justify-between gap-4">
                   <div className="text-xs text-gray-400 flex-1">{label}</div>
                   <div className="text-sm text-gray-900 text-right">{value}</div>
@@ -124,13 +137,13 @@ export default async function LeadDetail({ params }) {
           </div>
         )}
 
-        {answers.recommendations?.length > 0 && (
+        {reportPayload.recommendations?.length > 0 && (
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-4">
             <div className="px-6 py-3 bg-gray-50 border-b border-gray-100">
               <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Recommendations shown</h2>
             </div>
             <ul className="px-6 py-4 flex flex-col gap-2">
-              {answers.recommendations.map((rec) => (
+              {reportPayload.recommendations.map((rec) => (
                 <li key={rec} className="text-sm text-gray-700">• {rec}</li>
               ))}
             </ul>

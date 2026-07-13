@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
 import { renderToBuffer } from '@react-pdf/renderer';
 import TaxReportDocument from '@/lib/panama-tax/pdf/TaxReportDocument';
-import { TAX_DISCLAIMER } from '@/lib/panama-tax/disclaimer';
+import { recomputeLeadReport } from '@/lib/leadReport';
 
 function getServiceClient() {
   return createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
@@ -25,7 +25,7 @@ function checkRateLimit(ip) {
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const CALENDLY_URL = 'https://calendly.com/panama-contact-info/30min';
 
-function buildTaxReportEmailHtml(firstName) {
+function buildTaxReportEmailHtml() {
   return `
     <!DOCTYPE html>
     <html>
@@ -36,8 +36,8 @@ function buildTaxReportEmailHtml(firstName) {
           <div style="color:#FF491A;font-size:13px;margin-top:10px">Your personalized Panama tax report</div>
         </div>
         <div style="padding:24px;color:#1a1a1a;font-size:14px;line-height:1.6">
-          <p>Hi ${firstName},</p>
-          <p>Thank you for using our Panama tax calculator. Your personalized tax report is attached to this email as a PDF.</p>
+          <p>Hi there,</p>
+          <p>Thank you for using our Panama tax tools. Your personalized tax report is attached to this email as a PDF.</p>
           <p>Want to go over your specific situation with a real person? Book a free 30-minute call with our team — no obligation.</p>
           <div style="text-align:center;margin:28px 0">
             <a href="${CALENDLY_URL}" style="display:inline-block;background:#FF491A;color:#fff;font-weight:bold;text-decoration:none;padding:14px 28px;border-radius:8px;font-size:14px">
@@ -69,7 +69,7 @@ function buildTaxReportEmailHtml(firstName) {
   `;
 }
 
-function buildAdminNotificationHtml(firstName, email, sourcePage) {
+function buildAdminNotificationHtml(email, phone, sourcePage) {
   return `
     <!DOCTYPE html>
     <html>
@@ -80,8 +80,8 @@ function buildAdminNotificationHtml(firstName, email, sourcePage) {
           <div style="color:#FF491A;font-size:13px;margin-top:10px">New tax calculator lead (Page ${sourcePage})</div>
         </div>
         <table style="width:100%;border-collapse:collapse">
-          <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0"><div style="font-size:11px;color:#999">Name</div><div style="font-size:14px;color:#1a1a1a">${firstName}</div></td></tr>
-          <tr><td style="padding:8px 12px"><div style="font-size:11px;color:#999">Email</div><div style="font-size:14px;color:#1a1a1a">${email}</div></td></tr>
+          <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0"><div style="font-size:11px;color:#999">Email</div><div style="font-size:14px;color:#1a1a1a">${email}</div></td></tr>
+          <tr><td style="padding:8px 12px"><div style="font-size:11px;color:#999">Phone</div><div style="font-size:14px;color:#1a1a1a">${phone || '—'}</div></td></tr>
         </table>
       </div>
     </body>
@@ -108,11 +108,8 @@ export async function POST(request) {
     return Response.json({ success: true });
   }
 
-  const { firstName, email, consent, sourcePage, locale, answers } = data;
+  const { email, phone, consent, sourcePage, locale, calcInputs } = data;
 
-  if (!firstName?.trim()) {
-    return Response.json({ error: 'Missing required field: firstName' }, { status: 400 });
-  }
   if (!email?.trim() || !EMAIL_RE.test(email)) {
     return Response.json({ error: 'Invalid email' }, { status: 400 });
   }
@@ -122,17 +119,24 @@ export async function POST(request) {
   if (!['A', 'B'].includes(sourcePage)) {
     return Response.json({ error: 'Invalid source_page' }, { status: 400 });
   }
+  if (!calcInputs) {
+    return Response.json({ error: 'Missing calcInputs' }, { status: 400 });
+  }
+
+  // Never trust client-computed numbers — recompute the result server-side
+  // from the raw inputs for both the DB record and the PDF/email.
+  const { reportPayload, bracketBreakdown, resultBucket, disclaimer } = await recomputeLeadReport({
+    ...calcInputs,
+    sourcePage,
+    locale: locale || 'en',
+  });
 
   const supabase = getServiceClient();
-  const { error: dbError } = await supabase.from('tax_calculator_leads').insert([{
-    source_page: sourcePage,
-    locale: locale || 'en',
-    first_name: firstName.trim(),
-    last_name: null,
+  const { error: dbError } = await supabase.from('leads').insert([{
     email: email.trim(),
-    country: null,
-    phone: null,
-    answers: answers ?? {},
+    phone: phone?.trim() || null,
+    calc_inputs: { ...calcInputs, sourcePage, locale: locale || 'en' },
+    result_bucket: resultBucket,
     consent: true,
   }]);
 
@@ -143,14 +147,14 @@ export async function POST(request) {
 
   const buffer = await renderToBuffer(
     <TaxReportDocument
-      firstName={firstName.trim()}
       generatedAt={new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-      summaryItems={answers?.summaryItems ?? []}
-      resultHeadline={answers?.resultHeadline}
-      resultBody={answers?.resultBody}
-      calculatorResult={answers?.calculatorResult}
-      recommendations={answers?.recommendations ?? []}
-      disclaimer={TAX_DISCLAIMER}
+      summaryItems={reportPayload.summaryItems}
+      resultHeadline={reportPayload.resultHeadline}
+      resultBody={reportPayload.resultBody}
+      calculatorResult={reportPayload.calculatorResult}
+      bracketBreakdown={bracketBreakdown}
+      recommendations={reportPayload.recommendations}
+      disclaimer={disclaimer}
     />
   );
 
@@ -162,13 +166,13 @@ export async function POST(request) {
       from: 'Panama Contact Services <noreply@panama-contact.com>',
       to: email.trim(),
       subject: 'Your Personalized Panama Tax Report',
-      html: buildTaxReportEmailHtml(firstName.trim()),
+      html: buildTaxReportEmailHtml(),
       attachments: [{ filename: 'panama-tax-report.pdf', content: base64Pdf }],
     });
     if (sendErr) console.error('Resend error (lead):', sendErr);
   } catch (emailErr) {
     console.error('Resend error (lead):', emailErr);
-    // Don't fail the request — lead is saved and the PDF still downloads below.
+    // Don't fail the request — lead is saved even if the email fails.
   }
 
   try {
@@ -176,8 +180,8 @@ export async function POST(request) {
       from: 'Panama Contact Services <noreply@panama-contact.com>',
       to: process.env.EMAIL_ADMIN || 'info@panama-contact.com',
       replyTo: email.trim(),
-      subject: `New tax calculator lead – ${firstName.trim()}`,
-      html: buildAdminNotificationHtml(firstName.trim(), email.trim(), sourcePage),
+      subject: `New tax calculator lead – ${email.trim()}`,
+      html: buildAdminNotificationHtml(email.trim(), phone?.trim(), sourcePage),
     });
     if (sendErr) console.error('Resend error (admin):', sendErr);
   } catch (emailErr) {
