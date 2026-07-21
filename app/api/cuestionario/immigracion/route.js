@@ -199,6 +199,18 @@ export async function POST(request) {
   if (data.familiares_en_panama === 'Sí' && !data.familiares_en_panama_detalle?.trim()) {
     return Response.json({ error: 'Missing field: familiares_en_panama_detalle' }, { status: 400 });
   }
+  // Conditional required: visitado_panama follow-up
+  if (data.visitado_panama === 'Sí') {
+    for (const f of ['visitado_panama_tiempo', 'visitado_panama_tipo_visa']) {
+      if (!data[f]?.trim()) return Response.json({ error: `Missing field: ${f}` }, { status: 400 });
+    }
+  }
+  // Conditional required: visa_aprobada follow-up
+  if (data.visa_aprobada === 'Sí') {
+    for (const f of ['visa_aprobada_cuando', 'visa_aprobada_donde', 'visa_aprobada_tipo_visa']) {
+      if (!data[f]?.trim()) return Response.json({ error: `Missing field: ${f}` }, { status: 400 });
+    }
+  }
   // Conditional required: datos_persona_que_lleno
   if (data.solicitud_llenada_otra_persona === 'Sí' && !data.datos_persona_que_lleno?.trim()) {
     return Response.json({ error: 'Missing field: datos_persona_que_lleno' }, { status: 400 });

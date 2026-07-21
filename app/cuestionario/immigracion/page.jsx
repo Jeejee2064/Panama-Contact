@@ -117,12 +117,21 @@ const STEPS = [
 const SPOUSE_STATUSES = ['Casado', 'Union libre'];
 
 const STEP8_RADIOS = [
-  { name: 'visitado_panama', label: '¿Ha visitado Panamá? / Have you visited Panama?' },
-  { name: 'visa_aprobada', label: '¿Le han aprobado una visa panameña? / Have you been approved a Panamanian visa?' },
+  { name: 'visitado_panama', label: '¿Ha visitado Panamá? / Have you visited Panama?', subfields: [
+    { name: 'visitado_panama_tiempo', label: '¿Por cuánto tiempo? / For how long?', type: 'text' },
+    { name: 'visitado_panama_tipo_visa', label: '¿Con qué tipo de visa permaneció en el país? / With what type of visa did you remain in the country?', type: 'text' },
+  ] },
+  { name: 'visa_aprobada', label: '¿Le han aprobado una visa panameña? / Have you been approved a Panamanian visa?', subfields: [
+    { name: 'visa_aprobada_cuando', label: '¿Cuándo? / When?', type: 'text' },
+    { name: 'visa_aprobada_donde', label: '¿Dónde? / Where?', type: 'text' },
+    { name: 'visa_aprobada_tipo_visa', label: '¿Qué tipo de visa? / What type of visa?', type: 'text' },
+  ] },
   { name: 'visa_negada', label: '¿Le han negado una visa panameña? / Have you been denied a Panamanian visa?' },
   { name: 'visa_cancelada_revocada', label: '¿Le han cancelado o revocado una visa? / Has a visa been cancelled or revoked?' },
   { name: 'solicitud_residencia_previa', label: '¿Alguien sometió solicitud de residencia en su nombre? / Has anyone filed a residency application on your behalf?' },
-  { name: 'familiares_en_panama', label: '¿Tiene familiares con residencia o ciudadanía panameña? / Do you have relatives with Panamanian residency or citizenship?', conditional: 'familiares_en_panama_detalle' },
+  { name: 'familiares_en_panama', label: '¿Tiene familiares con residencia o ciudadanía panameña? / Do you have relatives with Panamanian residency or citizenship?', subfields: [
+    { name: 'familiares_en_panama_detalle', label: 'Nombre y parentesco / Name and relationship', type: 'textarea' },
+  ] },
   { name: 'contrato_trabajo_panama', label: '¿Tiene contrato de trabajo en Panamá? / Do you have a work contract in Panama?' },
   { name: 'intencion_estudiar_panama', label: '¿Tiene intención de estudiar en Panamá? / Do you intend to study in Panama?' },
 ];
@@ -351,34 +360,48 @@ function Step3({ register, errors, watch }) {
 }
 
 function Step8({ register, errors, watch }) {
-  const familiares = watch('familiares_en_panama');
   return (
     <div className="flex flex-col gap-5">
-      {STEP8_RADIOS.map((q) => (
-        <div key={q.name} data-field={q.name} className="flex flex-col gap-1">
-          <FieldLabel label={q.label} required={true} />
-          <RadioPills
-            name={q.name}
-            options={[{ value: 'Sí', label: 'Sí / Yes' }, { value: 'No', label: 'No' }]}
-            register={register}
-            error={errors[q.name]}
-            required="Requerido / Required"
-          />
-          {q.conditional && familiares === 'Sí' && (
-            <div data-field="familiares_en_panama_detalle" className="mt-2">
-              <FieldLabel label="Nombre y parentesco / Name and relationship" required={true} />
-              <textarea
-                rows={3}
-                {...register('familiares_en_panama_detalle', { required: 'Requerido / Required' })}
-                className={inputClass(!!errors.familiares_en_panama_detalle)}
-              />
-              {errors.familiares_en_panama_detalle && (
-                <p className="text-xs text-red-500 mt-1">{errors.familiares_en_panama_detalle.message}</p>
-              )}
-            </div>
-          )}
-        </div>
-      ))}
+      {STEP8_RADIOS.map((q) => {
+        const answer = watch(q.name);
+        return (
+          <div key={q.name} data-field={q.name} className="flex flex-col gap-1">
+            <FieldLabel label={q.label} required={true} />
+            <RadioPills
+              name={q.name}
+              options={[{ value: 'Sí', label: 'Sí / Yes' }, { value: 'No', label: 'No' }]}
+              register={register}
+              error={errors[q.name]}
+              required="Requerido / Required"
+            />
+            {q.subfields && answer === 'Sí' && (
+              <div className="flex flex-col gap-3 mt-2">
+                {q.subfields.map((sub) => (
+                  <div key={sub.name} data-field={sub.name}>
+                    <FieldLabel label={sub.label} required={true} />
+                    {sub.type === 'text' ? (
+                      <input
+                        type="text"
+                        {...register(sub.name, { required: 'Requerido / Required' })}
+                        className={inputClass(!!errors[sub.name])}
+                      />
+                    ) : (
+                      <textarea
+                        rows={3}
+                        {...register(sub.name, { required: 'Requerido / Required' })}
+                        className={inputClass(!!errors[sub.name])}
+                      />
+                    )}
+                    {errors[sub.name] && (
+                      <p className="text-xs text-red-500 mt-1">{errors[sub.name].message}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -475,8 +498,11 @@ export default function ImmigracionPage() {
     }
     if (s.special === 'step8') {
       const names = STEP8_RADIOS.map((q) => q.name);
-      const famVal = watch('familiares_en_panama');
-      if (famVal === 'Sí') names.push('familiares_en_panama_detalle');
+      STEP8_RADIOS.forEach((q) => {
+        if (q.subfields && watch(q.name) === 'Sí') {
+          names.push(...q.subfields.map((sub) => sub.name));
+        }
+      });
       return names;
     }
     if (s.special === 'step9') {

@@ -74,7 +74,12 @@ export const SECTIONS = [
   ]},
   { title: 'Historial migratorio / Immigration History', fields: [
     ['visitado_panama', '¿Ha visitado Panamá? / Have you visited Panama?'],
+    ['visitado_panama_tiempo', '¿Por cuánto tiempo? / For how long?'],
+    ['visitado_panama_tipo_visa', '¿Con qué tipo de visa permaneció en el país? / With what type of visa did you remain in the country?'],
     ['visa_aprobada', '¿Le han aprobado una visa panameña? / Approved a Panamanian visa?'],
+    ['visa_aprobada_cuando', '¿Cuándo? / When?'],
+    ['visa_aprobada_donde', '¿Dónde? / Where?'],
+    ['visa_aprobada_tipo_visa', '¿Qué tipo de visa? / What type of visa?'],
     ['visa_negada', '¿Le han negado una visa panameña? / Denied a Panamanian visa?'],
     ['visa_cancelada_revocada', '¿Le han cancelado o revocado una visa? / Visa cancelled or revoked?'],
     ['solicitud_residencia_previa', '¿Alguien sometió solicitud de residencia en su nombre? / Prior residency application?'],
