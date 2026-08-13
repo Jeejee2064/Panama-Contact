@@ -3,6 +3,7 @@ import Hero from '@/components/sections/Hero';
 import Features from '@/components/sections/Features';
 import WhyUs from '@/components/sections/WhyUs';
 import ServicesPreview from '@/components/sections/ServicesPreview';
+import LegalNotice from '@/components/sections/LegalNotice';
 import CTA from '@/components/sections/CTA';
 
 export async function generateMetadata({ params }) {
@@ -33,6 +34,7 @@ export default async function HomePage({ params }) {
         <Features />
         <ServicesPreview />
         <WhyUs />
+        <LegalNotice />
         <CTA />
       </div>
     </>

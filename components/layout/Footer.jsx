@@ -152,9 +152,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-600">
+        <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
           <span>© {new Date().getFullYear()} Panamá Contact Services. All rights reserved.</span>
-          <span className="text-gray-700">Panama City, Republic of Panama</span>
+          <div className="flex items-center gap-5">
+            <Link href="/privacy-policy" className="hover:text-[#FF4D1C] transition-colors">
+              {t('privacyPolicy')}
+            </Link>
+            <Link href="/legal-terms" className="hover:text-[#FF4D1C] transition-colors">
+              {t('legalTerms')}
+            </Link>
+            <span className="text-gray-700">Panama City, Republic of Panama</span>
+          </div>
         </div>
       </div>
     </footer>

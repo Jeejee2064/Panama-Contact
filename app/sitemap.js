@@ -34,6 +34,7 @@ const localizedPaths = {
   panamaTaxCalculator: routing.pathnames['/panama-tax-calculator'],
   panamaIncomeTaxCalculator: routing.pathnames['/panama-income-tax-calculator'],
   privacyPolicy: routing.pathnames['/privacy-policy'],
+  legalTerms: routing.pathnames['/legal-terms'],
 };
 
 // Base path for service/why-panama detail pages per locale
@@ -65,6 +66,7 @@ export default function sitemap() {
     { key: 'panamaTaxCalculator',       priority: 0.9, changeFrequency: 'monthly' },
     { key: 'panamaIncomeTaxCalculator', priority: 0.9, changeFrequency: 'monthly' },
     { key: 'privacyPolicy',             priority: 0.3, changeFrequency: 'yearly'  },
+    { key: 'legalTerms',                priority: 0.3, changeFrequency: 'yearly'  },
   ];
 
   for (const { key, priority, changeFrequency } of staticPages) {

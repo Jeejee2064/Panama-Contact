@@ -3,7 +3,7 @@ import { locales } from '@/i18n/config';
 import { routing } from '@/i18n/routing';
 import LegalDocument from '@/components/legal/LegalDocument';
 
-const PATHNAME = '/privacy-policy';
+const PATHNAME = '/legal-terms';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -16,7 +16,7 @@ function localizedUrl(locale) {
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'PrivacyPolicyPage.meta' });
+  const t = await getTranslations({ locale, namespace: 'LegalTermsPage.meta' });
 
   return {
     title: t('title'),
@@ -28,9 +28,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function PrivacyPolicyPage({ params }) {
+export default async function LegalTermsPage({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <LegalDocument locale={locale} namespace="PrivacyPolicyPage" />;
+  return <LegalDocument locale={locale} namespace="LegalTermsPage" />;
 }

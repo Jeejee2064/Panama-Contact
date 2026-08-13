@@ -17,7 +17,9 @@
     "freeConsultation": "Kostenlose Beratung buchen",
     "ctaHeading": "Bereit für Ihren Umzug?",
     "taxCalculator": "Steuerpflicht-Quiz",
-    "incomeTaxCalculator": "Einkommensteuerrechner"
+    "incomeTaxCalculator": "Einkommensteuerrechner",
+    "privacyPolicy": "Datenschutzerklärung",
+    "legalTerms": "Nutzungsbedingungen"
   },
   "HomePage": {
     "meta": {
@@ -87,6 +89,12 @@
       "heading": "Unsere Dienstleistungen",
       "cta": "Alle Dienstleistungen",
       "readMore": "Mehr erfahren"
+    },
+    "legalNotice": {
+      "sectionLabel": "Rechtlicher Hinweis",
+      "body1": "Im Rahmen der Erweiterung unserer Dienstleistungen bieten wir zudem juristische Beratung und Begleitung in verschiedenen Rechtsbereichen an, darunter Zivil-, Straf-, Handels-, Verwaltungs-, Arbeits-, Steuer-, Gesellschafts-, Immobilien- und Familienrecht, unter anderem.",
+      "body2": "Jede Beratung, Orientierung, Vertretung, Abwicklung oder jedes Verfahren rechtlicher Natur wird ausschließlich von qualifizierten Rechtsanwälten übernommen, die vom Obersten Gerichtshof der Republik Panama gemäß geltendem Recht ordnungsgemäß zur Ausübung des Anwaltsberufs zugelassen sind.",
+      "body3": "Panama Contact Legal handelt nach strengen Standards der Vertraulichkeit, beruflichen Ethik und regulatorischen Compliance und bemüht sich, jedem Kunden einen persönlichen, transparenten und auf seine rechtlichen Bedürfnisse zugeschnittenen Service zu bieten."
     },
     "cta": {
       "eyebrow": "Kostenlose Beratung",
@@ -1086,24 +1094,175 @@
   "PrivacyPolicyPage": {
     "meta": {
       "title": "Datenschutzerklärung | Panama Contact Services",
-      "description": "Wie Panama Contact Services personenbezogene Daten erhebt, verwendet und schützt, im Einklang mit dem panamaischen Gesetz 81 von 2019 zum Schutz personenbezogener Daten."
+      "description": "Wie Panama Contact Services S.A. personenbezogene Daten erhebt, verwendet und schützt, im Einklang mit dem panamaischen Gesetz 81 von 2019 zum Schutz personenbezogener Daten."
     },
     "heading": "Datenschutzerklärung",
-    "lastUpdated": "Zuletzt aktualisiert: 10. Juli 2026",
-    "intro": "Panama Contact Services („wir\") respektiert Ihre Privatsphäre. Diese Richtlinie erklärt, welche personenbezogenen Daten wir über diese Website erheben — einschließlich unserer kostenlosen Steuerrechner und unseres Quiz —, warum wir sie erheben und welche Rechte Sie daran haben, im Einklang mit dem panamaischen Gesetz 81 von 2019 zum Schutz personenbezogener Daten.",
-    "sections": {
-      "dataCollectedTitle": "Was wir erheben",
-      "dataCollectedBody": "Wenn Sie unser Kontaktformular, unsere Fragebögen oder Steuertools nutzen und sich für die Anforderung eines personalisierten Berichts oder einer Beratung entscheiden, erheben wir die Informationen, die Sie freiwillig angeben: Ihren Namen, Ihre E-Mail-Adresse und — je nach Formular — Telefonnummer, Land und Ihre Antworten (z. B. Einkommenszahlen oder Quiz-Antworten). Diese Angaben sind für die Nutzung unserer kostenlosen Rechner nicht erforderlich; die Ergebnisse werden ohne jegliche Datenerhebung angezeigt, sofern Sie nicht ausdrücklich einen Bericht oder eine Beratung anfordern.",
-      "howWeUseItTitle": "Wie wir sie verwenden",
-      "howWeUseItBody": "Wir verwenden Ihre Angaben, um Ihnen den angeforderten Bericht oder Inhalt zuzusenden, Beratungsanfragen nachzugehen und unsere Dienstleistungen zu verbessern. Wir verkaufen Ihre personenbezogenen Daten nicht an Dritte.",
-      "dataSharingTitle": "Dienstleister",
-      "dataSharingBody": "Wir nutzen Supabase zur sicheren Speicherung übermittelter Daten und Resend zum Versand transaktionaler E-Mails (z. B. Ihres personalisierten Steuerberichts). Diese Anbieter verarbeiten Daten in unserem Auftrag und sind vertraglich zum Schutz dieser Daten verpflichtet.",
-      "retentionTitle": "Datenspeicherung",
-      "retentionBody": "Wir speichern Ihre Angaben so lange, wie es zur Bearbeitung Ihrer Anfrage oder zur Erbringung der angeforderten Leistung erforderlich ist, oder wie gesetzlich vorgeschrieben.",
-      "rightsTitle": "Ihre Rechte",
-      "rightsBody": "Gemäß Gesetz 81 von 2019 haben Sie das Recht auf Auskunft, Berichtigung, Löschung oder Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten. Um eines dieser Rechte auszuüben, kontaktieren Sie uns bitte über die unten stehenden Angaben.",
-      "contactTitle": "Kontaktieren Sie uns",
-      "contactBody": "Bei datenschutzbezogenen Fragen oder Anliegen schreiben Sie uns an info@panama-contact.com."
-    }
+    "lastUpdated": "Zuletzt aktualisiert: 12. August 2026",
+    "intro": "<p>Panama Contact Services S.A., im Folgenden „Panama Contact“, respektiert die Privatsphäre ihrer Nutzer und verpflichtet sich, die über die Website <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a>, ihre Formulare, Buchungstools, Zahlungssysteme, Messaging-Kanäle und sonstigen damit verbundenen digitalen Medien erhobenen personenbezogenen Daten zu schützen.</p><p>Diese Datenschutzerklärung erläutert, welche Informationen wir erheben, wozu wir sie verwenden, mit wem wir sie gegebenenfalls teilen und welche Rechte den betroffenen Personen zustehen.</p>",
+    "sections": [
+      {
+        "heading": "Verantwortlicher für die Datenverarbeitung",
+        "body": "<p>Verantwortlicher für die Verarbeitung personenbezogener Daten ist:</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, Erdgeschoss, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Panama-Stadt<br>Republik Panama<br>E-Mail: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Website: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
+      },
+      {
+        "heading": "Rechtlicher Rahmen",
+        "body": "<p>Die Verarbeitung personenbezogener Daten erfolgt in Übereinstimmung mit der geltenden Gesetzgebung der Republik Panama, einschließlich des Gesetzes 81 vom 26. März 2019 zum Schutz personenbezogener Daten, des Exekutivdekrets 285 vom 28. Mai 2021 sowie aller weiteren Bestimmungen, die diese ändern, regeln oder ergänzen.</p>"
+      },
+      {
+        "heading": "Daten, die wir erheben können",
+        "body": "<p>Je nachdem, wie der Nutzer mit Panama Contact interagiert, können wir folgende Kategorien von Informationen erheben:</p><h3>Identifikations- und Kontaktdaten</h3><p>Vor- und Nachname, Staatsangehörigkeit, Wohnsitzland, Adresse, E-Mail-Adresse, Telefonnummer, WhatsApp-Informationen und alle weiteren über unsere Formulare oder Kommunikation bereitgestellten Daten.</p><h3>Informationen im Zusammenhang mit Anfragen</h3><p>Informationen, die der Nutzer freiwillig zu seiner Einwanderungs-, Bank-, Unternehmens-, Vermögens-, Steuer-, Immobilien- oder Verwaltungssituation sowie zu seinen Bedürfnissen bezüglich Relocation oder Niederlassung in Panama bereitstellt.</p><h3>Vom Nutzer bereitgestellte Dokumentation</h3><p>Sofern die Website das Hochladen von Dokumenten erlaubt, können wir Pässe, Ausweisdokumente, Wohnsitznachweise, Führungszeugnisse, Kontoauszüge, Unternehmensdokumente und andere Dateien erhalten, die zur Bewertung einer Anfrage oder zur Erbringung einer angeforderten Dienstleistung erforderlich sind.</p><p>Einige Dokumente können sensible Daten oder Finanzinformationen enthalten. Diese Daten werden nur dann verarbeitet, wenn dies erforderlich ist und eine rechtmäßige Grundlage dafür besteht.</p><h3>Buchungsdaten</h3><p>Datum und Uhrzeit des Termins, Grund der Beratung, Zeitzone, Kontaktinformationen und alle in das Terminplanungstool eingegebenen Kommentare.</p><h3>Zahlungsbezogene Daten</h3><p>Bei Online-Zahlungen können wir Informationen über die Transaktion erhalten, wie Name des Zahlers, Betrag, Datum, Zahlungsstatus und Transaktionsreferenz.</p><p>Vollständige Kredit- oder Debitkartendaten werden in der Regel direkt vom jeweiligen Zahlungsdienstleister verarbeitet. Panama Contact speichert keine vollständigen Kartendaten, sofern nicht ausdrücklich anders angegeben.</p><h3>Technische Daten und Navigationsdaten</h3><p>IP-Adresse, Gerätetyp, Browser, Betriebssystem, besuchte Seiten, Verweildauer, verwendete Links, ungefährer Standort und weitere technische Informationen, die über Cookies und Analysetools erhoben werden.</p><h3>Kommerzielle Kommunikation</h3><p>Wir können Informationen zu Newsletter-Anmeldungen, Informationsanfragen, Kommunikationspräferenzen und über E-Mail, Formulare oder WhatsApp ausgetauschten Nachrichten speichern.</p>"
+      },
+      {
+        "heading": "Zwecke der Verarbeitung",
+        "body": "<p>Personenbezogene Daten können verwendet werden, um:</p><ol><li>Anfragen und Informationsersuchen zu beantworten.</li><li>Persönliche oder virtuelle Termine zu koordinieren.</li><li>Die Bedürfnisse der betroffenen Person vorab zu bewerten.</li><li>Angebote, Kostenvoranschläge oder Anweisungen im Zusammenhang mit den angeforderten Dienstleistungen vorzubereiten.</li><li>Freiwillig übermittelte Dokumente entgegenzunehmen und zu prüfen.</li><li>Zahlungen zu verarbeiten und zu überprüfen.</li><li>Kommunikation per E-Mail, Telefon oder WhatsApp aufrechtzuerhalten.</li><li>Newsletter, Neuigkeiten oder kommerzielle Informationen zu versenden, sofern eine Einwilligung oder eine vorherige Beziehung dies zulässt.</li><li>Die Funktionsweise, Sicherheit und den Inhalt der Website zu verbessern.</li><li>Den Verkehr und die Nutzung der Website zu analysieren.</li><li>Betrug, Missbrauch, unbefugten Zugriff und andere Sicherheitsvorfälle zu verhindern.</li><li>Rechtliche, regulatorische, steuerliche, buchhalterische, vertragliche oder Sorgfaltspflichten zu erfüllen.</li><li>Anfragen zuständiger Behörden zu beantworten.</li><li>Ansprüche geltend zu machen, auszuüben oder zu verteidigen.</li></ol><p>Die Übermittlung von Informationen über die Website verpflichtet Panama Contact nicht dazu, eine Anfrage anzunehmen, und impliziert nicht automatisch das Bestehen einer beruflichen oder vertraglichen Beziehung.</p>"
+      },
+      {
+        "heading": "Rechtsgrundlagen der Verarbeitung",
+        "body": "<p>Die Verarbeitung kann je nach Fall beruhen auf:</p><ul><li>Der Einwilligung der betroffenen Person.</li><li>Der Anfrage von Informationen oder vorvertraglichen Maßnahmen.</li><li>Der Erfüllung eines Vertragsverhältnisses.</li><li>Der Erfüllung einer gesetzlichen Verpflichtung.</li><li>Den berechtigten Interessen von Panama Contact, sofern diese nicht die Rechte der betroffenen Person überwiegen.</li><li>Der Geltendmachung, Ausübung oder Verteidigung von Rechten und Ansprüchen.</li></ul><p>Der Nutzer kann seine Einwilligung widerrufen, wenn die Verarbeitung ausschließlich davon abhängt. Der Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung.</p>"
+      },
+      {
+        "heading": "Verpflichtender Charakter der Angaben",
+        "body": "<p>Als Pflichtfelder gekennzeichnete Felder müssen ausgefüllt werden, damit Panama Contact die entsprechende Anfrage bearbeiten kann.</p><p>Der Nutzer ist nicht verpflichtet, zusätzliche, nicht erforderliche Informationen bereitzustellen. Das Fehlen bestimmter Daten oder Dokumente könnte uns jedoch daran hindern, angemessen zu antworten, die Anfrage zu bewerten oder die angeforderte Leistung zu erbringen.</p>"
+      },
+      {
+        "heading": "Richtigkeit der Daten",
+        "body": "<p>Der Nutzer erklärt, dass die bereitgestellten Daten und Dokumente wahrheitsgemäß, vollständig, korrekt und aktuell sind.</p><p>Sofern der Nutzer Informationen über eine andere Person bereitstellt, erklärt er, hierzu befugt zu sein und diese Person über die entsprechende Verarbeitung informiert zu haben.</p>"
+      },
+      {
+        "heading": "Weitergabe von Daten an Dritte",
+        "body": "<p>Panama Contact kann personenbezogene Daten, nur soweit erforderlich, weitergeben an:</p><ul><li>Anbieter von Webhosting, technischem Support, IT-Sicherheit und Cloud-Speicher.</li><li>Anbieter von E-Mail-, Terminplanungs-, Videokonferenz-, Formular-, Analyse- und Newsletter-Diensten.</li><li>Zahlungsdienstleister und Finanzinstitute.</li><li>Rechtsanwälte, Buchhalter, Übersetzer, Notare, Resident Agents und andere Fachleute, die an der Erbringung oder Ausführung der Leistung beteiligt sind.</li><li>Banken, Versicherer, Immobilienentwickler und Anbieter im Zusammenhang mit einer bestimmten Anfrage, sofern der Nutzer dies genehmigt hat oder es für die angeforderte Leistung erforderlich ist.</li><li>Verwaltungs-, Justiz-, Steuer-, Einwanderungs-, Aufsichts- oder Polizeibehörden, sofern eine gesetzliche Verpflichtung besteht.</li><li>Andere Anbieter oder Mitarbeiter, die Vertraulichkeits- und Datenschutzpflichten unterliegen.</li></ul><p>Panama Contact verkauft oder vermietet keine personenbezogenen Daten an Dritte.</p>"
+      },
+      {
+        "heading": "Dienste und Plattformen Dritter",
+        "body": "<p>Die Website kann Dienste Dritter nutzen, um Termine, Zahlungen, Formulare, Dokumente, Statistiken, Newsletter, Karten, Videokonferenzen oder WhatsApp-Kommunikation zu verwalten.</p><p>Wenn der Nutzer diese Dienste nutzt, können seine Daten auch den Datenschutzrichtlinien und Bedingungen des jeweiligen Anbieters unterliegen. Panama Contact empfiehlt, diese vor der Nutzung dieser Plattformen zu prüfen.</p>"
+      },
+      {
+        "heading": "Internationale Datenübermittlungen",
+        "body": "<p>Einige Technologieanbieter, Speichersysteme, Zahlungsplattformen oder Kommunikationstools können Informationen außerhalb Panamas verarbeiten.</p><p>Sofern zutreffend, wird Panama Contact angemessene Maßnahmen ergreifen, um sicherzustellen, dass diese Übermittlungen mit einem angemessenen Schutzniveau und in Übereinstimmung mit dem geltenden Recht erfolgen.</p>"
+      },
+      {
+        "heading": "Cookies und ähnliche Technologien",
+        "body": "<p>Die Website verwendet Cookies und ähnliche Technologien, um:</p><ul><li>Ihre technische Funktionsweise zu ermöglichen.</li><li>Nutzerpräferenzen zu speichern.</li><li>Die Sicherheit zu stärken.</li><li>Den Datenverkehr und die Leistung zu messen.</li><li>Das Nutzungsverhalten zu analysieren.</li><li>Unsere Inhalte und Dienstleistungen zu verbessern.</li><li>Gegebenenfalls Funktionen Dritter zu verwalten.</li></ul><p>Unbedingt erforderliche Cookies können ohne Einwilligung verwendet werden, wenn sie für die Funktionsweise der Website unerlässlich sind. Analyse-, Werbe- oder nicht wesentliche Cookies unterliegen den verfügbaren Einwilligungsoptionen.</p><p>Der Nutzer kann nicht wesentliche Cookies über den entsprechenden Hinweis oder über die Einstellungen seines Browsers akzeptieren, ablehnen oder konfigurieren. Das Deaktivieren bestimmter Cookies kann einige Funktionen der Website beeinträchtigen.</p>"
+      },
+      {
+        "heading": "Kommerzielle Kommunikation",
+        "body": "<p>Panama Contact kann informative oder kommerzielle Mitteilungen versenden, wenn:</p><ul><li>Der Nutzer seine Einwilligung erteilt hat.</li><li>Eine vorherige Beziehung besteht, die solche Mitteilungen zulässt.</li><li>Das geltende Recht dies zulässt.</li></ul><p>Der Nutzer kann sich über den in den E-Mails enthaltenen Link, durch Antwort auf die erhaltene Nachricht oder durch Schreiben an <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a> abmelden.</p><p>Die Abmeldung von kommerzieller Kommunikation verhindert nicht den Versand administrativer Mitteilungen oder solcher, die sich auf eine angeforderte Dienstleistung beziehen.</p>"
+      },
+      {
+        "heading": "Datenspeicherung",
+        "body": "<p>Die Daten werden so lange gespeichert, wie es zur Erfüllung des Zwecks erforderlich ist, für den sie erhoben wurden.</p><p>Anschließend können sie für die durch gesetzliche, steuerliche, buchhalterische, aufsichtsrechtliche, berufliche oder anspruchsvorbeugende Verpflichtungen erforderlichen Fristen gesperrt oder archiviert werden.</p><p>Sobald die Daten nicht mehr erforderlich sind und keine Aufbewahrungspflicht besteht, werden sie in angemessener und sicherer Weise gelöscht, anonymisiert oder vernichtet.</p>"
+      },
+      {
+        "heading": "Sicherheit und Vertraulichkeit",
+        "body": "<p>Panama Contact ergreift angemessene administrative, organisatorische und technische Maßnahmen, um personenbezogene Daten vor Verlust, Veränderung, unbefugtem Zugriff, Offenlegung oder missbräuchlicher Verarbeitung zu schützen.</p><p>Der Zugriff ist auf Personen beschränkt, die die Informationen zur Erfüllung ihrer Aufgaben angemessenerweise benötigen und die Vertraulichkeitspflichten unterliegen.</p><p>Kein elektronisches Übertragungs- oder Speichersystem kann jedoch absolute Sicherheit garantieren. Nutzer sollten es vermeiden, unnötige Informationen zu versenden oder Kanäle zu verwenden, die sie für unsicher halten.</p>"
+      },
+      {
+        "heading": "Rechte der betroffenen Person",
+        "body": "<p>Gemäß geltendem Recht kann die betroffene Person Folgendes verlangen:</p><ul><li>Zugang zu ihren personenbezogenen Daten.</li><li>Berichtigung unrichtiger, unvollständiger oder veralteter Daten.</li><li>Löschung oder Streichung, sofern zutreffend.</li><li>Widerspruch gegen bestimmte Verarbeitungen.</li><li>Datenübertragbarkeit, sofern anwendbar.</li><li>Widerruf der Einwilligung.</li><li>Informationen über die Nutzung und Verarbeitung ihrer Daten.</li></ul><p>Um diese Rechte auszuüben, senden Sie bitte eine Anfrage an <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a> unter Angabe Ihres Namens, Ihrer Kontaktdaten, des Rechts, das Sie ausüben möchten, sowie der zur Identitätsprüfung erforderlichen Informationen.</p><p>Panama Contact kann zusätzliche Unterlagen anfordern, sofern dies angemessenerweise erforderlich ist, um die Identität des Antragstellers zu bestätigen, die Vertraulichkeit der Informationen zu schützen oder den Umfang der Anfrage zu verstehen.</p><p>Die betroffene Person kann sich gegebenenfalls auch an die Nationale Behörde für Transparenz und Informationszugang Panamas wenden.</p>"
+      },
+      {
+        "heading": "Daten von Minderjährigen",
+        "body": "<p>Die Website richtet sich nicht an Minderjährige, und Panama Contact ist nicht bestrebt, deren Daten vorsätzlich ohne Beteiligung ihrer Eltern, gesetzlichen Vertreter oder ordnungsgemäß bevollmächtigten Personen zu erheben.</p><p>Wird festgestellt, dass ein Minderjähriger Informationen ohne entsprechende Genehmigung bereitgestellt hat, können Maßnahmen ergriffen werden, um diese zu löschen oder ihre Verarbeitung einzuschränken.</p>"
+      },
+      {
+        "heading": "Externe Links",
+        "body": "<p>Die Website kann Links zu Seiten oder Diensten Dritter enthalten. Panama Contact kontrolliert deren Datenschutzpraktiken nicht und ist nicht verantwortlich für den Inhalt, die Sicherheit oder die Datenverarbeitung dieser Dritten.</p>"
+      },
+      {
+        "heading": "Änderungen",
+        "body": "<p>Panama Contact kann diese Datenschutzerklärung ändern, um rechtlichen, technologischen oder betrieblichen Änderungen Rechnung zu tragen.</p><p>Die aktualisierte Fassung wird auf der Website unter Angabe des Datums ihrer letzten Änderung veröffentlicht. Bei wesentlichen Änderungen können diese durch einen hervorgehobenen Hinweis oder auf andere angemessene Weise mitgeteilt werden.</p>"
+      },
+      {
+        "heading": "Kontakt",
+        "body": "<p>Für Fragen, Anfragen oder Beschwerden im Zusammenhang mit dieser Datenschutzerklärung oder der Verarbeitung personenbezogener Daten können Sie sich wenden an:</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, Erdgeschoss, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Panama-Stadt<br>Republik Panama<br>E-Mail: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Website: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
+      }
+    ]
+  },
+  "LegalTermsPage": {
+    "meta": {
+      "title": "Allgemeine Geschäftsbedingungen | Panama Contact Services",
+      "description": "Allgemeine Geschäftsbedingungen für die Nutzung der Website von Panama Contact Services S.A. gemäß den Gesetzen der Republik Panama."
+    },
+    "heading": "Allgemeine Nutzungsbedingungen der Website",
+    "lastUpdated": "Zuletzt aktualisiert: 12. August 2026",
+    "intro": "<p>Diese Allgemeinen Nutzungsbedingungen regeln den Zugang zu und die Nutzung der Website <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a>, betrieben von Panama Contact Services S.A., im Folgenden „Panama Contact“.</p><p>Durch den Zugriff auf, das Durchsuchen oder die Nutzung dieser Website erkennt der Nutzer an, diese Allgemeinen Nutzungsbedingungen gelesen und akzeptiert zu haben. Ist er damit nicht einverstanden, muss er von der Nutzung der Website absehen.</p>",
+    "sections": [
+      {
+        "heading": "Angaben zum Websitebetreiber",
+        "body": "<p>Die Website gehört:</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, Erdgeschoss, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Panama-Stadt<br>Republik Panama<br>E-Mail: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Website: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
+      },
+      {
+        "heading": "Zweck der Website",
+        "body": "<p>Die Website hat informativen Charakter und stellt die von Panama Contact angebotenen oder koordinierten Dienstleistungen vor, die Beratung und Unterstützung in Einwanderungs-, Unternehmens-, Bank-, Verwaltungs-, Immobilien-, Buchhaltungs-, Vermögens- und Relocation-Angelegenheiten in Panama umfassen können.</p><p>Sie kann dem Nutzer auch ermöglichen, Anfragen zu stellen, Termine zu vereinbaren, Dokumente hochzuladen, Zahlungen vorzunehmen oder über Tools Dritter mit Panama Contact zu kommunizieren.</p><p>Diese Bedingungen regeln ausschließlich den allgemeinen Zugang zu und die Nutzung der Website. Die Beauftragung von Dienstleistungen kann Angeboten, Verträgen, Kostenvoranschlägen, Zahlungsbedingungen oder zusätzlichen Dokumenten unterliegen.</p>"
+      },
+      {
+        "heading": "Allgemeine Informationen und keine individuelle Beratung",
+        "body": "<p>Die veröffentlichten Inhalte dienen allgemeinen Informationszwecken. Sie stellen für sich genommen keine rechtliche, einwanderungsrechtliche, bankbezogene, finanzielle, steuerliche, buchhalterische, immobilienbezogene oder Anlageberatung dar.</p><p>Die verfügbaren Informationen ersetzen keine professionelle Bewertung der individuellen Umstände des Nutzers.</p><p>Das Absenden eines Formulars, die Buchung eines Termins, der Austausch von Nachrichten oder das Hochladen von Dokumenten begründet nicht automatisch ein Mandatsverhältnis, ein Beratungsverhältnis oder ein Vertragsverhältnis mit Panama Contact oder einem ihrer Mitarbeiter.</p><p>Ein solches Verhältnis besteht erst, wenn es ausdrücklich angenommen und gegebenenfalls durch ein Angebot, einen Vertrag, eine schriftliche Bestätigung oder eine akzeptierte Zahlung formalisiert wurde.</p>"
+      },
+      {
+        "heading": "Rechtliche Änderungen und Richtigkeit der Informationen",
+        "body": "<p>Panama Contact ist bestrebt, die Informationen auf der Website klar und aktuell zu halten. Gesetze, Vorschriften, Verwaltungskriterien, Bankrichtlinien, Dokumentationsanforderungen, offizielle Gebühren, Fristen und Verfahren können sich jedoch ohne vorherige Ankündigung ändern.</p><p>Aus diesem Grund garantiert Panama Contact nicht, dass alle Inhalte dauerhaft aktuell, vollständig oder auf jeden Einzelfall anwendbar bleiben.</p><p>Vor einer Entscheidung oder der Einleitung eines Verfahrens sollte der Nutzer eine aktuelle Bestätigung und eine Bewertung seiner konkreten Situation einholen.</p>"
+      },
+      {
+        "heading": "Keine Erfolgsgarantie",
+        "body": "<p>Die veröffentlichten Informationen stellen kein Versprechen und keine Garantie für eine Genehmigung, Kontoeröffnung, den Erhalt einer Aufenthaltserlaubnis, Arbeitserlaubnis, Lizenz, Registrierung, Investition, Rendite, Bearbeitungsdauer oder ein sonstiges Ergebnis dar.</p><p>Endgültige Entscheidungen können von Behörden, Banken, Finanzinstituten, Notariaten, Registern, Anbietern und anderen von Panama Contact unabhängigen Dritten abhängen.</p><p>Die auf der Website genannten Fristen sind allgemeine Schätzungen und können je nach den Umständen des Antragstellers, den vorgelegten Unterlagen und den Bearbeitungszeiten Dritter variieren.</p>"
+      },
+      {
+        "heading": "Erlaubte Nutzung",
+        "body": "<p>Der Nutzer verpflichtet sich, die Website rechtmäßig, sorgfältig und in Übereinstimmung mit diesen Bedingungen zu nutzen.</p><p>Insbesondere hat der Nutzer:</p><ul><li>Bei der Nutzung von Formularen oder Tools der Website wahrheitsgemäße Angaben zu machen.</li><li>Die Rechte von Panama Contact und Dritten zu respektieren.</li><li>Jedes Verhalten zu vermeiden, das die Sicherheit oder Verfügbarkeit der Website gefährden könnte.</li><li>Die Inhalte ausschließlich für legitime persönliche oder geschäftliche Zwecke zu nutzen.</li></ul>"
+      },
+      {
+        "heading": "Verbotene Nutzungen",
+        "body": "<p>Es ist untersagt:</p><ul><li>Die Website zu betrügerischen, rechtswidrigen oder irreführenden Zwecken zu nutzen.</li><li>Sich als eine andere Person auszugeben.</li><li>Falsche oder verfälschte Informationen oder Dokumente sowie Dokumente Dritter ohne Genehmigung bereitzustellen.</li><li>Zu versuchen, unbefugten Zugriff auf die Website, Server, Konten, Systeme oder Datenbanken zu erlangen.</li><li>Viren, Schadcode oder Technologien einzuschleusen, die deren Funktionsweise beeinträchtigen sollen.</li><li>Automatisiertes Auslesen, Massenkopieren, Scraping oder systematisches Sammeln von Inhalten ohne Genehmigung durchzuführen.</li><li>Die Funktionsweise, Sicherheit oder Verfügbarkeit der Website zu beeinträchtigen.</li><li>Die Inhalte in einer Weise zu nutzen, die dem Ruf, den Rechten oder den berechtigten Interessen von Panama Contact oder Dritten schaden könnte.</li></ul><p>Panama Contact kann den Zugang einschränken oder sperren, wenn eine gegen diese Bedingungen verstoßende oder potenziell schädliche Nutzung festgestellt wird.</p>"
+      },
+      {
+        "heading": "Formulare, Termine und Kommunikation",
+        "body": "<p>Der Nutzer ist dafür verantwortlich, die Richtigkeit der bereitgestellten Kontaktdaten zu überprüfen.</p><p>Der automatische Eingang eines Formulars, einer Buchung oder einer Nachricht bedeutet nicht, dass Panama Contact sich zur Erbringung einer Leistung verpflichtet hat, und garantiert keine Verfügbarkeit.</p><p>Panama Contact kann zusätzliche Informationen anfordern, einen anderen Termin vorschlagen, eine Anfrage ablehnen oder von der Fortführung einer Kommunikation absehen, wenn ein rechtlicher, beruflicher, betrieblicher, ethischer, compliance-bezogener Grund oder ein Interessenkonflikt vorliegt.</p>"
+      },
+      {
+        "heading": "Hochladen von Dokumenten",
+        "body": "<p>Sofern die Website das Hochladen von Dateien erlaubt, erklärt der Nutzer, dass:</p><ul><li>er berechtigt ist, die Dokumente bereitzustellen.</li><li>die Informationen authentisch sind und nicht betrügerisch verändert wurden.</li><li>deren Übermittlung keine Rechte Dritter verletzt.</li><li>die Dateien keine Schadsoftware enthalten.</li></ul><p>Der Nutzer sollte es vermeiden, nicht angeforderte Dokumente oder Dokumente mit unnötigen personenbezogenen Daten hochzuladen.</p><p>Das Hochladen von Dokumenten bedeutet nicht deren Annahme, Prüfung oder Genehmigung durch Panama Contact.</p>"
+      },
+      {
+        "heading": "Zahlungen über die Website",
+        "body": "<p>Die Website kann Links oder Tools zur Durchführung bestimmter Zahlungen bereitstellen. Die Abwicklung kann durch externe Anbieter erfolgen und deren eigenen Bedingungen unterliegen.</p><p>Die Verfügbarkeit eines Zahlungstools bedeutet nicht, dass alle Dienstleistungen direkt über die Website beauftragt werden können.</p><p>Die spezifischen Bedingungen bezüglich Preisen, Stornierungen, Rückerstattungen, amtlichen Gebühren und Leistungserbringung müssen im entsprechenden Kostenvoranschlag, in der Rechnung, im Vertrag oder in der Bestätigung festgelegt werden. Diese allgemeinen Nutzungsbedingungen ersetzen solche Dokumente nicht.</p>"
+      },
+      {
+        "heading": "Geistiges Eigentum",
+        "body": "<p>Sofern nicht anders angegeben, gehören die Texte, Designs, Logos, Marken, Bilder, Videos, Grafiken, Dokumente, Datenbanken, die Struktur und sonstige Inhalte der Website Panama Contact oder werden mit entsprechender Genehmigung genutzt.</p><p>Der Nutzer kann die Inhalte für persönliche und nichtkommerzielle Zwecke einsehen.</p><p>Deren Vervielfältigung, Änderung, Veröffentlichung, Verbreitung, Verkauf, kommerzielle Verwertung oder Nutzung zur Erstellung abgeleiteter Inhalte ist ohne vorherige schriftliche Genehmigung von Panama Contact untersagt, mit Ausnahme der gesetzlich ausdrücklich erlaubten Nutzungen.</p><p>Marken, Handelsnamen und Logos Dritter gehören ihren jeweiligen Inhabern.</p>"
+      },
+      {
+        "heading": "Links und Dienste Dritter",
+        "body": "<p>Die Website kann Links zu oder Integrationen mit Terminplanungs-, Zahlungs-, Karten-, Messaging-, Social-Media-, Videokonferenz-, Bank-, Behörden- oder anderen Plattformen Dritter enthalten.</p><p>Diese Dienste werden von Dritten betrieben und können deren eigenen Bedingungen und Richtlinien unterliegen.</p><p>Panama Contact kontrolliert und garantiert weder die Verfügbarkeit, Sicherheit, Inhalte, Entscheidungen noch die Funktionsweise externer Seiten. Die Aufnahme eines Links bedeutet nicht zwangsläufig eine Billigung, Vertretung, Verbindung oder Garantie in Bezug auf den Dritten.</p>"
+      },
+      {
+        "heading": "Verfügbarkeit der Website",
+        "body": "<p>Panama Contact ist bestrebt, die Website verfügbar und sicher zu halten, garantiert jedoch keinen dauerhaften, unterbrechungsfreien oder fehlerfreien Betrieb.</p><p>Der Zugang kann wegen Wartung, Aktualisierungen, technischer Störungen, Sicherheitsvorfällen, höherer Gewalt oder Umständen außerhalb der zumutbaren Kontrolle von Panama Contact ausgesetzt werden.</p><p>Panama Contact kann Abschnitte, Funktionen oder Inhalte der Website ändern, aussetzen oder entfernen, wenn dies als erforderlich erachtet wird.</p>"
+      },
+      {
+        "heading": "Haftungsbeschränkung",
+        "body": "<p>Im gesetzlich zulässigen Höchstmaß haftet Panama Contact nicht für Schäden, die ausschließlich entstehen aus:</p><ul><li>Der Nutzung allgemeiner Informationen ohne Einholung einer spezifischen Beratung.</li><li>Entscheidungen, die auf veralteten oder unvollständigen Inhalten basieren.</li><li>Unterbrechungen oder technischen Fehlern der Website.</li><li>Handlungen, Unterlassungen oder Entscheidungen Dritter.</li><li>Externen Links, Plattformen oder Inhalten.</li><li>Unbefugtem Zugriff trotz angemessener Sicherheitsmaßnahmen.</li><li>Missbräuchlicher Nutzung der Website durch den Nutzer.</li></ul><p>Nichts in diesen Bedingungen schließt Haftungen aus, die gesetzlich nicht beschränkt oder ausgeschlossen werden können.</p>"
+      },
+      {
+        "heading": "Datenschutz und Cookies",
+        "body": "<p>Die Verarbeitung personenbezogener Daten, die über die Website erhoben werden, richtet sich nach der Datenschutzerklärung von Panama Contact.</p><p>Die Verwendung von Cookies und ähnlichen Technologien richtet sich nach dieser Erklärung und den auf der Website verfügbaren Einwilligungsoptionen.</p>"
+      },
+      {
+        "heading": "Änderungen",
+        "body": "<p>Panama Contact kann diese Bedingungen ändern, um rechtlichen, technischen, betrieblichen oder websitebezogenen Änderungen Rechnung zu tragen.</p><p>Die aktualisierte Fassung wird auf dieser Seite mit dem Datum ihrer letzten Änderung veröffentlicht. Die weitere Nutzung der Website nach Veröffentlichung der Änderungen gilt als Annahme der jeweils geltenden Fassung.</p>"
+      },
+      {
+        "heading": "Anwendbares Recht und Gerichtsstand",
+        "body": "<p>Diese Bedingungen unterliegen den Gesetzen der Republik Panama und sind entsprechend auszulegen.</p><p>Jede Streitigkeit im Zusammenhang mit dem Zugang zu oder der Nutzung der Website wird den zuständigen Gerichten der Republik Panama unterbreitet, unbeschadet unverzichtbarer Rechte, die dem Nutzer nach geltendem Recht zustehen können.</p>"
+      },
+      {
+        "heading": "Teilweise Unwirksamkeit",
+        "body": "<p>Sollte eine Bestimmung dieser Bedingungen für ungültig, rechtswidrig oder nicht durchsetzbar erklärt werden, bleiben die übrigen Bestimmungen in vollem Umfang wirksam.</p>"
+      },
+      {
+        "heading": "Kontakt",
+        "body": "<p>Für Anfragen im Zusammenhang mit der Website oder diesen Allgemeinen Nutzungsbedingungen können Sie sich wenden an:</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, Erdgeschoss, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Panama-Stadt<br>Republik Panama<br>E-Mail: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Website: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
+      }
+    ]
   }
 }

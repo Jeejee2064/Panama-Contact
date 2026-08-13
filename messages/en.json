@@ -17,7 +17,9 @@
     "freeConsultation": "Book Free Consultation",
     "ctaHeading": "Ready to make your move?",
     "taxCalculator": "Tax exposure quiz",
-    "incomeTaxCalculator": "Income tax calculator"
+    "incomeTaxCalculator": "Income tax calculator",
+    "privacyPolicy": "Privacy Policy",
+    "legalTerms": "Terms and Conditions"
   },
   "HomePage": {
     "meta": {
@@ -87,6 +89,12 @@
       "heading": "Our services",
       "cta": "All services",
       "readMore": "Learn more"
+    },
+    "legalNotice": {
+      "sectionLabel": "Legal notice",
+      "body1": "As part of our service expansion, we also offer legal advisory and support across various branches of law, including civil, criminal, commercial, administrative, labor, tax, corporate, real estate, and family law matters, among others.",
+      "body2": "All legal consultations, guidance, representation, procedures, or proceedings will be handled exclusively by qualified lawyers, duly authorized to practice law by the Supreme Court of Justice of the Republic of Panama, in accordance with applicable legislation.",
+      "body3": "Panama Contact Legal operates under strict standards of confidentiality, professional ethics, and regulatory compliance, striving to provide each client with personalized, transparent service tailored to their legal needs."
     },
     "cta": {
       "eyebrow": "Free consultation",
@@ -1086,24 +1094,175 @@
   "PrivacyPolicyPage": {
     "meta": {
       "title": "Privacy Policy | Panama Contact Services",
-      "description": "How Panama Contact Services collects, uses, and protects your personal data, in line with Panama’s Law 81 of 2019 on Personal Data Protection."
+      "description": "How Panama Contact Services S.A. collects, uses, and protects your personal data, in accordance with Panama's Law 81 of 2019 on Personal Data Protection."
     },
     "heading": "Privacy Policy",
-    "lastUpdated": "Last updated: July 10, 2026",
-    "intro": "Panama Contact Services (\"we\", \"us\") respects your privacy. This policy explains what personal data we collect through this website — including our free tax calculators and quiz — why we collect it, and what rights you have over it, in accordance with Panama’s Law 81 of 2019 on Personal Data Protection.",
-    "sections": {
-      "dataCollectedTitle": "What we collect",
-      "dataCollectedBody": "When you use our contact form, questionnaires, or tax tools and choose to request a personalized report or consultation, we collect the information you voluntarily provide: your name, email address, and — depending on the form — phone number, country, and your form answers (e.g. income figures or quiz responses). We do not require this information to use our free calculators; results are shown without any data collection unless you explicitly request a report or consultation.",
-      "howWeUseItTitle": "How we use it",
-      "howWeUseItBody": "We use your information to send you the report or content you requested, to follow up on consultation requests, and to improve our services. We do not sell your personal data to third parties.",
-      "dataSharingTitle": "Service providers",
-      "dataSharingBody": "We use Supabase to store submitted data securely and Resend to send transactional emails (such as your personalized tax report). These providers process data on our behalf and are contractually bound to protect it.",
-      "retentionTitle": "Data retention",
-      "retentionBody": "We retain your information for as long as needed to respond to your request or provide the service you asked for, or as required by law.",
-      "rightsTitle": "Your rights",
-      "rightsBody": "Under Law 81 of 2019, you have the right to access, rectify, cancel, or oppose the processing of your personal data. To exercise any of these rights, contact us using the details below.",
-      "contactTitle": "Contact us",
-      "contactBody": "For any privacy-related question or request, email us at info@panama-contact.com."
-    }
+    "lastUpdated": "Last updated: August 12, 2026",
+    "intro": "<p>Panama Contact Services S.A., hereinafter “Panama Contact”, respects the privacy of its users and is committed to protecting the personal data collected through the website <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a>, its forms, booking tools, payment systems, messaging channels, and other related digital media.</p><p>This Privacy Policy explains what information we collect, why we use it, with whom we may share it, and what rights data subjects have.</p>",
+    "sections": [
+      {
+        "heading": "Data controller",
+        "body": "<p>The controller responsible for the processing of personal data is:</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, ground floor, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Panama City<br>Republic of Panama<br>Email: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Website: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
+      },
+      {
+        "heading": "Legal framework",
+        "body": "<p>The processing of personal data is carried out in accordance with the legislation in force in the Republic of Panama, including Law 81 of March 26, 2019 on Personal Data Protection, Executive Decree 285 of May 28, 2021, and any other provisions that amend, regulate, or supplement them.</p>"
+      },
+      {
+        "heading": "Data we may collect",
+        "body": "<p>Depending on how the user interacts with Panama Contact, we may collect the following categories of information:</p><h3>Identification and contact data</h3><p>First and last name, nationality, country of residence, address, email address, phone number, WhatsApp information, and any other data provided through our forms or communications.</p><h3>Information related to inquiries</h3><p>Information the user chooses to provide about their immigration, banking, corporate, wealth, tax, real estate, or administrative situation, as well as their relocation or settlement needs in Panama.</p><h3>Documentation provided by the user</h3><p>Where the site allows document uploads, we may receive passports, identity documents, proof of address, criminal records, bank statements, corporate documents, and other files necessary to assess an inquiry or provide a requested service.</p><p>Some documents may contain sensitive data or financial information. Such data will be processed only when necessary and where a legitimate basis exists for doing so.</p><h3>Booking data</h3><p>Date and time of the appointment, reason for the consultation, time zone, contact information, and any comments entered into the scheduling tool.</p><h3>Payment-related data</h3><p>When online payments are made, we may receive information about the transaction, such as the payer's name, amount, date, payment status, and transaction reference.</p><p>Full credit or debit card details are normally processed directly by the corresponding payment provider. Panama Contact does not store full card details unless expressly stated otherwise.</p><h3>Technical and browsing data</h3><p>IP address, device type, browser, operating system, pages visited, time spent, links used, approximate location, and other technical information collected through cookies and analytics tools.</p><h3>Commercial communications</h3><p>We may retain information related to newsletter subscriptions, information requests, communication preferences, and messages exchanged by email, forms, or WhatsApp.</p>"
+      },
+      {
+        "heading": "Purposes of processing",
+        "body": "<p>Personal data may be used to:</p><ol><li>Respond to inquiries and information requests.</li><li>Coordinate in-person or virtual appointments.</li><li>Preliminarily assess the data subject's needs.</li><li>Prepare proposals, quotes, or instructions related to the requested services.</li><li>Receive and review documents submitted voluntarily.</li><li>Process and verify payments.</li><li>Maintain communications by email, phone, or WhatsApp.</li><li>Send newsletters, updates, or commercial information where consent exists or a prior relationship allows it.</li><li>Improve the operation, security, and content of the website.</li><li>Analyze site traffic and usage.</li><li>Prevent fraud, misuse, unauthorized access, and other security incidents.</li><li>Comply with legal, regulatory, tax, accounting, contractual, or due diligence obligations.</li><li>Respond to requests from competent authorities.</li><li>Formulate, exercise, or defend legal claims.</li></ol><p>Submitting information through the site does not obligate Panama Contact to accept a request, nor does it automatically imply the existence of a professional or contractual relationship.</p>"
+      },
+      {
+        "heading": "Legal bases for processing",
+        "body": "<p>Processing may be based, as applicable, on:</p><ul><li>The data subject's consent.</li><li>A request for information or pre-contractual measures.</li><li>The performance of a contractual relationship.</li><li>Compliance with a legal obligation.</li><li>Panama Contact's legitimate interests, provided these do not override the data subject's rights.</li><li>The formulation, exercise, or defense of rights and claims.</li></ul><p>The user may withdraw their consent where processing depends exclusively on it. Withdrawal will not affect the lawfulness of processing carried out prior to withdrawal.</p>"
+      },
+      {
+        "heading": "Mandatory nature of information",
+        "body": "<p>Fields marked as mandatory must be completed for Panama Contact to be able to handle the corresponding request.</p><p>The user is not required to provide additional information that is not necessary. However, the absence of certain data or documents may prevent us from responding adequately, assessing the request, or providing the requested service.</p>"
+      },
+      {
+        "heading": "Accuracy of data",
+        "body": "<p>The user represents that the data and documents provided are true, complete, accurate, and up to date.</p><p>Where the user provides information about another person, they represent that they are authorized to do so and have informed that person of the relevant processing.</p>"
+      },
+      {
+        "heading": "Disclosure of data to third parties",
+        "body": "<p>Panama Contact may share personal data, only where necessary, with:</p><ul><li>Web hosting, technical support, IT security, and cloud storage providers.</li><li>Email, scheduling, video call, forms, analytics, and newsletter providers.</li><li>Payment providers and financial institutions.</li><li>Lawyers, accountants, translators, notaries, resident agents, and other professionals involved in delivering or executing the service.</li><li>Banks, insurers, real estate developers, and providers related to a specific request, where the user has authorized it or where necessary for the requested service.</li><li>Administrative, judicial, tax, immigration, regulatory, or law-enforcement authorities where a legal obligation exists.</li><li>Other providers or collaborators subject to confidentiality and data protection obligations.</li></ul><p>Panama Contact does not sell or rent personal data to third parties.</p>"
+      },
+      {
+        "heading": "Third-party services and platforms",
+        "body": "<p>The site may use third-party services to manage appointments, payments, forms, documents, statistics, newsletters, maps, video calls, or WhatsApp communications.</p><p>When the user uses these services, their data may also become subject to the privacy policies and terms of the relevant provider. Panama Contact recommends reviewing them before using such platforms.</p>"
+      },
+      {
+        "heading": "International transfers",
+        "body": "<p>Some technology providers, storage systems, payment platforms, or communication tools may process information outside Panama.</p><p>Where applicable, Panama Contact will take reasonable measures to ensure that such transfers are carried out with an adequate level of protection and in accordance with applicable law.</p>"
+      },
+      {
+        "heading": "Cookies and similar technologies",
+        "body": "<p>The site uses cookies and similar technologies to:</p><ul><li>Enable its technical operation.</li><li>Remember user preferences.</li><li>Strengthen security.</li><li>Measure traffic and performance.</li><li>Analyze browsing behavior.</li><li>Improve our content and services.</li><li>Manage third-party functionality, where applicable.</li></ul><p>Strictly necessary cookies may be used without consent when indispensable for the site's operation. Analytical, advertising, or non-essential cookies will be subject to the available consent options.</p><p>The user may accept, reject, or configure non-essential cookies through the corresponding notice or their browser settings. Disabling certain cookies may affect some site functions.</p>"
+      },
+      {
+        "heading": "Commercial communications",
+        "body": "<p>Panama Contact may send informational or commercial communications when:</p><ul><li>The user has given consent.</li><li>A prior relationship exists that permits such communications.</li><li>Applicable law authorizes it.</li></ul><p>The user may unsubscribe via the link included in emails, by replying to the message received, or by writing to <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a>.</p><p>Unsubscribing from commercial communications will not prevent the sending of administrative messages or messages related to a requested service.</p>"
+      },
+      {
+        "heading": "Data retention",
+        "body": "<p>Data will be retained for as long as necessary to fulfill the purpose for which it was collected.</p><p>Thereafter, it may be kept blocked or archived for the periods required by legal, tax, accounting, regulatory, professional, or claims-prevention obligations.</p><p>Once data is no longer necessary and no retention obligation exists, it will be deleted, anonymized, or destroyed in a reasonable and secure manner.</p>"
+      },
+      {
+        "heading": "Security and confidentiality",
+        "body": "<p>Panama Contact adopts reasonable administrative, organizational, and technical measures to protect personal data against loss, alteration, unauthorized access, disclosure, or misuse.</p><p>Access is limited to individuals who reasonably need the information to perform their duties and who are subject to confidentiality obligations.</p><p>However, no electronic transmission or storage system can guarantee absolute security. Users should avoid sending unnecessary information or using channels they consider insecure.</p>"
+      },
+      {
+        "heading": "Data subject rights",
+        "body": "<p>Under applicable law, the data subject may request:</p><ul><li>Access to their personal data.</li><li>Rectification of incorrect, incomplete, or outdated data.</li><li>Cancellation or deletion, where applicable.</li><li>Objection to certain processing.</li><li>Data portability, where applicable.</li><li>Withdrawal of consent.</li><li>Information about the use and processing of their data.</li></ul><p>To exercise these rights, please send a request to <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a>, indicating your name, contact details, the right you wish to exercise, and the information needed to verify your identity.</p><p>Panama Contact may request additional documentation where reasonably necessary to confirm the requester's identity, protect the confidentiality of information, or understand the scope of the request.</p><p>The data subject may also file an inquiry or complaint with Panama's National Authority for Transparency and Access to Information, where applicable.</p>"
+      },
+      {
+        "heading": "Minors' data",
+        "body": "<p>The site is not directed at minors, and Panama Contact does not seek to deliberately collect their data without the involvement of their parents, legal representatives, or duly authorized persons.</p><p>If it is identified that a minor provided information without proper authorization, measures may be taken to delete it or restrict its processing.</p>"
+      },
+      {
+        "heading": "External links",
+        "body": "<p>The site may contain links to pages or services operated by third parties. Panama Contact does not control their privacy practices and is not responsible for the content, security, or data processing carried out by such third parties.</p>"
+      },
+      {
+        "heading": "Changes",
+        "body": "<p>Panama Contact may amend this Privacy Policy to reflect legal, technological, or operational changes.</p><p>The updated version will be published on the website indicating the date of its last modification. Where changes are substantial, they may be communicated through a prominent notice or other reasonable means.</p>"
+      },
+      {
+        "heading": "Contact",
+        "body": "<p>For inquiries, requests, or complaints related to this Privacy Policy or the processing of personal data, you may contact:</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, ground floor, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Panama City<br>Republic of Panama<br>Email: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Website: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
+      }
+    ]
+  },
+  "LegalTermsPage": {
+    "meta": {
+      "title": "Terms and Conditions | Panama Contact Services",
+      "description": "Terms and conditions governing the use of the Panama Contact Services S.A. website, in accordance with the laws of the Republic of Panama."
+    },
+    "heading": "Terms and Conditions of Website Use",
+    "lastUpdated": "Last updated: August 12, 2026",
+    "intro": "<p>These Terms and Conditions govern access to and use of the website <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a>, operated by Panama Contact Services S.A., hereinafter “Panama Contact”.</p><p>By accessing, browsing, or using this site, the user acknowledges having read and accepted these Terms and Conditions. If you do not agree with them, you should refrain from using the site.</p>",
+    "sections": [
+      {
+        "heading": "Identification of the site owner",
+        "body": "<p>The website belongs to:</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, ground floor, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Panama City<br>Republic of Panama<br>Email: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Website: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
+      },
+      {
+        "heading": "Purpose of the site",
+        "body": "<p>The site is informational in nature and presents the services offered or coordinated by Panama Contact, which may include guidance and assistance on immigration, corporate, banking, administrative, real estate, accounting, wealth, and relocation matters in Panama.</p><p>It may also allow the user to submit inquiries, request appointments, upload documents, make payments, or communicate with Panama Contact through third-party tools.</p><p>These Terms govern exclusively the general access to and use of the site. The engagement of services may be subject to proposals, contracts, quotes, payment terms, or additional documents.</p>"
+      },
+      {
+        "heading": "General information and absence of individualized advice",
+        "body": "<p>The published content is for general informational purposes. It does not, by itself, constitute legal, immigration, banking, financial, tax, accounting, real estate, or investment advice.</p><p>The available information does not replace a professional assessment of the user's particular circumstances.</p><p>Submitting a form, booking an appointment, exchanging messages, or uploading documents does not automatically create an attorney-client relationship, an advisor-client relationship, or a contractual relationship with Panama Contact or any of its collaborators.</p><p>Such a relationship will only exist once expressly accepted and, where applicable, formalized through a proposal, contract, written confirmation, or accepted payment.</p>"
+      },
+      {
+        "heading": "Regulatory changes and accuracy of information",
+        "body": "<p>Panama Contact strives to keep the site's information clear and up to date. However, laws, regulations, administrative criteria, banking policies, documentary requirements, official fees, timeframes, and procedures may change without notice.</p><p>For this reason, Panama Contact does not guarantee that all content will remain permanently updated, complete, or applicable to each particular case.</p><p>Before making a decision or initiating a procedure, the user should request updated confirmation and an assessment of their specific situation.</p>"
+      },
+      {
+        "heading": "No guarantee of outcomes",
+        "body": "<p>The information published does not constitute a promise or guarantee of approval, account opening, obtaining residency, work permits, licenses, registration, investment, return, response time, or any other outcome.</p><p>Final decisions may depend on public authorities, banks, financial institutions, notaries, registries, providers, and other third parties independent of Panama Contact.</p><p>The timeframes mentioned on the site are general estimates and may vary depending on the applicant's circumstances, the documentation submitted, and third-party processing times.</p>"
+      },
+      {
+        "heading": "Permitted use",
+        "body": "<p>The user agrees to use the site lawfully, diligently, and in accordance with these Terms.</p><p>In particular, the user shall:</p><ul><li>Provide truthful information when using the site's forms or tools.</li><li>Respect the rights of Panama Contact and third parties.</li><li>Avoid any conduct that compromises the security or availability of the site.</li><li>Use the content solely for legitimate personal or business purposes.</li></ul>"
+      },
+      {
+        "heading": "Prohibited uses",
+        "body": "<p>The following is prohibited:</p><ul><li>Using the site for fraudulent, unlawful, or deceptive purposes.</li><li>Impersonating another person.</li><li>Providing false or altered information or documents, or documents belonging to third parties without authorization.</li><li>Attempting to gain unauthorized access to the site, servers, accounts, systems, or databases.</li><li>Introducing viruses, malicious code, or technologies intended to affect its operation.</li><li>Carrying out automated extraction, mass copying, scraping, or systematic collection of content without authorization.</li><li>Interfering with the operation, security, or availability of the site.</li><li>Using the content in a way that could harm the reputation, rights, or legitimate interests of Panama Contact or third parties.</li></ul><p>Panama Contact may restrict or block access when it detects use contrary to these Terms or potentially harmful.</p>"
+      },
+      {
+        "heading": "Forms, appointments, and communications",
+        "body": "<p>The user is responsible for verifying that the contact information provided is correct.</p><p>The automatic receipt of a form, booking, or message does not imply that Panama Contact has agreed to provide a service, nor does it guarantee availability.</p><p>Panama Contact may request additional information, propose another date, decline a request, or refrain from continuing a communication where there is a legal, professional, operational, ethical, compliance, or conflict-of-interest reason for doing so.</p>"
+      },
+      {
+        "heading": "Document uploads",
+        "body": "<p>Where the site allows file uploads, the user represents that:</p><ul><li>They are entitled to provide the documents.</li><li>The information is authentic and has not been fraudulently altered.</li><li>Its submission does not infringe third-party rights.</li><li>The files do not contain malicious software.</li></ul><p>The user should avoid uploading documents that were not requested or that contain unnecessary personal information.</p><p>Uploading documents does not imply their acceptance, validation, or approval by Panama Contact.</p>"
+      },
+      {
+        "heading": "Payments through the site",
+        "body": "<p>The site may provide links or tools to make certain payments. Processing may be handled by external providers and subject to their own terms.</p><p>The availability of a payment tool does not mean that all services can be engaged directly through the site.</p><p>Specific terms regarding pricing, cancellations, refunds, official fees, and service delivery must be set out in the corresponding quote, invoice, contract, or confirmation. These general Terms of use do not replace such documents.</p>"
+      },
+      {
+        "heading": "Intellectual property",
+        "body": "<p>Unless otherwise indicated, the texts, designs, logos, trademarks, images, videos, graphics, documents, databases, structure, and other content on the site belong to Panama Contact or are used with the corresponding authorization.</p><p>The user may view the content for personal, non-commercial purposes.</p><p>Its reproduction, modification, publication, distribution, sale, commercial exploitation, or use to create derivative content is prohibited without Panama Contact's prior written authorization, except for uses expressly permitted by law.</p><p>Third-party trademarks, trade names, and logos belong to their respective owners.</p>"
+      },
+      {
+        "heading": "Third-party links and services",
+        "body": "<p>The site may contain links to or integrations with scheduling, payment, mapping, messaging, social media, video call, banking, public institution, or other third-party platforms.</p><p>These services are operated by third parties and may be subject to their own terms and policies.</p><p>Panama Contact does not control or guarantee the availability, security, content, decisions, or operation of external sites. The inclusion of a link does not necessarily imply approval, representation, association, or warranty regarding the third party.</p>"
+      },
+      {
+        "heading": "Site availability",
+        "body": "<p>Panama Contact strives to keep the site available and secure but does not guarantee permanent, uninterrupted, or error-free operation.</p><p>Access may be suspended for maintenance, updates, technical failures, security incidents, force majeure, or circumstances beyond Panama Contact's reasonable control.</p><p>Panama Contact may modify, suspend, or remove sections, functionalities, or content of the site whenever it deems necessary.</p>"
+      },
+      {
+        "heading": "Limitation of liability",
+        "body": "<p>To the maximum extent permitted by applicable law, Panama Contact will not be liable for damages arising exclusively from:</p><ul><li>The use of general information without obtaining specific advice.</li><li>Decisions made based on outdated or incomplete content.</li><li>Interruptions or technical errors on the site.</li><li>Acts, omissions, or decisions of third parties.</li><li>External links, platforms, or content.</li><li>Unauthorized access occurring despite the adoption of reasonable security measures.</li><li>Misuse of the site by the user.</li></ul><p>Nothing in these Terms excludes liabilities that cannot be legally limited or excluded.</p>"
+      },
+      {
+        "heading": "Privacy and cookies",
+        "body": "<p>The processing of personal data collected through the site is governed by Panama Contact's Privacy Policy.</p><p>The use of cookies and similar technologies is governed by that policy and the consent options available on the site.</p>"
+      },
+      {
+        "heading": "Changes",
+        "body": "<p>Panama Contact may amend these Terms to reflect legal, technical, operational, or site-related changes.</p><p>The updated version will be published on this page along with its last modification date. Continued use of the site after the changes are published will constitute acceptance of the version then in force.</p>"
+      },
+      {
+        "heading": "Governing law and jurisdiction",
+        "body": "<p>These Terms shall be governed by and interpreted in accordance with the laws of the Republic of Panama.</p><p>Any dispute related to access to or use of the site shall be submitted to the competent courts of the Republic of Panama, without prejudice to any non-waivable rights the user may have under applicable law.</p>"
+      },
+      {
+        "heading": "Severability",
+        "body": "<p>Should any provision of these Terms be declared invalid, unlawful, or unenforceable, the remaining provisions shall remain in full force and effect.</p>"
+      },
+      {
+        "heading": "Contact",
+        "body": "<p>For inquiries related to the site or these Terms and Conditions, you may contact:</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, ground floor, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Panama City<br>Republic of Panama<br>Email: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Website: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
+      }
+    ]
   }
 }
