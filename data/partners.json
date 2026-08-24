@@ -8,6 +8,7 @@
   {
     "id": "panamail",
     "url": "https://www.panamail.com/",
-    "logo": "/PanamailLogo.avif"
+    "logo": "/PanamailLogo.avif",
+    "logoBg": "dark"
   }
 ]
