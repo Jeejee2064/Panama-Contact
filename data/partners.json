@@ -2,7 +2,8 @@
   {
     "id": "casco-view-life",
     "url": "https://www.cascoviewlife.com/",
-    "logo": "/Casco View Life.avif"
+    "logo": "/Casco View Life.avif",
+    "logoBg": "dark"
   },
   {
     "id": "panamail",

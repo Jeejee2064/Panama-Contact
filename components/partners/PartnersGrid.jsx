@@ -26,7 +26,7 @@ export default async function PartnersGrid({ locale }) {
             rel="noopener noreferrer"
             className="group rounded-3xl overflow-hidden bg-white border border-[#324158]/10 hover:shadow-2xl transition-all flex flex-col"
           >
-            <div className="relative h-32 flex items-center justify-center bg-[#324158]/5 p-8">
+            <div className={`relative h-32 flex items-center justify-center p-8 ${partner.logoBg === 'dark' ? 'bg-[#324158]' : 'bg-[#324158]/5'}`}>
               <Image
                 src={partner.logo}
                 alt={t(`${partner.id}.name`)}
