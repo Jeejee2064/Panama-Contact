@@ -72,5 +72,12 @@ export const routing = defineRouting({
       pt: '/termos-e-condicoes',
       de: '/nutzungsbedingungen',
     },
+    '/partners': {
+      en: '/partners',
+      fr: '/partenaires',
+      es: '/socios',
+      pt: '/parceiros',
+      de: '/partner',
+    },
   },
 });

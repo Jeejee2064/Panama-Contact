@@ -6,6 +6,7 @@ import whyPanamaData from '@/data/why-panama.json';
 import { Link } from '@/i18n/navigation';
 import { whyPanamaSlugMap, resolveWhyPanamaSlug, localizeWhyPanamaSlug } from '@/data/slugs';
 import { locales } from '@/i18n/config';
+import { SITE_URL, localizedUrl, localizedDetailUrl, localizedDetailAlternates } from '@/i18n/urls';
 import FadeIn from '@/components/animations/FadeIn';
 import CTA from '@/components/sections/CTA';
 
@@ -31,22 +32,13 @@ export async function generateMetadata({ params }) {
 
   const cardTitle = t(`cards.${canonicalSlug}.title`);
   const cardMeta = t.raw(`cards.${canonicalSlug}.meta`);
-  const canonical = `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}/why-panama/${slug}`;
   return {
     title: cardMeta?.title ?? `${cardTitle} in Panama — Complete Guide | Panama Contact`,
     description: cardMeta?.description ?? t(`cards.${canonicalSlug}.shortDescription`),
     openGraph: {
       images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Panama Contact Services' }],
     },
-    alternates: {
-      canonical,
-      languages: Object.fromEntries(
-        locales.map((l) => [
-          l,
-          `https://panama-contact.com${l === 'en' ? '' : `/${l}`}/why-panama/${localizeWhyPanamaSlug(canonicalSlug, l)}`,
-        ])
-      ),
-    },
+    alternates: localizedDetailAlternates('/why-panama/[slug]', locale, slug, (l) => localizeWhyPanamaSlug(canonicalSlug, l)),
   };
 }
 
@@ -77,26 +69,27 @@ export default async function WhyPanamaDetail({ params }) {
     .slice(0, 3);
 
   const relatedItems = related.map((s) => ({
-    href: `/why-panama/${localizeWhyPanamaSlug(s.slug, locale)}`,
+    key: s.slug,
+    href: { pathname: '/why-panama/[slug]', params: { slug: localizeWhyPanamaSlug(s.slug, locale) } },
     label: t(`cards.${s.slug}.title`),
   }));
   // Free tax tools surfaced alongside the real related items on the tax-pressure page.
   if (canonicalSlug === 'tax-pressure') {
     relatedItems.push(
-      { href: '/panama-tax-calculator', label: t('taxExposureQuizLink') },
-      { href: '/panama-income-tax-calculator', label: t('incomeTaxCalculatorLink') },
+      { key: 'tax-exposure-quiz', href: '/panama-tax-calculator', label: t('taxExposureQuizLink') },
+      { key: 'income-tax-calculator', href: '/panama-income-tax-calculator', label: t('incomeTaxCalculatorLink') },
     );
   }
 
-  const baseUrl = `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}`;
+  const baseUrl = `${SITE_URL}${locale === 'en' ? '' : `/${locale}`}`;
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
-      { '@type': 'ListItem', position: 2, name: 'Why Panama', item: `${baseUrl}/why-panama` },
-      { '@type': 'ListItem', position: 3, name: title, item: `${baseUrl}/why-panama/${slug}` },
+      { '@type': 'ListItem', position: 2, name: 'Why Panama', item: localizedUrl('/why-panama', locale) },
+      { '@type': 'ListItem', position: 3, name: title, item: localizedDetailUrl('/why-panama/[slug]', locale, slug) },
     ],
   };
 
@@ -224,7 +217,7 @@ export default async function WhyPanamaDetail({ params }) {
                     <div className="flex flex-col gap-3">
                       {relatedItems.map((item) => (
                         <Link
-                          key={item.href}
+                          key={item.key}
                           href={item.href}
                           className="text-sm text-[#324158]/60 hover:text-[#FF491A] transition-colors flex items-center gap-2 group"
                         >

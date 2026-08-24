@@ -1,9 +1,9 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { locales } from '@/i18n/config';
 import { localizedAlternates } from '@/i18n/urls';
-import LegalDocument from '@/components/legal/LegalDocument';
+import PartnersGrid from '@/components/partners/PartnersGrid';
 
-const PATHNAME = '/privacy-policy';
+const PATHNAME = '/partners';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -11,7 +11,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'PrivacyPolicyPage.meta' });
+  const t = await getTranslations({ locale, namespace: 'PartnersPage.meta' });
 
   return {
     title: t('title'),
@@ -20,9 +20,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function PrivacyPolicyPage({ params }) {
+export default async function PartnersPage({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <LegalDocument locale={locale} namespace="PrivacyPolicyPage" />;
+  return <PartnersGrid locale={locale} />;
 }

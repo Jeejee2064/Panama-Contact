@@ -1,17 +1,12 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { locales } from '@/i18n/config';
-import { routing } from '@/i18n/routing';
+import { localizedAlternates } from '@/i18n/urls';
 import LegalDocument from '@/components/legal/LegalDocument';
 
 const PATHNAME = '/legal-terms';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
-}
-
-function localizedUrl(locale) {
-  const slug = routing.pathnames[PATHNAME][locale];
-  return `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}${slug}`;
 }
 
 export async function generateMetadata({ params }) {
@@ -21,10 +16,7 @@ export async function generateMetadata({ params }) {
   return {
     title: t('title'),
     description: t('description'),
-    alternates: {
-      canonical: localizedUrl(locale),
-      languages: Object.fromEntries(locales.map((l) => [l, localizedUrl(l)])),
-    },
+    alternates: localizedAlternates(PATHNAME, locale),
   };
 }
 

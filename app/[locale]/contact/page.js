@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import FadeIn from '@/components/animations/FadeIn';
 import { Phone, Mail, MapPin, Calendar, MessageCircle } from 'lucide-react';
+import { localizedAlternates } from '@/i18n/urls';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -8,6 +9,7 @@ export async function generateMetadata({ params }) {
   return {
     title: t('title'),
     description: t('description'),
+    alternates: localizedAlternates('/contact', locale),
   };
 }
 

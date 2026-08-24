@@ -19,7 +19,8 @@
     "taxCalculator": "Quiz d'exposition fiscale",
     "incomeTaxCalculator": "Calculateur d'impôt sur le revenu",
     "privacyPolicy": "Politique de Confidentialité",
-    "legalTerms": "Conditions Générales"
+    "legalTerms": "Conditions Générales",
+    "partners": "Partenaires"
   },
   "HomePage": {
     "meta": {
@@ -1265,5 +1266,22 @@
         "body": "<p>Pour toute question relative au site ou aux présentes Conditions Générales, vous pouvez contacter :</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, rez-de-chaussée, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Panama City<br>République du Panama<br>Email: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Site web: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
       }
     ]
+  },
+  "PartnersPage": {
+    "meta": {
+      "title": "Nos Partenaires | Panama Contact Services",
+      "description": "Entreprises locales de confiance que nous recommandons à nos clients qui s'installent au Panama : appartements meublés avec Casco View Life et bureaux virtuels avec Panamail."
+    },
+    "heading": "Nos Partenaires",
+    "intro": "Nous travaillons aux côtés d'un petit nombre d'entreprises locales de confiance qui partagent notre engagement à rendre votre installation au Panama fluide et sereine. Voici les partenaires que nous recommandons à nos clients.",
+    "cta": "Visiter le site",
+    "casco-view-life": {
+      "name": "Casco View Life",
+      "description": "Appartements meublés certifiés EDGE et unités d'investissement à Santa Ana, à deux pas de Casco Viejo — idéal pour les nomades digitaux, les séjours courts et les investisseurs recherchant un rendement locatif à Panama City."
+    },
+    "panamail": {
+      "name": "Panamail",
+      "description": "Bureaux virtuels et réexpédition de courrier dans le quartier des affaires de Panama City : adresse professionnelle enregistrée, numéro de téléphone local, et accompagnement pour les expatriés et entreprises qui s'installent au Panama."
+    }
   }
 }

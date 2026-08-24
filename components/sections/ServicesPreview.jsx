@@ -52,7 +52,7 @@ export default function ServicesPreview() {
             return (
               <Link
                 key={service.slug}
-                href={`/services/${localSlug}`}
+                href={{ pathname: '/services/[slug]', params: { slug: localSlug } }}
                 className="group rounded-3xl overflow-hidden bg-white text-[#324158] hover:shadow-2xl transition-all"
               >
                 {/* Image */}

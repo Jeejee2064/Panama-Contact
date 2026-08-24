@@ -181,6 +181,8 @@ const nextConfig = {
       { source: '/es/why-panama/:slug*', destination: '/es/por-que-panama/:slug*', permanent: true },
       { source: '/pt/why-panama/:slug*', destination: '/pt/por-que-panama/:slug*', permanent: true },
       { source: '/fr/why-panama/:slug*', destination: '/fr/pourquoi-panama/:slug*', permanent: true },
+      { source: '/de/services/:slug*',   destination: '/de/dienstleistungen/:slug*', permanent: true },
+      { source: '/de/why-panama/:slug*', destination: '/de/warum-panama/:slug*',     permanent: true },
 
       // ─── Old static page redirects ──────────────────────────────────────────
       { source: '/es/services',   destination: '/es/servicios',                       permanent: true },
@@ -190,6 +192,9 @@ const nextConfig = {
       { source: '/fr/why-panama', destination: '/fr/pourquoi-s-installer-au-panama',  permanent: true },
       { source: '/es/contact',    destination: '/es/contacto',                        permanent: true },
       { source: '/pt/contact',    destination: '/pt/contato',                         permanent: true },
+      { source: '/de/services',   destination: '/de/dienstleistungen',                permanent: true },
+      { source: '/de/why-panama', destination: '/de/warum-panama',                    permanent: true },
+      { source: '/de/contact',    destination: '/de/kontakt',                         permanent: true },
     ];
   },
 };

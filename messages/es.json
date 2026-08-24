@@ -19,7 +19,8 @@
     "taxCalculator": "Cuestionario de exposición fiscal",
     "incomeTaxCalculator": "Calculadora de impuesto sobre la renta",
     "privacyPolicy": "Política de Privacidad",
-    "legalTerms": "Términos y Condiciones"
+    "legalTerms": "Términos y Condiciones",
+    "partners": "Socios"
   },
   "HomePage": {
     "meta": {
@@ -98,7 +99,7 @@
     },
     "cta": {
       "eyebrow": "Consulta gratuita",
-      "heading": "¿No sabes qué se adapta a tu situación?",
+      "heading": "¿No sabes que se adapta a tu situacion?",
       "subheading": "¡Obtén tu consulta sin costo!",
       "cta": "Agenda tu consulta gratuita"
     }
@@ -1265,5 +1266,22 @@
         "body": "<p>Para consultas relacionadas con el sitio o estos Términos y Condiciones, puede comunicarse con:</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, planta baja, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Ciudad de Panamá<br>República de Panamá<br>Correo electrónico: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Sitio web: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
       }
     ]
+  },
+  "PartnersPage": {
+    "meta": {
+      "title": "Nuestros Socios | Panama Contact Services",
+      "description": "Empresas locales de confianza que recomendamos a nuestros clientes que se mudan a Panamá: apartamentos amueblados con Casco View Life y oficinas virtuales con Panamail."
+    },
+    "heading": "Nuestros Socios",
+    "intro": "Trabajamos junto a un pequeño grupo de empresas locales de confianza que comparten nuestro compromiso de hacer que su mudanza a Panamá sea fluida y sin estrés. Estos son los socios que recomendamos a nuestros clientes.",
+    "cta": "Visitar sitio web",
+    "casco-view-life": {
+      "name": "Casco View Life",
+      "description": "Apartamentos amueblados certificados EDGE y unidades de inversión en Santa Ana, a pasos de Casco Viejo — ideales para nómadas digitales, estadías cortas e inversores en busca de rentabilidad al instalarse en Ciudad de Panamá."
+    },
+    "panamail": {
+      "name": "Panamail",
+      "description": "Oficinas virtuales y reenvío de correo en el distrito bancario de Ciudad de Panamá: una dirección comercial registrada, un número de teléfono local y apoyo para la instalación de expatriados y empresas que establecen presencia en Panamá."
+    }
   }
 }

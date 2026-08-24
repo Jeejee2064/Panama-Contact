@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import servicesData from '@/data/services.json';
 import { serviceSlugMap, resolveServiceSlug, localizeServiceSlug } from '@/data/slugs';
 import { locales } from '@/i18n/config';
+import { SITE_URL, localizedUrl, localizedDetailUrl, localizedDetailAlternates } from '@/i18n/urls';
 import Badge from '@/components/ui/Badge';
 import FadeIn from '@/components/animations/FadeIn';
 import FaqAccordion from '@/components/ui/FaqAccordion';
@@ -28,22 +29,13 @@ export async function generateMetadata({ params }) {
   const item = t.raw(canonicalSlug);
   if (!item) return {};
 
-  const canonical = `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}/services/${slug}`;
   return {
     title: item.meta?.title ?? `${item.title} in Panama — Expert Guide & Services | Panama Contact`,
     description: item.meta?.description ?? item.description,
     openGraph: {
       images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Panama Contact Services' }],
     },
-    alternates: {
-      canonical,
-      languages: Object.fromEntries(
-        locales.map((l) => [
-          l,
-          `https://panama-contact.com${l === 'en' ? '' : `/${l}`}/services/${localizeServiceSlug(canonicalSlug, l)}`,
-        ])
-      ),
-    },
+    alternates: localizedDetailAlternates('/services/[slug]', locale, slug, (l) => localizeServiceSlug(canonicalSlug, l)),
   };
 }
 
@@ -73,18 +65,19 @@ export default async function ServiceDetailPage({ params }) {
     .slice(0, 3);
 
   const relatedItems = related.map((s) => ({
-    href: `/services/${localizeServiceSlug(s.slug, locale)}`,
+    key: s.slug,
+    href: { pathname: '/services/[slug]', params: { slug: localizeServiceSlug(s.slug, locale) } },
     label: tServices(`${s.slug}.title`),
   }));
   // Free tax tools surfaced alongside the real related services on the income-tax page.
   if (canonicalSlug === 'income-tax') {
     relatedItems.push(
-      { href: '/panama-income-tax-calculator', label: tDetail('incomeTaxCalculatorLink') },
-      { href: '/panama-tax-calculator', label: tDetail('taxExposureQuizLink') },
+      { key: 'income-tax-calculator', href: '/panama-income-tax-calculator', label: tDetail('incomeTaxCalculatorLink') },
+      { key: 'tax-exposure-quiz', href: '/panama-tax-calculator', label: tDetail('taxExposureQuizLink') },
     );
   }
 
-  const baseUrl = `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}`;
+  const baseUrl = `${SITE_URL}${locale === 'en' ? '' : `/${locale}`}`;
   const stripHtml = (html) => html?.replace(/<[^>]*>/g, '') ?? '';
 
   const breadcrumbSchema = {
@@ -92,8 +85,8 @@ export default async function ServiceDetailPage({ params }) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: `${baseUrl}/services` },
-      { '@type': 'ListItem', position: 3, name: title, item: `${baseUrl}/services/${slug}` },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: localizedUrl('/services', locale) },
+      { '@type': 'ListItem', position: 3, name: title, item: localizedDetailUrl('/services/[slug]', locale, slug) },
     ],
   };
 
@@ -216,7 +209,7 @@ export default async function ServiceDetailPage({ params }) {
                     <div className="flex flex-col gap-3">
                       {relatedItems.map((item) => (
                         <Link
-                          key={item.href}
+                          key={item.key}
                           href={item.href}
                           className="text-sm text-[#324158]/60 hover:text-orange-500 transition-colors flex items-center gap-2 group"
                         >

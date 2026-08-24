@@ -1,7 +1,8 @@
 'use client';
 import { Link, usePathname } from '@/i18n/navigation';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { localizeServiceSlug } from '@/data/slugs';
 import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 
 // These 2 tool pages have no site footer at all.
@@ -16,24 +17,32 @@ const WA_ICON = (
 export default function Footer() {
   const t = useTranslations('Footer');
   const pathname = usePathname();
+  const locale = useLocale();
 
   if (NO_FOOTER_PATHS.has(pathname)) return null;
 
+  // href built from the canonical (EN) slug key — never a literal URL segment,
+  // since the actual per-locale SEO slug (from serviceSlugMap) differs from the key.
+  const serviceLink = (slug, label) => ({
+    href: { pathname: '/services/[slug]', params: { slug: localizeServiceSlug(slug, locale) } },
+    label,
+  });
+
   const servicesCol1 = [
-    { href: '/services/insurance',        label: 'Insurance' },
-    { href: '/services/driver-s-license', label: "Driver's license" },
-    { href: '/services/goods-import',     label: 'Goods import' },
-    { href: '/services/business',         label: 'Business setup' },
-    { href: '/services/bank-account',     label: 'Bank account' },
-    { href: '/services/real-estate',      label: 'Real estate' },
+    serviceLink('insurance', 'Insurance'),
+    serviceLink('driver-s-license', "Driver's license"),
+    serviceLink('goods-import', 'Goods import'),
+    serviceLink('business', 'Business setup'),
+    serviceLink('bank-account', 'Bank account'),
+    serviceLink('real-estate', 'Real estate'),
   ];
 
   const servicesCol2 = [
-    { href: '/services/income-tax',          label: 'Income tax' },
-    { href: '/services/retiring',            label: 'Retiring' },
-    { href: '/services/qualified-investor',  label: 'Qualified investor' },
-    { href: '/services/digital-nomad',       label: 'Digital nomad' },
-    { href: '/services/friendly-nations',    label: 'Friendly nations' },
+    serviceLink('income-tax', 'Income tax'),
+    serviceLink('retiring', 'Retiring'),
+    serviceLink('qualified-investor', 'Qualified investor'),
+    serviceLink('digital-nomad', 'Digital nomad'),
+    serviceLink('friendly-nations', 'Friendly nations'),
   ];
 
   return (
@@ -97,7 +106,7 @@ export default function Footer() {
             </p>
             <ul className="flex flex-col gap-2.5">
               {servicesCol1.map((s) => (
-                <li key={s.href}>
+                <li key={s.label}>
                   <Link href={s.href} className="text-sm hover:text-[#FF4D1C] transition-colors">
                     {s.label}
                   </Link>
@@ -111,7 +120,7 @@ export default function Footer() {
             <p className="invisible text-xs mb-5">&nbsp;</p>
             <ul className="flex flex-col gap-2.5">
               {servicesCol2.map((s) => (
-                <li key={s.href}>
+                <li key={s.label}>
                   <Link href={s.href} className="text-sm hover:text-[#FF4D1C] transition-colors">
                     {s.label}
                   </Link>
@@ -133,6 +142,7 @@ export default function Footer() {
                 <li><Link href="/contact" className="text-sm hover:text-[#FF4D1C] transition-colors">{t('contact')}</Link></li>
                 <li><Link href="/panama-income-tax-calculator" className="text-sm hover:text-[#FF4D1C] transition-colors">{t('incomeTaxCalculator')}</Link></li>
                 <li><Link href="/panama-tax-calculator" className="text-sm hover:text-[#FF4D1C] transition-colors">{t('taxCalculator')}</Link></li>
+                <li><Link href="/partners" className="text-sm hover:text-[#FF4D1C] transition-colors">{t('partners')}</Link></li>
               </ul>
             </div>
 

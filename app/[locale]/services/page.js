@@ -3,6 +3,7 @@ import servicesData from '@/data/services.json';
 import ServicesGrid from './ServicesGrid';
 import CTA from '@/components/sections/CTA';
 import FaqAccordion from '@/components/ui/FaqAccordion';
+import { localizedAlternates } from '@/i18n/urls';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -10,6 +11,7 @@ export async function generateMetadata({ params }) {
   return {
     title: t('title'),
     description: t('description'),
+    alternates: localizedAlternates('/services', locale),
   };
 }
 

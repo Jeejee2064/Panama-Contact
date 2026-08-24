@@ -5,6 +5,7 @@ import WhyUs from '@/components/sections/WhyUs';
 import ServicesPreview from '@/components/sections/ServicesPreview';
 import LegalNotice from '@/components/sections/LegalNotice';
 import CTA from '@/components/sections/CTA';
+import { SITE_URL } from '@/i18n/urls';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://panama-contact.com/${locale === 'en' ? '' : locale}`,
+      url: `${SITE_URL}${locale === 'en' ? '' : `/${locale}`}`,
       siteName: 'Panama Contact Services',
       type: 'website',
       images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Panama Contact Services' }],

@@ -19,7 +19,8 @@
     "taxCalculator": "Steuerpflicht-Quiz",
     "incomeTaxCalculator": "Einkommensteuerrechner",
     "privacyPolicy": "Datenschutzerklärung",
-    "legalTerms": "Nutzungsbedingungen"
+    "legalTerms": "Nutzungsbedingungen",
+    "partners": "Partner"
   },
   "HomePage": {
     "meta": {
@@ -1264,5 +1265,22 @@
         "body": "<p>Für Anfragen im Zusammenhang mit der Website oder diesen Allgemeinen Nutzungsbedingungen können Sie sich wenden an:</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, Erdgeschoss, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Panama-Stadt<br>Republik Panama<br>E-Mail: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Website: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
       }
     ]
+  },
+  "PartnersPage": {
+    "meta": {
+      "title": "Unsere Partner | Panama Contact Services",
+      "description": "Vertrauenswürdige lokale Unternehmen, die wir unseren Kunden beim Umzug nach Panama empfehlen: möblierte Apartments mit Casco View Life und virtuelle Büros mit Panamail."
+    },
+    "heading": "Unsere Partner",
+    "intro": "Wir arbeiten mit einer kleinen Zahl vertrauenswürdiger lokaler Unternehmen zusammen, die sich ebenso dafür einsetzen, Ihren Umzug nach Panama reibungslos und stressfrei zu gestalten. Hier sind die Partner, die wir unseren Kunden empfehlen.",
+    "cta": "Website besuchen",
+    "casco-view-life": {
+      "name": "Casco View Life",
+      "description": "EDGE-zertifizierte, möblierte Apartments und Investitionseinheiten in Santa Ana, nur wenige Schritte von Casco Viejo entfernt — ideal für digitale Nomaden, Kurzaufenthalte und Investoren, die sich in Panama-Stadt niederlassen."
+    },
+    "panamail": {
+      "name": "Panamail",
+      "description": "Virtuelle Büros und Postweiterleitung im Bankenviertel von Panama-Stadt: eine registrierte Geschäftsadresse, eine lokale Telefonnummer und Unterstützung bei der Niederlassung für Expats und Unternehmen mit Präsenz in Panama."
+    }
   }
 }

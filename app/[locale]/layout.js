@@ -28,13 +28,14 @@ export async function generateMetadata({ params }) {
   return {
     metadataBase: new URL('https://panama-contact.com'),
     alternates: {
-      canonical: `/${locale}`,
+      canonical: locale === 'en' ? '/' : `/${locale}`,
       languages: {
-        en: '/en',
+        en: '/',
         es: '/es',
         fr: '/fr',
         pt: '/pt',
         de: '/de',
+        'x-default': '/',
       },
     },
     icons: {

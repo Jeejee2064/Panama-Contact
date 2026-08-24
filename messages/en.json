@@ -19,7 +19,8 @@
     "taxCalculator": "Tax exposure quiz",
     "incomeTaxCalculator": "Income tax calculator",
     "privacyPolicy": "Privacy Policy",
-    "legalTerms": "Terms and Conditions"
+    "legalTerms": "Terms and Conditions",
+    "partners": "Partners"
   },
   "HomePage": {
     "meta": {
@@ -1264,5 +1265,22 @@
         "body": "<p>For inquiries related to the site or these Terms and Conditions, you may contact:</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, ground floor, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Panama City<br>Republic of Panama<br>Email: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Website: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
       }
     ]
+  },
+  "PartnersPage": {
+    "meta": {
+      "title": "Our Partners | Panama Contact Services",
+      "description": "Trusted local businesses we recommend to clients relocating to Panama: furnished apartments with Casco View Life and virtual offices with Panamail."
+    },
+    "heading": "Our Partners",
+    "intro": "We work alongside a small number of trusted local businesses that share our commitment to making your move to Panama smooth and stress-free. Here are the partners we recommend to our clients.",
+    "cta": "Visit website",
+    "casco-view-life": {
+      "name": "Casco View Life",
+      "description": "EDGE-certified furnished apartments and investment units in Santa Ana, steps from Casco Viejo — ideal for digital nomads, short stays, and rental-yield investors settling in Panama City."
+    },
+    "panamail": {
+      "name": "Panamail",
+      "description": "Virtual offices and mail forwarding in Panama City's banking district: a registered business address, a local phone number, and setup support for expats and companies establishing a Panama presence."
+    }
   }
 }

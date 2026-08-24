@@ -65,7 +65,7 @@ export default function ServicesGrid({ services }) {
                 transition={{ duration: 0.25 }}
               >
                 <Link
-                  href={`/services/${localSlug}`}
+                  href={{ pathname: '/services/[slug]', params: { slug: localSlug } }}
                   className="group block h-full rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:border-orange-200 transition-all"
                 >
                   <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 relative">

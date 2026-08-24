@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { locales } from '@/i18n/config';
-import { routing } from '@/i18n/routing';
+import { SITE_URL, localizedUrl, localizedAlternates } from '@/i18n/urls';
 import FadeIn from '@/components/animations/FadeIn';
 import FaqAccordion from '@/components/ui/FaqAccordion';
 import PanamaIncomeTaxCalculator from '@/components/calculators/PanamaIncomeTaxCalculator';
@@ -14,11 +14,6 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-function localizedUrl(locale) {
-  const slug = routing.pathnames[PATHNAME][locale];
-  return `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}${slug}`;
-}
-
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'IncomeTaxCalculatorPage.meta' });
@@ -29,15 +24,12 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: localizedUrl(locale),
+      url: localizedUrl(PATHNAME, locale),
       siteName: 'Panama Contact Services',
       type: 'website',
       images: [{ url: '/og-panama-income-tax-calculator.jpg', width: 1200, height: 630, alt: t('title') }],
     },
-    alternates: {
-      canonical: localizedUrl(locale),
-      languages: Object.fromEntries(locales.map((l) => [l, localizedUrl(l)])),
-    },
+    alternates: localizedAlternates(PATHNAME, locale),
   };
 }
 
@@ -48,14 +40,14 @@ export default async function PanamaIncomeTaxCalculatorPage({ params }) {
   const t = await getTranslations({ locale, namespace: 'IncomeTaxCalculatorPage' });
   const tNav = await getTranslations({ locale, namespace: 'Nav' });
   const faqItems = t.raw('faq') ?? [];
-  const baseUrl = `https://panama-contact.com${locale === 'en' ? '' : `/${locale}`}`;
+  const baseUrl = `${SITE_URL}${locale === 'en' ? '' : `/${locale}`}`;
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: tNav('home'), item: baseUrl },
-      { '@type': 'ListItem', position: 2, name: t('hero.heading'), item: localizedUrl(locale) },
+      { '@type': 'ListItem', position: 2, name: t('hero.heading'), item: localizedUrl(PATHNAME, locale) },
     ],
   };
 
@@ -64,11 +56,11 @@ export default async function PanamaIncomeTaxCalculatorPage({ params }) {
     '@type': 'WebApplication',
     name: t('hero.heading'),
     description: t('meta.description'),
-    url: localizedUrl(locale),
+    url: localizedUrl(PATHNAME, locale),
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'Web',
     inLanguage: locale,
-    provider: { '@type': 'Organization', name: 'Panama Contact Services', url: 'https://panama-contact.com' },
+    provider: { '@type': 'Organization', name: 'Panama Contact Services', url: SITE_URL },
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   };
 

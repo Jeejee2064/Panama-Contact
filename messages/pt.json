@@ -19,7 +19,8 @@
     "taxCalculator": "Questionário de exposição fiscal",
     "incomeTaxCalculator": "Calculadora de imposto de renda",
     "privacyPolicy": "Política de Privacidade",
-    "legalTerms": "Termos e Condições"
+    "legalTerms": "Termos e Condições",
+    "partners": "Parceiros"
   },
   "HomePage": {
     "meta": {
@@ -1265,5 +1266,22 @@
         "body": "<p>Para consultas relacionadas ao site ou a estes Termos e Condições, você pode entrar em contato com:</p><p><strong>Panama Contact Services S.A.</strong><br>PH Jerónimo, térreo, Avenida B y Calle 10<br>San Felipe, Casco Viejo, Cidade do Panamá<br>República do Panamá<br>E-mail: <a href=\"mailto:info@panama-contact.com\">info@panama-contact.com</a><br>Site: <a href=\"https://www.panama-contact.com\">www.panama-contact.com</a></p>"
       }
     ]
+  },
+  "PartnersPage": {
+    "meta": {
+      "title": "Nossos Parceiros | Panama Contact Services",
+      "description": "Empresas locais de confiança que recomendamos aos nossos clientes que se mudam para o Panamá: apartamentos mobiliados com Casco View Life e escritórios virtuais com Panamail."
+    },
+    "heading": "Nossos Parceiros",
+    "intro": "Trabalhamos ao lado de um pequeno grupo de empresas locais de confiança que compartilham nosso compromisso de tornar sua mudança para o Panamá tranquila e sem estresse. Aqui estão os parceiros que recomendamos aos nossos clientes.",
+    "cta": "Visitar site",
+    "casco-view-life": {
+      "name": "Casco View Life",
+      "description": "Apartamentos mobiliados certificados EDGE e unidades de investimento em Santa Ana, a poucos passos de Casco Viejo — ideais para nômades digitais, estadias curtas e investidores em busca de rentabilidade ao se instalarem na Cidade do Panamá."
+    },
+    "panamail": {
+      "name": "Panamail",
+      "description": "Escritórios virtuais e reenvio de correspondência no distrito financeiro da Cidade do Panamá: um endereço comercial registrado, um número de telefone local e apoio para expatriados e empresas que estabelecem presença no Panamá."
+    }
   }
 }

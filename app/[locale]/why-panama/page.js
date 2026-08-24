@@ -16,6 +16,7 @@ import whyPanamaData from '@/data/why-panama.json';
 import { Link } from '@/i18n/navigation';
 import { localizeWhyPanamaSlug } from '@/data/slugs';
 import FadeIn from '@/components/animations/FadeIn';
+import { localizedAlternates } from '@/i18n/urls';
 
 const iconMap = {
   'life-quality':       Heart,
@@ -40,6 +41,7 @@ export async function generateMetadata({ params }) {
   return {
     title: t('title'),
     description: t('description'),
+    alternates: localizedAlternates('/why-panama', locale),
   };
 }
 
@@ -160,7 +162,7 @@ export default async function WhyPanamaPage({ params }) {
               return (
                 <FadeIn key={item.slug} delay={i * 0.08}>
                   <Link
-                    href={`/why-panama/${localizedSlug}`}
+                    href={{ pathname: '/why-panama/[slug]', params: { slug: localizedSlug } }}
                     className="group flex flex-col h-full bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-[#FF491A]/8 hover:border-[#FF491A]/25 transition-all duration-500"
                   >
                     {/* Icon header */}
