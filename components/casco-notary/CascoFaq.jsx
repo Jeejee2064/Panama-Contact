@@ -34,15 +34,19 @@ function FaqItem({ item, isOpen, onToggle }) {
   );
 }
 
-export default function CascoFaq({ copy }) {
+// showHeading=false when a SectionHero above already carries this same
+// heading as the page's H1 (the /faq sub-page).
+export default function CascoFaq({ copy, showHeading = true }) {
   const [open, setOpen] = useState(0);
 
   return (
     <section className="bg-white py-20 md:py-28">
       <div className="max-w-3xl mx-auto px-6">
-        <h2 className="font-[Gravesend] uppercase text-[#0F1B2A] text-2xl md:text-4xl tracking-wide text-center mb-12">
-          {copy.heading}
-        </h2>
+        {showHeading && (
+          <h2 className="font-[Gravesend] uppercase text-[#0F1B2A] text-2xl md:text-4xl tracking-wide text-center mb-12">
+            {copy.heading}
+          </h2>
+        )}
         <FadeIn className="divide-y divide-[#0F1B2A]/10 border-t border-[#0F1B2A]/10">
           {copy.items.map((item, i) => (
             <FaqItem

@@ -8,7 +8,7 @@ import {
   resolveWhyPanamaSlug, localizeWhyPanamaSlug,
 } from '@/data/slugs';
 
-const locales = ['en', 'fr', 'es', 'pt', 'de'];
+const ALL_LOCALES = ['en', 'fr', 'es', 'pt', 'de'];
 
 const flagMap = {
   en: 'us',
@@ -18,7 +18,10 @@ const flagMap = {
   de: 'de',
 };
 
-export default function LanguageSwitcher() {
+// `locales` lets callers restrict which flags are offered — e.g. pages that
+// only exist in a subset of locales (see RESTRICTED_LOCALES in Header.jsx)
+// should not show flags that would route into a 404.
+export default function LanguageSwitcher({ locales = ALL_LOCALES }) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname(); // internal template, e.g. /services/[slug]

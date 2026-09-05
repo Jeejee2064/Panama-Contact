@@ -9,8 +9,13 @@ import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 const NO_FOOTER_PATHS = new Set([
   '/panama-tax-calculator',
   '/panama-income-tax-calculator',
-  // Standalone landing page with its own bespoke footer.
+  // Casco Notary mini-site — its own bespoke footer (see CascoFooter),
+  // shared across the hub page and all its sub-pages.
   '/casco-notary-services',
+  '/casco-notary-services/services',
+  '/casco-notary-services/pricing',
+  '/casco-notary-services/delivery',
+  '/casco-notary-services/faq',
 ]);
 
 const WA_ICON = (

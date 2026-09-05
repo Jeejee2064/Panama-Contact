@@ -2,17 +2,23 @@
 import { PlaneTakeoff, Clock, Ban } from 'lucide-react';
 import FadeIn from '@/components/animations/FadeIn';
 
-export default function Delivery({ copy }) {
+// showHeading=false when a SectionHero above already carries this same
+// heading/intro as the page's H1 (the /delivery sub-page).
+export default function Delivery({ copy, showHeading = true }) {
   return (
     <section className="bg-[#0F1B2A] py-20 md:py-28 text-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
         <FadeIn>
-          <h2 className="font-[Gravesend] uppercase text-white text-2xl md:text-4xl tracking-wide mb-5 leading-tight">
-            {copy.heading}
-          </h2>
-          <p className="font-serif text-white/60 leading-relaxed mb-8">
-            {copy.intro}
-          </p>
+          {showHeading && (
+            <>
+              <h2 className="font-[Gravesend] uppercase text-white text-2xl md:text-4xl tracking-wide mb-5 leading-tight">
+                {copy.heading}
+              </h2>
+              <p className="font-serif text-white/60 leading-relaxed mb-8">
+                {copy.intro}
+              </p>
+            </>
+          )}
 
           <ul className="flex flex-col gap-4">
             <li className="flex items-start gap-3">

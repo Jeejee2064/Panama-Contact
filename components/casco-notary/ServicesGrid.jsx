@@ -10,18 +10,23 @@ const ICONS = [
   Building2, Stamp, Languages, Briefcase, PackageCheck,
 ];
 
-export default function ServicesGrid({ copy }) {
+// showHeading=false when a SectionHero above already carries this same
+// heading/intro as the page's H1 (e.g. the dedicated /services sub-page) —
+// avoids rendering the identical text twice.
+export default function ServicesGrid({ copy, showHeading = true }) {
   return (
     <section className="bg-white py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">
-          <h2 className="font-[Gravesend] uppercase text-[#0F1B2A] text-2xl md:text-4xl tracking-wide mb-4">
-            {copy.heading}
-          </h2>
-          <p className="font-serif text-[#0F1B2A]/60 leading-relaxed">
-            {copy.intro}
-          </p>
-        </div>
+        {showHeading && (
+          <div className="max-w-2xl mx-auto text-center mb-14 md:mb-16">
+            <h2 className="font-[Gravesend] uppercase text-[#0F1B2A] text-2xl md:text-4xl tracking-wide mb-4">
+              {copy.heading}
+            </h2>
+            <p className="font-serif text-[#0F1B2A]/60 leading-relaxed">
+              {copy.intro}
+            </p>
+          </div>
+        )}
 
         <StaggerContainer
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"

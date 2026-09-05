@@ -7,18 +7,32 @@ import { Menu, X } from 'lucide-react';
 
 // These 2 tool pages have no site header/footer at all — just a small
 // floating language switcher, so users can still change locale.
+// The Casco Notary mini-site: its own bespoke header/nav/footer, only the
+// floating language pill (below) is kept for EN⇄ES switching.
+const CASCO_NOTARY_PATHS = [
+  '/casco-notary-services',
+  '/casco-notary-services/services',
+  '/casco-notary-services/pricing',
+  '/casco-notary-services/delivery',
+  '/casco-notary-services/faq',
+];
+
 const BARE_HEADER_PATHS = new Set([
   '/panama-tax-calculator',
   '/panama-income-tax-calculator',
-  // Standalone landing page with its own bespoke header — only the floating
-  // language pill is kept for EN⇄ES switching.
-  '/casco-notary-services',
+  ...CASCO_NOTARY_PATHS,
 ]);
 
-function LocaleOnlyHeader() {
+// The Casco Notary mini-site only exists in EN/ES (see i18n/routing.js) —
+// showing the other flags there would route straight into a 404.
+const RESTRICTED_LOCALES = Object.fromEntries(
+  CASCO_NOTARY_PATHS.map((path) => [path, ['en', 'es']])
+);
+
+function LocaleOnlyHeader({ locales }) {
   return (
     <div className="fixed top-4 right-4 z-50 bg-white shadow-md rounded-full px-3 py-2 border border-gray-100">
-      <LanguageSwitcher />
+      <LanguageSwitcher locales={locales} />
     </div>
   );
 }
@@ -40,7 +54,7 @@ export default function Header() {
     document.body.style.overflow = open ? 'hidden' : 'auto';
   }, [open]);
 
-  if (isBareHeaderPath) return <LocaleOnlyHeader />;
+  if (isBareHeaderPath) return <LocaleOnlyHeader locales={RESTRICTED_LOCALES[pathname]} />;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">

@@ -79,11 +79,27 @@ export const routing = defineRouting({
       pt: '/parceiros',
       de: '/partner',
     },
-    // Standalone landing page — EN + ES only for this launch (see i18n/urls.js
-    // localizedNotaryAlternates, which builds hreflang for just these two).
+    // Standalone mini-site — EN + ES only for this launch (see i18n/urls.js
+    // localizedAlternatesSubset, which builds hreflang for just these two).
     '/casco-notary-services': {
       en: '/casco-notary-services',
       es: '/servicios-notariales-casco-viejo',
+    },
+    '/casco-notary-services/services': {
+      en: '/casco-notary-services/services',
+      es: '/servicios-notariales-casco-viejo/servicios',
+    },
+    '/casco-notary-services/pricing': {
+      en: '/casco-notary-services/pricing',
+      es: '/servicios-notariales-casco-viejo/precios',
+    },
+    '/casco-notary-services/delivery': {
+      en: '/casco-notary-services/delivery',
+      es: '/servicios-notariales-casco-viejo/entrega',
+    },
+    '/casco-notary-services/faq': {
+      en: '/casco-notary-services/faq',
+      es: '/servicios-notariales-casco-viejo/preguntas-frecuentes',
     },
   },
 });

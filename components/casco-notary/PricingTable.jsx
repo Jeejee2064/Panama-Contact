@@ -1,14 +1,19 @@
 'use client';
 import { StaggerContainer, StaggerItem } from '@/components/animations/Stagger';
 
-export default function PricingTable({ copy }) {
+// showHeading=false when a SectionHero above already carries this same
+// heading as the page's H1 (the /pricing sub-page) — copy.note still shows,
+// as fine-print above the table rather than a duplicated intro.
+export default function PricingTable({ copy, showHeading = true }) {
   return (
     <section id="pricing" className="bg-white py-20 md:py-28 scroll-mt-8">
       <div className="max-w-3xl mx-auto px-6">
-        <div className="text-center mb-10">
-          <h2 className="font-[Gravesend] uppercase text-[#0F1B2A] text-2xl md:text-4xl tracking-wide mb-4">
-            {copy.heading}
-          </h2>
+        <div className={`text-center mb-10 ${showHeading ? '' : 'pt-4'}`}>
+          {showHeading && (
+            <h2 className="font-[Gravesend] uppercase text-[#0F1B2A] text-2xl md:text-4xl tracking-wide mb-4">
+              {copy.heading}
+            </h2>
+          )}
           <p className="font-serif text-[#0F1B2A]/55 text-sm leading-relaxed max-w-xl mx-auto">
             {copy.note}
           </p>

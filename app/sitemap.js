@@ -102,21 +102,30 @@ export default function sitemap() {
     }
   }
 
-  // Casco Notary Services — standalone landing page, EN + ES only
-  const cascoNotaryPaths = routing.pathnames['/casco-notary-services'];
-  entries.push({
-    url: `${BASE}${cascoNotaryPaths.en}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: 0.7,
-    alternates: {
-      languages: {
-        en: `${BASE}${cascoNotaryPaths.en}`,
-        es: `${BASE}/es${cascoNotaryPaths.es}`,
-        'x-default': `${BASE}${cascoNotaryPaths.en}`,
+  // Casco Notary Services — standalone mini-site, EN + ES only
+  const cascoNotaryPages = [
+    { key: '/casco-notary-services', priority: 0.7 },
+    { key: '/casco-notary-services/services', priority: 0.6 },
+    { key: '/casco-notary-services/pricing', priority: 0.6 },
+    { key: '/casco-notary-services/delivery', priority: 0.6 },
+    { key: '/casco-notary-services/faq', priority: 0.6 },
+  ];
+  for (const { key, priority } of cascoNotaryPages) {
+    const paths = routing.pathnames[key];
+    entries.push({
+      url: `${BASE}${paths.en}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority,
+      alternates: {
+        languages: {
+          en: `${BASE}${paths.en}`,
+          es: `${BASE}/es${paths.es}`,
+          'x-default': `${BASE}${paths.en}`,
+        },
       },
-    },
-  });
+    });
+  }
 
   // Why Panama detail pages
   for (const [, translations] of Object.entries(whyPanamaSlugMap)) {

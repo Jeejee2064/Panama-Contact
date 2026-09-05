@@ -1,19 +1,17 @@
 'use client';
+import { Link } from '@/i18n/navigation';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import { StaggerContainer, StaggerItem } from '@/components/animations/Stagger';
 import SealMotif from './SealMotif';
-import CascoHeader from './CascoHeader';
 
-export default function Hero({ copy, backLabel, whatsappHref }) {
+export default function Hero({ copy, whatsappHref }) {
   return (
-    <section className="relative overflow-hidden bg-[#0F1B2A] pb-20 md:pb-28">
+    <section className="relative overflow-hidden bg-[#0F1B2A] py-16 md:py-24">
       {/* Line-art backdrop — no photo, editorial/graphic hero per design brief */}
       <SealMotif className="pointer-events-none absolute -right-24 -top-24 w-[420px] h-[420px] text-[#C9A55C] opacity-[0.18] md:w-[560px] md:h-[560px]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#C9A55C]/40 to-transparent" />
 
-      <CascoHeader backLabel={backLabel} />
-
-      <StaggerContainer className="relative z-10 max-w-4xl mx-auto px-6 pt-16 md:pt-24 text-center" staggerChildren={0.12}>
+      <StaggerContainer className="relative z-10 max-w-4xl mx-auto px-6 text-center" staggerChildren={0.12}>
         <StaggerItem>
           <p className="font-[Lagasignatica] text-[#C9A55C] text-xl md:text-2xl mb-3">
             {copy.eyebrowSuffix}
@@ -44,13 +42,13 @@ export default function Hero({ copy, backLabel, whatsappHref }) {
               {copy.ctaPrimary}
             </a>
 
-            <a
-              href="#pricing"
+            <Link
+              href="/casco-notary-services/pricing"
               className="group inline-flex items-center gap-2 border border-[#C9A55C]/40 text-[#C9A55C] hover:border-[#C9A55C] hover:bg-[#C9A55C]/10 px-7 py-4 rounded-xl font-semibold text-sm md:text-base tracking-wide transition-all duration-300"
             >
               {copy.ctaSecondary}
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-            </a>
+            </Link>
           </div>
         </StaggerItem>
       </StaggerContainer>

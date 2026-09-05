@@ -1,14 +1,14 @@
 import { Link } from '@/i18n/navigation';
 import { ArrowLeft } from 'lucide-react';
 
-// Bespoke minimal header for the standalone Casco Notary Services page.
-// The site's global Header is suppressed for this route (see BARE_HEADER_PATHS
-// in components/layout/Header.jsx) — only its floating language pill remains,
-// so this bar just carries the wordmark and a way back to the main site.
+// Bespoke minimal header shared by the Casco Notary mini-site's hub page and
+// all its sub-pages (rendered once from the segment layout.jsx). The site's
+// global Header is suppressed for these routes (see BARE_HEADER_PATHS in
+// components/layout/Header.jsx) — only its floating language pill remains.
 export default function CascoHeader({ backLabel }) {
   return (
-    <div className="relative z-20 flex items-center justify-between px-6 md:px-10 pt-6 md:pt-8">
-      <Link href="/" className="flex flex-col leading-none group">
+    <div className="relative z-20 bg-[#0F1B2A] flex items-center justify-between px-6 md:px-10 py-5 md:py-6">
+      <Link href="/casco-notary-services" className="flex flex-col leading-none group">
         <span className="font-[Gravesend] uppercase tracking-[0.2em] text-white text-sm md:text-base">
           Casco Notary
         </span>

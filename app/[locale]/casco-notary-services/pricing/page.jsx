@@ -1,15 +1,12 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { localizedAlternatesSubset, localizedUrl, SITE_URL } from '@/i18n/urls';
-import Hero from '@/components/casco-notary/Hero';
-import TrustStrip from '@/components/casco-notary/TrustStrip';
-import ServicesTeaser from '@/components/casco-notary/ServicesTeaser';
-import PanamaContactCrossSell from '@/components/casco-notary/PanamaContactCrossSell';
+import SectionHero from '@/components/casco-notary/SectionHero';
+import PricingTable from '@/components/casco-notary/PricingTable';
+import LegalDisclaimer from '@/components/casco-notary/LegalDisclaimer';
 import FinalCta from '@/components/casco-notary/FinalCta';
 
-// Mini-site hub page — see /services, /pricing, /delivery, /faq for the
-// full sub-pages this used to be one long scroll of.
-const PATHNAME = '/casco-notary-services';
+const PATHNAME = '/casco-notary-services/pricing';
 const SUPPORTED_LOCALES = ['en', 'es'];
 const WHATSAPP_NUMBER = '50764357515';
 
@@ -21,7 +18,7 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   if (!SUPPORTED_LOCALES.includes(locale)) return {};
 
-  const t = await getTranslations({ locale, namespace: 'CascoNotaryPage.home.meta' });
+  const t = await getTranslations({ locale, namespace: 'CascoNotaryPage.pricing.meta' });
 
   return {
     title: t('title'),
@@ -33,21 +30,22 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function CascoNotaryHomePage({ params }) {
+export default async function CascoNotaryPricingSubpage({ params }) {
   const { locale } = await params;
   if (!SUPPORTED_LOCALES.includes(locale)) notFound();
 
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: 'CascoNotaryPage' });
-  const home = t.raw('home');
-  const serviceItems = t.raw('services.items');
+  const pricing = t.raw('pricing');
   const whatsappMessage = t('chrome.whatsappMessage');
   const finalCta = t.raw('chrome.finalCta');
+  const nav = t.raw('chrome.nav');
 
   const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
 
   const baseUrl = `${SITE_URL}${locale === 'en' ? '' : `/${locale}`}`;
+  const hubUrl = localizedUrl('/casco-notary-services', locale);
   const pageUrl = localizedUrl(PATHNAME, locale);
 
   const breadcrumbSchema = {
@@ -55,33 +53,18 @@ export default async function CascoNotaryHomePage({ params }) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Panama Contact', item: baseUrl },
-      { '@type': 'ListItem', position: 2, name: home.h1, item: pageUrl },
+      { '@type': 'ListItem', position: 2, name: 'Casco Notary Services', item: hubUrl },
+      { '@type': 'ListItem', position: 3, name: nav.pricing, item: pageUrl },
     ],
-  };
-
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: 'Notary and document coordination services',
-    name: home.h1,
-    provider: {
-      '@type': 'Organization',
-      name: 'Panama Contact Services, S.A.',
-      url: SITE_URL,
-    },
-    areaServed: { '@type': 'City', name: 'Panama City' },
-    url: pageUrl,
   };
 
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
-      <Hero copy={home} whatsappHref={whatsappHref} />
-      <TrustStrip copy={home.trust} />
-      <ServicesTeaser copy={home.servicesTeaser} items={serviceItems} />
-      <PanamaContactCrossSell copy={home.crossSell} />
+      <SectionHero eyebrow={nav.pricing} h1={pricing.heading} />
+      <PricingTable copy={pricing} showHeading={false} />
+      <LegalDisclaimer copy={pricing.disclaimer} />
       <FinalCta copy={finalCta} whatsappHref={whatsappHref} />
     </div>
   );
