@@ -40,3 +40,18 @@ export function localizedDetailAlternates(pathnameKey, locale, slug, getSlugForL
     languages: { ...languages, 'x-default': languages.en },
   };
 }
+
+/**
+ * Same as localizedAlternates, but for a static page that only exists on a
+ * subset of locales (e.g. an EN/ES-only landing page) — avoids building
+ * hreflang entries for locales where routing.pathnames[pathnameKey] has no key.
+ */
+export function localizedAlternatesSubset(pathnameKey, locale, availableLocales) {
+  const languages = Object.fromEntries(
+    availableLocales.map((l) => [l, localizedUrl(pathnameKey, l)])
+  );
+  return {
+    canonical: localizedUrl(pathnameKey, locale),
+    languages: { ...languages, 'x-default': languages.en ?? Object.values(languages)[0] },
+  };
+}

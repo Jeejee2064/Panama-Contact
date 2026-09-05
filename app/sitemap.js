@@ -102,6 +102,22 @@ export default function sitemap() {
     }
   }
 
+  // Casco Notary Services — standalone landing page, EN + ES only
+  const cascoNotaryPaths = routing.pathnames['/casco-notary-services'];
+  entries.push({
+    url: `${BASE}${cascoNotaryPaths.en}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+    alternates: {
+      languages: {
+        en: `${BASE}${cascoNotaryPaths.en}`,
+        es: `${BASE}/es${cascoNotaryPaths.es}`,
+        'x-default': `${BASE}${cascoNotaryPaths.en}`,
+      },
+    },
+  });
+
   // Why Panama detail pages
   for (const [, translations] of Object.entries(whyPanamaSlugMap)) {
     for (const locale of LOCALES) {

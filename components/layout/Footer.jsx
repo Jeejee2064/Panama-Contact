@@ -6,7 +6,12 @@ import { localizeServiceSlug } from '@/data/slugs';
 import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 
 // These 2 tool pages have no site footer at all.
-const NO_FOOTER_PATHS = new Set(['/panama-tax-calculator', '/panama-income-tax-calculator']);
+const NO_FOOTER_PATHS = new Set([
+  '/panama-tax-calculator',
+  '/panama-income-tax-calculator',
+  // Standalone landing page with its own bespoke footer.
+  '/casco-notary-services',
+]);
 
 const WA_ICON = (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 shrink-0">
@@ -20,6 +25,11 @@ export default function Footer() {
   const locale = useLocale();
 
   if (NO_FOOTER_PATHS.has(pathname)) return null;
+
+  // Casco Notary Services is a standalone EN/ES-only page outside the localized
+  // routing map — link it with a plain <a>, not the localized <Link>, so it still
+  // resolves correctly from fr/pt/de pages (falls back to the EN version there).
+  const cascoNotaryHref = locale === 'es' ? '/es/servicios-notariales-casco-viejo' : '/casco-notary-services';
 
   // href built from the canonical (EN) slug key — never a literal URL segment,
   // since the actual per-locale SEO slug (from serviceSlugMap) differs from the key.
@@ -143,6 +153,11 @@ export default function Footer() {
                 <li><Link href="/panama-income-tax-calculator" className="text-sm hover:text-[#FF4D1C] transition-colors">{t('incomeTaxCalculator')}</Link></li>
                 <li><Link href="/panama-tax-calculator" className="text-sm hover:text-[#FF4D1C] transition-colors">{t('taxCalculator')}</Link></li>
                 <li><Link href="/partners" className="text-sm hover:text-[#FF4D1C] transition-colors">{t('partners')}</Link></li>
+                <li>
+                  <a href={cascoNotaryHref} className="text-sm hover:text-[#FF4D1C] transition-colors">
+                    {t('cascoNotary')}
+                  </a>
+                </li>
               </ul>
             </div>
 

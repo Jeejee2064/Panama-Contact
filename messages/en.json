@@ -20,7 +20,8 @@
     "incomeTaxCalculator": "Income tax calculator",
     "privacyPolicy": "Privacy Policy",
     "legalTerms": "Terms and Conditions",
-    "partners": "Partners"
+    "partners": "Partners",
+    "cascoNotary": "Notary Services (Casco Viejo)"
   },
   "HomePage": {
     "meta": {
@@ -1282,5 +1283,277 @@
       "name": "Panamail",
       "description": "Virtual offices and mail forwarding in Panama City's banking district: a registered business address, a local phone number, and setup support for expats and companies establishing a Panama presence."
     }
+  },
+  "CascoNotaryPage": {
+    "meta": {
+      "title": "Casco Notary Services | Notary & Document Help in Panama City",
+      "description": "Skip the notary lines in Panama City. We collect, coordinate and deliver document authentications, powers of attorney, sworn declarations and certified translations — door-to-door from Casco Viejo."
+    },
+    "eyebrow": "Casco Notary Services",
+    "eyebrowSuffix": "Powered by Panama Contact",
+    "h1": "Notary & Document Services in Panama City, Handled for You",
+    "subhead": "Skip the lines and the paperwork maze. We collect your documents, coordinate the procedure with an authorised notary public or the relevant institution, and bring everything back to you.",
+    "ctaPrimary": "Send your documents on WhatsApp",
+    "ctaSecondary": "See pricing",
+    "backToSite": "Panama Contact",
+    "trust": {
+      "heading": "Why clients use Casco Notary Services",
+      "items": [
+        {
+          "title": "Authorised notaries only",
+          "description": "Every notarial act is performed exclusively by a duly authorised notary public in Panama."
+        },
+        {
+          "title": "48-hour standard turnaround",
+          "description": "Most documents are collected, processed and returned within 48 business hours."
+        },
+        {
+          "title": "Based in Casco Viejo",
+          "description": "Steps from the courts, consulates and government offices you'd otherwise have to queue at yourself."
+        },
+        {
+          "title": "Door-to-door",
+          "description": "We pick up and deliver — you never have to set foot in a waiting room."
+        }
+      ]
+    },
+    "services": {
+      "heading": "Notary assistance without the hassle",
+      "intro": "Casco Notary Services helps individuals and businesses manage common notarial and administrative procedures in Panama City without spending hours travelling between offices.",
+      "items": [
+        {
+          "title": "Document Authentication",
+          "description": "Coordination of document authentications with an authorised notary public."
+        },
+        {
+          "title": "Certified & Passport Copies",
+          "description": "Coordination of certified copies (cotejos) and certified passport copies."
+        },
+        {
+          "title": "Sworn Declarations",
+          "description": "Affidavits and sworn declarations drafted by you or at the notary's office."
+        },
+        {
+          "title": "Public Deeds",
+          "description": "Coordination of public deed (escritura) processing with an authorised notary."
+        },
+        {
+          "title": "Powers of Attorney",
+          "description": "Powers of attorney for consular procedures, coordinated end to end."
+        },
+        {
+          "title": "Embassy & Consulate Filings",
+          "description": "Submission of documents to embassies and consulates on your behalf."
+        },
+        {
+          "title": "Immigration Movement Certificates",
+          "description": "Requesting your official migration movement record from Panama's immigration service."
+        },
+        {
+          "title": "Official Translations",
+          "description": "Certified and sworn translations for immigration, banking and legal procedures."
+        },
+        {
+          "title": "Corporate Documents",
+          "description": "Corporate and administrative document coordination for businesses."
+        },
+        {
+          "title": "Collection & Delivery",
+          "description": "Secure pickup and delivery of your documents anywhere in Panama City."
+        }
+      ],
+      "footnote": "All notarial acts are performed exclusively by authorised notaries public in Panama."
+    },
+    "process": {
+      "heading": "How it works",
+      "steps": [
+        {
+          "title": "Send",
+          "description": "Send a photo of your document via WhatsApp for an initial assessment and quotation."
+        },
+        {
+          "title": "Hand over your documents",
+          "description": "We pick up your documents, or you drop them off at our office in Casco Viejo."
+        },
+        {
+          "title": "We coordinate",
+          "description": "We hand your documents to an authorised notary public or the relevant institution and coordinate the procedure."
+        },
+        {
+          "title": "We follow up",
+          "description": "We track progress until the procedure is complete — no need for you to follow up with anyone."
+        },
+        {
+          "title": "We deliver",
+          "description": "Your completed documents are collected and returned to you, standard or urgent."
+        }
+      ]
+    },
+    "delivery": {
+      "heading": "Document collection & delivery in Panama City",
+      "intro": "We collect and deliver documents between Casco Viejo and most areas of Panama City. Have us pick up your documents, or drop them off at our office — once received, we deliver within 48 business hours.",
+      "standard": "Standard delivery: within 48 business hours",
+      "urgent": "Urgent delivery options available on request",
+      "airport": "Urgent delivery between Casco Viejo and Tocumen International Airport",
+      "restriction": "We do not deliver across bridges or via the city's expressways (corredores)."
+    },
+    "translations": {
+      "heading": "Official translation services",
+      "body": "We coordinate official and certified translations for immigration, banking, corporate, legal and consular procedures. Pricing depends on the language, page count, document type and turnaround required — documents in a foreign language often need translation before a notary or public institution in Panama can process them."
+    },
+    "crossSell": {
+      "heading": "Powered by Panama Contact",
+      "body": "Casco Notary Services is operated by Panama Contact, an administrative and relocation consultancy based in Casco Viejo. Through Panama Contact, clients can also get help with personal and corporate bank accounts, immigration and residency procedures, company incorporation, driver's licence recognition, and consular and administrative procedures.",
+      "linkServices": "Explore all Panama Contact services",
+      "linkHome": "About Panama Contact",
+      "items": [
+        "Personal and corporate bank account applications",
+        "Immigration and residency procedures",
+        "Company incorporation",
+        "Driver's licence recognition",
+        "Banking documentation",
+        "Consular and administrative procedures"
+      ]
+    },
+    "pricing": {
+      "heading": "Example pricing",
+      "note": "Prices cover the coordination, handling and processing of the requested service. Where expressly indicated, third-party notarial or institutional charges may also be included.",
+      "items": [
+        {
+          "label": "Authentications",
+          "price": "B/. 12.00 per page (B/. 20.00 minimum)"
+        },
+        {
+          "label": "Authentication of foreign-language documents",
+          "price": "From B/. 50.00"
+        },
+        {
+          "label": "Simple certified copies (cotejos)",
+          "price": "B/. 20.00"
+        },
+        {
+          "label": "Certified copies of deeds",
+          "price": "B/. 60.00"
+        },
+        {
+          "label": "Sworn declaration drafted by the client",
+          "price": "B/. 80.00"
+        },
+        {
+          "label": "Sworn declaration drafted at the notary's office",
+          "price": "B/. 160.00"
+        },
+        {
+          "label": "Fiscal stamps (timbres)",
+          "price": "B/. 32.00"
+        },
+        {
+          "label": "Deeds drafted by the client",
+          "price": "B/. 12.00 per page"
+        },
+        {
+          "label": "Notarial record books (libros)",
+          "price": "B/. 40.00"
+        },
+        {
+          "label": "Certified passport copies",
+          "price": "B/. 40.00"
+        },
+        {
+          "label": "Powers of attorney for consular procedures",
+          "price": "B/. 40.00"
+        },
+        {
+          "label": "Submission of procedures to consulates",
+          "price": "B/. 50.00"
+        },
+        {
+          "label": "Immigration movement certificate request",
+          "price": "B/. 250.00"
+        },
+        {
+          "label": "Standard delivery of documents or valuables, Casco Viejo ↔ rest of the city",
+          "price": "B/. 10.00"
+        },
+        {
+          "label": "Delivery to/from Costa del Este",
+          "price": "On request"
+        },
+        {
+          "label": "Urgent delivery, Casco Viejo ↔ Tocumen International Airport",
+          "price": "B/. 100.00"
+        }
+      ],
+      "deliveryNote": "We do not deliver across bridges or via the city's expressways (corredores)."
+    },
+    "disclaimer": {
+      "heading": "Legal disclaimer",
+      "body1": "Casco Notary Services is a document collection, administrative coordination and delivery service operated by Panama Contact Services, S.A. Panama Contact Services, S.A. is not a notary public or an official notary office and does not perform notarial acts or exercise public notarial functions. All authentications, certifications, sworn declarations, public deeds and other notarial acts are performed exclusively by duly authorised notaries public in Panama.",
+      "body2": "Service prices charged by Casco Notary Services may include administrative coordination, document handling, transportation, delivery and third-party expenses. They should not be interpreted as the official fees charged directly by a notary public, consulate, bank or government institution."
+    },
+    "faq": {
+      "heading": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Is Casco Notary Services a notary office?",
+          "answer": "No. We are a document collection, coordination and delivery service. All notarial acts — authentications, sworn declarations, public deeds and more — are performed exclusively by duly authorised notaries public in Panama."
+        },
+        {
+          "question": "How long does document delivery take?",
+          "answer": "Standard delivery runs within 48 business hours of receiving your documents. Urgent options are available, including express delivery between Casco Viejo and Tocumen International Airport."
+        },
+        {
+          "question": "Do you deliver to Tocumen International Airport?",
+          "answer": "Yes — we offer urgent delivery between Casco Viejo and Tocumen for B/. 100.00. Note that we do not cross bridges or use the city's expressways (corredores)."
+        },
+        {
+          "question": "Do I need a translation before my document can be notarized in Panama?",
+          "answer": "Documents written in a language other than Spanish generally need to be translated by an authorised public translator before a notary or Panamanian institution can process them. We coordinate certified translations for you."
+        },
+        {
+          "question": "Can you help with banking or immigration matters too?",
+          "answer": "Yes. Casco Notary Services is operated by Panama Contact, which also assists with bank account applications, residency and immigration procedures, and company incorporation."
+        },
+        {
+          "question": "How do I get started?",
+          "answer": "Send a photo or scan of your document via WhatsApp for an initial assessment and quotation."
+        }
+      ]
+    },
+    "finalCta": {
+      "heading": "Request a service",
+      "body": "Fast, practical and reliable document assistance from the heart of Casco Viejo.",
+      "cta": "Send your documents on WhatsApp"
+    },
+    "footer": {
+      "tagline": "Notary and document coordination, powered by Panama Contact.",
+      "backHome": "Powered by Panama Contact",
+      "address": "Ph Jeronimo, Avenida B y calle 10 este, planta baja - San Felipe, Ciudad de Panamá, Panamá",
+      "rights": "Panamá Contact Services. All rights reserved.",
+      "privacyLabel": "Privacy Policy",
+      "termsLabel": "Terms & Conditions"
+    },
+    "location": {
+      "heading": "Our location",
+      "intro": "Drop off or collect your documents at our office in the heart of Casco Viejo — or have us come to you.",
+      "address": "Ph Jeronimo, Avenida B y calle 10 este, planta baja - San Felipe, Ciudad de Panamá, Panamá",
+      "directions": "Get directions"
+    },
+    "remote": {
+      "heading": "Remote notarial & administrative services",
+      "intro": "We offer a complete document management service between Casco Viejo and the rest of Panama City, so you don't need to travel. We pick up your documents, coordinate the necessary procedures, and deliver them once the process is complete.",
+      "items": [
+        "Notarial services",
+        "Official translations",
+        "Document authentication and certification",
+        "Affidavits",
+        "Powers of attorney and consular procedures",
+        "Immigration movement record request — B/. 250.00",
+        "Banking services, including advice and assistance from Panama Contact",
+        "Document and valuable-item pickup and delivery between Casco Viejo and the rest of Panama City"
+      ],
+      "note": "We do not provide deliveries across bridges or use the city's expressways (corredores)."
+    },
+    "whatsappMessage": "Hi! I would like a quote for a notary / document service in Panama."
   }
 }

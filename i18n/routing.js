@@ -79,5 +79,11 @@ export const routing = defineRouting({
       pt: '/parceiros',
       de: '/partner',
     },
+    // Standalone landing page — EN + ES only for this launch (see i18n/urls.js
+    // localizedNotaryAlternates, which builds hreflang for just these two).
+    '/casco-notary-services': {
+      en: '/casco-notary-services',
+      es: '/servicios-notariales-casco-viejo',
+    },
   },
 });

@@ -7,7 +7,13 @@ import { Menu, X } from 'lucide-react';
 
 // These 2 tool pages have no site header/footer at all — just a small
 // floating language switcher, so users can still change locale.
-const BARE_HEADER_PATHS = new Set(['/panama-tax-calculator', '/panama-income-tax-calculator']);
+const BARE_HEADER_PATHS = new Set([
+  '/panama-tax-calculator',
+  '/panama-income-tax-calculator',
+  // Standalone landing page with its own bespoke header — only the floating
+  // language pill is kept for EN⇄ES switching.
+  '/casco-notary-services',
+]);
 
 function LocaleOnlyHeader() {
   return (
