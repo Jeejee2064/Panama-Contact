@@ -1361,6 +1361,12 @@
           "Documentación bancaria",
           "Trámites consulares y administrativos"
         ]
+      },
+      "corporate": {
+        "heading": "Precios corporativos para empresas en Casco Viejo",
+        "body": "Si tienes una oficina o un negocio en Casco Viejo, Panama Contact puede convertirse en tu aliado de confianza para la gestión habitual de documentos y trámites. Ofrecemos tarifas corporativas especiales para empresas que requieren servicios frecuentes de mensajería, trámites notariales, traducciones, gestiones bancarias o presentación de documentos ante instituciones. Nosotros nos ocupamos de coordinar los trámites, los motoristas y las entregas para que puedas concentrarte en operar y hacer crecer tu negocio.",
+        "cta": "Contáctanos para una tarifa corporativa",
+        "whatsappMessage": "¡Hola! Me gustaría consultar sobre las tarifas corporativas para mi empresa en Casco Viejo."
       }
     },
     "services": {

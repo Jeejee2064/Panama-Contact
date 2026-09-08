@@ -5,6 +5,7 @@ import Hero from '@/components/casco-notary/Hero';
 import TrustStrip from '@/components/casco-notary/TrustStrip';
 import ServicesTeaser from '@/components/casco-notary/ServicesTeaser';
 import PanamaContactCrossSell from '@/components/casco-notary/PanamaContactCrossSell';
+import CorporateRates from '@/components/casco-notary/CorporateRates';
 import FinalCta from '@/components/casco-notary/FinalCta';
 
 // Mini-site hub page — see /services, /pricing, /delivery, /faq for the
@@ -46,6 +47,7 @@ export default async function CascoNotaryHomePage({ params }) {
   const finalCta = t.raw('chrome.finalCta');
 
   const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+  const corporateWhatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(home.corporate.whatsappMessage)}`;
 
   const baseUrl = `${SITE_URL}${locale === 'en' ? '' : `/${locale}`}`;
   const pageUrl = localizedUrl(PATHNAME, locale);
@@ -82,6 +84,7 @@ export default async function CascoNotaryHomePage({ params }) {
       <TrustStrip copy={home.trust} />
       <ServicesTeaser copy={home.servicesTeaser} items={serviceItems} />
       <PanamaContactCrossSell copy={home.crossSell} />
+      <CorporateRates copy={home.corporate} whatsappHref={corporateWhatsappHref} />
       <FinalCta copy={finalCta} whatsappHref={whatsappHref} />
     </div>
   );
