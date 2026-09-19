@@ -195,6 +195,16 @@ const nextConfig = {
       { source: '/de/services',   destination: '/de/dienstleistungen',                permanent: true },
       { source: '/de/why-panama', destination: '/de/warum-panama',                    permanent: true },
       { source: '/de/contact',    destination: '/de/kontakt',                         permanent: true },
+
+      // ─── Legacy 404s found in GSC (Sept 2026) — not covered by rules above ──
+      { source: '/services/declaracion-renta-panama-extranjeros', destination: '/es/servicios/declaracion-renta-panama-extranjeros', permanent: true },
+      { source: '/services/driver-s-license-',                    destination: '/services/drivers-license-panama-foreigners',        permanent: true },
+      { source: '/fr/nos-services',                                destination: '/fr/services',                                       permanent: true },
+      { source: '/fr/pourquoi-le-panama/opportunites-dinvestissement', destination: '/fr/pourquoi-panama/opportunites-investissement-panama', permanent: true },
+      { source: '/fr/services/comprar-imoveis-panama-estrangeiros', destination: '/fr/services/acheter-immobilier-panama-etrangers',  permanent: true },
+      { source: '/es/servicios/-business-',                        destination: '/es/servicios/crear-empresa-panama-extranjeros',     permanent: true },
+      { source: '/pt/servicos/-business-',                         destination: '/pt/servicos/abrir-empresa-panama-estrangeiros',     permanent: true },
+      { source: '/fr/services/-business-',                         destination: '/fr/services/creation-entreprise-panama-etrangers', permanent: true },
     ];
   },
 };
