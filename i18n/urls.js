@@ -36,7 +36,10 @@ export function localizedDetailAlternates(pathnameKey, locale, slug, getSlugForL
     locales.map((l) => [l, localizedDetailUrl(pathnameKey, l, getSlugForLocale(l))])
   );
   return {
-    canonical: localizedDetailUrl(pathnameKey, locale, slug),
+    // Built from getSlugForLocale, not the raw `slug` param: the caller may be
+    // resolving an already-invalid slug that's about to be redirected, and the
+    // canonical tag must never self-reference that URL.
+    canonical: languages[locale],
     languages: { ...languages, 'x-default': languages.en },
   };
 }

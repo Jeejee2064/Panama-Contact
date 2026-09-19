@@ -1,8 +1,8 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Link } from '@/i18n/navigation';
+import { Link, permanentRedirect } from '@/i18n/navigation';
 import servicesData from '@/data/services.json';
-import { serviceSlugMap, resolveServiceSlug, localizeServiceSlug } from '@/data/slugs';
+import { serviceSlugMap, resolveServiceSlug, localizeServiceSlug, findServiceCanonical } from '@/data/slugs';
 import { locales } from '@/i18n/config';
 import { SITE_URL, localizedUrl, localizedDetailUrl, localizedDetailAlternates } from '@/i18n/urls';
 import Badge from '@/components/ui/Badge';
@@ -24,6 +24,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
   const canonicalSlug = resolveServiceSlug(slug, locale);
+  if (!canonicalSlug) return {};
 
   const t = await getTranslations({ locale, namespace: 'services' });
   const item = t.raw(canonicalSlug);
@@ -44,6 +45,14 @@ export default async function ServiceDetailPage({ params }) {
   setRequestLocale(locale);
 
   const canonicalSlug = resolveServiceSlug(slug, locale);
+  if (!canonicalSlug) {
+    const fallback = findServiceCanonical(slug);
+    if (!fallback) notFound();
+    permanentRedirect({
+      href: { pathname: '/services/[slug]', params: { slug: localizeServiceSlug(fallback, locale) } },
+      locale,
+    });
+  }
 
   const service = servicesData.services
     ? servicesData.services.find((s) => s.slug === canonicalSlug)

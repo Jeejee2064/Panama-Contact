@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowRight, Calendar } from 'lucide-react';
 import whyPanamaData from '@/data/why-panama.json';
-import { Link } from '@/i18n/navigation';
-import { whyPanamaSlugMap, resolveWhyPanamaSlug, localizeWhyPanamaSlug } from '@/data/slugs';
+import { Link, permanentRedirect } from '@/i18n/navigation';
+import { whyPanamaSlugMap, resolveWhyPanamaSlug, localizeWhyPanamaSlug, findWhyPanamaCanonical } from '@/data/slugs';
 import { locales } from '@/i18n/config';
 import { SITE_URL, localizedUrl, localizedDetailUrl, localizedDetailAlternates } from '@/i18n/urls';
 import FadeIn from '@/components/animations/FadeIn';
@@ -25,6 +25,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
   const canonicalSlug = resolveWhyPanamaSlug(slug, locale);
+  if (!canonicalSlug) return {};
 
   const t = await getTranslations({ locale, namespace: 'WhyPanamaPage' });
   const item = whyPanamaData.find((d) => d.slug === canonicalSlug);
@@ -49,6 +50,14 @@ export default async function WhyPanamaDetail({ params }) {
 
   // "qualite-de-vie" (FR) → "life-quality"
   const canonicalSlug = resolveWhyPanamaSlug(slug, locale);
+  if (!canonicalSlug) {
+    const fallback = findWhyPanamaCanonical(slug);
+    if (!fallback) notFound();
+    permanentRedirect({
+      href: { pathname: '/why-panama/[slug]', params: { slug: localizeWhyPanamaSlug(fallback, locale) } },
+      locale,
+    });
+  }
 
   // Structural data from JSON (image, orderScore, etc.)
   const item = whyPanamaData.find((d) => d.slug === canonicalSlug);

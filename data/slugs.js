@@ -127,19 +127,44 @@ export const whyPanamaSlugMap = {
   },
 };
 
-// Localized slug → canonical slug
+// Localized slug → canonical slug. Returns null when `localizedSlug` is not
+// the correct slug for `locale` — callers must not fall back to treating it
+// as already-canonical, or a URL like /es/servicios/qualified-investor
+// (the raw EN-ish map key, never a real ES slug) would silently render the
+// same content as its correct URL and self-declare as canonical, producing
+// duplicate-content pages Search Console flags as "Duplicate, Google chose
+// a different canonical than user".
 export function resolveServiceSlug(localizedSlug, locale) {
   for (const [canonical, translations] of Object.entries(serviceSlugMap)) {
     if (translations[locale] === localizedSlug) return canonical;
   }
-  return localizedSlug;
+  return null;
 }
 
 export function resolveWhyPanamaSlug(localizedSlug, locale) {
   for (const [canonical, translations] of Object.entries(whyPanamaSlugMap)) {
     if (translations[locale] === localizedSlug) return canonical;
   }
-  return localizedSlug;
+  return null;
+}
+
+// Looks up a slug across every locale (and the bare canonical key itself),
+// for redirecting old/incorrect slugs to the correct URL for the current
+// locale instead of 404ing or silently rendering duplicate content.
+export function findServiceCanonical(slug) {
+  if (serviceSlugMap[slug]) return slug;
+  for (const [canonical, translations] of Object.entries(serviceSlugMap)) {
+    if (Object.values(translations).includes(slug)) return canonical;
+  }
+  return null;
+}
+
+export function findWhyPanamaCanonical(slug) {
+  if (whyPanamaSlugMap[slug]) return slug;
+  for (const [canonical, translations] of Object.entries(whyPanamaSlugMap)) {
+    if (Object.values(translations).includes(slug)) return canonical;
+  }
+  return null;
 }
 
 // Canonical → localized slug
