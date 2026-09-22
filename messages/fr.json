@@ -417,7 +417,7 @@
       "sections": [
         {
           "heading": null,
-          "body": "<p>Panama Contact Services vous aide dans votre recherche de l'appartement ou de la maison idéale au Panama. Notre approche se caractérise par une compréhension approfondie des nuances et subtilités du pays, combinée à un solide réseau de contacts. Nous collaborons avec des agents immobiliers agréés au Panama pour trouver des biens correspondant à vos exigences.</p><p>L'immobilier panaméen est aussi diversifié que ses paysages — de la métropole animée de Panama City aux terrains montagneux du Chiriquí, en passant par les rivages séduisants de la province de Bocas del Toro. Chaque région offre des caractéristiques uniques et des opportunités distinctes.</p>"
+          "body": "<p>Panama Contact Services vous aide dans votre recherche de l'appartement ou de la maison idéale au Panama. Notre approche se caractérise par une compréhension approfondie des nuances et subtilités du pays, combinée à un solide réseau de contacts. Nous collaborons avec des agents immobiliers agréés au Panama pour trouver des biens correspondant à vos exigences.</p><p>L'immobilier panaméen est aussi diversifié que ses paysages — de la métropole animée de Panama City aux terrains montagneux du Chiriquí, en passant par les rivages séduisants de la province de Bocas del Toro. Chaque région offre des caractéristiques uniques et des opportunités distinctes.</p><p>En attendant de finaliser votre achat ou de trouver le bien idéal, <a href=\"https://acomodorentals.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Acomodo Rentals</a> propose des locations meublées de courte et moyenne durée à Panama City, y compris à Casco Viejo — une solution pratique pour vous installer sans précipiter votre décision.</p>"
         },
         {
           "heading": "Financer Votre Bien au Panama",
@@ -1271,7 +1271,7 @@
   "PartnersPage": {
     "meta": {
       "title": "Nos Partenaires | Panama Contact Services",
-      "description": "Entreprises locales de confiance que nous recommandons à nos clients qui s'installent au Panama : appartements meublés avec Casco View Life et bureaux virtuels avec Panamail."
+      "description": "Entreprises locales de confiance que nous recommandons à nos clients qui s'installent au Panama : appartements meublés avec Casco View Life, locations courte et moyenne durée avec Acomodo Rentals, et bureaux virtuels avec Panamail."
     },
     "heading": "Nos Partenaires",
     "intro": "Nous travaillons aux côtés d'un petit nombre d'entreprises locales de confiance qui partagent notre engagement à rendre votre installation au Panama fluide et sereine. Voici les partenaires que nous recommandons à nos clients.",
@@ -1279,6 +1279,10 @@
     "casco-view-life": {
       "name": "Casco View Life",
       "description": "Appartements meublés certifiés EDGE et unités d'investissement à Santa Ana, à deux pas de Casco Viejo — idéal pour les nomades digitaux, les séjours courts et les investisseurs recherchant un rendement locatif à Panama City."
+    },
+    "acomodo-rentals": {
+      "name": "Acomodo Rentals",
+      "description": "Locations meublées de courte et moyenne durée à Panama City, avec une forte présence à Casco Viejo — une solution rapide pour trouver un logement prêt à emménager pendant votre installation ou la recherche d'un logement permanent."
     },
     "panamail": {
       "name": "Panamail",

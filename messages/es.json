@@ -417,7 +417,7 @@
       "sections": [
         {
           "heading": null,
-          "body": "<p>Panama Contact Services te ayuda en la búsqueda del apartamento o casa perfecta en Panamá. Nuestro enfoque se caracteriza por un profundo conocimiento de los matices y sutilezas del país, combinado con una sólida red de contactos. Colaboramos con agentes de bienes raíces licenciados en Panamá para encontrar propiedades que se alineen con tus requerimientos.</p><p>Los bienes raíces de Panamá son tan diversos como sus paisajes — desde la bulliciosa metrópoli de Ciudad de Panamá hasta los terrenos montañosos de Chiriquí, y las costas cautivadoras de la provincia de Bocas del Toro. Cada región ofrece características únicas y oportunidades distintas.</p>"
+          "body": "<p>Panama Contact Services te ayuda en la búsqueda del apartamento o casa perfecta en Panamá. Nuestro enfoque se caracteriza por un profundo conocimiento de los matices y sutilezas del país, combinado con una sólida red de contactos. Colaboramos con agentes de bienes raíces licenciados en Panamá para encontrar propiedades que se alineen con tus requerimientos.</p><p>Los bienes raíces de Panamá son tan diversos como sus paisajes — desde la bulliciosa metrópoli de Ciudad de Panamá hasta los terrenos montañosos de Chiriquí, y las costas cautivadoras de la provincia de Bocas del Toro. Cada región ofrece características únicas y oportunidades distintas.</p><p>Mientras finalizas tu compra o buscas la propiedad ideal, <a href=\"https://acomodorentals.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Acomodo Rentals</a> ofrece alquileres amueblados de corto y mediano plazo en Ciudad de Panamá, incluido Casco Viejo — una forma cómoda de instalarte sin apresurar tu decisión.</p>"
         },
         {
           "heading": "Financiamiento de tu Propiedad en Panamá",
@@ -1271,7 +1271,7 @@
   "PartnersPage": {
     "meta": {
       "title": "Nuestros Socios | Panama Contact Services",
-      "description": "Empresas locales de confianza que recomendamos a nuestros clientes que se mudan a Panamá: apartamentos amueblados con Casco View Life y oficinas virtuales con Panamail."
+      "description": "Empresas locales de confianza que recomendamos a nuestros clientes que se mudan a Panamá: apartamentos amueblados con Casco View Life, alquileres de corto y mediano plazo con Acomodo Rentals, y oficinas virtuales con Panamail."
     },
     "heading": "Nuestros Socios",
     "intro": "Trabajamos junto a un pequeño grupo de empresas locales de confianza que comparten nuestro compromiso de hacer que su mudanza a Panamá sea fluida y sin estrés. Estos son los socios que recomendamos a nuestros clientes.",
@@ -1279,6 +1279,10 @@
     "casco-view-life": {
       "name": "Casco View Life",
       "description": "Apartamentos amueblados certificados EDGE y unidades de inversión en Santa Ana, a pasos de Casco Viejo — ideales para nómadas digitales, estadías cortas e inversores en busca de rentabilidad al instalarse en Ciudad de Panamá."
+    },
+    "acomodo-rentals": {
+      "name": "Acomodo Rentals",
+      "description": "Alquileres amueblados de corto y mediano plazo en Ciudad de Panamá, con fuerte presencia en Casco Viejo — una forma rápida de encontrar vivienda lista para mudarse mientras te instalas o buscas un hogar permanente."
     },
     "panamail": {
       "name": "Panamail",

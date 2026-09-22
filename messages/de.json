@@ -416,7 +416,7 @@
       "sections": [
         {
           "heading": null,
-          "body": "<p>Panama Contact Services unterstützt Sie bei der Suche nach der perfekten Wohnung oder dem perfekten Haus in Panama. Unser Ansatz zeichnet sich durch ein gründliches Verständnis der Nuancen des Landes aus, kombiniert mit einem starken Kontaktnetzwerk. Wir arbeiten mit lizenzierten Immobilienmaklern in Panama zusammen, um Immobilien zu finden, die Ihren Anforderungen entsprechen.</p><p>Der Immobilienmarkt Panamas ist so vielfältig wie seine Landschaften — von der pulsierenden Metropole Panama City bis zu den bergigen Gebieten von Chiriqui und den verlockenden Küsten der Provinz Bocas del Toro.</p>"
+          "body": "<p>Panama Contact Services unterstützt Sie bei der Suche nach der perfekten Wohnung oder dem perfekten Haus in Panama. Unser Ansatz zeichnet sich durch ein gründliches Verständnis der Nuancen des Landes aus, kombiniert mit einem starken Kontaktnetzwerk. Wir arbeiten mit lizenzierten Immobilienmaklern in Panama zusammen, um Immobilien zu finden, die Ihren Anforderungen entsprechen.</p><p>Der Immobilienmarkt Panamas ist so vielfältig wie seine Landschaften — von der pulsierenden Metropole Panama City bis zu den bergigen Gebieten von Chiriqui und den verlockenden Küsten der Provinz Bocas del Toro.</p><p>Während Sie Ihren Kauf abschließen oder die passende Immobilie suchen, bietet <a href=\"https://acomodorentals.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Acomodo Rentals</a> möblierte Kurz- und Mittelzeitmieten in Panama-Stadt, auch in Casco Viejo — eine praktische Möglichkeit, sich niederzulassen, ohne Ihre Entscheidung zu überstürzen.</p>"
         },
         {
           "heading": "Finanzierung Ihrer Immobilie in Panama",
@@ -1270,7 +1270,7 @@
   "PartnersPage": {
     "meta": {
       "title": "Unsere Partner | Panama Contact Services",
-      "description": "Vertrauenswürdige lokale Unternehmen, die wir unseren Kunden beim Umzug nach Panama empfehlen: möblierte Apartments mit Casco View Life und virtuelle Büros mit Panamail."
+      "description": "Vertrauenswürdige lokale Unternehmen, die wir unseren Kunden beim Umzug nach Panama empfehlen: möblierte Apartments mit Casco View Life, Kurz- und Mittelzeitmieten mit Acomodo Rentals und virtuelle Büros mit Panamail."
     },
     "heading": "Unsere Partner",
     "intro": "Wir arbeiten mit einer kleinen Zahl vertrauenswürdiger lokaler Unternehmen zusammen, die sich ebenso dafür einsetzen, Ihren Umzug nach Panama reibungslos und stressfrei zu gestalten. Hier sind die Partner, die wir unseren Kunden empfehlen.",
@@ -1278,6 +1278,10 @@
     "casco-view-life": {
       "name": "Casco View Life",
       "description": "EDGE-zertifizierte, möblierte Apartments und Investitionseinheiten in Santa Ana, nur wenige Schritte von Casco Viejo entfernt — ideal für digitale Nomaden, Kurzaufenthalte und Investoren, die sich in Panama-Stadt niederlassen."
+    },
+    "acomodo-rentals": {
+      "name": "Acomodo Rentals",
+      "description": "Möblierte Kurz- und Mittelzeitmieten in Panama-Stadt mit starker Präsenz in Casco Viejo — eine schnelle Möglichkeit, eine bezugsfertige Unterkunft zu finden, während Sie sich niederlassen oder ein dauerhaftes Zuhause suchen."
     },
     "panamail": {
       "name": "Panamail",

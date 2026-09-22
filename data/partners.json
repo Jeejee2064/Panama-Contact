@@ -10,5 +10,11 @@
     "url": "https://www.panamail.com/",
     "logo": "/PanamailLogo.avif",
     "logoBg": "dark"
+  },
+  {
+    "id": "acomodo-rentals",
+    "url": "https://acomodorentals.com/",
+    "logo": null,
+    "logoBg": "dark"
   }
 ]

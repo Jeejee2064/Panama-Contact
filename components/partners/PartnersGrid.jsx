@@ -27,13 +27,19 @@ export default async function PartnersGrid({ locale }) {
             className="group rounded-3xl overflow-hidden bg-white border border-[#324158]/10 hover:shadow-2xl transition-all flex flex-col"
           >
             <div className={`relative h-32 flex items-center justify-center p-8 ${partner.logoBg === 'dark' ? 'bg-[#324158]' : 'bg-[#324158]/5'}`}>
-              <Image
-                src={partner.logo}
-                alt={t(`${partner.id}.name`)}
-                width={180}
-                height={64}
-                className="object-contain max-h-16 w-auto group-hover:scale-105 transition-transform duration-500"
-              />
+              {partner.logo ? (
+                <Image
+                  src={partner.logo}
+                  alt={t(`${partner.id}.name`)}
+                  width={180}
+                  height={64}
+                  className="object-contain max-h-16 w-auto group-hover:scale-105 transition-transform duration-500"
+                />
+              ) : (
+                <span className={`font-[Gravesend] text-lg uppercase tracking-wide ${partner.logoBg === 'dark' ? 'text-white' : 'text-[#324158]'}`}>
+                  {t(`${partner.id}.name`)}
+                </span>
+              )}
             </div>
 
             <div className="p-8 text-center flex flex-col flex-1">

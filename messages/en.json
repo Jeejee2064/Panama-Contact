@@ -416,7 +416,7 @@
       "sections": [
         {
           "heading": null,
-          "body": "<p>Panama Contact Services aids you in your search for the perfect apartment or house in Panama. Our approach is marked by a thorough understanding of the country's nuances and subtleties, combined with a strong network of contacts. We collaborate with licensed real estate agents in Panama to find properties that align with your requirements.</p><p>Panama's real estate is as diverse as its landscapes — from the bustling metropolis of Panama City to the mountainous terrains of Chiriqui, and the alluring shores of Bocas del Toro province. Each region offers unique characteristics and distinct opportunities.</p>"
+          "body": "<p>Panama Contact Services aids you in your search for the perfect apartment or house in Panama. Our approach is marked by a thorough understanding of the country's nuances and subtleties, combined with a strong network of contacts. We collaborate with licensed real estate agents in Panama to find properties that align with your requirements.</p><p>Panama's real estate is as diverse as its landscapes — from the bustling metropolis of Panama City to the mountainous terrains of Chiriqui, and the alluring shores of Bocas del Toro province. Each region offers unique characteristics and distinct opportunities.</p><p>While you finalize your purchase or search for the right property, <a href=\"https://acomodorentals.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Acomodo Rentals</a> offers furnished short and mid-term rentals across Panama City, including Casco Viejo — a convenient way to settle in without rushing your decision.</p>"
         },
         {
           "heading": "Financing Your Property in Panama",
@@ -1270,7 +1270,7 @@
   "PartnersPage": {
     "meta": {
       "title": "Our Partners | Panama Contact Services",
-      "description": "Trusted local businesses we recommend to clients relocating to Panama: furnished apartments with Casco View Life and virtual offices with Panamail."
+      "description": "Trusted local businesses we recommend to clients relocating to Panama: furnished apartments with Casco View Life, short and mid-term rentals with Acomodo Rentals, and virtual offices with Panamail."
     },
     "heading": "Our Partners",
     "intro": "We work alongside a small number of trusted local businesses that share our commitment to making your move to Panama smooth and stress-free. Here are the partners we recommend to our clients.",
@@ -1278,6 +1278,10 @@
     "casco-view-life": {
       "name": "Casco View Life",
       "description": "EDGE-certified furnished apartments and investment units in Santa Ana, steps from Casco Viejo — ideal for digital nomads, short stays, and rental-yield investors settling in Panama City."
+    },
+    "acomodo-rentals": {
+      "name": "Acomodo Rentals",
+      "description": "Furnished short and mid-term rentals across Panama City, with a strong presence in Casco Viejo — a fast way to find move-in-ready housing while you settle in or search for a permanent home."
     },
     "panamail": {
       "name": "Panamail",

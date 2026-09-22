@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/layout/WhatsAppButton';
+import AffiliateLinkTracker from '@/components/analytics/AffiliateLinkTracker';
 import '../globals.css';
 
 import localFont from 'next/font/local';
@@ -127,6 +128,7 @@ export default async function LocaleLayout({ children, params }) {
           <main>{children}</main>
           <Footer />
           <WhatsAppButton />
+          <AffiliateLinkTracker />
         </NextIntlClientProvider>
       </body>
     </html>
