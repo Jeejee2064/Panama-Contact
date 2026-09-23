@@ -1,7 +1,7 @@
 import { routing } from './routing';
 import { locales } from './config';
 
-export const SITE_URL = 'https://panama-contact.com';
+export const SITE_URL = 'https://www.panama-contact.com';
 
 function withPrefix(locale, path) {
   return `${SITE_URL}${locale === 'en' ? '' : `/${locale}`}${path}`;

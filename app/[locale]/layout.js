@@ -27,7 +27,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   return {
-    metadataBase: new URL('https://panama-contact.com'),
+    metadataBase: new URL('https://www.panama-contact.com'),
     alternates: {
       canonical: locale === 'en' ? '/' : `/${locale}`,
       languages: {
@@ -73,7 +73,7 @@ export default async function LocaleLayout({ children, params }) {
     '@type': 'LocalBusiness',
     name: 'Panama Contact Services',
     description: 'Expert relocation, residency visa, company formation, banking, and real estate services in Panama.',
-    url: 'https://panama-contact.com',
+    url: 'https://www.panama-contact.com',
     telephone: ['+50764357515', '+5073185882'],
     email: 'info@panama-contact.com',
     address: {
@@ -102,10 +102,10 @@ export default async function LocaleLayout({ children, params }) {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Panama Contact Services',
-    url: 'https://panama-contact.com',
+    url: 'https://www.panama-contact.com',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://panama-contact.com/services?q={search_term_string}',
+      target: 'https://www.panama-contact.com/services?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   };

@@ -1,3 +1,5 @@
+import { SITE_URL } from '@/i18n/urls';
+
 export default function robots() {
   return {
     rules: {
@@ -5,6 +7,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/cuestionario', '/admin'],
     },
-    sitemap: 'https://panama-contact.com/sitemap.xml',
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

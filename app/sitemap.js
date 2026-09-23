@@ -1,7 +1,6 @@
 import { serviceSlugMap, whyPanamaSlugMap } from '@/data/slugs';
 import { routing } from '@/i18n/routing';
-
-const BASE = 'https://panama-contact.com';
+import { SITE_URL as BASE } from '@/i18n/urls';
 const LOCALES = ['en', 'fr', 'es', 'pt', 'de'];
 
 // locale → URL prefix (en has none due to localePrefix: 'as-needed')
@@ -72,17 +71,18 @@ export default function sitemap() {
   ];
 
   for (const { key, priority, changeFrequency } of staticPages) {
-    entries.push({
-      url: `${BASE}${localizedPaths[key]['en']}`,
-      lastModified: new Date(),
-      changeFrequency,
-      priority,
-      alternates: {
-        languages: Object.fromEntries(
-          LOCALES.map((l) => [l, `${BASE}${prefix(l)}${localizedPaths[key][l]}`])
-        ),
-      },
-    });
+    const languages = Object.fromEntries(
+      LOCALES.map((l) => [l, `${BASE}${prefix(l)}${localizedPaths[key][l]}`])
+    );
+    for (const locale of LOCALES) {
+      entries.push({
+        url: languages[locale],
+        lastModified: new Date(),
+        changeFrequency,
+        priority,
+        alternates: { languages },
+      });
+    }
   }
 
   // Service detail pages
@@ -112,19 +112,20 @@ export default function sitemap() {
   ];
   for (const { key, priority } of cascoNotaryPages) {
     const paths = routing.pathnames[key];
-    entries.push({
-      url: `${BASE}${paths.en}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority,
-      alternates: {
-        languages: {
-          en: `${BASE}${paths.en}`,
-          es: `${BASE}/es${paths.es}`,
-          'x-default': `${BASE}${paths.en}`,
-        },
-      },
-    });
+    const languages = {
+      en: `${BASE}${paths.en}`,
+      es: `${BASE}/es${paths.es}`,
+      'x-default': `${BASE}${paths.en}`,
+    };
+    for (const url of [languages.en, languages.es]) {
+      entries.push({
+        url,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority,
+        alternates: { languages },
+      });
+    }
   }
 
   // Why Panama detail pages
