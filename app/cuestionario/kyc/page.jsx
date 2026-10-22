@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import { useForm, useFieldArray, Controller } from 'react-hook-form';
 import {
-  REFERENCE_FIELDS, BENEFICIAL_OWNER_FIELDS, SHARED_DECLARATION_FIELDS,
-  isRequired, sectionsForType, documentsForType,
+  REFERENCE_FIELDS, BENEFICIAL_OWNER_FIELDS, MAX_REFERENCES,
+  isRequired, sectionsForType, sharedFieldsForType, documentsForType,
 } from '@/data/kyc-fields';
 import FileUploadField from '@/components/kyc/FileUploadField';
 import CuestionarioHeader from '@/components/cuestionario/CuestionarioHeader';
@@ -225,12 +225,12 @@ function TypeStep({ clientType, setClientType, error }) {
   );
 }
 
-function ReferencesStep({ fields, append, remove, register, errors, minRows, control }) {
+function ReferencesStep({ fields, append, remove, register, errors, minRows, maxRows, control }) {
   return (
     <div className="flex flex-col gap-4">
       <BilingualText
         className="text-sm md:text-base text-gray-600 dark:text-gray-300"
-        text={`Indique al menos ${minRows} referencias (bancaria, comercial y personal). / Provide at least ${minRows} references (banking, commercial and personal).`}
+        text={`Indique al menos ${minRows} referencias: una bancaria, una comercial y una personal (máximo ${maxRows}). / Provide at least ${minRows} references: one banking, one commercial and one personal (maximum ${maxRows}).`}
       />
       {fields.map((field, index) => (
         <div key={field.id} className="border border-gray-200 dark:border-gray-700 rounded-xl p-4 grid sm:grid-cols-2 gap-3">
@@ -275,13 +275,15 @@ function ReferencesStep({ fields, append, remove, register, errors, minRows, con
           )}
         </div>
       ))}
-      <button
-        type="button"
-        onClick={() => append({ name: '', relationship: '', phone: '', email: '' })}
-        className="self-start text-sm font-semibold text-[#FF491A] hover:underline"
-      >
-        + Agregar referencia / Add reference
-      </button>
+      {fields.length < maxRows && (
+        <button
+          type="button"
+          onClick={() => append({ name: '', relationship: '', phone: '', email: '' })}
+          className="self-start text-sm font-semibold text-[#FF491A] hover:underline"
+        >
+          + Agregar referencia / Add reference
+        </button>
+      )}
     </div>
   );
 }
@@ -420,7 +422,7 @@ function buildSteps(clientType) {
   if (!clientType) return [typeStep];
 
   const sections = sectionsForType(clientType).map((s) => ({ title: s.title, fields: s.fields }));
-  const sharedStep = { title: 'Forma de pago y declaración / Payment & Declaration', fields: SHARED_DECLARATION_FIELDS };
+  const sharedStep = { title: 'Forma de pago y declaración / Payment & Declaration', fields: sharedFieldsForType(clientType) };
   const refStep = { title: 'Referencias / References', special: 'references' };
   const docStep = { title: 'Documentos / Documents', special: 'documents' };
   const finalStep = { title: 'Declaración final / Final Declaration', special: 'final' };
@@ -619,7 +621,7 @@ export default function KycPage() {
                   <TypeStep clientType={clientType} setClientType={setClientType} error={typeError} />
                 )}
                 {currentStep.special === 'references' && (
-                  <ReferencesStep fields={referenceFields} append={appendReference} remove={removeReference} register={register} errors={errors} minRows={MIN_REFERENCES} control={control} />
+                  <ReferencesStep fields={referenceFields} append={appendReference} remove={removeReference} register={register} errors={errors} minRows={MIN_REFERENCES} maxRows={MAX_REFERENCES} control={control} />
                 )}
                 {currentStep.special === 'beneficial-owners' && (
                   <BeneficialOwnersStep fields={ownerFields} append={appendOwner} remove={removeOwner} register={register} errors={errors} minRows={MIN_BENEFICIAL_OWNERS} control={control} />

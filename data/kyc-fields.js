@@ -17,13 +17,12 @@ export const MARITAL_STATUS_OPTIONS = [
   { value: 'Union libre', label: 'Unión libre / Common law' },
 ];
 
+// Same three brackets as the Due Diligence PDF forms. Older submissions may hold
+// the previous six-bracket values — see incomeBracket() for the mapping.
 export const INCOME_RANGES = [
   { value: 'Menos de $10,000', label: 'Menos de $10,000 USD / Less than $10,000 USD' },
   { value: '$10,000 - $30,000', label: '$10,000 - $30,000 USD' },
-  { value: '$30,001 - $50,000', label: '$30,001 - $50,000 USD' },
-  { value: '$50,001 - $100,000', label: '$50,001 - $100,000 USD' },
-  { value: '$100,001 - $250,000', label: '$100,001 - $250,000 USD' },
-  { value: 'Más de $250,000', label: 'Más de $250,000 USD / More than $250,000 USD' },
+  { value: 'Más de $30,000', label: 'Más de $30,000 USD / More than $30,000 USD' },
 ];
 
 export const PAYMENT_METHOD_OPTIONS = [
@@ -68,26 +67,44 @@ export const REFERENCE_FIELDS = [
 ];
 
 export const MIN_REFERENCES = 3;
+export const MAX_REFERENCES = 6;
 
 // ─── Beneficial owners (dynamic rows, legal entity only) ──────────────────────
 
 export const BENEFICIAL_OWNER_FIELDS = [
   ['full_name', 'Nombre completo / Full name'],
-  ['id_card', 'Cédula o pasaporte / ID card or passport'],
+  ['id_card', 'Cédula / ID card'],
   ['date_of_birth', 'Fecha de nacimiento / Date of birth'],
   ['nationality', 'Nacionalidad / Nationality'],
   ['address', 'Dirección / Address'],
-  ['date_acquired_status', 'Fecha en que adquirió la condición de beneficiario final / Date acquired beneficial owner status'],
+  ['date_acquired_status', 'Fecha en que adquiere la condición de beneficiario final / Date beneficial owner status was acquired'],
 ];
+
+const NATURAL_AML_LABEL = 'Indique si usted ha sido objeto de investigación o condena por actividades ilícitas, relacionadas al delito de blanqueo de capitales o financiamiento del terrorismo. / Indicate if you have been the subject of investigation or conviction for illicit activities related to the crime of money laundering or financing of terrorism.';
+const LEGAL_AML_LABEL = 'Indique si el Representante Legal, Accionista, Apoderado o la Sociedad misma son o han sido objeto de investigación o condena por actividades ilícitas, relacionadas al delito de blanqueo de capitales o financiamiento del terrorismo. / Indicate if the Legal Representative, Shareholder, Proxy, or the Company itself is or has been the subject of investigation or conviction for illicit activities related to the crime of money laundering or financing of terrorism.';
 
 // ─── Shared declaration fields (rendered on the final step of both flows) ─────
 
 export const SHARED_DECLARATION_FIELDS = [
   { name: 'payment_method', label: 'Forma de pago / Payment method', type: 'select', required: true, options: PAYMENT_METHOD_OPTIONS },
   { name: 'payment_method_other', label: '¿Cuál? / Which one?', type: 'text', required: (v) => v.payment_method === 'Otro' },
-  { name: 'aml_investigation_yn', label: 'Indique si usted, sus representantes/accionistas o la empresa (según aplique) han sido objeto de investigación o condena por blanqueo de capitales o financiamiento del terrorismo. / Indicate if you, your representatives/shareholders or the company (as applicable) have been investigated or convicted for money laundering or terrorism financing.', type: 'radio', required: true, options: YES_NO_OPTIONS },
+  { name: 'aml_investigation_yn', label: NATURAL_AML_LABEL, type: 'radio', required: true, options: YES_NO_OPTIONS },
   { name: 'country_of_origin_resources', label: 'País de origen de los recursos / Country of origin of resources', type: 'text', required: true },
 ];
+
+// PEP block is identical on both forms; only the column prefix differs (np_ / le_).
+function pepFields(p) {
+  const isPep = `${p}_is_pep_yn`;
+  return [
+    { name: isPep, label: '¿Se encuentra usted bajo la categoría de Persona Expuesta Políticamente, familiar o estrecho colaborador? / Are you under the category of Politically Exposed Person, family member, or close associate?', type: 'radio', required: true, options: YES_NO_OPTIONS },
+    { name: `${p}_pep_category`, label: 'Si su respuesta es «Sí», seleccione en qué categoría de PEP se encuentra / If your answer is “Yes”, select which PEP category applies', type: 'radio', required: (v) => v[isPep] === 'Sí', options: PEP_CATEGORY_OPTIONS },
+    { name: `${p}_pep_separated_24m_yn`, label: '¿Ha sido una Persona Expuesta Políticamente (o un familiar o estrecho colaborador) separado de su cargo durante los últimos 24 meses a la fecha de completar esta declaración? / Has a Politically Exposed Person (or a family member or close associate) been separated from their position during the last 24 months as of the date of completing this declaration?', type: 'radio', required: (v) => v[isPep] === 'Sí', options: YES_NO_OPTIONS },
+    { name: `${p}_pep_current_position`, label: 'Cargo político actual / Current political position', type: 'text', required: false },
+    { name: `${p}_pep_current_position_date`, label: 'Fecha (cargo actual) / Date (current position)', type: 'date', required: false },
+    { name: `${p}_pep_previous_position`, label: 'Cargo político anterior / Previous political position', type: 'text', required: false },
+    { name: `${p}_pep_previous_position_date`, label: 'Fecha (cargo anterior) / Date (previous position)', type: 'date', required: false },
+  ];
+}
 
 // ─── NATURAL PERSON ─────────────────────────────────────────────────────────────
 
@@ -98,75 +115,67 @@ export const NATURAL_SECTIONS = [
       { name: 'np_name_surname', label: 'Nombre y apellido / Name and surname', type: 'text', required: true },
       { name: 'np_id_card', label: 'N° de cédula / ID card number', type: 'text', required: false },
       { name: 'np_passport_no', label: 'N° de pasaporte / Passport number', type: 'text', required: true },
-      { name: 'np_passport_issue_date', label: 'Fecha de expedición del pasaporte / Passport issue date', type: 'date', required: true },
-      { name: 'np_passport_issuing_country', label: 'País de expedición del pasaporte / Passport issuing country', type: 'text', required: true },
-      { name: 'np_passport_expiration_date', label: 'Fecha de vencimiento del pasaporte / Passport expiration date', type: 'date', required: true },
+      { name: 'np_passport_issue_date', label: 'Fecha de emisión del pasaporte / Passport issue date', type: 'date', required: true },
+      { name: 'np_passport_issuing_country', label: 'País emisor del pasaporte / Passport issuing country', type: 'text', required: true },
+      { name: 'np_passport_expiration_date', label: 'Fecha de expiración del pasaporte / Passport expiration date', type: 'date', required: true },
       { name: 'np_date_of_birth', label: 'Fecha de nacimiento / Date of birth', type: 'date', required: true },
       { name: 'np_country_of_birth', label: 'País de nacimiento / Country of birth', type: 'text', required: true },
       { name: 'np_gender', label: 'Género / Gender', type: 'radio', required: true, options: GENDER_OPTIONS },
       { name: 'np_marital_status', label: 'Estado civil / Marital status', type: 'select', required: true, options: MARITAL_STATUS_OPTIONS },
       { name: 'np_nationality', label: 'Nacionalidad / Nationality', type: 'text', required: true },
       { name: 'np_country_of_residence', label: 'País de residencia / Country of residence', type: 'text', required: true },
-      { name: 'np_po_box', label: 'Casilla postal / P.O. Box', type: 'text', required: false },
+      { name: 'np_po_box', label: 'Apartado postal / P.O. Box', type: 'text', required: false },
       { name: 'np_residential_address', label: 'Dirección residencial / Residential address', type: 'text', required: true },
-      { name: 'np_residential_country', label: 'País de la dirección residencial / Country of residential address', type: 'text', required: true },
+      { name: 'np_residential_country', label: 'País (dirección residencial) / Country (residential address)', type: 'text', required: true },
     ],
   },
   {
-    title: 'Contacto y empleo / Contact & Employment',
+    title: 'Contacto e información laboral / Contact & Employment Information',
     fields: [
       { name: 'np_personal_email', label: 'Correo electrónico / Email', type: 'email', required: true },
       { name: 'np_personal_phone', label: 'Teléfono / Phone', type: 'tel', required: true },
       { name: 'np_personal_cellphone', label: 'Celular / Cellphone', type: 'tel', required: true },
-      { name: 'np_occupation_profession', label: 'Ocupación o profesión / Occupation or profession', type: 'text', required: true },
-      { name: 'np_employer_company', label: 'Empresa empleadora / Employer company', type: 'text', required: false },
-      { name: 'np_employer_work_address', label: 'Dirección laboral (calle/avenida) / Work address (street/avenue)', type: 'text', required: false },
-      { name: 'np_employer_phone_1', label: 'Teléfono laboral N°1 / Work phone No. 1', type: 'tel', required: false },
-      { name: 'np_employer_phone_2', label: 'Teléfono laboral N°2 / Work phone No. 2', type: 'tel', required: false },
-      { name: 'np_employer_cellphone', label: 'Celular laboral / Work cellphone', type: 'tel', required: false },
-      { name: 'np_employer_work_email', label: 'Correo laboral / Work email', type: 'email', required: false },
+      { name: 'np_occupation_profession', label: 'Ocupación / Profesión / Occupation / Profession', type: 'text', required: true },
+      { name: 'np_employer_company', label: 'Empresa donde labora / Employer company', type: 'text', required: false },
+      { name: 'np_employer_work_address', label: 'Dirección de trabajo (calle / avenida) / Work address (street / avenue)', type: 'text', required: false },
+      { name: 'np_employer_phone_1', label: 'Teléfono No. 1 / Phone No. 1', type: 'tel', required: false },
+      { name: 'np_employer_phone_2', label: 'Teléfono No. 2 / Phone No. 2', type: 'tel', required: false },
+      { name: 'np_employer_cellphone', label: 'Celular No. / Cellphone No.', type: 'tel', required: false },
+      { name: 'np_employer_work_email', label: 'Email de trabajo / Work email', type: 'email', required: false },
     ],
   },
   {
-    title: 'Declaración de blanqueo y afidávit / AML Declaration & Affidavit',
+    title: 'Declaración jurada / Affidavit (Sworn Declaration)',
     fields: [
-      { name: 'np_intermediary_third_party_yn', label: '¿Figura como intermediario de otra persona que sea el beneficiario final de estos fondos? / Do you act as an intermediary for another person who is the true beneficial owner of these funds?', type: 'radio', required: true, options: YES_NO_OPTIONS },
+      { name: 'np_intermediary_third_party_yn', label: '¿Figura como intermediario de otra persona que es Beneficiario verdadero de esos fondos? / Do you figure as an intermediary for another person who is the True Beneficial Owner of these funds?', type: 'radio', required: true, options: YES_NO_OPTIONS },
       { name: 'np_beneficiary_name', label: 'Nombre del beneficiario final / Final beneficiary name', type: 'text', required: (v) => v.np_intermediary_third_party_yn === 'Sí' },
-      { name: 'np_beneficiary_id_passport', label: 'N° de cédula/pasaporte del beneficiario final / Final beneficiary ID/passport number', type: 'text', required: (v) => v.np_intermediary_third_party_yn === 'Sí' },
+      { name: 'np_beneficiary_id_passport', label: 'Número de cédula / pasaporte / ID / Passport number', type: 'text', required: (v) => v.np_intermediary_third_party_yn === 'Sí' },
     ],
   },
   {
-    title: 'Origen de fondos / Source of Funds',
+    title: 'Declaración de fuente y origen de patrimonio / Declaration of source and origin of assets',
     fields: [
-      { name: 'np_source_of_funds', label: 'Fuente de fondos y activos / Source of funds and assets', type: 'checkbox-group', required: true, options: SOURCE_OF_FUNDS_OPTIONS },
+      { name: 'np_source_of_funds', label: 'Procedencia / Source of funds', type: 'checkbox-group', required: true, options: SOURCE_OF_FUNDS_OPTIONS },
       { name: 'np_source_of_funds_other', label: '¿Cuál? / Which one?', type: 'text', required: (v) => Array.isArray(v.np_source_of_funds) && v.np_source_of_funds.includes('Otro') },
-      { name: 'np_source_company_name', label: 'Nombre de la empresa (si aplica) / Company name (if applicable)', type: 'text', required: false },
+      { name: 'np_source_company_name', label: 'Nombre de la empresa / Company name', type: 'text', required: false },
       { name: 'np_source_company_address', label: 'Dirección de la empresa / Company address', type: 'text', required: false },
       { name: 'np_source_company_phone', label: 'Teléfono de la empresa / Company phone', type: 'tel', required: false },
-      { name: 'np_source_products_services', label: 'Productos/servicios / Products/services', type: 'text', required: false },
+      { name: 'np_source_products_services', label: 'Productos / Servicios / Products / Services', type: 'text', required: false },
       { name: 'np_source_company_email', label: 'Correo de la empresa / Company email', type: 'email', required: false },
-      { name: 'np_source_activity_description', label: 'Breve descripción de la actividad que dio origen a los fondos / Brief description of the activity that gave rise to the funds', type: 'textarea', required: true },
+      { name: 'np_source_activity_description', label: 'Breve descripción que permita determinar la actividad que dio origen a los fondos involucrados en la operación / Brief description allowing the determination of the activity that gave origin to the funds involved in the operation', type: 'textarea', required: true },
     ],
   },
   {
     title: 'Perfil financiero / Financial Profile',
     fields: [
       { name: 'np_annual_income_range', label: 'Ingreso anual (actividad principal) / Annual income (main activity)', type: 'select', required: true, options: INCOME_RANGES },
-      { name: 'np_non_operational_income_activity', label: 'Actividad de ingresos no operacionales / Non-operational income activity', type: 'text', required: false },
-      { name: 'np_non_operational_income_range', label: 'Rango de ingresos no operacionales / Non-operational income range', type: 'select', required: false, options: INCOME_RANGES },
+      { name: 'np_non_operational_income_activity', label: 'Actividad (ingresos no operacionales) / Activity (non-operational income)', type: 'text', required: false },
+      { name: 'np_non_operational_income_range', label: 'Rango de ingresos / Income range', type: 'select', required: false, options: INCOME_RANGES },
     ],
   },
   {
     title: 'Persona Expuesta Políticamente (PEP) / Politically Exposed Person',
-    fields: [
-      { name: 'np_is_pep_yn', label: '¿Es usted, un familiar cercano o asociado cercano una Persona Expuesta Políticamente? / Are you, a close family member or close associate a Politically Exposed Person?', type: 'radio', required: true, options: YES_NO_OPTIONS },
-      { name: 'np_pep_category', label: 'Categoría PEP / PEP category', type: 'radio', required: (v) => v.np_is_pep_yn === 'Sí', options: PEP_CATEGORY_OPTIONS },
-      { name: 'np_pep_separated_24m_yn', label: '¿Ha sido separado de su cargo en los últimos 24 meses? / Separated from position in the last 24 months?', type: 'radio', required: (v) => v.np_is_pep_yn === 'Sí', options: YES_NO_OPTIONS },
-      { name: 'np_pep_current_position', label: 'Cargo político actual / Current political position', type: 'text', required: false },
-      { name: 'np_pep_current_position_date', label: 'Fecha del cargo actual / Current position date', type: 'date', required: false },
-      { name: 'np_pep_previous_position', label: 'Cargo político anterior / Previous political position', type: 'text', required: false },
-      { name: 'np_pep_previous_position_date', label: 'Fecha del cargo anterior / Previous position date', type: 'date', required: false },
-    ],
+    fields: pepFields('np'),
   },
 ];
 
@@ -202,23 +211,23 @@ export const NATURAL_DOCUMENTS = [
 
 export const LEGAL_SECTIONS = [
   {
-    title: 'Datos generales de la empresa / Company General Data',
+    title: 'Datos generales de la sociedad / General data of the company',
     fields: [
       { name: 'le_company_name', label: 'Nombre de la empresa / Company name', type: 'text', required: true },
-      { name: 'le_tax_id', label: 'Identificación tributaria (TIN) / Tax identification (TIN)', type: 'text', required: true },
-      { name: 'le_registered_office', label: 'Domicilio registrado / Registered office', type: 'text', required: true },
+      { name: 'le_tax_id', label: 'Identificación fiscal (TIN) / Tax identification (TIN)', type: 'text', required: true },
+      { name: 'le_registered_office', label: 'Domicilio social / Registered office', type: 'text', required: true },
       { name: 'le_physical_address', label: 'Dirección física / Physical address', type: 'text', required: true },
       { name: 'le_postal_address', label: 'Dirección postal / Postal address', type: 'text', required: false },
       { name: 'le_telephone', label: 'Teléfono / Telephone', type: 'tel', required: true },
-      { name: 'le_company_type', label: 'Tipo de sociedad / Type of company', type: 'text', required: true },
+      { name: 'le_company_type', label: 'Tipo de persona / sociedad / Type of company / entity', type: 'text', required: true },
       { name: 'le_company_activities', label: 'Actividades de la empresa / Company activities', type: 'textarea', required: true },
       { name: 'le_email', label: 'Correo electrónico / Email', type: 'email', required: true },
-      { name: 'le_listed_stock_exchange_yn', label: '¿Cotiza en bolsa de valores? / Listed on a stock exchange?', type: 'radio', required: true, options: YES_NO_OPTIONS },
-      { name: 'le_stock_exchange_name', label: 'Nombre de la bolsa de valores / Name of the stock exchange', type: 'text', required: (v) => v.le_listed_stock_exchange_yn === 'Sí' },
+      { name: 'le_listed_stock_exchange_yn', label: '¿Cotiza en bolsa? / Listed on stock exchange?', type: 'radio', required: true, options: YES_NO_OPTIONS },
+      { name: 'le_stock_exchange_name', label: 'Nombre de la bolsa / Name of the stock exchange', type: 'text', required: (v) => v.le_listed_stock_exchange_yn === 'Sí' },
     ],
   },
   {
-    title: 'Representante legal, accionistas y apoderados / Officers',
+    title: 'Dignatarios y accionistas / Officers and shareholders',
     fields: [
       { name: 'le_legal_representative', label: 'Representante legal / Legal representative', type: 'text', required: true },
       { name: 'le_president', label: 'Presidente / President', type: 'text', required: false },
@@ -229,9 +238,8 @@ export const LEGAL_SECTIONS = [
     ],
   },
   {
-    title: 'Información del representante / accionista / apoderado',
+    title: 'Información general del representante legal / accionista / apoderado / General information of the legal representative / shareholder / proxy',
     fields: [
-      { name: 'le_rep_building_house', label: 'Edificio / Casa', type: 'text', required: false },
       { name: 'le_rep_name_surname', label: 'Nombre y apellido / Name and surname', type: 'text', required: true },
       { name: 'le_rep_date_of_birth', label: 'Fecha de nacimiento / Date of birth', type: 'date', required: true },
       { name: 'le_rep_place_of_birth', label: 'Lugar de nacimiento / Place of birth', type: 'text', required: true },
@@ -246,37 +254,41 @@ export const LEGAL_SECTIONS = [
       { name: 'le_rep_cell_phone', label: 'Celular / Cell phone', type: 'tel', required: true },
       { name: 'le_accountant_name', label: 'Nombre del contador / Accountant name', type: 'text', required: false },
       { name: 'le_accountant_email', label: 'Correo del contador / Accountant email', type: 'email', required: false },
-      { name: 'le_accountant_id_license', label: 'Cédula/licencia del contador / Accountant ID/license', type: 'text', required: false },
+      { name: 'le_accountant_id_license', label: 'Cédula de contador / idoneidad / Accountant ID / license', type: 'text', required: false },
       { name: 'le_accountant_address', label: 'Dirección del contador / Accountant address', type: 'text', required: false },
     ],
   },
   {
-    title: 'Origen de recursos / Origin of Resources',
+    title: 'Declaración de fuente y origen de recursos / Declaration of source and origin of resources',
     fields: [
-      { name: 'le_origin_assets_declaration', label: 'Declaración del origen de activos y/o fondos / Declaration of origin of assets and/or funds', type: 'textarea', required: true },
+      { name: 'le_origin_assets_declaration', label: 'Declaración de origen de bienes y/o fondos / Declaration of origin of assets and/or funds', type: 'textarea', required: true },
     ],
   },
   {
     title: 'Perfil financiero / Financial Profile',
     fields: [
-      { name: 'le_annual_income_main_activity', label: 'Ingreso anual de la actividad principal / Annual income of main activity', type: 'select', required: true, options: INCOME_RANGES },
-      { name: 'le_monthly_operational_income', label: 'Ingreso operacional mensual / Monthly operational income', type: 'text', required: true },
-      { name: 'le_expenses', label: 'Gastos / Expenses', type: 'text', required: true },
+      { name: 'le_annual_income_main_activity', label: 'Ingresos anuales (actividad principal) / Annual income (main activity)', type: 'select', required: true, options: INCOME_RANGES },
+      { name: 'le_monthly_operational_income', label: 'Ingresos operacionales mensuales / Monthly operational income', type: 'text', required: true },
+      { name: 'le_expenses', label: 'Egresos / Expenses', type: 'text', required: true },
       { name: 'le_profit', label: 'Utilidad / Profit', type: 'text', required: true },
-      { name: 'le_monthly_non_operational_income', label: 'Ingreso no operacional mensual / Monthly non-operational income', type: 'text', required: false },
-      { name: 'le_non_operational_activity', label: 'Actividad no operacional / Non-operational activity', type: 'text', required: false },
-      { name: 'le_non_operational_income_range', label: 'Rango de ingresos no operacionales / Non-operational income range', type: 'select', required: false, options: INCOME_RANGES },
+      { name: 'le_monthly_non_operational_income', label: 'Ingresos no operacionales mensuales / Monthly non-operational income', type: 'text', required: false },
+      { name: 'le_non_operational_activity', label: 'Actividad / Activity', type: 'text', required: false },
+      { name: 'le_non_operational_income_range', label: 'Rango de ingresos / Income range', type: 'select', required: false, options: INCOME_RANGES },
     ],
   },
   {
-    title: 'Tipo de contribuyente e información internacional',
+    title: 'Persona Expuesta Políticamente (PEP) / Politically Exposed Person',
+    fields: pepFields('le'),
+  },
+  {
+    title: 'Información tributaria y operaciones internacionales / Tax information & international operations',
     fields: [
       { name: 'le_taxpayer_type', label: 'Tipo de contribuyente / Taxpayer type', type: 'select', required: true, options: TAXPAYER_TYPE_OPTIONS },
-      { name: 'le_self_withholder_other_income_yn', label: '¿Autorretenedor de otros ingresos? / Self-withholder of other income?', type: 'radio', required: true, options: YES_NO_OPTIONS },
-      { name: 'le_itbms_responsible_yn', label: '¿Responsable de ITBMS? / ITBMS responsible?', type: 'radio', required: true, options: YES_NO_OPTIONS },
-      { name: 'le_obligated_taxes_other_states_yn', label: '¿Obligado a pagar impuestos en otros estados? / Obligated to pay taxes in other states?', type: 'radio', required: true, options: YES_NO_OPTIONS },
+      { name: 'le_self_withholder_other_income_yn', label: 'Autorretenedor de otros ingresos / Self-withholder of other income', type: 'radio', required: true, options: YES_NO_OPTIONS },
+      { name: 'le_itbms_responsible_yn', label: 'Responsable de ITBMS / ITBMS responsible', type: 'radio', required: true, options: YES_NO_OPTIONS },
+      { name: 'le_obligated_taxes_other_states_yn', label: 'Obligado a tributar en otros Estados / Obligated to pay taxes in other States', type: 'radio', required: true, options: YES_NO_OPTIONS },
       { name: 'le_obligated_taxes_which_state', label: '¿Cuál? / Which one?', type: 'text', required: (v) => v.le_obligated_taxes_other_states_yn === 'Sí' },
-      { name: 'le_foreign_currency_operations_yn', label: '¿Realiza operaciones en moneda extranjera? / Performs operations in foreign currency?', type: 'radio', required: true, options: YES_NO_OPTIONS },
+      { name: 'le_foreign_currency_operations_yn', label: 'Realiza operaciones en moneda extranjera / Performs operations in foreign currency', type: 'radio', required: true, options: YES_NO_OPTIONS },
       { name: 'le_foreign_currency_which', label: '¿Cuál? / Which one?', type: 'text', required: (v) => v.le_foreign_currency_operations_yn === 'Sí' },
     ],
   },
@@ -324,6 +336,13 @@ export const LEGAL_DOCUMENTS = [
 
 export function isRequired(field, values) {
   return typeof field.required === 'function' ? field.required(values) : !!field.required;
+}
+
+// The AML question is worded differently on the natural-person and legal-entity forms.
+export function sharedFieldsForType(clientType) {
+  return SHARED_DECLARATION_FIELDS.map((f) => (
+    f.name === 'aml_investigation_yn' && clientType === 'legal' ? { ...f, label: LEGAL_AML_LABEL } : f
+  ));
 }
 
 export function sectionsForType(clientType) {

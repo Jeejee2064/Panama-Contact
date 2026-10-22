@@ -6,6 +6,7 @@
 
 export const SECTIONS = [
   { title: 'Identidad / Identity', fields: [
+    ['tipo_solicitud', 'Tipo de solicitud / Application type'],
     ['apellidos', 'Apellidos / Last name'],
     ['primer_y_segundo_nombre', 'Primer y segundo nombre / First and middle name'],
     ['otros_apellidos_nombres', 'Otros apellidos o nombres / Other names used'],

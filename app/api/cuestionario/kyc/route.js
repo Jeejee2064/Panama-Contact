@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
 import {
   NATURAL_SECTIONS, LEGAL_SECTIONS, NATURAL_DOCUMENTS, LEGAL_DOCUMENTS,
-  REFERENCE_FIELDS, BENEFICIAL_OWNER_FIELDS, MIN_REFERENCES,
+  REFERENCE_FIELDS, BENEFICIAL_OWNER_FIELDS, MIN_REFERENCES, MAX_REFERENCES,
   SHARED_DECLARATION_FIELDS, isRequired, sectionsForType, documentsForType,
 } from '@/data/kyc-fields';
 
@@ -223,6 +223,9 @@ export async function POST(request) {
   const references = Array.isArray(data.reference_contacts) ? data.reference_contacts : [];
   if (references.length < MIN_REFERENCES) {
     return Response.json({ error: `At least ${MIN_REFERENCES} references are required` }, { status: 400 });
+  }
+  if (references.length > MAX_REFERENCES) {
+    return Response.json({ error: `At most ${MAX_REFERENCES} references are allowed` }, { status: 400 });
   }
   for (const ref of references) {
     for (const [key] of REFERENCE_FIELDS) {

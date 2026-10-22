@@ -182,8 +182,15 @@ export async function POST(request) {
     return Response.json({ success: true });
   }
 
+  const isRenewal = data.tipo_solicitud === 'Renovación';
+  const FIRST_TIME_ONLY = [
+    'estatura', 'color_cabello', 'color_ojos', 'color_piel',
+    'puerto_de_entrada', 'pais_de_procedencia', 'compania_transporte', 'fecha_llegada_panama',
+  ];
+
   // Validate required fields
   for (const field of REQUIRED_FIELDS) {
+    if (isRenewal && FIRST_TIME_ONLY.includes(field)) continue;
     if (!data[field] || String(data[field]).trim() === '') {
       return Response.json({ error: `Missing required field: ${field}` }, { status: 400 });
     }

@@ -16,6 +16,10 @@ const STEPS = [
   {
     title: 'Identidad / Identity',
     fields: [
+      {
+        name: 'tipo_solicitud', label: 'Tipo de solicitud / Application type', type: 'radio', required: true,
+        options: [{ value: 'Primera vez', label: 'Primera vez / First time' }, { value: 'Renovación', label: 'Renovación / Renewal' }],
+      },
       { name: 'apellidos', label: 'Apellidos / Last name', type: 'text', required: true },
       { name: 'primer_y_segundo_nombre', label: 'Primer y segundo nombre / First and middle name', type: 'text', required: true },
       { name: 'otros_apellidos_nombres', label: 'Otros apellidos o nombres / Other names used', type: 'text', required: false },
@@ -37,10 +41,10 @@ const STEPS = [
           { value: 'Union libre', label: 'Unión libre / Common law' },
         ],
       },
-      { name: 'estatura', label: 'Estatura / Height (meters)', type: 'text', required: true },
-      { name: 'color_cabello', label: 'Color de cabello / Hair color', type: 'select', required: true, options: HAIR_COLOR_OPTIONS },
-      { name: 'color_ojos', label: 'Color de ojos / Eye color', type: 'select', required: true, options: EYE_COLOR_OPTIONS },
-      { name: 'color_piel', label: 'Color de piel / Skin color', type: 'select', required: true, options: SKIN_COLOR_OPTIONS },
+      { name: 'estatura', label: 'Estatura / Height (meters)', type: 'text', required: true, firstTimeOnly: true },
+      { name: 'color_cabello', label: 'Color de cabello / Hair color', type: 'select', required: true, options: HAIR_COLOR_OPTIONS, firstTimeOnly: true },
+      { name: 'color_ojos', label: 'Color de ojos / Eye color', type: 'select', required: true, options: EYE_COLOR_OPTIONS, firstTimeOnly: true },
+      { name: 'color_piel', label: 'Color de piel / Skin color', type: 'select', required: true, options: SKIN_COLOR_OPTIONS, firstTimeOnly: true },
     ],
   },
   {
@@ -89,10 +93,10 @@ const STEPS = [
       { name: 'tiempo_permanencia_panama', label: '¿Cuánto tiempo planea permanecer? / How long do you plan to stay?', type: 'text', required: true },
       { name: 'fecha_regreso_pais_origen', label: '¿Cuándo planea regresar? / When do you plan to return?', type: 'date', required: false },
       { name: 'medios_economicos', label: '¿Con qué medios económicos? / What financial means do you have?', type: 'text', required: true },
-      { name: 'puerto_de_entrada', label: 'Puerto de entrada / Port of entry', type: 'select', required: true, options: ENTRY_PORT_OPTIONS },
-      { name: 'pais_de_procedencia', label: 'País de procedencia / Country of origin', type: 'select', required: true, options: COUNTRY_OPTIONS },
-      { name: 'compania_transporte', label: 'Compañía de transporte / Transport company', type: 'select', required: true, options: TRANSPORT_COMPANY_OPTIONS },
-      { name: 'fecha_llegada_panama', label: 'Fecha de llegada a Panamá / Date of arrival in Panama', type: 'date', required: true },
+      { name: 'puerto_de_entrada', label: 'Puerto de entrada / Port of entry', type: 'select', required: true, options: ENTRY_PORT_OPTIONS, firstTimeOnly: true },
+      { name: 'pais_de_procedencia', label: 'País de procedencia / Country of origin', type: 'select', required: true, options: COUNTRY_OPTIONS, firstTimeOnly: true },
+      { name: 'compania_transporte', label: 'Compañía de transporte / Transport company', type: 'select', required: true, options: TRANSPORT_COMPANY_OPTIONS, firstTimeOnly: true },
+      { name: 'fecha_llegada_panama', label: 'Fecha de llegada a Panamá / Date of arrival in Panama', type: 'date', required: true, firstTimeOnly: true },
     ],
   },
   {
@@ -101,9 +105,6 @@ const STEPS = [
       { name: 'nombre_responsable', label: '¿Quién se hará responsable económicamente? / Who will be financially responsible for you?', type: 'text', required: true },
       { name: 'direccion_responsable', label: 'Dirección del responsable / Guarantor\'s address', type: 'text', required: true },
       { name: 'telefono_responsable', label: 'Teléfono del responsable / Guarantor\'s phone', type: 'tel', required: true },
-      { name: 'nombre_persona_responsable', label: 'Nombre de la persona responsable / Name of responsible person', type: 'text', required: false },
-      { name: 'direccion_persona_responsable', label: 'Dirección de la persona responsable / Address of responsible person', type: 'text', required: false },
-      { name: 'telefono_persona_responsable', label: 'Teléfono de la persona responsable / Phone of responsible person', type: 'tel', required: false },
     ],
   },
   // Step 8: Immigration History — handled specially (conditional textarea)
@@ -113,6 +114,8 @@ const STEPS = [
   // Step 10: Third party — handled specially (conditional textarea)
   { title: 'Llenado por tercero / Filled by Third Party', special: 'step10' },
 ];
+
+const isVisible = (f, tipo) => !(f.firstTimeOnly && tipo === 'Renovación');
 
 const SPOUSE_STATUSES = ['Casado', 'Union libre'];
 
@@ -517,7 +520,7 @@ export default function ImmigracionPage() {
       if (watch('solicitud_llenada_otra_persona') === 'Sí') names.push('datos_persona_que_lleno');
       return names;
     }
-    return (s.fields || []).filter((f) => f.required).map((f) => f.name);
+    return (s.fields || []).filter((f) => f.required && isVisible(f, watch('tipo_solicitud'))).map((f) => f.name);
   }
 
   function scrollToTop() {
@@ -565,7 +568,14 @@ export default function ImmigracionPage() {
       const res = await fetch('/api/cuestionario/immigracion', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, website: data.website || '' }),
+        body: JSON.stringify({
+          ...data,
+          // Drop stale answers to fields hidden for renewals
+          ...(data.tipo_solicitud === 'Renovación' && Object.fromEntries(
+            STEPS.flatMap((st) => (st.fields || []).filter((f) => f.firstTimeOnly).map((f) => [f.name, '']))
+          )),
+          website: data.website || '',
+        }),
       });
 
       if (res.status === 429) {
@@ -649,7 +659,7 @@ export default function ImmigracionPage() {
                 {currentStep.special === 'step10' && (
                   <Step10 register={register} errors={errors} watch={watch} />
                 )}
-                {!currentStep.special && currentStep.fields.map((field) =>
+                {!currentStep.special && currentStep.fields.filter((f) => isVisible(f, watch('tipo_solicitud'))).map((field) =>
                   renderField(field, { register, errors, control })
                 )}
               </div>
