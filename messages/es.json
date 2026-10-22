@@ -107,7 +107,7 @@
   },
   "ServicesPage": {
     "meta": {
-      "title": "Servicios para Expatriados en Panamá — Visas, Empresa, Inmobiliaria | Panama Contact",
+      "title": "Servicios para Expatriados en Panamá — Visas, Empresa, Inmobiliaria",
       "description": "Asesoramiento experto para instalarse en Panamá. Visa países amigos, nómada digital, constitución de empresa, cuenta bancaria, bienes raíces. Consulta gratuita."
     },
     "sectionLabel": "Servicios",
@@ -173,7 +173,7 @@
         }
       ],
       "meta": {
-        "title": "Visa de Países Amigos Panamá 2026 — Requisitos y Proceso | Panama Contact",
+        "title": "Visa de Países Amigos Panamá 2026 — Requisitos y Proceso",
         "description": "Obtenga la residencia en Panamá con la Visa de Países Amigos. Proceso de 3 a 6 meses para ciudadanos de más de 50 países. Consulta gratuita disponible."
       }
     },
@@ -213,7 +213,7 @@
         }
       ],
       "meta": {
-        "title": "Visa Nómada Digital Panamá 2026 — Requisitos y Solicitud | Panama Contact",
+        "title": "Visa Nómada Digital Panamá 2026 — Requisitos y Solicitud",
         "description": "Viva y trabaje de forma remota desde Panamá con la Visa de Nómada Digital. Permiso renovable de 9 meses sin impuestos sobre ingresos extranjeros."
       }
     },
@@ -227,7 +227,7 @@
         },
         {
           "question": "¿Cuáles son las opciones de inversión para la Visa de Inversionista Calificado?",
-          "answer": "Existen tres opciones: (1) una colocación financiera de al menos $500,000 USD en una casa de valores registrada en Panamá; (2) un depósito bancario a plazo fijo de $750,000 USD en un banco panameño; o (3) una compra de bienes raíces de al menos $300,000 USD (o $500,000 USD después de octubre de 2024). La propiedad debe mantenerse por un mínimo de cinco años. Todos los fondos invertidos deben provenir del extranjero."
+          "answer": "Existen tres opciones: (1) una colocación financiera de al menos $500,000 USD en una casa de valores registrada en Panamá; (2) un depósito bancario a plazo fijo de $750,000 USD en un banco panameño; o (3) una compra de bienes raíces de al menos $300,000 USD bajo el régimen transitorio para inmuebles nuevos, o $500,000 USD en los demás casos (los umbrales cambian con la normativa: confirme el monto vigente antes de comprometerse). La propiedad debe mantenerse por un mínimo de cinco años. Todos los fondos invertidos deben provenir del extranjero."
         },
         {
           "question": "¿Necesito vivir en Panamá para mantener la residencia de Inversionista Calificado?",
@@ -249,7 +249,7 @@
         },
         {
           "heading": "Opción 3 — Bienes Raíces: $300,000 / $500,000",
-          "body": "<p><strong>Inversión requerida:</strong> Al menos $300,000 hasta octubre de 2024, y $500,000 después de esa fecha. También puede aplicarse mediante un contrato de promesa de venta.</p><p><strong>Período de retención:</strong> La propiedad debe mantenerse por un mínimo de cinco años.</p><p><strong>Documentación:</strong> Títulos de propiedad y/o contratos de compra.</p>"
+          "body": "<p><strong>Inversión requerida:</strong> $300,000 bajo el régimen transitorio para inmuebles nuevos, $500,000 en los demás casos. Los umbrales y las fechas límite los fija la normativa y han cambiado: confirme el monto vigente con nuestro equipo antes de comprometerse. También puede aplicarse mediante un contrato de promesa de venta.</p><p><strong>Período de retención:</strong> La propiedad debe mantenerse por un mínimo de cinco años.</p><p><strong>Documentación:</strong> Títulos de propiedad y/o contratos de compra.</p>"
         },
         {
           "heading": "Trámite y Condiciones Clave",
@@ -257,7 +257,7 @@
         }
       ],
       "meta": {
-        "title": "Residencia Inversor Calificado Panamá 2026 — Inversión $300K | Panama Contact",
+        "title": "Residencia Inversor Calificado Panamá 2026 — Inversión $300K",
         "description": "Obtenga la residencia permanente en Panamá mediante una inversión de $300,000 USD. Aprobación acelerada en 30 días con acompañamiento profesional completo."
       }
     },
@@ -301,7 +301,7 @@
         }
       ],
       "meta": {
-        "title": "Visa Pensionado Panamá 2026 — Jubilarse en Panamá | Panama Contact",
+        "title": "Visa Pensionado Panamá 2026 — Jubilarse en Panamá",
         "description": "Jubílese en Panamá con la Visa Pensionado desde $1,000/mes de pensión. Disfrute de descuentos exclusivos y un estilo de vida tropical con nuestro apoyo experto."
       }
     },
@@ -337,7 +337,7 @@
         }
       ],
       "meta": {
-        "title": "Abrir Cuenta Bancaria en Panamá 2026 — Guía para Extranjeros | Panama Contact",
+        "title": "Abrir Cuenta Bancaria en Panamá 2026 — Guía para Extranjeros",
         "description": "Abra una cuenta bancaria personal o empresarial en Panamá como extranjero o no residente. Asistencia paso a paso de Panama Contact Services."
       }
     },
@@ -389,7 +389,7 @@
         }
       ],
       "meta": {
-        "title": "Constitución de Empresa en Panamá 2026 — S.A. y S.R.L. | Panama Contact",
+        "title": "Constitución de Empresa en Panamá 2026 — S.A. y S.R.L.",
         "description": "Constituya una sociedad anónima o SRL en Panamá de forma rápida y económica. Estructuras fiscalmente ventajosas y reconocidas internacionalmente."
       }
     },
@@ -429,7 +429,7 @@
         }
       ],
       "meta": {
-        "title": "Comprar Inmueble en Panamá 2026 — Guía para Extranjeros | Panama Contact",
+        "title": "Comprar Inmueble en Panamá 2026 — Guía para Extranjeros",
         "description": "Los extranjeros pueden comprar propiedades en Panamá con los mismos derechos que los ciudadanos. Encuentre su hogar ideal o inversión con nuestros expertos locales."
       }
     },
@@ -465,7 +465,7 @@
         }
       ],
       "meta": {
-        "title": "Declaración de Renta en Panamá 2026 — Guía Fiscal para Expats | Panama Contact",
+        "title": "Declaración de Renta en Panamá 2026 — Guía Fiscal para Expats",
         "description": "Presente su declaración anual de renta en Panamá de forma correcta y puntual. Asesoría fiscal experta para residentes, expatriados y empresas."
       }
     },
@@ -501,7 +501,7 @@
         }
       ],
       "meta": {
-        "title": "Importación de Bienes a Panamá 2026 — Aduanas y Aranceles | Panama Contact",
+        "title": "Importación de Bienes a Panamá 2026 — Aduanas y Aranceles",
         "description": "Navegue el proceso aduanero de Panamá e importe sus pertenencias, vehículo o mercancías. Guía clara sobre aranceles, documentación y exenciones."
       }
     },
@@ -537,7 +537,7 @@
         }
       ],
       "meta": {
-        "title": "Licencia de Conducir en Panamá 2026 — Canje y Solicitud | Panama Contact",
+        "title": "Licencia de Conducir en Panamá 2026 — Canje y Solicitud",
         "description": "Canjee su licencia extranjera por una panameña o solicítela desde cero. Proceso rápido y sencillo con nuestro apoyo paso a paso."
       }
     },
@@ -569,14 +569,14 @@
         }
       ],
       "meta": {
-        "title": "Seguros en Panamá 2026 — Salud, Vida y Propiedad | Panama Contact",
+        "title": "Seguros en Panamá 2026 — Salud, Vida y Propiedad",
         "description": "Obtenga la cobertura de seguro adecuada en Panamá: salud, vida, propiedad y más. Asesoría personalizada de nuestros especialistas locales en seguros."
       }
     }
   },
   "WhyPanamaPage": {
     "meta": {
-      "title": "¿Por qué vivir en Panamá? Impuestos, Salud, Calidad de Vida | Panama Contact",
+      "title": "¿Por qué vivir en Panamá? Impuestos, Salud, Calidad de Vida",
       "description": "Descubre por qué miles de expatriados eligen Panamá: dólar americano, tributación territorial, salud de primer nivel, estabilidad económica y comunidad internacional."
     },
     "heading": "Un Paraíso de Diversidad, Buen Vivir y Prosperidad",
@@ -614,7 +614,7 @@
           }
         ],
         "meta": {
-          "title": "Calidad de Vida en Panamá 2026 — Costo, Seguridad y Estilo de Vida | Panama Contact",
+          "title": "Calidad de Vida en Panamá 2026 — Costo, Seguridad y Estilo de Vida",
           "description": "Descubra por qué Panamá ofrece una calidad de vida excepcional: bajo costo de vida, infraestructura moderna, seguridad y una sociedad multicultural acogedora."
         }
       },
@@ -637,7 +637,7 @@
           }
         ],
         "meta": {
-          "title": "Sistema de Salud en Panamá 2026 — Guía del Sistema Público y Privado | Panama Contact",
+          "title": "Sistema de Salud en Panamá 2026 — Guía del Sistema Público y Privado",
           "description": "Explore el sistema de salud público-privado de Panamá. Hospitales modernos, médicos con formación internacional y opciones de seguro privado asequibles."
         }
       },
@@ -664,7 +664,7 @@
           }
         ],
         "meta": {
-          "title": "Estabilidad Económica de Panamá — Crecimiento e Inversión | Panama Contact",
+          "title": "Estabilidad Económica de Panamá — Crecimiento e Inversión",
           "description": "Descubra por qué Panamá es el modelo económico de América Latina. Economía dolarizada, fuerte crecimiento del PIB y clima favorable a la inversión."
         }
       },
@@ -687,7 +687,7 @@
           }
         ],
         "meta": {
-          "title": "Oportunidades de Inversión en Panamá 2026 — Guía para Inversores | Panama Contact",
+          "title": "Oportunidades de Inversión en Panamá 2026 — Guía para Inversores",
           "description": "Descubra por qué Panamá atrae a inversores extranjeros: sin impuestos sobre rentas extranjeras, programas de incentivos, inmobiliario en crecimiento y entorno estable."
         }
       },
@@ -710,7 +710,7 @@
           }
         ],
         "meta": {
-          "title": "Panamá como Hub Financiero — Banca, Zonas Francas y Comercio | Panama Contact",
+          "title": "Panamá como Hub Financiero — Banca, Zonas Francas y Comercio",
           "description": "Panamá es el principal centro financiero de Centroamérica. Banca internacional, Zona Libre de Colón y un marco regulatorio favorable a los negocios."
         }
       },
@@ -733,7 +733,7 @@
           }
         ],
         "meta": {
-          "title": "Sistema Fiscal de Panamá 2026 — Tributación Territorial para Expats | Panama Contact",
+          "title": "Sistema Fiscal de Panamá 2026 — Tributación Territorial para Expats",
           "description": "Panamá aplica un sistema fiscal territorial: sin impuestos sobre rentas extranjeras. Descubra todas las ventajas fiscales para expatriados, jubilados e inversores."
         }
       }
@@ -786,7 +786,7 @@
   },
   "IncomeTaxCalculatorPage": {
     "meta": {
-      "title": "Calculadora de Impuesto sobre la Renta en Panamá (ISR) 2026 | Estimación Gratuita | Panama Contact",
+      "title": "Calculadora de Impuesto sobre la Renta en Panamá (ISR) 2026 | Estimación Gratuita",
       "description": "Estima tu impuesto sobre la renta personal en Panamá (ISR) en segundos. Calculadora gratuita con tasas 2026, deducciones e ingreso neto — sin necesidad de correo electrónico."
     },
     "hero": {
@@ -915,7 +915,7 @@
   },
   "TaxExposureQuizPage": {
     "meta": {
-      "title": "Cuestionario Gratuito de Exposición Fiscal en Panamá — ¿Soy Sujeto a Impuestos? | Panama Contact",
+      "title": "Cuestionario Gratuito de Exposición Fiscal en Panamá — ¿Soy Sujeto a Impuestos?",
       "description": "Realiza nuestro cuestionario gratuito de 2 minutos para verificar tu exposición fiscal en Panamá. Descubre si tus ingresos son gravables bajo el sistema fiscal territorial de Panamá."
     },
     "hero": {
@@ -1316,7 +1316,7 @@
     },
     "home": {
       "meta": {
-        "title": "Servicios Notariales en Casco Viejo | Panama Contact",
+        "title": "Servicios Notariales en Casco Viejo",
         "description": "Olvídate de las filas notariales en Ciudad de Panamá. Recogemos, coordinamos y entregamos autenticaciones, poderes, declaraciones juradas y traducciones — puerta a puerta desde Casco Viejo."
       },
       "eyebrow": "Casco Notary Services",

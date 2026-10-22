@@ -1,11 +1,112 @@
 import createNextIntlPlugin from 'next-intl/plugin';
+import { serviceSlugMap, whyPanamaSlugMap } from './data/slugs.js';
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.js');
 
 /** @type {import('next').NextConfig} */
+const WWW = 'https://www.panama-contact.com';
+const BARE_HOST = [{ type: 'host', value: 'panama-contact.com' }];
+
+/**
+ * Collapses redirect chains to a single hop and adds a bare-domain twin of
+ * every rule that goes straight to the final www URL (instead of
+ * bare → www → old slug → new slug, which GSC flags as 2-3 hop chains).
+ */
+function flattenRedirects(inputRules) {
+  const seen = new Set();
+  const rules = [...inputRules, ...slugAliasRedirects()].filter((r) => !seen.has(r.source) && seen.add(r.source));
+  const exact = new Map(rules.filter((r) => !r.source.includes(':')).map((r) => [r.source, r.destination]));
+  const wild = rules
+    .filter((r) => r.source.endsWith('/:slug*'))
+    .map((r) => ({ from: r.source.replace('/:slug*', ''), to: r.destination.replace('/:slug*', '') }));
+
+  // Old wildcard base (/es/services/:slug*) followed by an exact rule on the new
+  // base (/es/servicios/x → /es/servicios/y): emit the exact old path directly.
+  const expanded = [];
+  for (const w of wild) {
+    for (const [src, dest] of exact) {
+      if (src.startsWith(w.to + '/')) {
+        expanded.push({ source: w.from + src.slice(w.to.length), destination: dest, permanent: true });
+      }
+    }
+  }
+
+  const resolve = (dest) => {
+    for (let i = 0; i < 5; i++) {
+      const bare = dest.replace(/\/$/, '');
+      const next = exact.get(bare) ?? exact.get(bare + '/');
+      if (!next || next === dest) break;
+      dest = next;
+    }
+    return dest;
+  };
+
+  const all = [...expanded, ...rules].map((r) => ({ ...r, destination: resolve(r.destination) }));
+  // Twins only for hand-written rules: keeps the total under Vercel's redirect
+  // cap; generated alias rules reach www via the catch-all below.
+  const handWritten = new Set(inputRules.map((r) => r.source));
+  const twins = all.filter((r) => handWritten.has(r.source)).map((r) => ({
+    source: r.source,
+    has: BARE_HOST,
+    destination: WWW + r.destination,
+    permanent: true,
+  }));
+  // Bare domain, no specific rule: one hop to the same path on www.
+  const bareCatchAll = { source: '/:path*', has: BARE_HOST, destination: WWW + '/:path*', permanent: true };
+  return [...twins, bareCatchAll, ...all];
+}
+
+// Every wrong-but-known slug (raw canonical key, or another locale's slug) on
+// every legacy base path → its final URL in one hop, so neither the wildcard
+// base-path rule nor the page-level permanentRedirect adds extra hops.
+function slugAliasRedirects() {
+  const bases = {
+    services: { en: ['/services'], fr: ['/services'], es: ['/servicios', '/services'], pt: ['/servicos', '/services'], de: ['/dienstleistungen', '/services'] },
+    why: { en: ['/why-panama'], fr: ['/pourquoi-panama', '/why-panama'], es: ['/por-que-panama', '/why-panama'], pt: ['/por-que-panama', '/why-panama'], de: ['/warum-panama', '/why-panama'] },
+  };
+  const out = [];
+  for (const [kind, map] of [['services', serviceSlugMap], ['why', whyPanamaSlugMap]]) {
+    for (const [key, tr] of Object.entries(map)) {
+      for (const locale of Object.keys(tr)) {
+        const prefix = locale === 'en' ? '' : `/${locale}`;
+        const finalBase = bases[kind][locale][0];
+        const aliases = new Set([key, tr.en]);
+        aliases.delete(tr[locale]);
+        for (const base of bases[kind][locale]) {
+          for (const alias of aliases) {
+            out.push({ source: `${prefix}${base}/${alias}`, destination: `${prefix}${finalBase}/${tr[locale]}`, permanent: true });
+          }
+          if (base !== finalBase) {
+            out.push({ source: `${prefix}${base}/${tr[locale]}`, destination: `${prefix}${finalBase}/${tr[locale]}`, permanent: true });
+          }
+        }
+      }
+    }
+  }
+  return out;
+}
+
 const nextConfig = {
-  async redirects() {
+  async headers() {
     return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+        ],
+      },
+    ];
+  },
+  async redirects() {
+    return flattenRedirects([
+
+      // ─── Non-canonical locale/slug forms that next-intl would answer with a 307 ──
+      { source: '/en', destination: '/', permanent: true },
+      { source: '/en/:path*', destination: '/:path*', permanent: true },
+      { source: '/why-panama', destination: '/why-move-to-panama', permanent: true },
 
       // ─── Old WordPress EN → new slugs ──────────────────────────────────────
       { source: '/services/real-estate-in-panama-panama-contact-services-assists-you', destination: '/services/buy-property-panama-foreigners', permanent: true },
@@ -85,8 +186,8 @@ const nextConfig = {
       { source: '/fr/pourquoi-le-panama/place-financiere-internationale/', destination: '/fr/pourquoi-panama/panama-centre-bancaire-financier', permanent: true },
       { source: '/fr/pourquoi-le-panama/faible-pression-fiscale', destination: '/fr/pourquoi-panama/fiscalite-territoriale-panama-expatries', permanent: true },
       { source: '/fr/pourquoi-le-panama/faible-pression-fiscale/', destination: '/fr/pourquoi-panama/fiscalite-territoriale-panama-expatries', permanent: true },
-      { source: '/fr/termes-et-conditions', destination: '/fr', permanent: true },
-      { source: '/fr/termes-et-conditions/', destination: '/fr', permanent: true },
+      { source: '/fr/termes-et-conditions', destination: '/fr/conditions-generales-utilisation', permanent: true },
+      { source: '/fr/termes-et-conditions/', destination: '/fr/conditions-generales-utilisation', permanent: true },
 
       // ─── Current slugs → new SEO slugs (EN) ────────────────────────────────
       { source: '/services/friendly-nations-visa-panama',     destination: '/services/friendly-nations-visa-panama-residency',         permanent: true },
@@ -205,7 +306,7 @@ const nextConfig = {
       { source: '/es/servicios/-business-',                        destination: '/es/servicios/crear-empresa-panama-extranjeros',     permanent: true },
       { source: '/pt/servicos/-business-',                         destination: '/pt/servicos/abrir-empresa-panama-estrangeiros',     permanent: true },
       { source: '/fr/services/-business-',                         destination: '/fr/services/creation-entreprise-panama-etrangers', permanent: true },
-    ];
+    ]);
   },
 };
 

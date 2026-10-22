@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Link, permanentRedirect } from '@/i18n/navigation';
 import servicesData from '@/data/services.json';
-import { serviceSlugMap, resolveServiceSlug, localizeServiceSlug, findServiceCanonical } from '@/data/slugs';
+import { serviceSlugMap, resolveServiceSlug, localizeServiceSlug, findServiceCanonical, localizeWhyPanamaSlug } from '@/data/slugs';
 import { locales } from '@/i18n/config';
 import { SITE_URL, localizedUrl, localizedDetailUrl, localizedDetailAlternates } from '@/i18n/urls';
 import Badge from '@/components/ui/Badge';
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
   if (!item) return {};
 
   return {
-    title: item.meta?.title ?? `${item.title} in Panama — Expert Guide & Services | Panama Contact`,
+    title: item.meta?.title ?? `${item.title} in Panama — Expert Guide & Services`,
     description: item.meta?.description ?? item.description,
     openGraph: {
       images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Panama Contact Services' }],
@@ -84,6 +84,27 @@ export default async function ServiceDetailPage({ params }) {
       { key: 'income-tax-calculator', href: '/panama-income-tax-calculator', label: tDetail('incomeTaxCalculatorLink') },
       { key: 'tax-exposure-quiz', href: '/panama-tax-calculator', label: tDetail('taxExposureQuizLink') },
     );
+  }
+
+  // Guide pages that otherwise get a single inbound link (see why-panama detail).
+  const whyLinks = {
+    'income-tax': ['tax-pressure'],
+    'bank-account': ['financial-hub'],
+    'qualified-investor': ['welcoming-country', 'financial-hub'],
+    'real-estate': ['welcoming-country'],
+    retiring: ['life-quality', 'healthcare'],
+    'digital-nomad': ['life-quality', 'tax-pressure'],
+    business: ['tax-pressure', 'financial-hub'],
+  }[canonicalSlug] ?? [];
+  if (whyLinks.length) {
+    const tWhy = await getTranslations({ locale, namespace: 'WhyPanamaPage' });
+    for (const w of whyLinks) {
+      relatedItems.push({
+        key: `why-${w}`,
+        href: { pathname: '/why-panama/[slug]', params: { slug: localizeWhyPanamaSlug(w, locale) } },
+        label: tWhy(`cards.${w}.title`),
+      });
+    }
   }
 
   const baseUrl = `${SITE_URL}${locale === 'en' ? '' : `/${locale}`}`;

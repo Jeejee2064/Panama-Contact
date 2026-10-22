@@ -46,7 +46,7 @@ export async function proxy(request) {
   // with a locale prefix by next-intl, or they 404 and become invisible
   // to Google entirely (this was silently breaking sitemap.xml/robots.txt
   // site-wide, not just the new pages).
-  if (pathname === '/sitemap.xml' || pathname === '/robots.txt' || pathname.endsWith('.html')) {
+  if (pathname === '/sitemap.xml' || pathname === '/robots.txt' || pathname.endsWith('.html') || pathname.endsWith('.txt')) {
     return NextResponse.next();
   }
 

@@ -11,12 +11,11 @@ export default function CTA() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/why-panama.avif"
+          src="/why-panama.jpg"
           alt=""
           fill
           className="object-cover"
           sizes="100vw"
-          priority
         />
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-[#0f1b2a]/70" />

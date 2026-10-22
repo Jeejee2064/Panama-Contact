@@ -20,6 +20,10 @@ const lagasignatica = localFont({
   variable: '--font-lagasignatica'
 });
 
+// Add the Google Business Profile, LinkedIn and directory URLs here: sameAs is
+// the main entity-disambiguation signal for search and AI engines.
+const SAME_AS = ['https://wa.me/50764357515'];
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -68,26 +72,37 @@ export default async function LocaleLayout({ children, params }) {
 
   const messages = await getMessages();
 
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  const ORG_ID = 'https://www.panama-contact.com/#organization';
+
+  // One entity across all pages/locales (same @id), referenced by WebSite.
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Panama Contact Services',
+    '@type': 'ProfessionalService',
+    '@id': ORG_ID,
+    name: 'Panamá Contact',
+    legalName: 'Panama Contact Services, S.A.',
     description: 'Expert relocation, residency visa, company formation, banking, and real estate services in Panama.',
-    url: 'https://www.panama-contact.com',
+    url: `https://www.panama-contact.com${localePath}`,
+    logo: 'https://www.panama-contact.com/icons/apple-touch-icon.png',
+    image: 'https://www.panama-contact.com/og-image.jpg',
     telephone: ['+50764357515', '+5073185882'],
     email: 'info@panama-contact.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Ph Jeronimo, Avenida B y calle 10 este, planta baja - San Felipe',
       addressLocality: 'Ciudad de Panamá',
+      addressRegion: 'Panamá',
       addressCountry: 'PA',
     },
-    geo: { '@type': 'GeoCoordinates', latitude: 8.9936, longitude: -79.5197 },
+    geo: { '@type': 'GeoCoordinates', latitude: 8.9534375, longitude: -79.5366875 },
+    areaServed: { '@type': 'Country', name: 'Panama' },
+    knowsLanguage: ['en', 'fr', 'es', 'pt', 'de'],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+50764357515',
       contactType: 'customer service',
-      availableLanguage: ['English', 'French', 'Spanish', 'Portuguese'],
+      availableLanguage: ['English', 'French', 'Spanish', 'Portuguese', 'German'],
     },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
@@ -95,19 +110,17 @@ export default async function LocaleLayout({ children, params }) {
       opens: '09:00',
       closes: '18:00',
     },
-    sameAs: ['https://wa.me/50764357515'],
+    sameAs: SAME_AS,
   };
 
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Panama Contact Services',
-    url: 'https://www.panama-contact.com',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://www.panama-contact.com/services?q={search_term_string}',
-      'query-input': 'required name=search_term_string',
-    },
+    '@id': `https://www.panama-contact.com${localePath}/#website`,
+    name: 'Panamá Contact',
+    url: `https://www.panama-contact.com${localePath}`,
+    inLanguage: locale,
+    publisher: { '@id': ORG_ID },
   };
 
   return (

@@ -1,6 +1,7 @@
 import { serviceSlugMap, whyPanamaSlugMap } from '@/data/slugs';
 import { routing } from '@/i18n/routing';
 import { SITE_URL as BASE } from '@/i18n/urls';
+import { LASTMOD } from '@/lib/lastmod';
 const LOCALES = ['en', 'fr', 'es', 'pt', 'de'];
 
 // locale → URL prefix (en has none due to localePrefix: 'as-needed')
@@ -77,7 +78,7 @@ export default function sitemap() {
     for (const locale of LOCALES) {
       entries.push({
         url: languages[locale],
-        lastModified: new Date(),
+        lastModified: new Date(LASTMOD[key]),
         changeFrequency,
         priority,
         alternates: { languages },
@@ -90,7 +91,7 @@ export default function sitemap() {
     for (const locale of LOCALES) {
       entries.push({
         url: `${BASE}${prefix(locale)}${serviceBase[locale]}/${translations[locale]}`,
-        lastModified: new Date(),
+        lastModified: new Date(LASTMOD.serviceDetail),
         changeFrequency: 'monthly',
         priority: 0.8,
         alternates: {
@@ -120,7 +121,7 @@ export default function sitemap() {
     for (const url of [languages.en, languages.es]) {
       entries.push({
         url,
-        lastModified: new Date(),
+        lastModified: new Date(LASTMOD.cascoNotary),
         changeFrequency: 'monthly',
         priority,
         alternates: { languages },
@@ -133,7 +134,7 @@ export default function sitemap() {
     for (const locale of LOCALES) {
       entries.push({
         url: `${BASE}${prefix(locale)}${whyBase[locale]}/${translations[locale]}`,
-        lastModified: new Date(),
+        lastModified: new Date(LASTMOD.whyPanamaDetail),
         changeFrequency: 'monthly',
         priority: 0.7,
         alternates: {

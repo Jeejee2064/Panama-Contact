@@ -107,7 +107,7 @@
   },
   "ServicesPage": {
     "meta": {
-      "title": "Panama Residency & Expat Services — Visas, Business, Real Estate | Panama Contact",
+      "title": "Panama Residency & Expat Services — Visas, Business, Real Estate",
       "description": "Expert guidance for relocating to Panama. Friendly Nations visa, digital nomad visa, company formation, bank accounts, real estate & more. Free consultation."
     },
     "sectionLabel": "Services",
@@ -172,7 +172,7 @@
         }
       ],
       "meta": {
-        "title": "Friendly Nations Visa Panama 2026 — Eligibility & Process | Panama Contact",
+        "title": "Friendly Nations Visa Panama 2026 — Eligibility & Process",
         "description": "Apply for the Panama Friendly Nations Visa with expert guidance. Residency in 3–6 months for citizens of 50+ countries. Free consultation available."
       }
     },
@@ -212,7 +212,7 @@
         }
       ],
       "meta": {
-        "title": "Panama Digital Nomad Visa 2026 — Requirements & Application | Panama Contact",
+        "title": "Panama Digital Nomad Visa 2026 — Requirements & Application",
         "description": "Live and work remotely from Panama with the Digital Nomad Visa. 9-month renewable permit with no tax on foreign income. Expert guidance included."
       }
     },
@@ -226,7 +226,7 @@
         },
         {
           "question": "What are the investment options for the Qualified Investor Visa?",
-          "answer": "There are three options: (1) a financial placement of at least $500,000 USD in a Panama-registered securities house; (2) a fixed-term bank deposit of $750,000 USD in a Panamanian bank; or (3) a real estate purchase of at least $300,000 USD (or $500,000 USD after October 2024). The property must be held for a minimum of five years. All invested funds must originate from abroad."
+          "answer": "There are three options: (1) a financial placement of at least $500,000 USD in a Panama-registered securities house; (2) a fixed-term bank deposit of $750,000 USD in a Panamanian bank; or (3) a real estate purchase of at least $300,000 USD under the transitional regime for new-build property, or $500,000 USD otherwise (thresholds change with regulation: confirm the current amount with us before committing). The property must be held for a minimum of five years. All invested funds must originate from abroad."
         },
         {
           "question": "Do I need to live in Panama to keep the Qualified Investor residency?",
@@ -248,7 +248,7 @@
         },
         {
           "heading": "Option 3 — Real Estate: $300,000 / $500,000",
-          "body": "<p><strong>Investment required:</strong> At least $300,000 until October 2024, and $500,000 after that date. Can also apply via a promise of sale contract.</p><p><strong>Holding period:</strong> The property must be retained for a minimum of five years.</p><p><strong>Documentation:</strong> Property titles and/or purchase contracts.</p>"
+          "body": "<p><strong>Investment required:</strong> $300,000 under the transitional regime for new-build property, $500,000 otherwise. The thresholds and cut-off dates are set by regulation and have changed: confirm the current amount with our team before you commit. Can also apply via a promise of sale contract.</p><p><strong>Holding period:</strong> The property must be retained for a minimum of five years.</p><p><strong>Documentation:</strong> Property titles and/or purchase contracts.</p>"
         },
         {
           "heading": "Procedure and Key Conditions",
@@ -256,7 +256,7 @@
         }
       ],
       "meta": {
-        "title": "Qualified Investor Residency Panama 2026 — $300K Investment | Panama Contact",
+        "title": "Qualified Investor Residency Panama 2026 — $300K Investment",
         "description": "Obtain Panama permanent residency through a $300,000 USD investment. Fast-track approval in 30 days. Professional, end-to-end support."
       }
     },
@@ -300,7 +300,7 @@
         }
       ],
       "meta": {
-        "title": "Panama Pensionado Visa 2026 — Retire in Panama | Panama Contact",
+        "title": "Panama Pensionado Visa 2026 — Retire in Panama",
         "description": "Retire in Panama with the Pensionado Visa from $1,000/month pension income. Enjoy exclusive discounts and a tropical lifestyle with our expert help."
       }
     },
@@ -336,7 +336,7 @@
         }
       ],
       "meta": {
-        "title": "Open a Bank Account in Panama 2026 — Non-Resident Guide | Panama Contact",
+        "title": "Open a Bank Account in Panama 2026 — Non-Resident Guide",
         "description": "Open a personal or business bank account in Panama as a foreigner or non-resident. Step-by-step assistance from Panama Contact Services."
       }
     },
@@ -388,7 +388,7 @@
         }
       ],
       "meta": {
-        "title": "Company Formation in Panama 2026 — S.A. & LLC Setup | Panama Contact",
+        "title": "Company Formation in Panama 2026 — S.A. & LLC Setup",
         "description": "Set up a corporation or LLC in Panama quickly and affordably. Tax-friendly, internationally recognized structures. Expert business registration support."
       }
     },
@@ -428,7 +428,7 @@
         }
       ],
       "meta": {
-        "title": "Buy Real Estate in Panama 2026 — Foreign Buyer's Guide | Panama Contact",
+        "title": "Buy Real Estate in Panama 2026 — Foreign Buyer's Guide",
         "description": "Foreigners can buy property in Panama with the same rights as citizens. Find your ideal home, condo or investment with our trusted local experts."
       }
     },
@@ -464,7 +464,7 @@
         }
       ],
       "meta": {
-        "title": "Panama Income Tax Declaration 2026 — Expat Tax Filing Guide | Panama Contact",
+        "title": "Panama Income Tax Declaration 2026 — Expat Tax Filing Guide",
         "description": "File your annual income tax return in Panama correctly and on time. Expert tax advisory for residents, expats, and businesses. Avoid penalties."
       }
     },
@@ -500,7 +500,7 @@
         }
       ],
       "meta": {
-        "title": "Import Goods to Panama 2026 — Customs & Duties Guide | Panama Contact",
+        "title": "Import Goods to Panama 2026 — Customs & Duties Guide",
         "description": "Navigate Panama's customs process and import your belongings, vehicle, or goods. Clear guidance on duties, documentation, and exemptions."
       }
     },
@@ -536,7 +536,7 @@
         }
       ],
       "meta": {
-        "title": "Panama Driver's License 2026 — Exchange & Application Guide | Panama Contact",
+        "title": "Panama Driver's License 2026 — Exchange & Application Guide",
         "description": "Exchange your foreign driver's license for a Panamanian one or apply from scratch. Fast, simple process with our step-by-step support."
       }
     },
@@ -568,14 +568,14 @@
         }
       ],
       "meta": {
-        "title": "Panama Insurance 2026 — Health, Life & Property Coverage | Panama Contact",
+        "title": "Panama Insurance 2026 — Health, Life & Property Coverage",
         "description": "Get the right insurance coverage in Panama — health, life, property, and more. Personalized advice from our local insurance specialists."
       }
     }
   },
   "WhyPanamaPage": {
     "meta": {
-      "title": "Why Move to Panama? Taxes, Healthcare, Cost of Living & More | Panama Contact",
+      "title": "Why Move to Panama? Taxes, Healthcare, Cost of Living & More",
       "description": "Discover why thousands of expats choose Panama: US dollar economy, territorial taxation, world-class healthcare, 80+ international banks, and warm expat community."
     },
     "heading": "A Paradise of Diversity, Good Living & Prosperity",
@@ -613,7 +613,7 @@
           }
         ],
         "meta": {
-          "title": "Quality of Life in Panama 2026 — Cost, Safety & Lifestyle | Panama Contact",
+          "title": "Quality of Life in Panama 2026 — Cost, Safety & Lifestyle",
           "description": "Discover why Panama offers an exceptional quality of life: low cost of living, modern infrastructure, safety, and a welcoming multicultural society."
         }
       },
@@ -636,7 +636,7 @@
           }
         ],
         "meta": {
-          "title": "Healthcare in Panama 2026 — Public & Private System Guide | Panama Contact",
+          "title": "Healthcare in Panama 2026 — Public & Private System Guide",
           "description": "Explore Panama's dual public-private healthcare system. Modern hospitals, internationally trained doctors, and affordable private insurance options."
         }
       },
@@ -663,7 +663,7 @@
           }
         ],
         "meta": {
-          "title": "Panama's Economic Stability — Growth, Investment & Dollarization | Panama Contact",
+          "title": "Panama's Economic Stability — Growth, Investment & Dollarization",
           "description": "Learn why Panama is Latin America's economic success story. Dollarized economy, strong GDP growth, strategic canal position, and investment-friendly climate."
         }
       },
@@ -686,7 +686,7 @@
           }
         ],
         "meta": {
-          "title": "Investment Opportunities in Panama 2026 — Foreign Investor Guide | Panama Contact",
+          "title": "Investment Opportunities in Panama 2026 — Foreign Investor Guide",
           "description": "Discover why Panama attracts foreign investors: zero tax on foreign income, incentive programs, growing real estate, and a stable business environment."
         }
       },
@@ -709,7 +709,7 @@
           }
         ],
         "meta": {
-          "title": "Panama as a Financial Hub — Banking, Free Zones & Commerce | Panama Contact",
+          "title": "Panama as a Financial Hub — Banking, Free Zones & Commerce",
           "description": "Panama is Central America's leading financial center. International banking, Colón Free Zone, and a business-friendly regulatory framework."
         }
       },
@@ -732,7 +732,7 @@
           }
         ],
         "meta": {
-          "title": "Panama Tax System 2026 — Territorial Taxation for Expats | Panama Contact",
+          "title": "Panama Tax System 2026 — Territorial Taxation for Expats",
           "description": "Panama applies a territorial tax system — no tax on foreign-sourced income. Discover the full tax advantages for expats, retirees, and investors."
         }
       }
@@ -785,7 +785,7 @@
   },
   "IncomeTaxCalculatorPage": {
     "meta": {
-      "title": "Panama Income Tax Calculator (ISR) 2026 | Free Estimate | Panama Contact",
+      "title": "Panama Income Tax Calculator (ISR) 2026 | Free Estimate",
       "description": "Estimate your Panama personal income tax (ISR) in seconds. Free calculator with 2026 brackets, deductions, and net income — no email required."
     },
     "hero": {
@@ -914,7 +914,7 @@
   },
   "TaxExposureQuizPage": {
     "meta": {
-      "title": "Free Panama Tax Exposure Quiz — Am I Taxable in Panama? | Panama Contact",
+      "title": "Free Panama Tax Exposure Quiz — Am I Taxable in Panama?",
       "description": "Take our free 2-minute quiz to check your Panama tax exposure. Find out if your income is taxable under Panama’s territorial tax system."
     },
     "hero": {

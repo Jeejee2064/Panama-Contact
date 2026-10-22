@@ -34,7 +34,7 @@ export async function generateMetadata({ params }) {
   const cardTitle = t(`cards.${canonicalSlug}.title`);
   const cardMeta = t.raw(`cards.${canonicalSlug}.meta`);
   return {
-    title: cardMeta?.title ?? `${cardTitle} in Panama — Complete Guide | Panama Contact`,
+    title: cardMeta?.title ?? `${cardTitle} in Panama — Complete Guide`,
     description: cardMeta?.description ?? t(`cards.${canonicalSlug}.shortDescription`),
     openGraph: {
       images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Panama Contact Services' }],
@@ -72,10 +72,11 @@ export default async function WhyPanamaDetail({ params }) {
   const sections         = t.raw(`cards.${canonicalSlug}.sections`);
 
   // Related items — other why-panama cards, localized slugs
-  const related = whyPanamaData
-    .filter((d) => d.slug !== canonicalSlug)
-    .sort((a, b) => a.orderScore - b.orderScore)
-    .slice(0, 3);
+  // The 3 items that follow this one in order (wrapping around), so every card
+  // gets inbound links — a plain "first 3 others" left the last two never linked.
+  const ordered = [...whyPanamaData].sort((a, b) => a.orderScore - b.orderScore);
+  const at = ordered.findIndex((d) => d.slug === canonicalSlug);
+  const related = [1, 2, 3].map((n) => ordered[(at + n) % ordered.length]);
 
   const relatedItems = related.map((s) => ({
     key: s.slug,

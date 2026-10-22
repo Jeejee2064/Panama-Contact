@@ -58,7 +58,7 @@ export default async function WhyPanamaPage({ params }) {
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="relative min-h-[90vh] flex items-end overflow-hidden">
         <Image
-          src="/why-panama.avif"
+          src="/why-panama.jpg"
           alt="Panama skyline and canal"
           fill
           className="object-cover object-center"
