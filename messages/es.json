@@ -1349,7 +1349,7 @@
       "servicesTeaser": {
         "heading": "Lo que gestionamos",
         "intro": "Desde autenticaciones notariales hasta trámites consulares — un vistazo a lo que Casco Notary Services coordina por ti.",
-        "seeAllLabel": "Ver los 10 servicios",
+        "seeAllLabel": "Ver los {count} servicios",
         "pricingLabel": "Ver precios"
       },
       "crossSell": {

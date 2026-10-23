@@ -1,5 +1,6 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { getCnsContent } from '@/lib/cns/content';
 import { localizedAlternatesSubset, localizedUrl, SITE_URL } from '@/i18n/urls';
 import SectionHero from '@/components/casco-notary/SectionHero';
 import CascoFaq from '@/components/casco-notary/CascoFaq';
@@ -7,7 +8,10 @@ import FinalCta from '@/components/casco-notary/FinalCta';
 
 const PATHNAME = '/casco-notary-services/faq';
 const SUPPORTED_LOCALES = ['en', 'es'];
-const WHATSAPP_NUMBER = '50764357515';
+
+// Content comes from the CMS (/admin/cns); re-check the database every 5 min
+// as a safety net on top of the on-save revalidation.
+export const revalidate = 300;
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -17,11 +21,11 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   if (!SUPPORTED_LOCALES.includes(locale)) return {};
 
-  const t = await getTranslations({ locale, namespace: 'CascoNotaryPage.faq.meta' });
+  const c = await getCnsContent(locale);
 
   return {
-    title: t('title'),
-    description: t('description'),
+    title: c.faq.meta.title,
+    description: c.faq.meta.description,
     openGraph: {
       images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Casco Notary Services — Panama Contact' }],
     },
@@ -35,13 +39,12 @@ export default async function CascoNotaryFaqSubpage({ params }) {
 
   setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: 'CascoNotaryPage' });
-  const faq = t.raw('faq');
-  const whatsappMessage = t('chrome.whatsappMessage');
-  const finalCta = t.raw('chrome.finalCta');
-  const nav = t.raw('chrome.nav');
+  const c = await getCnsContent(locale);
+  const faq = c.faq;
+  const finalCta = c.chrome.finalCta;
+  const nav = c.chrome.nav;
 
-  const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappHref = `https://wa.me/${c.chrome.whatsappNumber}?text=${encodeURIComponent(c.chrome.whatsappMessage)}`;
 
   const baseUrl = `${SITE_URL}${locale === 'en' ? '' : `/${locale}`}`;
   const hubUrl = localizedUrl('/casco-notary-services', locale);

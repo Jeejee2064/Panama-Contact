@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
+import { getCnsContent } from '@/lib/cns/content';
 import CascoHeader from '@/components/casco-notary/CascoHeader';
 import CascoNav from '@/components/casco-notary/CascoNav';
 import CascoFooter from '@/components/casco-notary/CascoFooter';
@@ -15,14 +16,14 @@ export default async function CascoNotaryLayout({ children, params }) {
 
   setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: 'CascoNotaryPage.chrome' });
+  const { chrome } = await getCnsContent(locale);
 
   return (
     <div>
-      <CascoHeader backLabel={t('backToSite')} />
-      <CascoNav labels={t.raw('nav')} />
+      <CascoHeader backLabel={chrome.backToSite} />
+      <CascoNav labels={chrome.nav} />
       {children}
-      <CascoFooter copy={t.raw('footer')} />
+      <CascoFooter copy={chrome.footer} />
     </div>
   );
 }

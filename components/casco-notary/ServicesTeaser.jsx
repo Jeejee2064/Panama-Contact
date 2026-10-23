@@ -51,7 +51,7 @@ export default function ServicesTeaser({ copy, items }) {
             href="/casco-notary-services/services"
             className="group inline-flex items-center gap-2 bg-[#0F1B2A] hover:bg-[#182740] text-white px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
           >
-            {copy.seeAllLabel}
+            {copy.seeAllLabel.replace('{count}', items.length)}
             <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
           <Link

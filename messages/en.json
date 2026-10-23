@@ -1348,7 +1348,7 @@
       "servicesTeaser": {
         "heading": "What we handle",
         "intro": "From notarial authentications to consular paperwork — a preview of what Casco Notary Services coordinates for you.",
-        "seeAllLabel": "See all 10 services",
+        "seeAllLabel": "See all {count} services",
         "pricingLabel": "See pricing"
       },
       "crossSell": {
