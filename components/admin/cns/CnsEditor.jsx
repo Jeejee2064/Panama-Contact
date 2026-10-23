@@ -1,5 +1,5 @@
 'use client';
-import { useState, useTransition } from 'react';
+import { createContext, useContext, useState, useSyncExternalStore, useTransition } from 'react';
 import Link from 'next/link';
 import { AnimatePresence, motion, Reorder, useDragControls } from 'framer-motion';
 import { AlertTriangle, ArrowDown, ArrowLeft, ArrowUp, Check, ChevronDown, ChevronsUpDown, ExternalLink, Eye, EyeOff, GripVertical, Loader2, Plus, Trash2 } from 'lucide-react';
@@ -8,6 +8,12 @@ import { CNS_COLLECTIONS, CNS_LOCALES, CNS_LOCALE_LABELS, CNS_PAGES } from '@/li
 
 const inputClass =
   'w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm bg-gray-50/60 placeholder:text-gray-300 hover:border-gray-300 focus:bg-white focus:outline-none focus:border-[#FF491A] focus:ring-4 focus:ring-orange-100 transition';
+
+// Which languages are shown in the editor. Spanish only by default (the main
+// editor writes Spanish); English can be switched on when needed.
+const LocalesContext = createContext(['es']);
+const useLocales = () => useContext(LocalesContext);
+const gridCols = (locales) => (locales.length > 1 ? 'md:grid-cols-2' : '');
 
 const FLAG_CODE = { en: 'gb', es: 'es' };
 
@@ -18,6 +24,7 @@ function Flag({ locale, className = '' }) {
 // Small flag in front of a field — only on narrow screens, where the two
 // languages are stacked and the column header is not aligned with them.
 function LangChip({ locale }) {
+  if (useLocales().length < 2) return null;
   return (
     <span className="md:hidden inline-flex items-center gap-1.5 text-[11px] font-semibold text-gray-500 mb-1">
       <Flag locale={locale} /> {CNS_LOCALE_LABELS[locale]}
@@ -27,9 +34,10 @@ function LangChip({ locale }) {
 
 // Shown once per section instead of repeating the language on every field.
 function LangHeader() {
+  const locales = useLocales();
   return (
-    <div className="hidden md:grid grid-cols-2 gap-3 sticky top-[57px] z-10 -mx-6 px-6 py-2 bg-white/95 backdrop-blur border-b border-gray-100">
-      {CNS_LOCALES.map((loc) => (
+    <div className={`hidden md:grid ${gridCols(locales)} gap-3 sticky top-[57px] z-10 -mx-6 px-6 py-2 bg-white/95 backdrop-blur border-b border-gray-100`}>
+      {locales.map((loc) => (
         <div key={loc} className="flex items-center gap-2 text-sm font-semibold text-gray-700">
           <Flag locale={loc} className="text-base" /> {CNS_LOCALE_LABELS[loc]}
         </div>
@@ -48,6 +56,7 @@ function Input({ type, value, onChange, placeholder }) {
 
 // One text, shown in both languages side by side.
 function TextField({ field, value, onChange }) {
+  const locales = useLocales();
   return (
     <div>
       <label className="block text-sm font-semibold text-gray-800">{field.label}</label>
@@ -57,8 +66,8 @@ function TextField({ field, value, onChange }) {
           <Input type={field.type} value={value.en} onChange={(v) => onChange({ en: v, es: v })} />
         </div>
       ) : (
-        <div className="grid md:grid-cols-2 gap-3 mt-1">
-          {CNS_LOCALES.map((loc) => (
+        <div className={`grid ${gridCols(locales)} gap-3 mt-1`}>
+          {locales.map((loc) => (
             <div key={loc}>
               <LangChip locale={loc} />
               <Input type={field.type} value={value[loc]} onChange={(v) => onChange({ ...value, [loc]: v })} />
@@ -96,8 +105,11 @@ const spring = { type: 'spring', stiffness: 520, damping: 40, mass: 0.8 };
 // expanded = the full EN/ES form.
 function ItemRow({ def, item, index, count, open, flash, confirming, onToggle, onUpdate, onMove, onRemove }) {
   const controls = useDragControls();
-  const preview = item.title_en || item.title_es || '(sin título)';
-  const sub = def.bodyKey ? item.body_en || item.body_es : '';
+  const locales = useLocales();
+  const main = locales[0];
+  const other = main === 'es' ? 'en' : 'es';
+  const preview = item[`title_${main}`] || item[`title_${other}`] || '(sin título)';
+  const sub = def.bodyKey ? item[`body_${main}`] || item[`body_${other}`] : '';
 
   return (
     <Reorder.Item
@@ -175,8 +187,8 @@ function ItemRow({ def, item, index, count, open, flash, confirming, onToggle, o
             transition={{ duration: 0.22, ease: 'easeOut' }}
             style={{ overflow: 'hidden' }}
           >
-            <div className="grid md:grid-cols-2 gap-4 px-4 pb-4 pt-3 mx-2 border-t border-gray-100">
-              {CNS_LOCALES.map((loc) => (
+            <div className={`grid ${gridCols(locales)} gap-4 px-4 pb-4 pt-3 mx-2 border-t border-gray-100`}>
+              {locales.map((loc) => (
                 <div key={loc} className="space-y-2.5">
                   <LangChip locale={loc} />
                   <div>
@@ -294,7 +306,7 @@ function ItemList({ def, items, onChange }) {
       >
         <span className="inline-flex items-center gap-1.5"><Plus size={16} />{def.addLabel}</span>
       </motion.button>
-      <p className="text-xs text-gray-400 mt-2">Si una traducción se deja vacía, el sitio muestra la versión en inglés.</p>
+      <p className="text-xs text-gray-400 mt-2">Si una traducción se deja vacía, el sitio muestra la del otro idioma.</p>
     </div>
   );
 }
@@ -393,8 +405,53 @@ function Section({ section, index, ready, initialTexts, initialItems }) {
   );
 }
 
-export default function CnsEditor({ page, ready, initialTexts, initialItems }) {
+// "Show English" preference, remembered in this browser.
+const ENGLISH_KEY = 'cns-show-english';
+const subscribeEnglish = (cb) => {
+  window.addEventListener(ENGLISH_KEY, cb);
+  return () => window.removeEventListener(ENGLISH_KEY, cb);
+};
+const readEnglish = () => {
+  try {
+    return localStorage.getItem(ENGLISH_KEY) === '1';
+  } catch {
+    return false;
+  }
+};
+
+function LanguageToggle({ showEnglish, onChange }) {
   return (
+    <button
+      type="button"
+      role="switch"
+      aria-checked={showEnglish}
+      onClick={() => onChange(!showEnglish)}
+      className="inline-flex items-center gap-2.5 rounded-xl border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+    >
+      <span className={`relative w-9 h-5 rounded-full transition-colors ${showEnglish ? 'bg-[#FF491A]' : 'bg-gray-300'}`}>
+        <motion.span
+          layout
+          transition={spring}
+          className={`absolute top-0.5 w-4 h-4 rounded-full bg-white shadow ${showEnglish ? 'right-0.5' : 'left-0.5'}`}
+        />
+      </span>
+      <Flag locale="en" /> Mostrar también el inglés
+    </button>
+  );
+}
+
+export default function CnsEditor({ page, ready, initialTexts, initialItems }) {
+  const showEnglish = useSyncExternalStore(subscribeEnglish, readEnglish, () => false);
+  const changeShowEnglish = (value) => {
+    try {
+      localStorage.setItem(ENGLISH_KEY, value ? '1' : '0');
+    } catch {}
+    window.dispatchEvent(new Event(ENGLISH_KEY));
+  };
+  const locales = showEnglish ? ['es', 'en'] : ['es'];
+
+  return (
+    <LocalesContext.Provider value={locales}>
     <main className="flex-1 max-w-5xl mx-auto w-full px-4 py-8">
       <nav className="sticky top-0 z-20 -mx-4 px-4 py-3 mb-4 bg-gray-50/95 backdrop-blur border-b border-gray-200 flex flex-wrap gap-2" aria-label="Páginas">
         {CNS_PAGES.map((p) => (
@@ -424,7 +481,8 @@ export default function CnsEditor({ page, ready, initialTexts, initialItems }) {
           <h1 className="text-2xl font-bold text-gray-900">{page.title}</h1>
           <p className="text-sm text-gray-500">{page.description}</p>
         </div>
-        <div className="flex gap-2 text-sm">
+        <div className="flex flex-wrap items-center gap-2 text-sm">
+          <LanguageToggle showEnglish={showEnglish} onChange={changeShowEnglish} />
           <a href={page.path} target="_blank" rel="noreferrer" className="px-3 py-1.5 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50"><span className="inline-flex items-center gap-1.5">Ver en inglés<ExternalLink size={14} /></span></a>
           <a href={`/es${page.path}`} target="_blank" rel="noreferrer" className="px-3 py-1.5 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50"><span className="inline-flex items-center gap-1.5">Ver en español<ExternalLink size={14} /></span></a>
         </div>
@@ -455,5 +513,6 @@ export default function CnsEditor({ page, ready, initialTexts, initialItems }) {
         ))}
       </div>
     </main>
+    </LocalesContext.Provider>
   );
 }
