@@ -9,11 +9,32 @@ import { CNS_COLLECTIONS, CNS_LOCALES, CNS_LOCALE_LABELS, CNS_PAGES } from '@/li
 const inputClass =
   'w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm bg-gray-50/60 placeholder:text-gray-300 hover:border-gray-300 focus:bg-white focus:outline-none focus:border-[#FF491A] focus:ring-4 focus:ring-orange-100 transition';
 
+const FLAG_CODE = { en: 'gb', es: 'es' };
+
+function Flag({ locale, className = '' }) {
+  return <span className={`fi fi-${FLAG_CODE[locale]} rounded-[3px] shadow-sm ${className}`} title={CNS_LOCALE_LABELS[locale]} aria-label={CNS_LOCALE_LABELS[locale]} />;
+}
+
+// Small flag in front of a field — only on narrow screens, where the two
+// languages are stacked and the column header is not aligned with them.
 function LangChip({ locale }) {
   return (
-    <span className="inline-block text-[10px] font-bold uppercase tracking-wider bg-[#0F1B2A] text-[#C9A55C] rounded-full px-2 py-0.5">
-      {locale} · {CNS_LOCALE_LABELS[locale]}
+    <span className="md:hidden inline-flex items-center gap-1.5 text-[11px] font-semibold text-gray-500 mb-1">
+      <Flag locale={locale} /> {CNS_LOCALE_LABELS[locale]}
     </span>
+  );
+}
+
+// Shown once per section instead of repeating the language on every field.
+function LangHeader() {
+  return (
+    <div className="hidden md:grid grid-cols-2 gap-3 sticky top-[57px] z-10 -mx-6 px-6 py-2 bg-white/95 backdrop-blur border-b border-gray-100">
+      {CNS_LOCALES.map((loc) => (
+        <div key={loc} className="flex items-center gap-2 text-sm font-semibold text-gray-700">
+          <Flag locale={loc} className="text-base" /> {CNS_LOCALE_LABELS[loc]}
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -327,13 +348,13 @@ function Section({ section, index, ready, initialTexts, initialItems }) {
         </div>
       </header>
 
-      <div className="px-6 py-5 space-y-5">
+      <div className="px-6 pb-5 space-y-5">
+        {(section.fields.some((f) => !f.shared) || def) && <LangHeader />}
         {section.fields.map((f) => (
           <TextField key={f.key} field={f} value={texts[f.key]} onChange={(v) => setTexts((p) => ({ ...p, [f.key]: v }))} />
         ))}
         {def && (
-          <div className={section.fields.length ? 'pt-2 border-t border-gray-100' : ''}>
-            {section.fields.length > 0 && <h3 className="text-sm font-semibold text-gray-800 mt-4 mb-3">Lista</h3>}
+          <div className={section.fields.length ? 'pt-4 border-t border-gray-100' : 'pt-4'}>
             <ItemList def={def} items={items} onChange={setItems} />
           </div>
         )}
