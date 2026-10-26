@@ -16,7 +16,7 @@ import whyPanamaData from '@/data/why-panama.json';
 import { Link } from '@/i18n/navigation';
 import { localizeWhyPanamaSlug } from '@/data/slugs';
 import FadeIn from '@/components/animations/FadeIn';
-import { localizedAlternates } from '@/i18n/urls';
+import { localizedAlternates, localizedUrl } from '@/i18n/urls';
 
 const iconMap = {
   'life-quality':       Heart,
@@ -51,6 +51,8 @@ export default async function WhyPanamaPage({ params }) {
 
   const t = await getTranslations({ locale, namespace: 'WhyPanamaPage' });
   const sortedData = [...whyPanamaData].sort((a, b) => a.orderScore - b.orderScore);
+  const articleSections = t.raw('articleSections');
+  const calculatorUrl = localizedUrl('/panama-income-tax-calculator', locale);
 
   return (
     <div className="bg-white">
@@ -134,6 +136,25 @@ export default async function WhyPanamaPage({ params }) {
             </div>
           </FadeIn>
         </div>
+      </section>
+
+      {/* ── Article sections ─────────────────────────────────────── */}
+      <section className="pb-24 md:pb-32 px-6 bg-white">
+        <article className="max-w-3xl mx-auto">
+          {articleSections.map((section, i) => (
+            <FadeIn key={i}>
+              <div className="mb-12">
+                <h2 className="text-2xl md:text-3xl font-[Gravesend] text-[#0f1b2a] mb-4 pb-2 border-b border-[#0f1b2a]/10 uppercase">
+                  {section.heading}
+                </h2>
+                <div
+                  className="prose prose-[#324158] max-w-none prose-p:text-[#324158]/70 prose-p:leading-relaxed prose-a:text-[#FF491A]"
+                  dangerouslySetInnerHTML={{ __html: section.body.replaceAll('{{calc}}', calculatorUrl) }}
+                />
+              </div>
+            </FadeIn>
+          ))}
+        </article>
       </section>
 
       {/* ── Advantages heading ───────────────────────────────────── */}
