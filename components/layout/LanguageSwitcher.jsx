@@ -1,7 +1,7 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from '@/i18n/navigation';
+import { getPathname, usePathname } from '@/i18n/navigation';
 import { useParams } from 'next/navigation';
 import {
   resolveServiceSlug, localizeServiceSlug,
@@ -23,40 +23,37 @@ const flagMap = {
 // should not show flags that would route into a 404.
 export default function LanguageSwitcher({ locales = ALL_LOCALES }) {
   const locale = useLocale();
-  const router = useRouter();
   const pathname = usePathname(); // internal template, e.g. /services/[slug]
   const params = useParams();    // actual values, e.g. { slug: 'visa-nations-amies' }
 
-  function switchLocale(nextLocale) {
-    if (nextLocale === locale) return;
+  // Real <a href> links (not router.push buttons) so crawlers can follow them
+  // to every language version of the current page.
+  function hrefFor(nextLocale) {
+    if (!params?.slug) return getPathname({ href: pathname, locale: nextLocale });
 
-    if (params?.slug) {
-      const currentSlug = String(params.slug);
-      let translatedSlug = currentSlug;
+    const currentSlug = String(params.slug);
+    let translatedSlug = currentSlug;
 
-      if (pathname === '/services/[slug]') {
-        const canonical = resolveServiceSlug(currentSlug, locale);
-        translatedSlug = localizeServiceSlug(canonical, nextLocale);
-      } else if (pathname === '/why-panama/[slug]') {
-        const canonical = resolveWhyPanamaSlug(currentSlug, locale);
-        translatedSlug = localizeWhyPanamaSlug(canonical, nextLocale);
-      }
-
-      router.replace(
-        { pathname, params: { slug: translatedSlug } },
-        { locale: nextLocale }
-      );
-    } else {
-      router.replace(pathname, { locale: nextLocale });
+    if (pathname === '/services/[slug]') {
+      const canonical = resolveServiceSlug(currentSlug, locale);
+      translatedSlug = localizeServiceSlug(canonical, nextLocale);
+    } else if (pathname === '/why-panama/[slug]') {
+      const canonical = resolveWhyPanamaSlug(currentSlug, locale);
+      translatedSlug = localizeWhyPanamaSlug(canonical, nextLocale);
     }
+
+    return getPathname({ href: { pathname, params: { slug: translatedSlug } }, locale: nextLocale });
   }
 
   return (
     <div className="flex items-center gap-2">
       {locales.map((l) => (
-        <button
+        <a
           key={l}
-          onClick={() => switchLocale(l)}
+          href={hrefFor(l)}
+          hrefLang={l}
+          aria-label={l.toUpperCase()}
+          aria-current={l === locale ? 'true' : undefined}
           className={`p-1 rounded-full transition ${
             l === locale
               ? ''
@@ -66,7 +63,7 @@ export default function LanguageSwitcher({ locales = ALL_LOCALES }) {
           <span
             className={`fi fi-${flagMap[l]} rounded-full w-5 h-5 block`}
           />
-        </button>
+        </a>
       ))}
     </div>
   );
